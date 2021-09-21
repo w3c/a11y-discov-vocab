@@ -11,6 +11,8 @@ This repository is where the vocabularies of terms are maintained for the follow
 - [accessMode](https://schema.org/accessMode)
 - [accessModeSufficient](https://schema.org/accessModeSufficient)
 
+These vocabularies will be maintained by a task force of the schema.org community group. As the formation of this group is still under development, full details on how to participate will be provided at a later date.
+
 ## Background
 
 For a complete discussion of the original development of these properties, please refer to the [a11ymetadata.org web site](http://www.a11ymetadata.org/about/).

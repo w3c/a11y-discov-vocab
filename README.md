@@ -15,7 +15,7 @@ For more information about the original development of these properties, please 
 
 ## Governance
 
-These vocabularies are maintained by [Accessibility Discoverability Vocabulary for Schema.org Community Group](https://www.w3.org/community/a11y-discov-vocab/).
+These vocabularies are maintained by [Accessibility Discoverability Vocabulary for Schema.org Community Group](https://www.w3.org/community/a11y-discov-vocab/). Please refer to the [Community Group's charter](https://github.com/w3c/a11y-discov-vocab/wiki/Community-Group-Charter) for a detailed description of the governance of this group.
 
 The chairs of the Community Group are responsible for ensuring the smooth functioning of the group and resolving any issues that might arise.
 

@@ -58,9 +58,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md), about licensing contributions.
 
 ## Publishing New Revisions
 
-Only chairs of the Community Group may publish new versions of the vocabulary.
+Only chairs and editors may publish new versions of the vocabulary.
 
-The chairs will endeavour to republish the vocabulary whenever consensus on proposed changes is reached and a pull request is ready to be integrated.
+The Community Group will endeavour to republish the vocabulary whenever consensus on proposed changes is reached and a pull request is ready to be integrated.
 
 Exceptions to this rule may occur at the chairs' discretion. For example, if multiple issues need to be resolved for a new version to make sense, or if many small issues are expected to be resolved within a short period of time, so the work of republishing for each is not warranted.
 

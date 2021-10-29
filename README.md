@@ -13,9 +13,20 @@ This repository is where the vocabularies of terms are maintained for the follow
 
 For more information about the original development of these properties, please refer to the [a11ymetadata.org web site](http://www.a11ymetadata.org/about/).
 
+## Vocabulary
+
+The Schema.org Accessibility Properties for Content Discoverability vocabulary is available in the following forms:
+
+- [Editor's Draft](https://w3c.github.io/a11y-discov-vocab/) - The editor's draft is the working version of the vocabulary. It may include changes that have not yet been published and that may be subject to further revision before publishing. This document has no standing and should not be referenced.
+- [Latest Version](https://www.w3.org/wiki/WebSchemas/Accessibility) - The latest version of the vocabulary is the stable version of the vocabulary endorsed by the Community Group. The latest version should be referenced by implementers.
+
+__Note that the latest version currently references the old Web Schemas wiki vocabulary. This link will be updated once the Community Group publishes its first version of the specification.__
+
 ## Governance
 
-These vocabularies are maintained by [Accessibility Discoverability Vocabulary for Schema.org Community Group](https://www.w3.org/community/a11y-discov-vocab/). Please refer to the [Community Group's charter](https://github.com/w3c/a11y-discov-vocab/wiki/Community-Group-Charter) for a detailed description of the governance of this group.
+This repository is maintained by the [Accessibility Discoverability Vocabulary for Schema.org Community Group](https://www.w3.org/community/a11y-discov-vocab/).
+
+Please refer to the [Community Group's charter](https://github.com/w3c/a11y-discov-vocab/wiki/Community-Group-Charter) for a detailed description of the governance of this group.
 
 The chairs of the Community Group are responsible for ensuring the smooth functioning of the group and resolving any issues that might arise.
 

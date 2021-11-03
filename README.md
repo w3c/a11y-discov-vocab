@@ -22,6 +22,8 @@ The Schema.org Accessibility Properties for Content Discoverability vocabulary i
 
 __Note that the latest version currently references the old Web Schemas wiki vocabulary. This link will be updated once the Community Group publishes its first version of the specification.__
 
+The Community Group also maintains a [crosswalk document](https://w3c.github.io/a11y-discov-vocab/crosswalk/) that describes how to map the Schema.org properties and terms to equivalent expressions in EPUB and ONIX.
+
 ## Governance
 
 This repository is maintained by the [Accessibility Discoverability Vocabulary for Schema.org Community Group](https://www.w3.org/community/a11y-discov-vocab/).

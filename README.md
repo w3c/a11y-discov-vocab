@@ -44,7 +44,7 @@ The Community Group will endeavour to gain consensus on issues before resolving 
 
 The chairs may periodically request teleconferences to discuss items. For example, if consensus cannot be reached through the tracker, if there are proposals that require group discussion, or if the group determines there are new work items that cannot be initiated through the tracker. In these cases, the date of the meeting and agenda will be sent to the [Community Group's email list](https://lists.w3.org/Archives/Public/public-a11y-discov-vocab/) in advance of the call. Minutes for all meetings will be posted to the Community Group's home page.
 
-The Community Group may also hold meetings or get togethers at larger W3C events, such as TPAC.
+The Community Group may also hold meetings or get togethers at W3C events, such as TPAC.
 
 ## Participation
 

@@ -18,9 +18,7 @@ For more information about the original development of these properties, please 
 The Schema.org Accessibility Properties for Content Discoverability vocabulary is available in the following forms:
 
 - [Editor's Draft](https://w3c.github.io/a11y-discov-vocab/) - The editor's draft is the working version of the vocabulary. It may include changes that have not yet been published and that may be subject to further revision before publishing. This document has no standing and should not be referenced.
-- [Latest Version](https://www.w3.org/wiki/WebSchemas/Accessibility) - The latest version of the vocabulary is the stable version of the vocabulary endorsed by the Community Group. The latest version should be referenced by implementers.
-
-__Note that the latest version currently references the old Web Schemas wiki vocabulary. This link will be updated once the Community Group publishes its first version of the specification.__
+- [Latest Version](https://www.w3.org/2021/a11y-discov-vocab/latest/) - The latest version of the vocabulary is the stable version of the vocabulary endorsed by the Community Group. The latest version should be referenced by implementers.
 
 The Community Group also maintains a [crosswalk document](https://w3c.github.io/a11y-discov-vocab/crosswalk/) that describes how to map the Schema.org properties and terms to equivalent expressions in EPUB and ONIX.
 

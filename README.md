@@ -13,7 +13,7 @@ This repository is where the vocabularies of terms are maintained for the follow
 
 For more information about the original development of these properties, please refer to the [a11ymetadata.org web site](http://www.a11ymetadata.org/about/).
 
-## Group Documents
+## Published Documents
 
 ### Vocabulary
 

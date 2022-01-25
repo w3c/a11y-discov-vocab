@@ -491,30 +491,6 @@
 					<p>The adaptation terms identify provisions in the content that enable reading in alternative access
 						modes.</p>
 
-					<section id="displayTransformability">
-						<h5>displayTransformability</h5>
-
-						<p>Display properties are controllable by the user. This property can be set, for example, if
-							custom CSS style sheets can be applied to the content to control the appearance. It can also
-							be used to indicate that styling in document formats like Word and PDF can be modified.</p>
-
-						<p>This property can be modified to identify the specific display properties that allow
-							meaningful control. Modifiers should take the form of CSS property names, even if CSS is not
-							the document styling format:</p>
-
-						<ul>
-							<li><code>/font-size</code></li>
-							<li><code>/font-family</code></li>
-							<li><code>/line-height</code></li>
-							<li><code>/word-spacing</code></li>
-							<li><code>/color</code></li>
-							<li><code>/background-color</code></li>
-						</ul>
-
-						<p>Note that many CSS display properties can be modified, but not all usefully enhance the
-							accessibility (e.g., image-based content). </p>
-					</section>
-
 					<section id="alternativeText">
 						<h5>alternativeText</h5>
 
@@ -568,40 +544,50 @@
 							ruby.</p>
 					</section>
 
+					<section id="signLanguage">
+						<h5>signLanguage</h5>
+
+						<p>Sign language interpretation is available for audio and video content. The value may be
+							extended by adding an [[ISO-639]] sign language code. For example, <code>/sgn-en-us</code>
+							for American Sign Language.</p>
+					</section>
+
 					<section id="transcript">
 						<h5>transcript</h5>
 
 						<p>Indicates that a transcript of the audio content is available.</p>
 					</section>
-
-					<section id="ttsMarkup">
-						<h5>ttsMarkup</h5>
-
-						<p>One or more of [[SSML]], [[Pronunciation-Lexicon]], and [[CSS3-Speech]] properties has been
-							used to enhance text-to-speech playback quality.</p>
-					</section>
-
-					<section id="unlocked">
-						<h5>unlocked</h5>
-
-						<p>No digital rights management or other content restriction protocols have been applied to the
-							resource.</p>
-					</section>
 				</section>
 
-				<section id="playback-terms">
-					<h4>Playback Terms</h4>
+				<section id="rendering-control-terms">
+					<h4>Rendering Control Terms</h4>
 
 					<p>The playback values identify synchronized rendering and content control features.</p>
-
-					<section id="signLanguage">
-						<h5>signLanguage</h5>
-
-						<p>Synchronized sign language interpretation is available for audio and video content. The value
-							may be extended by adding an [[ISO-639]] sign language code. For example,
-								<code>/sgn-en-us</code> for American Sign Language.</p>
+					
+					<section id="displayTransformability">
+						<h5>displayTransformability</h5>
+						
+						<p>Display properties are controllable by the user. This property can be set, for example, if
+							custom CSS style sheets can be applied to the content to control the appearance. It can also
+							be used to indicate that styling in document formats like Word and PDF can be modified.</p>
+						
+						<p>This property can be modified to identify the specific display properties that allow
+							meaningful control. Modifiers should take the form of CSS property names, even if CSS is not
+							the document styling format:</p>
+						
+						<ul>
+							<li><code>/font-size</code></li>
+							<li><code>/font-family</code></li>
+							<li><code>/line-height</code></li>
+							<li><code>/word-spacing</code></li>
+							<li><code>/color</code></li>
+							<li><code>/background-color</code></li>
+						</ul>
+						
+						<p>Note that many CSS display properties can be modified, but not all usefully enhance the
+							accessibility (e.g., image-based content). </p>
 					</section>
-
+					
 					<section id="synchronizedAudioText">
 						<h5>synchronizedAudioText</h5>
 
@@ -615,6 +601,13 @@
 
 						<p>For content with timed interaction, this value indicates that the user can control the timing
 							to meet their needs (e.g., pause and reset)</p>
+					</section>
+
+					<section id="unlocked">
+						<h5>unlocked</h5>
+
+						<p>No digital rights management or other content restriction protocols have been applied to the
+							resource.</p>
 					</section>
 				</section>
 
@@ -642,6 +635,13 @@
 						<h5>MathML</h5>
 
 						<p>Identifies that mathematical equations and formulas are encoded in [[MathML]].</p>
+					</section>
+
+					<section id="ttsMarkup">
+						<h5>ttsMarkup</h5>
+
+						<p>One or more of [[SSML]], [[Pronunciation-Lexicon]], and [[CSS3-Speech]] properties has been
+							used to enhance text-to-speech playback quality.</p>
 					</section>
 				</section>
 

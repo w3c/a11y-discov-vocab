@@ -366,23 +366,32 @@
 					characteristics of the content. It allows a user agent to discover these characteristics without
 					having to parse or interpret the structure of the content.</p>
 
-				<p>For ease of reading, this section splits the vocabulary into four distinct groups:</p>
+				<p>For ease of reading, this section splits the vocabulary into the following distinct groups:</p>
 
 				<ul>
-					<li><a href="#transformation-terms">Transformation terms</a> identify characteristics of the content
-						that can be manipulated by the user to make the content better fit their personal needs. The
-						ability to change the font size of the text is one example of a transformation property.</li>
-
 					<li><a href="#structure-and-navigation-terms">Structure and navigation terms</a> identify navigation
 						aids that are provided to simplify moving around within the media, such as the inclusion of a
 						table of contents or an index.</li>
 
-					<li><a href="#content-control-terms">Content control terms</a> identify content and features that
-						are fully controllable by the user. The ability to pause a timed interface is an example.</li>
+					<li><a href="#adaptation-terms">Adaptation terms</a> identify content features that provide
+						alternate access to a resource. The inclusion of alternative text in an [[HTML]]
+							<code>alt</code> attribute is one of the most commonly identifiable augmentation
+						features.</li>
 
-					<li><a href="#augmentation-terms">Augmentation terms</a> identify content features that provide
-						alternate access to a resource. The inclusion of alternative text in an alt attribute is one of
-						the most commonly identifiable augmentation features.</li>
+					<li><a href="#rendering-control-terms">Rendering control terms</a> identify content rendering
+						features that users have access to or can control. The ability to modify the appearance of the
+						text is one example.</li>
+
+					<li><a href="#specialized-markup-terms">Specialized markup terms</a> identify that content is
+						encoded using domain-specific grammars like MathML and ChemML that can provide users a richer
+						reading experience.</li>
+
+					<li><a href="#clarity-terms">Clarity terms</a> identify ways that the content has been enhanced for
+						clearer readability. Audio with minimized background noise is one example, while content
+						formatted for large print reading is another.</li>
+
+					<li><a href="#tactile-terms">Tactile terms</a> identify content that is formatted for tactile use,
+						such as graphics and objects.</li>
 				</ul>
 
 				<p>The vocabulary also includes <a href="#feature-none">the term "<code>none</code>"</a> that authors
@@ -713,26 +722,26 @@
 
 					<section id="tactileGraphic">
 						<h5>tactileGraphic</h5>
-						
+
 						<p>When used with creative works such as books, indicates that the resource includes tactile
 							graphics.</p>
-						
+
 						<p>When used to describe an image resource or physical object, indicates that the resource is a
 							tactile graphic.</p>
-						
+
 						<div class="note">
 							<p>Refer to the <a href="http://www.brailleauthority.org/tg/">BANA Guidelines and Standards
-								for Tactile Graphics</a> for more information about tactile graphic formats and
+									for Tactile Graphics</a> for more information about tactile graphic formats and
 								formatting.</p>
 						</div>
 					</section>
-					
+
 					<section id="tactileObject">
 						<h5>tactileObject</h5>
-						
+
 						<p>When used with creative works such as books, indicates that the resource includes models to
 							generate tactile 3D objects.</p>
-						
+
 						<p>When used to describe a physical object, indicates that the resource is a tactile 3D
 							object.</p>
 					</section>

@@ -52,8 +52,7 @@
 			pre,
 			code {
 				white-space: break-spaces !important;
-			}
-		</style>
+			}</style>
 	</head>
 	<body>
 		<section id="abstract">
@@ -84,8 +83,8 @@
 					taxonomy, these specific properties were developed together as part of a project to improve the
 					discoverability of accessible resources headed by Benetech and IMS Global. Many of these properties
 					were derived directly from the <a
-						href="http://www.imsglobal.org/accessibility/afav3p0pd/AfA3p0_DESinfoModel_v1p0pd.html"
-						>Global Access for All (AfA) Information Model Data Element Specification</a>.</p>
+						href="http://www.imsglobal.org/accessibility/afav3p0pd/AfA3p0_DESinfoModel_v1p0pd.html">Global
+						Access for All (AfA) Information Model Data Element Specification</a>.</p>
 
 				<p>Part of this work included defining vocabularies of recommended values for use with these properties
 					to ensure predictability for machine processing. This document represents those vocabularies.</p>
@@ -118,15 +117,15 @@
 					the context in which they are created and used. Two values that differ only in case should be
 					treated as identical.</p>
 			</section>
-			
+
 			<section id="extensions">
 				<h3>Extending Vocabulary Terms</h3>
-				
+
 				<p>This vocabulary currently uses the old <a href="https://schema.org/docs/old_extension.html">slash
-					extension syntax</a> employed by Schema.org until 2015. In this model, extensions of a term are
-					made by adding a slash followed by a refinement term. For example, see the <a
-						href="#braille"><code>braille</code> feature</a> for specifying specific braille codes.</p>
-				
+						extension syntax</a> employed by Schema.org until 2015. In this model, extensions of a term are
+					made by adding a slash followed by a refinement term. For example, see the <a href="#braille"
+							><code>braille</code> feature</a> for specifying specific braille codes.</p>
+
 				<p>Authors are advised to use this extension mechanism sparingly at this time, as a future version of
 					the vocabulary may update this approach.</p>
 			</section>
@@ -851,7 +850,7 @@
 
 			<p>The <code>accessibilitySummary</code> property is a free-form field that allows authors to describe the
 				accessible properties of the resource. As a result, it does not have an associated vocabulary.</p>
-			
+
 			<aside class="example" title="JSON-LD">
 				<pre><code>{
    "@context": "schema.org",
@@ -861,8 +860,8 @@
    &#8230;
 }</code></pre>
 			</aside>
-			
-			
+
+
 			<aside class="example" title="EPUB 3">
 				<pre><code>&lt;package &#8230;>
    &lt;metadata>
@@ -897,7 +896,7 @@
 				<p>The <a href="#accessModeSufficient"><code>accessModeSufficient</code> property</a> is designed to
 					fill this gap of understanding the combinations of modes necessary to fully consume the
 					information.</p>
-				
+
 				<aside class="example" title="JSON-LD">
 					<pre><code>{
    "@context": "schema.org",
@@ -908,7 +907,7 @@
    &#8230;
 }</code></pre>
 				</aside>
-				
+
 				<aside class="example" title="HTML and RDFa">
 					<pre><code>&lt;div
     vocab="https://schema.org"
@@ -1013,20 +1012,20 @@
 					<p>A list of single or combined <a href="#accessMode">accessModes</a> that are sufficient to
 						understand all the intellectual content of a resource.</p>
 				</blockquote>
-				
+
 				<p>Although the <a href="#accessMode">access modes</a> indicate how the information is encoded in its
 					default form, knowing the encoding only describes one possible perceptual pathway through the
-					content. For example, a book with textual and visual content will at least require an individual
-					who can read text and view images.</p>
-				
+					content. For example, a book with textual and visual content will at least require an individual who
+					can read text and view images.</p>
+
 				<p>The author of the content may provide alternatives to a specific access mode that allow the content
 					to be consumed in an alternative manner. The use of alternative text and extended descriptions, for
 					example, can allow a user who cannot perceive visual content to read all the information in textual
 					form.</p>
-				
-				<p>The list(s) of sufficient access modes provides users with the possible combinations of reading
-					modes that allow the content to be read in full.</p>
-				
+
+				<p>The list(s) of sufficient access modes provides users with the possible combinations of reading modes
+					that allow the content to be read in full.</p>
+
 				<aside class="example" title="JSON-LD">
 					<pre><code>{
    "@context": "schema.org",
@@ -1047,8 +1046,8 @@
    &#8230;
 }</code></pre>
 				</aside>
-				
-				
+
+
 				<aside class="example" title="EPUB 3">
 					<pre><code>&lt;package &#8230;>
    &lt;metadata>
@@ -1105,11 +1104,8 @@
 			<section id="ex-book">
 				<h3>Book</h3>
 
-				<p>The following example shows how the accessibility metadata is used to enhance Bookshare records. A
-					description of the process of adding this metadata, and a corpus of searchable books, can be found
-					at the <a
-						href="http://www.a11ymetadata.org/bookshare-tags-over-195000-titles-with-accessibility-metadata/"
-						>accessibility metadata website</a>.</p>
+				<p>The following example shows how accessibility metadata could be used to enhance a library record
+					available on the Web.</p>
 
 				<div class="example">
 					<pre>&lt;div itemscope="" itemtype="http://schema.org/Book">
@@ -1122,12 +1118,9 @@
    &lt;meta itemprop="accessibilityFeature" content="readingOrder" />
    &lt;meta itemprop="accessibilityFeature" content="structuralNavigation" />
    &lt;meta itemprop="accessibilityFeature" content="tableOfContents" />
-   &lt;meta itemprop="accessibilityControl" content="fullKeyboardControl" />
-   &lt;meta itemprop="accessibilityControl" content="fullMouseControl" />
    &lt;meta itemprop="accessibilityHazard" content="noFlashingHazard" />
    &lt;meta itemprop="accessibilityHazard" content="noMotionSimulationHazard" />
    &lt;meta itemprop="accessibilityHazard" content="noSoundHazard" />
-   &lt;meta itemprop="accessibilityAPI" content="ARIA" />
    &lt;dl>
       &lt;dt>Name:&lt;/dt>
       &lt;dd itemprop="name">Holt Physical Science&lt;/dd>
@@ -1163,8 +1156,6 @@
       &lt;dd>&lt;span itemprop="genre">Educational Materials&lt;/span>&lt;/dd>
       &lt;dt>Grade Levels:&lt;/dt>
       &lt;dd>Sixth grade, Seventh grade, Eighth grade&lt;/dd>
-      &lt;dt>Submitted By:&lt;/dt>
-      &lt;dd>Bookshare Staff&lt;/dd>
       &lt;dt>NIMAC:&lt;/dt>
       &lt;dd>This book is currently only available to public K-12 schools and organizations in the United
          States for use with students with an IEP, because it was created from files supplied by the
@@ -1180,79 +1171,77 @@
    &lt;/div>
 &lt;/div></pre>
 				</div>
-
-				<p>(The source record can be found at https://www.bookshare.org/browse/book/190639.)</p>
 			</section>
 
 			<section id="ex-video">
 				<h3>Video</h3>
 
-				<p>This example shows how the accessibility metadata can be used to augment a record for a video.</p>
+				<p>This example shows how the accessibility metadata could be used to augment a record for a video.</p>
 
 				<div class="example">
 					<pre>&lt;dl itemtype="http://schema.org/VideoObject" itemscope="">
    &lt;dt>Title:&lt;/dt>
    &lt;dd itemprop="name">Arctic Climate Perspectives&lt;/dd>
    &lt;dt>Description:&lt;/dt>
-   &lt;dd itemprop="description">This video, adapted from material provided by the ECHO partners,
-      describes how global climate change is affecting Barrow, Alaska.&lt;/dd>
+   &lt;dd itemprop="description">This video, adapted from material provided by the ECHO
+      partners, describes how global climate change is affecting Barrow, Alaska.&lt;/dd>
    &lt;dt>Adaptation Type:&lt;/dt>
    &lt;dd>&lt;span itemprop="accessibilityFeature">captions&lt;/span>&lt;/dd>
    &lt;dt>Access Mode:&lt;/dt>
    &lt;dd>auditory, visual&lt;/dd>
    &lt;dt>URL:&lt;/dt>
-   &lt;dd>&lt;a itemprop="url" href="http://www.teachersdomain.org/asset/echo07_vid_climate"
-      >http://www.teachersdomain.org/asset/echo07_vid_climate&lt;/a>/&lt;/dd>
+   &lt;dd>&lt;a itemprop="url" href="http://www.example.org/asset/echo07_vid_climate"
+      >http://www.example.org/asset/echo07_vid_climate&lt;/a>/&lt;/dd>
    &lt;dt>Has Adaptation:&lt;/dt>
-   &lt;dd>http://www.teachersdomain.org/asset/echo07_vid_climate_dvs/&lt;/dd>
+   &lt;dd>http://www.example.org/asset/echo07_vid_climate_dvs/&lt;/dd>
    &lt;dt>Subjects:&lt;/dt>
-   &lt;dd>&lt;span itemprop="about">National K-12 Subject::Science::Earth and Space Science::Water Cycle,
-      Weather, and Climate::Structure and Composition of the Atmosphere, National K-12
-      Subject::Science::Earth and Space Science::Water Cycle, Weather, and
-      Climate::Climate&lt;/span>&lt;/dd>
+   &lt;dd>&lt;span itemprop="about">National K-12 Subject::Science::Earth and Space
+      Science::Water Cycle, Weather, and Climate::Structure and Composition of the
+      Atmosphere, National K-12 Subject::Science::Earth and Space Science::Water Cycle,
+      Weather, and Climate::Climate&lt;/span>&lt;/dd>
    &lt;dt>Education Level:&lt;/dt>
    &lt;dd>Grade 6, Grade 7, Grade 8, Grade 9&lt;/dd>
    &lt;dt>Audience:&lt;/dt>
    &lt;dd>&lt;span itemprop="intendedEndUserRole">Learner&lt;/span>&lt;/dd>
    &lt;dt>Resource Type:&lt;/dt>
-   &lt;dd>&lt;span itemprop="genre">Audio/Visual&lt;/span>, &lt;span itemprop="genre">Movie/Animation&lt;/span>&lt;/dd>
+   &lt;dd>&lt;span itemprop="genre">Audio/Visual&lt;/span>,
+      &lt;span itemprop="genre">Movie/Animation&lt;/span>&lt;/dd>
    &lt;dt>Language:&lt;/dt>
    &lt;dd>&lt;span itemprop="inLanguage">en-US&lt;/span>&lt;/dd>
    &lt;dt>Publication Date:&lt;/dt>
    &lt;dd itemprop="datePublished">2007-02-12&lt;/dd>
    &lt;dt>Rights:&lt;/dt>
    &lt;dd>Download and Share, &lt;a itemprop="useRightsUrl"
-      href="http://www.teachersdomain.org/oerlicense/2/"
-      >http://www.teachersdomain.org/oerlicense/2/&lt;/a>&lt;/dd>
+      href="http://www.example.org/oerlicense/2/"
+      >http://www.example.org/oerlicense/2/&lt;/a>&lt;/dd>
 &lt;/dl></pre>
 				</div>
 			</section>
 		</section>
 		<section id="change-log" class="appendix">
 			<h2>Change Log</h2>
-			
-			<p>Note that this change log only identifies substantive changes to the vocabulary &#8212; those that add
-				or deprecate terms, or are similarly noteworthy.</p>
-			
+
+			<p>Note that this change log only identifies substantive changes to the vocabulary &#8212; those that add or
+				deprecate terms, or are similarly noteworthy.</p>
+
 			<p>For a list of all issues addressed (typos, minor definition modifications, etc.), refer to the <a
-				href="https://github.com/w3c/a11y-discov-vocab/issues?q=is%3Aissue+is%3Aclosed"
-				>Community Group's issue tracker</a>.</p>
-			
+					href="https://github.com/w3c/a11y-discov-vocab/issues?q=is%3Aissue+is%3Aclosed">Community Group's
+					issue tracker</a>.</p>
+
 			<ul>
 				<li>No substantive changes have been made to date.</li>
 			</ul>
 		</section>
 		<section id="acknowledgments" class="appendix">
 			<h2>Acknowledgments</h2>
-			
-			<p>The editors would like to thank the <a
-				href="https://www.w3.org/community/a11y-discov-vocab/participants">Accessibility Discoverability
-				Vocabulary for Schema.org Community Group participants</a> for their ongoing input and suggestions
-				to improve this vocabulary.</p>
-			
-			<p>Additional thanks goes to the original participants of the <a
-				href="http://www.a11ymetadata.org">Accessibility Metadata Project</a> for their work bringing the
-				properties and vocabularies to reality.</p>
+
+			<p>The editors would like to thank the <a href="https://www.w3.org/community/a11y-discov-vocab/participants"
+					>Accessibility Discoverability Vocabulary for Schema.org Community Group participants</a> for their
+				ongoing input and suggestions to improve this vocabulary.</p>
+
+			<p>Additional thanks goes to the original participants of the <a href="http://www.a11ymetadata.org"
+					>Accessibility Metadata Project</a> for their work bringing the properties and vocabularies to
+				reality.</p>
 		</section>
 	</body>
 </html>

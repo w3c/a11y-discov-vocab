@@ -432,78 +432,11 @@
 			<section id="accessibilityFeature-vocabulary">
 				<h3>Vocabulary</h3>
 
-				<section id="transformation-terms">
-					<h4>Transformation Terms</h4>
-
-					<p>Transformation features either state how content is available in a transformed state or is set up
-						so that a user can transform it. These properties derive from <a
-							href="http://www.w3.org/TR/WCAG2/#visual-audio-contrast">WCAG 2 Success Criterion
-						1.4</a>.</p>
-
-					<section id="highContrastAudio">
-						<h5>highContrastAudio</h5>
-
-						<p>Audio content with speech in the foreground meets the contrast thresholds set out in <a
-								href="https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio">WCAG
-								Success Criteria 1.4.7</a>. The requirement the audio meets can be appended, but is not
-							required:</p>
-
-						<ul>
-							<li><code>/noBackground</code> - no background noise is present</li>
-							<li><code>/reducedBackground</code> - at least 20db difference between foreground speech and
-								background noise</li>
-							<li><code>/switchableBackground</code> - background noise can be turned off (sufficient
-								contrast may not be met without doing so)</li>
-						</ul>
-					</section>
-
-					<section id="highContrastDisplay">
-						<h5>highContrastDisplay</h5>
-
-						<p>Content meets the visual contrast threshold set out in <a
-								href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced">WCAG Success
-								Criteria 1.4.6</a>.</p>
-					</section>
-
-					<section id="largePrint">
-						<h5>largePrint</h5>
-
-						<p>The content has been formatted to meet large print guidelines. The specific point size may
-							optionally be added as an extension (e.g., <code>largePrint/18</code>).</p>
-
-						<p>The property is not set if the font size can be increased. See <a
-								href="#displayTransformability"><code>displayTransformability</code></a>.</p>
-					</section>
-
-					<section id="displayTransformability">
-						<h5>displayTransformability</h5>
-
-						<p>Display properties are controllable by the user. This property can be set, for example, if
-							custom CSS style sheets can be applied to the content to control the appearance. It can also
-							be used to indicate that styling in document formats like Word and PDF can be modified.</p>
-
-						<p>This property can be modified to identify the specific display properties that allow
-							meaningful control. Modifiers should take the form of CSS property names, even if CSS is not
-							the document styling format:</p>
-
-						<ul>
-							<li><code>/font-size</code></li>
-							<li><code>/font-family</code></li>
-							<li><code>/line-height</code></li>
-							<li><code>/word-spacing</code></li>
-							<li><code>/color</code></li>
-							<li><code>/background-color</code></li>
-						</ul>
-
-						<p>Note that many CSS display properties can be modified, but not all usefully enhance the
-							accessibility (e.g., image-based content). </p>
-					</section>
-				</section>
-
 				<section id="structure-and-navigation-terms">
 					<h4>Structure and Navigation Terms</h4>
 
-					<p>The following values identify key navigation aids available with the work.</p>
+					<p>The structure and navigation term identify structuring and navigation aids that facilitate use of
+						the work.</p>
 
 					<section id="annotations">
 						<h5>annotations</h5>
@@ -552,12 +485,116 @@
 					</section>
 				</section>
 
-				<section id="content-control-terms">
-					<h4>Content Control Terms</h4>
+				<section id="adaptation-terms">
+					<h4>Adaptation Terms</h4>
 
-					<p>The following values identify aspects of the content that users can control to improve access to
-						the content. Do not confuse these control features with the accessibilityControl property, which
-						defines input methods used to control the content.</p>
+					<p>The adaptation terms identify provisions in the content that enable reading in alternative access
+						modes.</p>
+
+					<section id="alternativeText">
+						<h5>alternativeText</h5>
+
+						<p>Alternative text is provided for visual content (e.g., via the [[HTML]] <a
+								href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-alt"
+									><code>alt</code> attribute</a>).</p>
+					</section>
+
+					<section id="audioDescription">
+						<h5>audioDescription</h5>
+
+						<p>Audio descriptions are available (e.g., via an [[HTML]] <a
+								href="https://html.spec.whatwg.org/multipage/media.html#the-track-element"
+									><code>track</code></a> element with its <code>kind</code> attribute set to
+								"<code>descriptions</code>").</p>
+					</section>
+
+					<section id="captions">
+						<h5>captions</h5>
+
+						<p>Indicates that synchronized captions are available for audio and video content.</p>
+					</section>
+
+					<section id="describedMath">
+						<h5>describedMath</h5>
+
+						<p>Textual descriptions of math equations are included, whether in the alt attribute for
+							image-based equations, using the <a
+								href="https://www.w3.org/TR/MathML3/chapter2.html#interf.toplevel.atts"
+									><code>alttext</code> attribute</a> for [[MathML]] equations, or by other means.</p>
+					</section>
+
+					<section id="longDescription">
+						<h5>longDescription</h5>
+
+						<p>Descriptions are provided for image-based visual content and/or complex structures such as
+							tables, mathematics, diagrams, and charts.</p>
+
+						<div class="note">
+							<p>Authors may set this property independent of the method they use to provide the extended
+								descriptions (i.e., it is not required to use the obsolete [[HTML]] <a
+									href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-longdesc"
+										><code>longdesc</code> attribute</a>).</p>
+						</div>
+					</section>
+
+					<section id="rubyAnnotations">
+						<h5>rubyAnnotations</h5>
+
+						<p>Indicates that <a
+								href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
+									><code>ruby</code> annotations</a> [[HTML]] are provided in the content. Ruby
+							annotations are used as pronunciation guides for the logographic characters for languages
+							like Chinese or Japanese. It makes difficult Kanji or CJK ideographic characters more
+							accessible.</p>
+
+						<p>The absence of <code>rubyAnnotations</code> implies that no CJK ideographic characters have
+							ruby.</p>
+					</section>
+
+					<section id="signLanguage">
+						<h5>signLanguage</h5>
+
+						<p>Sign language interpretation is available for audio and video content. The value may be
+							extended by adding an [[ISO-639]] sign language code. For example, <code>/sgn-en-us</code>
+							for American Sign Language.</p>
+					</section>
+
+					<section id="transcript">
+						<h5>transcript</h5>
+
+						<p>Indicates that a transcript of the audio content is available.</p>
+					</section>
+				</section>
+
+				<section id="rendering-control-terms">
+					<h4>Rendering Control Terms</h4>
+
+					<p>The rendering control values identify that access to a resource and rendering and playback of its
+						content can be controlled for easier reading.</p>
+
+					<section id="displayTransformability">
+						<h5>displayTransformability</h5>
+
+						<p>Display properties are controllable by the user. This property can be set, for example, if
+							custom CSS style sheets can be applied to the content to control the appearance. It can also
+							be used to indicate that styling in document formats like Word and PDF can be modified.</p>
+
+						<p>This property can be modified to identify the specific display properties that allow
+							meaningful control. Modifiers should take the form of CSS property names, even if CSS is not
+							the document styling format:</p>
+
+						<ul>
+							<li><code>/font-size</code></li>
+							<li><code>/font-family</code></li>
+							<li><code>/line-height</code></li>
+							<li><code>/word-spacing</code></li>
+							<li><code>/color</code></li>
+							<li><code>/background-color</code></li>
+						</ul>
+
+						<p>Note that many CSS display properties can be modified, but not all usefully enhance the
+							accessibility (e.g., image-based content). </p>
+					</section>
 
 					<section id="synchronizedAudioText">
 						<h5>synchronizedAudioText</h5>
@@ -582,28 +619,86 @@
 					</section>
 				</section>
 
-				<section id="augmentation-terms">
-					<h4>Augmentation Terms</h4>
+				<section id="specialized-markup-terms">
+					<h4>Specialized Markup Terms</h4>
 
-					<p>Augmentation is the provision of intellectual content in a different access mode from its
-						source.</p>
+					<p>The specialized markup terms identify content available in specialized markup grammars. These
+						grammars typically provide users with enhanced structure and navigation capabilities.</p>
 
-					<section id="alternativeText">
-						<h5>alternativeText</h5>
+					<section id="ChemML">
+						<h5>ChemML</h5>
 
-						<p>Alternative text is provided for visual content (e.g., via the [[HTML]] <a
-								href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-alt"
-									><code>alt</code> attribute</a>).</p>
+						<p>Identifies that chemical information is encoded using the <a
+								href="https://hachmannlab.github.io/chemml/">ChemML markup language</a>.</p>
 					</section>
 
-					<section id="audioDescription">
-						<h5>audioDescription</h5>
+					<section id="latex">
+						<h5>latex</h5>
 
-						<p>Audio descriptions are available (e.g., via an [[HTML]] <a
-								href="https://html.spec.whatwg.org/multipage/media.html#the-track-element"
-									><code>track</code></a> element with its <code>kind</code> attribute set to
-								"<code>descriptions</code>").</p>
+						<p>Identifies that mathematical equations and formulas are encoded in the <a
+								href="https://www.latex-project.org/">LaTeX typesetting system</a>.</p>
 					</section>
+
+					<section id="mathml">
+						<h5>MathML</h5>
+
+						<p>Identifies that mathematical equations and formulas are encoded in [[MathML]].</p>
+					</section>
+
+					<section id="ttsMarkup">
+						<h5>ttsMarkup</h5>
+
+						<p>One or more of [[SSML]], [[Pronunciation-Lexicon]], and [[CSS3-Speech]] properties has been
+							used to enhance text-to-speech playback quality.</p>
+					</section>
+				</section>
+
+				<section id="clarity-terms">
+					<h4>Clarity Terms</h4>
+
+					<p>The clarity terms identify ways that the content has been enhanced for improved auditory or
+						visual clarity.</p>
+
+					<section id="highContrastAudio">
+						<h5>highContrastAudio</h5>
+
+						<p>Audio content with speech in the foreground meets the contrast thresholds set out in <a
+								href="https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio">WCAG
+								Success Criteria 1.4.7</a>. The requirement the audio meets can be appended, but is not
+							required:</p>
+
+						<ul>
+							<li><code>/noBackground</code> - no background noise is present</li>
+							<li><code>/reducedBackground</code> - at least 20db difference between foreground speech and
+								background noise</li>
+							<li><code>/switchableBackground</code> - background noise can be turned off (sufficient
+								contrast may not be met without doing so)</li>
+						</ul>
+					</section>
+
+					<section id="highContrastDisplay">
+						<h5>highContrastDisplay</h5>
+
+						<p>Content meets the visual contrast threshold set out in <a
+								href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced">WCAG Success
+								Criteria 1.4.6</a>.</p>
+					</section>
+
+					<section id="largePrint">
+						<h5>largePrint</h5>
+
+						<p>The content has been formatted to meet large print guidelines. The specific point size may
+							optionally be added as an extension (e.g., <code>largePrint/18</code>).</p>
+
+						<p>The property is not set if the font size can be increased. See <a
+								href="#displayTransformability"><code>displayTransformability</code></a>.</p>
+					</section>
+				</section>
+
+				<section id="tactile-terms">
+					<h4>Tactile Terms</h4>
+
+					<p>The tactile terms identify content that is available in tactile form.</p>
 
 					<section id="braille">
 						<h5>braille</h5>
@@ -614,77 +709,6 @@
 							or <code>/nemeth</code>), and whether the braille is contracted or not (<code>/grade1</code>
 							and <code>/grade2</code>). Other extensions such as the code the braille conforms to can
 							also be specified.</p>
-					</section>
-
-					<section id="captions">
-						<h5>captions</h5>
-
-						<p>Indicates that synchronized captions are available for audio and video content.</p>
-					</section>
-
-					<section id="ChemML">
-						<h5>ChemML</h5>
-
-						<p>Identifies that chemical information is encoded using the <a
-								href="https://hachmannlab.github.io/chemml/">ChemML markup language</a>.</p>
-					</section>
-
-					<section id="describedMath">
-						<h5>describedMath</h5>
-
-						<p>Textual descriptions of math equations are included, whether in the alt attribute for
-							image-based equations, using the <a
-								href="https://www.w3.org/TR/MathML3/chapter2.html#interf.toplevel.atts"
-									><code>alttext</code> attribute</a> for [[MathML]] equations, or by other means.</p>
-					</section>
-
-					<section id="latex">
-						<h5>latex</h5>
-
-						<p>Identifies that mathematical equations and formulas are encoded in the <a
-								href="https://www.latex-project.org/">LaTeX typesetting system</a>.</p>
-					</section>
-
-					<section id="longDescription">
-						<h5>longDescription</h5>
-
-						<p>Descriptions are provided for image-based visual content and/or complex structures such as
-							tables, mathematics, diagrams, and charts.</p>
-
-						<div class="note">
-							<p>Authors may set this property independent of the method they use to provide the extended
-								descriptions (i.e., it is not required to use the obsolete [[HTML]] <a
-									href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-longdesc"
-										><code>longdesc</code> attribute</a>).</p>
-						</div>
-					</section>
-
-					<section id="mathml">
-						<h5>MathML</h5>
-
-						<p>Identifies that mathematical equations and formulas are encoded in [[MathML]].</p>
-					</section>
-
-					<section id="rubyAnnotations">
-						<h5>rubyAnnotations</h5>
-
-						<p>Indicates that <a
-								href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
-									><code>ruby</code> annotations</a> [[HTML]] are provided in the content. Ruby
-							annotations are used as pronunciation guides for the logographic characters for languages
-							like Chinese or Japanese. It makes difficult Kanji or CJK ideographic characters more
-							accessible.</p>
-
-						<p>The absence of <code>rubyAnnotations</code> implies that no CJK ideographic characters have
-							ruby.</p>
-					</section>
-
-					<section id="signLanguage">
-						<h5>signLanguage</h5>
-
-						<p>Synchronized sign language interpretation is available for audio and video content. The value
-							may be extended by adding an [[ISO-639]] sign language code. For example,
-								<code>/sgn-en-us</code> for American Sign Language.</p>
 					</section>
 
 					<section id="tactileGraphic">
@@ -699,19 +723,6 @@
 						<h5>tactileObject</h5>
 
 						<p>The content is a tactile 3D object, or the model to generate one is included.</p>
-					</section>
-
-					<section id="transcript">
-						<h5>transcript</h5>
-
-						<p>Indicates that a transcript of the audio content is available.</p>
-					</section>
-
-					<section id="ttsMarkup">
-						<h5>ttsMarkup</h5>
-
-						<p>One or more of [[SSML]], [[Pronunciation-Lexicon]], and [[CSS3-Speech]] properties has been
-							used to enhance text-to-speech playback quality.</p>
 					</section>
 				</section>
 
@@ -1243,7 +1254,8 @@
 					issue tracker</a>.</p>
 
 			<ul>
-				<li>No substantive changes have been made to date.</li>
+				<li>26-Jan-2022: The accessibility features have been restructured to better organize them by purpose.
+					See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
 			</ul>
 		</section>
 		<section id="acknowledgments" class="appendix">

@@ -52,6 +52,30 @@
 			pre,
 			code {
 				white-space: break-spaces !important;
+			}
+			fieldset {
+				border: none;
+				padding: 0;
+				margin: 0;
+			}
+			legend {
+				position: absolute;
+				left: -9999rem;
+				overflow: hidden;
+			}
+			div.ex-buttons {
+				margin: 1rem auto -1rem;
+				min-width: 45rem;
+				background-color: rgb(235, 235, 235);
+			}
+			div.ex-buttons input {
+				background-color: inherit;
+				border: none;
+				width: 5rem;
+				height: 1.6rem;
+			}
+			input.active {
+				background-color: rgb(250, 250, 250) !important;
 			}</style>
 	</head>
 	<body>
@@ -151,8 +175,10 @@
 				<p>Setting the property means that the resource is compatible with the given API(s). It does not
 					necessarily mean that the content will be fully accessible to any given user group.</p>
 
-				<aside class="example" title="JSON-LD">
-					<pre><code>{
+				<aside class="example ex-group" title="AccessibilityAPI">
+					<pre class="epub"><code>To Do</code></pre>
+
+					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "DigitalDocument",
    &#8230;
@@ -160,10 +186,10 @@
                         "iOSAccessibility"],
    &#8230;
 }</code></pre>
-				</aside>
 
-				<aside class="example" title="HTML and RDFa">
-					<pre><code>&lt;div
+					<pre class="microdata"><code>To Do</code></pre>
+
+					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
     typeof="DigitalDocument">
    &#8230;
@@ -278,8 +304,10 @@
 
 				<p>Setting the property means that the specified control method(s) are compatible with the resource.</p>
 
-				<aside class="example" title="JSON-LD">
-					<pre><code>{
+				<aside class="example ex-group" title="accessibilityControl">
+					<pre class="epub"><code>To Do</code></pre>
+
+					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "DigitalDocument",
    &#8230;
@@ -287,10 +315,8 @@
                             "fullMouseControl"],
    &#8230;
 }</code></pre>
-				</aside>
 
-				<aside class="example" title="HTML and Microdata">
-					<pre><code>&lt;div
+					<pre class="microdata"><code>&lt;div
     itemtype="https://schema.org/DigitalDocument"
     itemscope="">
    &#8230;
@@ -309,6 +335,8 @@
    &#8230;
 &lt;/div></code></pre>
 				</aside>
+
+				<pre class="rdfa"><code>To Do</code></pre>
 			</section>
 
 			<section id="accessibilityControl-vocabulary">
@@ -398,21 +426,8 @@
 					can set to indicate that the resource does not contain special enhancements. This value avoids the
 					ambiguity that can arise if a resource has not been checked.</p>
 
-				<aside class="example" title="JSON-LD">
-					<pre><code>{
-   "@context": "schema.org",
-   "@type": "Book",
-   &#8230;
-   "accessibilityFeature": ["tableOfContents",
-                            "alternativeText",
-                            "longDescription",
-                            "transcript"],
-   &#8230;
-}</code></pre>
-				</aside>
-
-				<aside class="example" title="EPUB 3">
-					<pre><code>&lt;package &#8230;>
+				<aside class="example ex-group" title="accessibilityFeature">
+					<pre class="epub"><code>&lt;package &#8230;>
    &lt;metadata>
       &#8230;
       &lt;meta
@@ -435,6 +450,21 @@
    &lt;/metadata>
    &#8230;
 &lt;/package></code></pre>
+
+					<pre class="json-ld"><code>{
+   "@context": "schema.org",
+   "@type": "Book",
+   &#8230;
+   "accessibilityFeature": ["tableOfContents",
+                            "alternativeText",
+                            "longDescription",
+                            "transcript"],
+   &#8230;
+}</code></pre>
+
+					<pre class="microdata"><code>To Do</code></pre>
+
+					<pre class="rdfa"><code>To Do</code></pre>
 				</aside>
 			</section>
 
@@ -778,18 +808,20 @@
 					not know whether hazards are present (e.g., because they do not know how, or are unable, to assess
 					them).</p>
 
-				<aside class="example" title="JSON-LD">
-					<pre><code>{
+				<aside class="example ex-group" title="accessibilityHazard">
+					<pre class="epub"><code>To Do</code></pre>
+
+					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "MediaObject",
    &#8230;
    "accessibilityHazard": ["flashingHazard"],
    &#8230;
 }</code></pre>
-				</aside>
 
-				<aside class="example" title="HTML and RDFa">
-					<pre><code>&lt;div
+					<pre class="microdata"><code>To Do</code></pre>
+
+					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
     typeof="MediaObject">
    &#8230;
@@ -890,19 +922,8 @@
 			<p>The <code>accessibilitySummary</code> property is a free-form field that allows authors to describe the
 				accessible properties of the resource. As a result, it does not have an associated vocabulary.</p>
 
-			<aside class="example" title="JSON-LD">
-				<pre><code>{
-   "@context": "schema.org",
-   "@type": "Book",
-   &#8230;
-   "accessibilitySummary": "This publication &#8230;",
-   &#8230;
-}</code></pre>
-			</aside>
-
-
-			<aside class="example" title="EPUB 3">
-				<pre><code>&lt;package &#8230;>
+			<aside class="example ex-group" title="accessibilitySummary">
+				<pre class="epub"><code>&lt;package &#8230;>
    &lt;metadata>
       &#8230;
       &lt;meta
@@ -914,6 +935,18 @@
    &lt;/metadata>
    &#8230;
 &lt;/package></code></pre>
+
+				<pre class="json-ld"><code>{
+   "@context": "schema.org",
+   "@type": "Book",
+   &#8230;
+   "accessibilitySummary": "This publication &#8230;",
+   &#8230;
+}</code></pre>
+
+				<pre class="microdata"><code>To Do</code></pre>
+
+				<pre class="rdfa"><code>To Do</code></pre>
 			</aside>
 		</section>
 		<section id="accessMode">
@@ -936,8 +969,10 @@
 					fill this gap of understanding the combinations of modes necessary to fully consume the
 					information.</p>
 
-				<aside class="example" title="JSON-LD">
-					<pre><code>{
+				<aside class="example ex-group" title="accessMode">
+					<pre class="epub"><code>To Do</code></pre>
+
+					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "Book",
    &#8230;
@@ -945,10 +980,10 @@
                   "visual"],
    &#8230;
 }</code></pre>
-				</aside>
 
-				<aside class="example" title="HTML and RDFa">
-					<pre><code>&lt;div
+					<pre class="microdata"><code>To Do</code></pre>
+
+					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
     typeof="Book">
    &#8230;
@@ -1072,8 +1107,24 @@
 					sufficient access modes: each listing of sufficient access modes provides users with one possible
 					combination of reading modes that allow the content to be read in full.</p>
 
-				<aside class="example" title="JSON-LD">
-					<pre><code>{
+				<aside class="example ex-group" title="accessModeSufficient">
+					<pre class="epub"><code>&lt;package &#8230;>
+   &lt;metadata>
+      &#8230;
+      &lt;meta
+          property="schema:accessModeSufficient">
+         textual,visual
+      &lt;/meta>
+      &lt;meta
+          property="schema:accessModeSufficient">
+         textual
+      &lt;/meta>
+  	&#8230;
+   &lt;/metadata>
+   &#8230;
+&lt;/package></code></pre>
+
+					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "Book",
    &#8230;
@@ -1091,25 +1142,10 @@
    ]
    &#8230;
 }</code></pre>
-				</aside>
 
+					<pre class="microdata"><code>To Do</code></pre>
 
-				<aside class="example" title="EPUB 3">
-					<pre><code>&lt;package &#8230;>
-   &lt;metadata>
-      &#8230;
-      &lt;meta
-          property="schema:accessModeSufficient">
-         textual,visual
-      &lt;/meta>
-      &lt;meta
-          property="schema:accessModeSufficient">
-         textual
-      &lt;/meta>
-  	&#8230;
-   &lt;/metadata>
-   &#8230;
-&lt;/package></code></pre>
+					<pre class="rdfa"><code>To Do</code></pre>
 				</aside>
 			</section>
 
@@ -1291,5 +1327,64 @@
 					>Accessibility Metadata Project</a> for their work bringing the properties and vocabularies to
 				reality.</p>
 		</section>
+		<script>
+			// <![CDATA[
+			var pre = document.querySelectorAll('pre.epub, pre.json-ld, pre.rdfa, pre.microdata');
+			
+			window.onload = function() {
+			
+				// hide the non-epub examples
+				for (var i = 0; i < pre.length; i++) {
+					if (!pre[i].classList.contains('epub')) {
+						pre[i].setAttribute('hidden', 'hidden');
+					}
+				}
+				
+				// add the control buttons
+				var buttons = '<div class="ex-buttons">\
+<fieldset>\
+	<legend>Select example format</legend>\
+	<input type="button" class="active" value="EPUB" onclick="changeExamples(this)"/>\
+	<input type="button" value="JSON-LD" onclick="changeExamples(this)"/>\
+	<input type="button" value="Microdata" onclick="changeExamples(this)"/>\
+	<input type="button" value="RDFa" onclick="changeExamples(this)"/>\
+</fieldset>\
+</div>';
+				
+				var exhd = document.querySelectorAll('aside.ex-group > pre:first-child');
+				
+				for (var j= 0; j < exhd.length; j++) {
+					exhd[j].insertAdjacentHTML('beforeBegin', buttons);;
+				}
+			}
+			
+			function changeExamples(elem) {
+			
+				// hide the non-epub examples
+				var type = elem.value.toLowerCase();
+				
+				for (var i = 0; i < pre.length; i++) {
+					if (!pre[i].classList.contains(type)) {
+						pre[i].setAttribute('hidden', 'hidden');
+					}
+					else {
+						pre[i].removeAttribute('hidden');
+					}
+				}
+				
+				// set the active button
+				var button = document.querySelectorAll('input[type="button"]');
+				
+				for (var j = 0; j < button.length; j++) {
+					if (button[j].value.toLowerCase() !== type) {
+						button[j].classList.remove('active');
+					}
+					else {
+						button[j].classList.add('active');
+					}	
+				}
+			}
+			// ]]>
+		</script>
 	</body>
 </html>

@@ -48,7 +48,8 @@
 					repoURL: "https://github.com/w3c/a11y-discov-vocab",
 					branch: "main"
 				},
-				preProcess: [formatExamples,inlineCustomCSS]
+				preProcess: [formatExamples,inlineCustomCSS],
+				postProcess: [formatExampleTitles]
 			};
 			//]]>
 		</script>
@@ -151,8 +152,6 @@
 					necessarily mean that the content will be fully accessible to any given user group.</p>
 
 				<aside class="example ex-group" title="AccessibilityAPI">
-					<pre class="epub"><code>To Do</code></pre>
-
 					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "DigitalDocument",
@@ -162,8 +161,8 @@
    &#8230;
 }</code></pre>
 
-					<pre class="microdata"><code>To Do</code></pre>
-
+					<pre class="epub">AccessibilityAPI is not applicable to EPUB</pre>
+					
 					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
     typeof="DigitalDocument">
@@ -172,13 +171,36 @@
       This word processing document is compatible
       with the
       &lt;span
-          property="accessibilityAPI"
-          content="AndroidAccessibility">Android&lt;/span>
+          property="accessibilityAPI">
+         AndroidAccessibility
+      &lt;/span>
       and
       &lt;span
-          property="accessibilityAPI"
-          content="iOSAccessibility">iOS&lt;/span>
-         accessibility APIS.
+          property="accessibilityAPI">
+         iOSAccessibility
+      &lt;/span>
+      accessibility APIS.
+   &lt;/p>
+   &#8230;
+&lt;/div></code></pre>
+					
+					<pre class="microdata"><code>&lt;div
+    itemtype="DigitalDocument"
+    itemscope="">
+   &#8230;
+   &lt;p>
+      This word processing document is compatible
+      with the
+      &lt;span
+          itemprop="accessibilityAPI">
+         AndroidAccessibility
+      &lt;/span>
+      and
+      &lt;span
+          itemprop="accessibilityAPI">
+         iOSAccessibility
+      &lt;/span>
+      APIS.
    &lt;/p>
    &#8230;
 &lt;/div></code></pre>
@@ -280,8 +302,6 @@
 				<p>Setting the property means that the specified control method(s) are compatible with the resource.</p>
 
 				<aside class="example ex-group" title="accessibilityControl">
-					<pre class="epub"><code>To Do</code></pre>
-
 					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "DigitalDocument",
@@ -291,6 +311,10 @@
    &#8230;
 }</code></pre>
 
+					<pre class="epub"><code>To Do</code></pre>
+					
+					<pre class="rdfa"><code>To Do</code></pre>
+					
 					<pre class="microdata"><code>&lt;div
     itemtype="https://schema.org/DigitalDocument"
     itemscope="">
@@ -310,8 +334,6 @@
    &#8230;
 &lt;/div></code></pre>
 				</aside>
-
-				<pre class="rdfa"><code>To Do</code></pre>
 			</section>
 
 			<section id="accessibilityControl-vocabulary">
@@ -402,6 +424,17 @@
 					ambiguity that can arise if a resource has not been checked.</p>
 
 				<aside class="example ex-group" title="accessibilityFeature">
+					<pre class="json-ld"><code>{
+   "@context": "schema.org",
+   "@type": "Book",
+   &#8230;
+   "accessibilityFeature": ["tableOfContents",
+                            "alternativeText",
+                            "longDescription",
+                            "transcript"],
+   &#8230;
+}</code></pre>
+
 					<pre class="epub"><code>&lt;package &#8230;>
    &lt;metadata>
       &#8230;
@@ -425,21 +458,10 @@
    &lt;/metadata>
    &#8230;
 &lt;/package></code></pre>
-
-					<pre class="json-ld"><code>{
-   "@context": "schema.org",
-   "@type": "Book",
-   &#8230;
-   "accessibilityFeature": ["tableOfContents",
-                            "alternativeText",
-                            "longDescription",
-                            "transcript"],
-   &#8230;
-}</code></pre>
-
-					<pre class="microdata"><code>To Do</code></pre>
-
+					
 					<pre class="rdfa"><code>To Do</code></pre>
+					
+					<pre class="microdata"><code>To Do</code></pre>
 				</aside>
 			</section>
 
@@ -784,8 +806,6 @@
 					them).</p>
 
 				<aside class="example ex-group" title="accessibilityHazard">
-					<pre class="epub"><code>To Do</code></pre>
-
 					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "MediaObject",
@@ -794,8 +814,8 @@
    &#8230;
 }</code></pre>
 
-					<pre class="microdata"><code>To Do</code></pre>
-
+					<pre class="epub"><code>To Do</code></pre>
+					
 					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
     typeof="MediaObject">
@@ -811,6 +831,8 @@
    &lt;/p>
    &#8230;
 &lt;/div></code></pre>
+					
+					<pre class="microdata"><code>To Do</code></pre>
 				</aside>
 			</section>
 
@@ -898,6 +920,14 @@
 				accessible properties of the resource. As a result, it does not have an associated vocabulary.</p>
 
 			<aside class="example ex-group" title="accessibilitySummary">
+				<pre class="json-ld"><code>{
+   "@context": "schema.org",
+   "@type": "Book",
+   &#8230;
+   "accessibilitySummary": "This publication &#8230;",
+   &#8230;
+}</code></pre>
+
 				<pre class="epub"><code>&lt;package &#8230;>
    &lt;metadata>
       &#8230;
@@ -911,17 +941,9 @@
    &#8230;
 &lt;/package></code></pre>
 
-				<pre class="json-ld"><code>{
-   "@context": "schema.org",
-   "@type": "Book",
-   &#8230;
-   "accessibilitySummary": "This publication &#8230;",
-   &#8230;
-}</code></pre>
-
-				<pre class="microdata"><code>To Do</code></pre>
-
 				<pre class="rdfa"><code>To Do</code></pre>
+				
+				<pre class="microdata"><code>To Do</code></pre>
 			</aside>
 		</section>
 		<section id="accessMode">
@@ -945,8 +967,6 @@
 					information.</p>
 
 				<aside class="example ex-group" title="accessMode">
-					<pre class="epub"><code>To Do</code></pre>
-
 					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "Book",
@@ -956,7 +976,7 @@
    &#8230;
 }</code></pre>
 
-					<pre class="microdata"><code>To Do</code></pre>
+					<pre class="epub"><code>To Do</code></pre>
 
 					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
@@ -973,6 +993,8 @@
    &lt;/p>
    &#8230;
 &lt;/div></code></pre>
+					
+					<pre class="microdata"><code>To Do</code></pre>
 				</aside>
 			</section>
 
@@ -1083,22 +1105,6 @@
 					combination of reading modes that allow the content to be read in full.</p>
 
 				<aside class="example ex-group" title="accessModeSufficient">
-					<pre class="epub"><code>&lt;package &#8230;>
-   &lt;metadata>
-      &#8230;
-      &lt;meta
-          property="schema:accessModeSufficient">
-         textual,visual
-      &lt;/meta>
-      &lt;meta
-          property="schema:accessModeSufficient">
-         textual
-      &lt;/meta>
-  	&#8230;
-   &lt;/metadata>
-   &#8230;
-&lt;/package></code></pre>
-
 					<pre class="json-ld"><code>{
    "@context": "schema.org",
    "@type": "Book",
@@ -1118,9 +1124,25 @@
    &#8230;
 }</code></pre>
 
-					<pre class="microdata"><code>To Do</code></pre>
+					<pre class="epub"><code>&lt;package &#8230;>
+   &lt;metadata>
+      &#8230;
+      &lt;meta
+          property="schema:accessModeSufficient">
+         textual,visual
+      &lt;/meta>
+      &lt;meta
+          property="schema:accessModeSufficient">
+         textual
+      &lt;/meta>
+  	&#8230;
+   &lt;/metadata>
+   &#8230;
+&lt;/package></code></pre>
 
 					<pre class="rdfa"><code>To Do</code></pre>
+					
+					<pre class="microdata"><code>To Do</code></pre>
 				</aside>
 			</section>
 
@@ -1304,7 +1326,7 @@
 		</section>
 		<script>
 			// <![CDATA[
-			var pre = document.querySelectorAll('pre.epub, pre.json-ld, pre.rdfa, pre.microdata');
+			var pre = document.querySelectorAll('pre.json-ld, pre.epub, pre.rdfa, pre.microdata');
 			
 			function changeExamples(elem) {
 			
@@ -1330,6 +1352,12 @@
 					else {
 						button[j].classList.add('active');
 					}	
+				}
+				
+				var format = document.querySelectorAll('aside.ex-group > div.marker > span.example-title > span.format');
+				
+				for (var k = 0; k < format.length; k++) {
+					format[k].innerHTML = elem.value;
 				}
 			}
 			// ]]>

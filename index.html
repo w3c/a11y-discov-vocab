@@ -4,7 +4,8 @@
 		<meta charset="utf-8" />
 		<title>Schema.org Accessibility Properties for Discoverability Vocabulary</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
-		<script src="common/js/permalink-a11y.js" class="remove"></script>
+		<script src="js/examples.js" class="remove"></script>
+		<script src="js/css-inline.js" class="remove"></script>
 		<script class="remove">
 			//<![CDATA[
 			var respecConfig = {
@@ -46,37 +47,11 @@
 				github: {
 					repoURL: "https://github.com/w3c/a11y-discov-vocab",
 					branch: "main"
-				}
-			};//]]></script>
-		<style>
-			pre,
-			code {
-				white-space: break-spaces !important;
-			}
-			fieldset {
-				border: none;
-				padding: 0;
-				margin: 0;
-			}
-			legend {
-				position: absolute;
-				left: -9999rem;
-				overflow: hidden;
-			}
-			div.ex-buttons {
-				margin: 1rem auto -1rem;
-				min-width: 45rem;
-				background-color: rgb(235, 235, 235);
-			}
-			div.ex-buttons input {
-				background-color: inherit;
-				border: none;
-				width: 5rem;
-				height: 1.6rem;
-			}
-			input.active {
-				background-color: rgb(250, 250, 250) !important;
-			}</style>
+				},
+				preProcess: [formatExamples,inlineCustomCSS]
+			};
+			//]]>
+		</script>
 	</head>
 	<body>
 		<section id="abstract">
@@ -1330,33 +1305,6 @@
 		<script>
 			// <![CDATA[
 			var pre = document.querySelectorAll('pre.epub, pre.json-ld, pre.rdfa, pre.microdata');
-			
-			window.onload = function() {
-			
-				// hide the non-epub examples
-				for (var i = 0; i < pre.length; i++) {
-					if (!pre[i].classList.contains('epub')) {
-						pre[i].setAttribute('hidden', 'hidden');
-					}
-				}
-				
-				// add the control buttons
-				var buttons = '<div class="ex-buttons">\
-<fieldset>\
-	<legend>Select example format</legend>\
-	<input type="button" class="active" value="EPUB" onclick="changeExamples(this)"/>\
-	<input type="button" value="JSON-LD" onclick="changeExamples(this)"/>\
-	<input type="button" value="Microdata" onclick="changeExamples(this)"/>\
-	<input type="button" value="RDFa" onclick="changeExamples(this)"/>\
-</fieldset>\
-</div>';
-				
-				var exhd = document.querySelectorAll('aside.ex-group > pre:first-child');
-				
-				for (var j= 0; j < exhd.length; j++) {
-					exhd[j].insertAdjacentHTML('beforeBegin', buttons);;
-				}
-			}
 			
 			function changeExamples(elem) {
 			

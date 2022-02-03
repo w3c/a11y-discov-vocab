@@ -311,9 +311,26 @@
    &#8230;
 }</code></pre>
 
-					<pre class="epub"><code>To Do</code></pre>
+					<pre class="epub">AccessibilityControl is not applicable to EPUB</pre>
 					
-					<pre class="rdfa"><code>To Do</code></pre>
+					<pre class="rdfa"><code>&lt;div
+    vocab="https://schema.org"
+    typeof="DigitalDocument">
+   &#8230;
+   &lt;p>
+      This word processing document supports
+      user interaction via
+      &lt;span
+          property="accessibilityControl"
+          content="fullKeyboardControl">keyboard&lt;/span>
+      and
+      &lt;span
+          property="accessibilityControl"
+          content="fullMouseControl">mouse&lt;/span>
+      input.
+   &lt;/p>
+   &#8230;
+&lt;/div></code></pre>
 					
 					<pre class="microdata"><code>&lt;div
     itemtype="https://schema.org/DigitalDocument"
@@ -439,6 +456,10 @@
    &lt;metadata>
       &#8230;
       &lt;meta
+          property="rdf:type">
+         https://schema.org/Book
+      &lt;/meta>
+      &lt;meta
           property="schema:accessibilityFeature">
          tableOfContents
       &lt;/meta>
@@ -459,9 +480,73 @@
    &#8230;
 &lt;/package></code></pre>
 					
-					<pre class="rdfa"><code>To Do</code></pre>
+					<pre class="rdfa"><code>&lt;div
+    vocab="https://schema.org"
+    typeof="Book">
+   &#8230;
+   &lt;p>
+      Included accessibility features:
+   &lt;/p>
+   &lt;ul>
+   	&lt;li
+           property="accessibilityFeature"
+           content="tableOfContents">
+          Table of contents
+       &lt;/li>
+   	&lt;li
+           property="accessibilityFeature"
+           content="alternativeText">
+          Alternative text for images
+       &lt;/li>
+   	&lt;li
+           property="accessibilityFeature"
+           content="longDescription">
+          Extended descriptions for images
+       &lt;/li>
+   	&lt;li
+           property="accessibilityFeature"
+           content="transcript">
+          Transcripts for videos
+       &lt;/li>
+   &lt;/ul>
+   &#8230;
+&lt;/div></code></pre>
 					
-					<pre class="microdata"><code>To Do</code></pre>
+					<pre class="microdata"><code>&lt;div
+    itemtype="https://schema.org/Book"
+    itemscope="">
+   &#8230;
+   &lt;p>
+      Included accessibility features:
+   &lt;/p>
+   &lt;ul>
+   	&lt;li>
+   	   &lt;meta
+             itemprop="accessibilityFeature"
+             content="tableOfContents">
+          Table of contents
+       &lt;/li>
+   	&lt;li>
+   	   &lt;meta
+             itemprop="accessibilityFeature"
+             content="alternativeText">
+          Alternative text for images
+       &lt;/li>
+   	&lt;li>
+   	   &lt;meta
+             itemprop="accessibilityFeature"
+             content="longDescription">
+          Extended descriptions for images
+       &lt;/li>
+   	&lt;li>
+   	   &lt;meta
+             itemprop="accessibilityFeature"
+             content="transcript">
+          Transcripts for videos
+       &lt;/li>
+   &lt;/ul>
+   &#8230;
+&lt;/div></code></pre>
 				</aside>
 			</section>
 
@@ -814,7 +899,17 @@
    &#8230;
 }</code></pre>
 
-					<pre class="epub"><code>To Do</code></pre>
+					<pre class="epub"><code>&lt;package &#8230;>
+   &lt;metadata>
+      &#8230;
+      &lt;meta
+          property="schema:accessibilityHazard">
+         flashing
+      &lt;/meta>
+  	&#8230;
+   &lt;/metadata>
+   &#8230;
+&lt;/package></code></pre>
 					
 					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
@@ -832,7 +927,21 @@
    &#8230;
 &lt;/div></code></pre>
 					
-					<pre class="microdata"><code>To Do</code></pre>
+					<pre class="microdata"><code>&lt;div
+    itemtype="https://schema.org/MediaObject"
+    itemscope="">
+   &#8230;
+   &lt;p>
+      This video contains
+      &lt;span
+          itemprop="accessibilityHazard">
+         flashing
+      &lt;/span>
+      sequences that may affect
+      photosensitive readers.
+   &lt;/p>
+   &#8230;
+&lt;/div></code></pre>
 				</aside>
 			</section>
 
@@ -932,6 +1041,10 @@
    &lt;metadata>
       &#8230;
       &lt;meta
+          property="rdf:type">
+         Book
+      &lt;/meta>
+      &lt;meta
           property="schema:accessibilitySummary">
          This publication meets the
          requirements of &#8230;
@@ -941,9 +1054,37 @@
    &#8230;
 &lt;/package></code></pre>
 
-				<pre class="rdfa"><code>To Do</code></pre>
+				<pre class="rdfa"><code>&lt;div
+    vocab="https://schema.org"
+    typeof="Book">
+   &#8230;
+   &lt;dl>
+      &#8230;
+      &lt;dt>Accessibility Summary:&lt;/dt>
+      &lt;dd> 
+         &lt;p property="accessibilitySummary">This
+            publication meets the requirements of
+            &#8230;&lt;/p>
+      &lt;/dd>
+   &lt;/dl>
+   &#8230;
+&lt;/div></code></pre>
 				
-				<pre class="microdata"><code>To Do</code></pre>
+				<pre class="microdata"><code>&lt;div
+    itemtype="https://schema.org/Book"
+    itemscope="">
+   &#8230;
+   &lt;dl>
+      &#8230;
+      &lt;dt>Accessibility Summary:&lt;/dt>
+      &lt;dd> 
+         &lt;p itemprop="accessibilitySummary">This 
+            publication meets the requirements of
+            &#8230;&lt;/p>
+      &lt;/dd>
+   &lt;/dl>
+   &#8230;
+&lt;/div></code></pre>
 			</aside>
 		</section>
 		<section id="accessMode">
@@ -969,18 +1110,32 @@
 				<aside class="example ex-group" title="accessMode">
 					<pre class="json-ld"><code>{
    "@context": "schema.org",
-   "@type": "Book",
+   "@type": "CreativeWork",
    &#8230;
    "accessMode": ["textual",
                   "visual"],
    &#8230;
 }</code></pre>
 
-					<pre class="epub"><code>To Do</code></pre>
+					<pre class="epub"><code>&lt;package &#8230;>
+   &lt;metadata>
+      &#8230;
+      &lt;meta
+          property="schema:accessMode">
+         textual
+      &lt;/meta>
+      &lt;meta
+          property="schema:accessMode">
+         visual
+      &lt;/meta>
+   	&#8230;
+   &lt;/metadata>
+   &#8230;
+&lt;/package></code></pre>
 
 					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
-    typeof="Book">
+    typeof="CreativeWork">
    &#8230;
    &lt;p>
       This book contains both
@@ -994,7 +1149,21 @@
    &#8230;
 &lt;/div></code></pre>
 					
-					<pre class="microdata"><code>To Do</code></pre>
+					<pre class="microdata"><code>&lt;div
+    itemtype="https://schema.org/CreativeWork"
+    itemscope="">
+   &#8230;
+   &lt;p>
+      This book contains both
+      &lt;span
+          itemprop="accessMode">textual&lt;/span>
+      and
+      &lt;span
+          itemprop="accessMode">visual&lt;/span>
+         content.
+   &lt;/p>
+   &#8230;
+&lt;/div></code></pre>
 				</aside>
 			</section>
 
@@ -1107,12 +1276,12 @@
 				<aside class="example ex-group" title="accessModeSufficient">
 					<pre class="json-ld"><code>{
    "@context": "schema.org",
-   "@type": "Book",
+   "@type": "CreativeWork",
    &#8230;
    "accessModeSufficient": [
       {
          "@type": "ItemList",
-         "itemListElement": ["textual", "visual"],
+         "itemListElement": ["textual","visual"],
          "description": "Text and images"
       },
       {
@@ -1125,8 +1294,8 @@
 }</code></pre>
 
 					<pre class="epub"><code>&lt;package &#8230;>
-   &lt;metadata>
       &#8230;
+   &lt;metadata>
       &lt;meta
           property="schema:accessModeSufficient">
          textual,visual
@@ -1140,9 +1309,61 @@
    &#8230;
 &lt;/package></code></pre>
 
-					<pre class="rdfa"><code>To Do</code></pre>
+					<pre class="rdfa"><code>&lt;div
+    vocab="https://schema.org"
+    typeof="CreativeWork">
+   &#8230;
+   &lt;dl>
+      &#8230;
+      &lt;dt>Sufficient Access Modes:&lt;/dt>
+      &lt;dd property="accessModeSufficient">
+         &lt;ul>
+            &lt;li>
+            	&lt;div typeof="ItemList">
+                   &lt;meta property="itemListElement" content="textual">
+                   &lt;meta property="itemListElement" content="visual">
+                   &lt;span property="description">Text and Images&lt;/span>
+            	&lt;/div>
+            &lt;/li>
+            &lt;li>
+            	&lt;div typeof="ItemList">
+                   &lt;meta property="itemListElement" content="textual">
+                   &lt;span property="description">Text&lt;/span>
+            	&lt;/div>
+            &lt;/li>
+         &lt;/ul>
+      &lt;/dd>
+   &lt;/dl>
+   &#8230;
+&lt;/div></code></pre>
 					
-					<pre class="microdata"><code>To Do</code></pre>
+					<pre class="microdata"><code>&lt;div
+    itemtype="https://schema.org/CreativeWork"
+    itemscope="">
+   &#8230;
+   &lt;dl>
+      &#8230;
+      &lt;dt>Sufficient Access Modes:&lt;/dt>
+      &lt;dd itemprop="accessModeSufficient">
+         &lt;ul>
+            &lt;li>
+            	&lt;div itemtype="ItemList" itemscope="">
+                   &lt;meta itemprop="itemListElement" content="textual">
+                   &lt;meta itemprop="itemListElement" content="visual">
+                   &lt;span itemprop="description">Text and Images&lt;/span>
+            	&lt;/div>
+            &lt;/li>
+            &lt;li>
+            	&lt;div itemtype="ItemList" itemscope="">
+                   &lt;meta itemprop="itemListElement" content="textual">
+                   &lt;span itemprop="description">Text&lt;/span>
+            	&lt;/div>
+            &lt;/li>
+         &lt;/ul>
+      &lt;/dd>
+   &lt;/dl>
+   &#8230;
+&lt;/div></code></pre>
 				</aside>
 			</section>
 

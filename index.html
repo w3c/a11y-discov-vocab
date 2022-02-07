@@ -193,10 +193,16 @@
 					<p>Indicates the resource is compatible with the Android Accessibility API.</p>
 				</section>
 
-				<section id="ARIA">
-					<h4>ARIA</h4>
+				<section id="ARIA-deprecated">
+					<h4>ARIA (deprecated)</h4>
 
 					<p>Indicates the resource uses ARIA markup to improve interoperability with platform APIs.</p>
+
+					<div class="note">
+						<p>The use of the ARIA value is now deprecated as ARIA is not an accessibility API. The
+								<code>accessibilityFeature</code> property value "<code>ARIA</code>" is now recommended
+							to use to indicate that a resource makes use of ARIA to improve structural navigation.</p>
+					</div>
 				</section>
 
 				<section id="ATK">
@@ -451,6 +457,24 @@
 						<h5>annotations</h5>
 
 						<p>The work includes annotations from the author, instructor and/or others.</p>
+					</section>
+
+					<section id="ARIA">
+						<h5>ARIA</h5>
+
+						<p>Indicates the resource includes ARIA roles to organize and improve the structure and
+							navigation.</p>
+
+						<p>The use of this value corresponds to the inclusion of <a
+								href="https://www.w3.org/TR/wai-aria/#document_structure_roles">Document Structure</a>,
+								<a href="https://www.w3.org/TR/wai-aria/#landmark_roles">Landmark</a>, <a
+								href="https://www.w3.org/TR/wai-aria/#live_region_roles">Live Region</a>, and <a
+								href="https://www.w3.org/TR/wai-aria/#window_roles">Window</a> roles [[WAI-ARIA]].</p>
+
+						<div class="note">
+							<p>The <a href="#accessibilityControl"><code>accessibilityControl</code> property</a> can be
+								used to indicate what input devices custom controls are accessible with.</p>
+						</div>
 					</section>
 
 					<section id="bookmarks">
@@ -1156,6 +1180,7 @@
 				<div class="example">
 					<pre>&lt;div itemscope="" itemtype="http://schema.org/Book">
    &lt;meta itemprop="bookFormat" content="EBook/DAISY3" />
+   &lt;meta itemprop="accessibilityFeature" content="ARIA" />
    &lt;meta itemprop="accessibilityFeature" content="largePrint" />
    &lt;meta itemprop="accessibilityFeature" content="highContrastDisplay" />
    &lt;meta itemprop="accessibilityFeature" content="displayTransformability/resizeText" />
@@ -1167,7 +1192,6 @@
    &lt;meta itemprop="accessibilityControl" content="fullKeyboardControl" />
    &lt;meta itemprop="accessibilityControl" content="fullMouseControl" />
    &lt;meta itemprop="accessibilityHazard" content="none" />
-   &lt;meta itemprop="accessibilityAPI" content="ARIA" />
    &lt;dl>
       &lt;dt>Name:&lt;/dt>
       &lt;dd itemprop="name">Holt Physical Science&lt;/dd>
@@ -1276,6 +1300,10 @@
 					issue tracker</a>.</p>
 
 			<ul>
+				<li>04-Feb-2022: The <code>accessibilityAPI</code> value "ARIA" is deprecated. It is replaced by a new
+					"ARIA" value for <code>accessibilityFeature</code> for indicating the use of roles of enhanced
+					structural and landmark navigation. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/4"
+						>issue 4</a>.</li>
 				<li>26-Jan-2022: The accessibility features have been restructured to better organize them by purpose.
 					See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
 			</ul>

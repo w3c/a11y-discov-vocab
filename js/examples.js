@@ -21,10 +21,11 @@ function formatExamples() {
 </fieldset>\
 </div>';
 	
-	var exhd = document.querySelectorAll('aside.ex-group > pre:first-child');
+	var exhd = document.querySelectorAll('aside.ex-group > :first-child');
 	
 	for (var j= 0; j < exhd.length; j++) {
-		exhd[j].insertAdjacentHTML('beforeBegin', buttons);;
+		var placement = exhd[j].tagName.toLowerCase() === 'p' ? 'afterend' : 'beforebegin';
+		exhd[j].insertAdjacentHTML(placement, buttons);
 	}
 }
 

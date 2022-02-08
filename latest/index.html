@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 28.2.6">
+<meta name="generator" content="ReSpec 29.0.6">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -94,11 +94,11 @@ details.respec-tests-details>ul{width:100%;margin-top:-.3em}
 details.respec-tests-details>li{padding-left:1em}
 a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
 aside.example .marker>a.self-link{color:inherit}
-:is(h2,h3,h4,h5,h6)+a.self-link{border:none;color:inherit;position:relative;top:-2.9em;left:-1.4em;margin-bottom:-2em}
-:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";opacity:.5;text-decoration:none}
+:is(h2,h3,h4,h5,h6)+a.self-link{border:none;color:inherit;position:relative;top:-2.75em;left:-1.4em;margin-bottom:-2em;display:block;font-size:100%}
+:is(h2,h3,h4,h5,h6)+a.self-link::before{content:"§";opacity:.5;text-decoration:none;line-height:1.2em;vertical-align:middle}
 @media (max-width:767px){
 dd{margin-left:0}
-:is(h2,h3,h4,h5,h6)+a.self-link{left:95%}
+:is(h2,h3,h4,h5,h6)+a.self-link{left:101%}
 }
 @media print{
 .removeOnSave{display:none}
@@ -180,8 +180,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     "repoURL": "https://github.com/w3c/a11y-discov-vocab",
     "branch": "main"
   },
-  "publishISODate": "2022-01-26T00:00:00.000Z",
-  "generatedSubtitle": "Final Community Group Report 26 January 2022"
+  "publishISODate": "2022-02-07T00:00:00.000Z",
+  "generatedSubtitle": "Final Community Group Report 07 February 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/cg-final"></head>
 	<body class="h-entry informative"><div class="head">
@@ -189,7 +189,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     
     <h2>
       Final Community Group Report
-      <time class="dt-published" datetime="2022-01-26">26 January 2022</time>
+      <time class="dt-published" datetime="2022-02-07">07 February 2022</time>
     </h2>
     <dl>
       
@@ -249,12 +249,12 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
           discussion of this specification.
         
     
-  </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#background"><bdi class="secno">1.1 </bdi>Background</a></li><li class="tocline"><a class="tocxref" href="#naming"><bdi class="secno">1.2 </bdi>Vocabulary Naming Convention</a></li><li class="tocline"><a class="tocxref" href="#extensions"><bdi class="secno">1.3 </bdi>Extending Vocabulary Terms</a></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilityAPI"><bdi class="secno">2. </bdi>The <code>accessibilityAPI</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibilityAPI-application"><bdi class="secno">2.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessibilityAPI-vocabulary"><bdi class="secno">2.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#AndroidAccessibility"><bdi class="secno">2.2.1 </bdi>AndroidAccessibility</a></li><li class="tocline"><a class="tocxref" href="#ARIA"><bdi class="secno">2.2.2 </bdi>ARIA</a></li><li class="tocline"><a class="tocxref" href="#ATK"><bdi class="secno">2.2.3 </bdi>ATK</a></li><li class="tocline"><a class="tocxref" href="#AT-SPI"><bdi class="secno">2.2.4 </bdi>AT-SPI</a></li><li class="tocline"><a class="tocxref" href="#BlackberryAccessibility"><bdi class="secno">2.2.5 </bdi>BlackberryAccessibility</a></li><li class="tocline"><a class="tocxref" href="#iAccessible2"><bdi class="secno">2.2.6 </bdi>iAccessible2</a></li><li class="tocline"><a class="tocxref" href="#iOSAccessibility"><bdi class="secno">2.2.7 </bdi>iOSAccessibility</a></li><li class="tocline"><a class="tocxref" href="#JavaAccessibility"><bdi class="secno">2.2.8 </bdi>JavaAccessibility</a></li><li class="tocline"><a class="tocxref" href="#MacOSXAccessibility"><bdi class="secno">2.2.9 </bdi>MacOSXAccessibility</a></li><li class="tocline"><a class="tocxref" href="#MSAA"><bdi class="secno">2.2.10 </bdi>MSAA</a></li><li class="tocline"><a class="tocxref" href="#UIAutomation"><bdi class="secno">2.2.11 </bdi>UIAutomation</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilityControl"><bdi class="secno">3. </bdi>The <code>accessibilityControl</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibilityControl-application"><bdi class="secno">3.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessibilityControl-vocabulary"><bdi class="secno">3.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#fullKeyboardControl"><bdi class="secno">3.2.1 </bdi>fullKeyboardControl</a></li><li class="tocline"><a class="tocxref" href="#fullMouseControl"><bdi class="secno">3.2.2 </bdi>fullMouseControl</a></li><li class="tocline"><a class="tocxref" href="#fullSwitchControl"><bdi class="secno">3.2.3 </bdi>fullSwitchControl</a></li><li class="tocline"><a class="tocxref" href="#fullTouchControl"><bdi class="secno">3.2.4 </bdi>fullTouchControl</a></li><li class="tocline"><a class="tocxref" href="#fullVideoControl"><bdi class="secno">3.2.5 </bdi>fullVideoControl</a></li><li class="tocline"><a class="tocxref" href="#fullVoiceControl"><bdi class="secno">3.2.6 </bdi>fullVoiceControl</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilityFeature"><bdi class="secno">4. </bdi>The <code>accessibilityFeature</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibilityFeature-application"><bdi class="secno">4.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessibilityFeature-vocabulary"><bdi class="secno">4.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#structure-and-navigation-terms"><bdi class="secno">4.2.1 </bdi>Structure and Navigation Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#annotations"><bdi class="secno">4.2.1.1 </bdi>annotations</a></li><li class="tocline"><a class="tocxref" href="#bookmarks"><bdi class="secno">4.2.1.2 </bdi>bookmarks</a></li><li class="tocline"><a class="tocxref" href="#index-term"><bdi class="secno">4.2.1.3 </bdi>index</a></li><li class="tocline"><a class="tocxref" href="#printPageNumbers"><bdi class="secno">4.2.1.4 </bdi>printPageNumbers</a></li><li class="tocline"><a class="tocxref" href="#readingOrder"><bdi class="secno">4.2.1.5 </bdi>readingOrder</a></li><li class="tocline"><a class="tocxref" href="#structuralNavigation"><bdi class="secno">4.2.1.6 </bdi>structuralNavigation</a></li><li class="tocline"><a class="tocxref" href="#taggedPDF"><bdi class="secno">4.2.1.7 </bdi>taggedPDF</a></li></ol></li><li class="tocline"><a class="tocxref" href="#adaptation-terms"><bdi class="secno">4.2.2 </bdi>Adaptation Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alternativeText"><bdi class="secno">4.2.2.1 </bdi>alternativeText</a></li><li class="tocline"><a class="tocxref" href="#audioDescription"><bdi class="secno">4.2.2.2 </bdi>audioDescription</a></li><li class="tocline"><a class="tocxref" href="#captions"><bdi class="secno">4.2.2.3 </bdi>captions</a></li><li class="tocline"><a class="tocxref" href="#describedMath"><bdi class="secno">4.2.2.4 </bdi>describedMath</a></li><li class="tocline"><a class="tocxref" href="#longDescription"><bdi class="secno">4.2.2.5 </bdi>longDescription</a></li><li class="tocline"><a class="tocxref" href="#rubyAnnotations"><bdi class="secno">4.2.2.6 </bdi>rubyAnnotations</a></li><li class="tocline"><a class="tocxref" href="#signLanguage"><bdi class="secno">4.2.2.7 </bdi>signLanguage</a></li><li class="tocline"><a class="tocxref" href="#transcript"><bdi class="secno">4.2.2.8 </bdi>transcript</a></li></ol></li><li class="tocline"><a class="tocxref" href="#rendering-control-terms"><bdi class="secno">4.2.3 </bdi>Rendering Control Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#displayTransformability"><bdi class="secno">4.2.3.1 </bdi>displayTransformability</a></li><li class="tocline"><a class="tocxref" href="#synchronizedAudioText"><bdi class="secno">4.2.3.2 </bdi>synchronizedAudioText</a></li><li class="tocline"><a class="tocxref" href="#timingControl"><bdi class="secno">4.2.3.3 </bdi>timingControl</a></li><li class="tocline"><a class="tocxref" href="#unlocked"><bdi class="secno">4.2.3.4 </bdi>unlocked</a></li></ol></li><li class="tocline"><a class="tocxref" href="#specialized-markup-terms"><bdi class="secno">4.2.4 </bdi>Specialized Markup Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ChemML"><bdi class="secno">4.2.4.1 </bdi>ChemML</a></li><li class="tocline"><a class="tocxref" href="#latex"><bdi class="secno">4.2.4.2 </bdi>latex</a></li><li class="tocline"><a class="tocxref" href="#mathml"><bdi class="secno">4.2.4.3 </bdi>MathML</a></li><li class="tocline"><a class="tocxref" href="#ttsMarkup"><bdi class="secno">4.2.4.4 </bdi>ttsMarkup</a></li></ol></li><li class="tocline"><a class="tocxref" href="#clarity-terms"><bdi class="secno">4.2.5 </bdi>Clarity Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#highContrastAudio"><bdi class="secno">4.2.5.1 </bdi>highContrastAudio</a></li><li class="tocline"><a class="tocxref" href="#highContrastDisplay"><bdi class="secno">4.2.5.2 </bdi>highContrastDisplay</a></li><li class="tocline"><a class="tocxref" href="#largePrint"><bdi class="secno">4.2.5.3 </bdi>largePrint</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tactile-terms"><bdi class="secno">4.2.6 </bdi>Tactile Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#braille"><bdi class="secno">4.2.6.1 </bdi>braille</a></li><li class="tocline"><a class="tocxref" href="#tactileGraphic"><bdi class="secno">4.2.6.2 </bdi>tactileGraphic</a></li><li class="tocline"><a class="tocxref" href="#tactileObject"><bdi class="secno">4.2.6.3 </bdi>tactileObject</a></li></ol></li><li class="tocline"><a class="tocxref" href="#feature-none"><bdi class="secno">4.2.7 </bdi>none</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilityHazard"><bdi class="secno">5. </bdi>The <code>accessibilityHazard</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibilityHazard-application"><bdi class="secno">5.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessibilityHazard-vocabulary"><bdi class="secno">5.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#flashing"><bdi class="secno">5.2.1 </bdi>flashing</a></li><li class="tocline"><a class="tocxref" href="#noFlashingHazard"><bdi class="secno">5.2.2 </bdi>noFlashingHazard</a></li><li class="tocline"><a class="tocxref" href="#motionSimulation"><bdi class="secno">5.2.3 </bdi>motionSimulation</a></li><li class="tocline"><a class="tocxref" href="#noMotionSimulationHazard"><bdi class="secno">5.2.4 </bdi>noMotionSimulationHazard</a></li><li class="tocline"><a class="tocxref" href="#sound"><bdi class="secno">5.2.5 </bdi>sound</a></li><li class="tocline"><a class="tocxref" href="#noSoundHazard"><bdi class="secno">5.2.6 </bdi>noSoundHazard</a></li><li class="tocline"><a class="tocxref" href="#unknown"><bdi class="secno">5.2.7 </bdi>unknown</a></li><li class="tocline"><a class="tocxref" href="#hazard-none"><bdi class="secno">5.2.8 </bdi>none</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilitySummary"><bdi class="secno">6. </bdi>The <code>accessibilitySummary</code> Property</a></li><li class="tocline"><a class="tocxref" href="#accessMode"><bdi class="secno">7. </bdi>The <code>accessMode</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessMode-application"><bdi class="secno">7.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessMode-vocabulary"><bdi class="secno">7.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#auditory"><bdi class="secno">7.2.1 </bdi>auditory</a></li><li class="tocline"><a class="tocxref" href="#chartOnVisual"><bdi class="secno">7.2.2 </bdi>chartOnVisual</a></li><li class="tocline"><a class="tocxref" href="#chemOnVisual"><bdi class="secno">7.2.3 </bdi>chemOnVisual</a></li><li class="tocline"><a class="tocxref" href="#colorDependent"><bdi class="secno">7.2.4 </bdi>colorDependent</a></li><li class="tocline"><a class="tocxref" href="#diagramOnVisual"><bdi class="secno">7.2.5 </bdi>diagramOnVisual</a></li><li class="tocline"><a class="tocxref" href="#mathOnVisual"><bdi class="secno">7.2.6 </bdi>mathOnVisual</a></li><li class="tocline"><a class="tocxref" href="#musicOnVisual"><bdi class="secno">7.2.7 </bdi>musicOnVisual</a></li><li class="tocline"><a class="tocxref" href="#tactile"><bdi class="secno">7.2.8 </bdi>tactile</a></li><li class="tocline"><a class="tocxref" href="#textOnVisual"><bdi class="secno">7.2.9 </bdi>textOnVisual</a></li><li class="tocline"><a class="tocxref" href="#textual"><bdi class="secno">7.2.10 </bdi>textual</a></li><li class="tocline"><a class="tocxref" href="#visual"><bdi class="secno">7.2.11 </bdi>visual</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessModeSufficient"><bdi class="secno">8. </bdi>The <code>accessModeSufficient</code> property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessModeSufficient-application"><bdi class="secno">8.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessModeSufficient-vocabulary"><bdi class="secno">8.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ams-auditory"><bdi class="secno">8.2.1 </bdi>auditory</a></li><li class="tocline"><a class="tocxref" href="#ams-tactile"><bdi class="secno">8.2.2 </bdi>tactile</a></li><li class="tocline"><a class="tocxref" href="#ams-textual"><bdi class="secno">8.2.3 </bdi>textual</a></li><li class="tocline"><a class="tocxref" href="#ams-visual"><bdi class="secno">8.2.4 </bdi>visual</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">9. </bdi>Examples</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ex-book"><bdi class="secno">9.1 </bdi>Book</a></li><li class="tocline"><a class="tocxref" href="#ex-video"><bdi class="secno">9.2 </bdi>Video</a></li></ol></li><li class="tocline"><a class="tocxref" href="#change-log"><bdi class="secno">A. </bdi>Change Log</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.1 </bdi>Informative references</a></li></ol></li></ol></nav>
-		<section id="intro">
-			<h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#intro" aria-label="Permalink for Section 1."></a>
+  </p></section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#intro"><bdi class="secno">1. </bdi>Introduction</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#background"><bdi class="secno">1.1 </bdi>Background</a></li><li class="tocline"><a class="tocxref" href="#naming"><bdi class="secno">1.2 </bdi>Vocabulary Naming Convention</a></li><li class="tocline"><a class="tocxref" href="#extensions"><bdi class="secno">1.3 </bdi>Extending Vocabulary Terms</a></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilityAPI"><bdi class="secno">2. </bdi>The <code>accessibilityAPI</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibilityAPI-application"><bdi class="secno">2.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessibilityAPI-vocabulary"><bdi class="secno">2.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#AndroidAccessibility"><bdi class="secno">2.2.1 </bdi>AndroidAccessibility</a></li><li class="tocline"><a class="tocxref" href="#ARIA-deprecated"><bdi class="secno">2.2.2 </bdi>ARIA (deprecated)</a></li><li class="tocline"><a class="tocxref" href="#ATK"><bdi class="secno">2.2.3 </bdi>ATK</a></li><li class="tocline"><a class="tocxref" href="#AT-SPI"><bdi class="secno">2.2.4 </bdi>AT-SPI</a></li><li class="tocline"><a class="tocxref" href="#BlackberryAccessibility"><bdi class="secno">2.2.5 </bdi>BlackberryAccessibility</a></li><li class="tocline"><a class="tocxref" href="#iAccessible2"><bdi class="secno">2.2.6 </bdi>iAccessible2</a></li><li class="tocline"><a class="tocxref" href="#iOSAccessibility"><bdi class="secno">2.2.7 </bdi>iOSAccessibility</a></li><li class="tocline"><a class="tocxref" href="#JavaAccessibility"><bdi class="secno">2.2.8 </bdi>JavaAccessibility</a></li><li class="tocline"><a class="tocxref" href="#MacOSXAccessibility"><bdi class="secno">2.2.9 </bdi>MacOSXAccessibility</a></li><li class="tocline"><a class="tocxref" href="#MSAA"><bdi class="secno">2.2.10 </bdi>MSAA</a></li><li class="tocline"><a class="tocxref" href="#UIAutomation"><bdi class="secno">2.2.11 </bdi>UIAutomation</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilityControl"><bdi class="secno">3. </bdi>The <code>accessibilityControl</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibilityControl-application"><bdi class="secno">3.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessibilityControl-vocabulary"><bdi class="secno">3.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#fullKeyboardControl"><bdi class="secno">3.2.1 </bdi>fullKeyboardControl</a></li><li class="tocline"><a class="tocxref" href="#fullMouseControl"><bdi class="secno">3.2.2 </bdi>fullMouseControl</a></li><li class="tocline"><a class="tocxref" href="#fullSwitchControl"><bdi class="secno">3.2.3 </bdi>fullSwitchControl</a></li><li class="tocline"><a class="tocxref" href="#fullTouchControl"><bdi class="secno">3.2.4 </bdi>fullTouchControl</a></li><li class="tocline"><a class="tocxref" href="#fullVideoControl"><bdi class="secno">3.2.5 </bdi>fullVideoControl</a></li><li class="tocline"><a class="tocxref" href="#fullVoiceControl"><bdi class="secno">3.2.6 </bdi>fullVoiceControl</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilityFeature"><bdi class="secno">4. </bdi>The <code>accessibilityFeature</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibilityFeature-application"><bdi class="secno">4.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessibilityFeature-vocabulary"><bdi class="secno">4.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#structure-and-navigation-terms"><bdi class="secno">4.2.1 </bdi>Structure and Navigation Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#annotations"><bdi class="secno">4.2.1.1 </bdi>annotations</a></li><li class="tocline"><a class="tocxref" href="#ARIA"><bdi class="secno">4.2.1.2 </bdi>ARIA</a></li><li class="tocline"><a class="tocxref" href="#bookmarks"><bdi class="secno">4.2.1.3 </bdi>bookmarks</a></li><li class="tocline"><a class="tocxref" href="#index-term"><bdi class="secno">4.2.1.4 </bdi>index</a></li><li class="tocline"><a class="tocxref" href="#printPageNumbers"><bdi class="secno">4.2.1.5 </bdi>printPageNumbers</a></li><li class="tocline"><a class="tocxref" href="#readingOrder"><bdi class="secno">4.2.1.6 </bdi>readingOrder</a></li><li class="tocline"><a class="tocxref" href="#structuralNavigation"><bdi class="secno">4.2.1.7 </bdi>structuralNavigation</a></li><li class="tocline"><a class="tocxref" href="#tableOfContents"><bdi class="secno">4.2.1.8 </bdi>tableOfContents</a></li><li class="tocline"><a class="tocxref" href="#taggedPDF"><bdi class="secno">4.2.1.9 </bdi>taggedPDF</a></li></ol></li><li class="tocline"><a class="tocxref" href="#adaptation-terms"><bdi class="secno">4.2.2 </bdi>Adaptation Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#alternativeText"><bdi class="secno">4.2.2.1 </bdi>alternativeText</a></li><li class="tocline"><a class="tocxref" href="#audioDescription"><bdi class="secno">4.2.2.2 </bdi>audioDescription</a></li><li class="tocline"><a class="tocxref" href="#captions"><bdi class="secno">4.2.2.3 </bdi>captions</a></li><li class="tocline"><a class="tocxref" href="#describedMath"><bdi class="secno">4.2.2.4 </bdi>describedMath</a></li><li class="tocline"><a class="tocxref" href="#longDescription"><bdi class="secno">4.2.2.5 </bdi>longDescription</a></li><li class="tocline"><a class="tocxref" href="#rubyAnnotations"><bdi class="secno">4.2.2.6 </bdi>rubyAnnotations</a></li><li class="tocline"><a class="tocxref" href="#signLanguage"><bdi class="secno">4.2.2.7 </bdi>signLanguage</a></li><li class="tocline"><a class="tocxref" href="#transcript"><bdi class="secno">4.2.2.8 </bdi>transcript</a></li></ol></li><li class="tocline"><a class="tocxref" href="#rendering-control-terms"><bdi class="secno">4.2.3 </bdi>Rendering Control Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#displayTransformability"><bdi class="secno">4.2.3.1 </bdi>displayTransformability</a></li><li class="tocline"><a class="tocxref" href="#synchronizedAudioText"><bdi class="secno">4.2.3.2 </bdi>synchronizedAudioText</a></li><li class="tocline"><a class="tocxref" href="#timingControl"><bdi class="secno">4.2.3.3 </bdi>timingControl</a></li><li class="tocline"><a class="tocxref" href="#unlocked"><bdi class="secno">4.2.3.4 </bdi>unlocked</a></li></ol></li><li class="tocline"><a class="tocxref" href="#specialized-markup-terms"><bdi class="secno">4.2.4 </bdi>Specialized Markup Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ChemML"><bdi class="secno">4.2.4.1 </bdi>ChemML</a></li><li class="tocline"><a class="tocxref" href="#latex"><bdi class="secno">4.2.4.2 </bdi>latex</a></li><li class="tocline"><a class="tocxref" href="#mathml"><bdi class="secno">4.2.4.3 </bdi>MathML</a></li><li class="tocline"><a class="tocxref" href="#ttsMarkup"><bdi class="secno">4.2.4.4 </bdi>ttsMarkup</a></li></ol></li><li class="tocline"><a class="tocxref" href="#clarity-terms"><bdi class="secno">4.2.5 </bdi>Clarity Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#highContrastAudio"><bdi class="secno">4.2.5.1 </bdi>highContrastAudio</a></li><li class="tocline"><a class="tocxref" href="#highContrastDisplay"><bdi class="secno">4.2.5.2 </bdi>highContrastDisplay</a></li><li class="tocline"><a class="tocxref" href="#largePrint"><bdi class="secno">4.2.5.3 </bdi>largePrint</a></li></ol></li><li class="tocline"><a class="tocxref" href="#tactile-terms"><bdi class="secno">4.2.6 </bdi>Tactile Terms</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#braille"><bdi class="secno">4.2.6.1 </bdi>braille</a></li><li class="tocline"><a class="tocxref" href="#tactileGraphic"><bdi class="secno">4.2.6.2 </bdi>tactileGraphic</a></li><li class="tocline"><a class="tocxref" href="#tactileObject"><bdi class="secno">4.2.6.3 </bdi>tactileObject</a></li></ol></li><li class="tocline"><a class="tocxref" href="#feature-none"><bdi class="secno">4.2.7 </bdi>none</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilityHazard"><bdi class="secno">5. </bdi>The <code>accessibilityHazard</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessibilityHazard-application"><bdi class="secno">5.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessibilityHazard-vocabulary"><bdi class="secno">5.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#flashing"><bdi class="secno">5.2.1 </bdi>flashing</a></li><li class="tocline"><a class="tocxref" href="#noFlashingHazard"><bdi class="secno">5.2.2 </bdi>noFlashingHazard</a></li><li class="tocline"><a class="tocxref" href="#motionSimulation"><bdi class="secno">5.2.3 </bdi>motionSimulation</a></li><li class="tocline"><a class="tocxref" href="#noMotionSimulationHazard"><bdi class="secno">5.2.4 </bdi>noMotionSimulationHazard</a></li><li class="tocline"><a class="tocxref" href="#sound"><bdi class="secno">5.2.5 </bdi>sound</a></li><li class="tocline"><a class="tocxref" href="#noSoundHazard"><bdi class="secno">5.2.6 </bdi>noSoundHazard</a></li><li class="tocline"><a class="tocxref" href="#unknown"><bdi class="secno">5.2.7 </bdi>unknown</a></li><li class="tocline"><a class="tocxref" href="#hazard-none"><bdi class="secno">5.2.8 </bdi>none</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessibilitySummary"><bdi class="secno">6. </bdi>The <code>accessibilitySummary</code> Property</a></li><li class="tocline"><a class="tocxref" href="#accessMode"><bdi class="secno">7. </bdi>The <code>accessMode</code> Property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessMode-application"><bdi class="secno">7.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessMode-vocabulary"><bdi class="secno">7.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#auditory"><bdi class="secno">7.2.1 </bdi>auditory</a></li><li class="tocline"><a class="tocxref" href="#chartOnVisual"><bdi class="secno">7.2.2 </bdi>chartOnVisual</a></li><li class="tocline"><a class="tocxref" href="#chemOnVisual"><bdi class="secno">7.2.3 </bdi>chemOnVisual</a></li><li class="tocline"><a class="tocxref" href="#colorDependent"><bdi class="secno">7.2.4 </bdi>colorDependent</a></li><li class="tocline"><a class="tocxref" href="#diagramOnVisual"><bdi class="secno">7.2.5 </bdi>diagramOnVisual</a></li><li class="tocline"><a class="tocxref" href="#mathOnVisual"><bdi class="secno">7.2.6 </bdi>mathOnVisual</a></li><li class="tocline"><a class="tocxref" href="#musicOnVisual"><bdi class="secno">7.2.7 </bdi>musicOnVisual</a></li><li class="tocline"><a class="tocxref" href="#tactile"><bdi class="secno">7.2.8 </bdi>tactile</a></li><li class="tocline"><a class="tocxref" href="#textOnVisual"><bdi class="secno">7.2.9 </bdi>textOnVisual</a></li><li class="tocline"><a class="tocxref" href="#textual"><bdi class="secno">7.2.10 </bdi>textual</a></li><li class="tocline"><a class="tocxref" href="#visual"><bdi class="secno">7.2.11 </bdi>visual</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#accessModeSufficient"><bdi class="secno">8. </bdi>The <code>accessModeSufficient</code> property</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accessModeSufficient-application"><bdi class="secno">8.1 </bdi>Application</a></li><li class="tocline"><a class="tocxref" href="#accessModeSufficient-vocabulary"><bdi class="secno">8.2 </bdi>Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ams-auditory"><bdi class="secno">8.2.1 </bdi>auditory</a></li><li class="tocline"><a class="tocxref" href="#ams-tactile"><bdi class="secno">8.2.2 </bdi>tactile</a></li><li class="tocline"><a class="tocxref" href="#ams-textual"><bdi class="secno">8.2.3 </bdi>textual</a></li><li class="tocline"><a class="tocxref" href="#ams-visual"><bdi class="secno">8.2.4 </bdi>visual</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">9. </bdi>Examples</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#ex-book"><bdi class="secno">9.1 </bdi>Book</a></li><li class="tocline"><a class="tocxref" href="#ex-video"><bdi class="secno">9.2 </bdi>Video</a></li></ol></li><li class="tocline"><a class="tocxref" href="#change-log"><bdi class="secno">A. </bdi>Change Log</a></li><li class="tocline"><a class="tocxref" href="#acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">C. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">C.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+		<section id="intro"><h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction</h2><a class="self-link" href="#intro" aria-label="Permalink for Section 1."></a>
+			
 
-			<section id="background">
-				<h3 id="x1-1-background"><bdi class="secno">1.1 </bdi>Background</h3><a class="self-link" href="#background" aria-label="Permalink for Section 1.1"></a>
+			<section id="background"><h3 id="x1-1-background"><bdi class="secno">1.1 </bdi>Background</h3><a class="self-link" href="#background" aria-label="Permalink for Section 1.1"></a>
+				
 
 				<p>The <a href="https://schema.org/CreativeWork"><code>CreativeWork</code> type</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-schema-org" title="Schema.org">schema-org</a></cite>]
 					includes the following accessibility properties for discoverability:</p>
@@ -288,8 +288,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					this vocabulary, please refer to their relevant definitions in schema.org.</p></div>
 			</section>
 
-			<section id="naming">
-				<h3 id="x1-2-vocabulary-naming-convention"><bdi class="secno">1.2 </bdi>Vocabulary Naming Convention</h3><a class="self-link" href="#naming" aria-label="Permalink for Section 1.2"></a>
+			<section id="naming"><h3 id="x1-2-vocabulary-naming-convention"><bdi class="secno">1.2 </bdi>Vocabulary Naming Convention</h3><a class="self-link" href="#naming" aria-label="Permalink for Section 1.2"></a>
+				
 
 				<p>The values defined in this vocabulary follow a camel casing convention: single words are lowercase,
 					while compound words are concatenated into a single value with a capital letter indicating the start
@@ -306,8 +306,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					treated as identical.</p>
 			</section>
 
-			<section id="extensions">
-				<h3 id="x1-3-extending-vocabulary-terms"><bdi class="secno">1.3 </bdi>Extending Vocabulary Terms</h3><a class="self-link" href="#extensions" aria-label="Permalink for Section 1.3"></a>
+			<section id="extensions"><h3 id="x1-3-extending-vocabulary-terms"><bdi class="secno">1.3 </bdi>Extending Vocabulary Terms</h3><a class="self-link" href="#extensions" aria-label="Permalink for Section 1.3"></a>
+				
 
 				<p>This vocabulary currently uses the old <a href="https://schema.org/docs/old_extension.html">slash
 						extension syntax</a> employed by Schema.org until 2015. In this model, extensions of a term are
@@ -317,11 +317,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					the vocabulary may update this approach.</p>
 			</section>
 		</section>
-		<section id="accessibilityAPI">
-			<h2 id="x2-the-accessibilityapi-property"><bdi class="secno">2. </bdi>The <code>accessibilityAPI</code> Property</h2><a class="self-link" href="#accessibilityAPI" aria-label="Permalink for Section 2."></a>
+		<section id="accessibilityAPI"><h2 id="x2-the-accessibilityapi-property"><bdi class="secno">2. </bdi>The <code>accessibilityAPI</code> Property</h2><a class="self-link" href="#accessibilityAPI" aria-label="Permalink for Section 2."></a>
+			
 
-			<section id="accessibilityAPI-application">
-				<h3 id="x2-1-application"><bdi class="secno">2.1 </bdi>Application</h3><a class="self-link" href="#accessibilityAPI-application" aria-label="Permalink for Section 2.1"></a>
+			<section id="accessibilityAPI-application"><h3 id="x2-1-application"><bdi class="secno">2.1 </bdi>Application</h3><a class="self-link" href="#accessibilityAPI-application" aria-label="Permalink for Section 2.1"></a>
+				
 
 				<blockquote>
 					<p>Indicates that the resource is compatible with the referenced accessibility API.</p>
@@ -375,83 +375,89 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</aside>
 			</section>
 
-			<section id="accessibilityAPI-vocabulary">
-				<h3 id="x2-2-vocabulary"><bdi class="secno">2.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessibilityAPI-vocabulary" aria-label="Permalink for Section 2.2"></a>
+			<section id="accessibilityAPI-vocabulary"><h3 id="x2-2-vocabulary"><bdi class="secno">2.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessibilityAPI-vocabulary" aria-label="Permalink for Section 2.2"></a>
+				
 
-				<section id="AndroidAccessibility">
-					<h4 id="x2-2-1-androidaccessibility"><bdi class="secno">2.2.1 </bdi>AndroidAccessibility</h4><a class="self-link" href="#AndroidAccessibility" aria-label="Permalink for Section 2.2.1"></a>
+				<section id="AndroidAccessibility"><h4 id="x2-2-1-androidaccessibility"><bdi class="secno">2.2.1 </bdi>AndroidAccessibility</h4><a class="self-link" href="#AndroidAccessibility" aria-label="Permalink for Section 2.2.1"></a>
+					
 
 					<p>Indicates the resource is compatible with the Android Accessibility API.</p>
 				</section>
 
-				<section id="ARIA">
-					<h4 id="x2-2-2-aria"><bdi class="secno">2.2.2 </bdi>ARIA</h4><a class="self-link" href="#ARIA" aria-label="Permalink for Section 2.2.2"></a>
+				<section id="ARIA-deprecated"><h4 id="x2-2-2-aria-deprecated"><bdi class="secno">2.2.2 </bdi>ARIA (deprecated)</h4><a class="self-link" href="#ARIA-deprecated" aria-label="Permalink for Section 2.2.2"></a>
+					
 
 					<p>Indicates the resource uses ARIA markup to improve interoperability with platform APIs.</p>
+
+					<div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="5"><span>Note</span></div><div class="">
+						<p>The use of the ARIA value is now deprecated as ARIA is not an accessibility API. The
+								<code>accessibilityFeature</code> property value "<code>ARIA</code>" is now recommended
+							to use to indicate that a resource makes use of ARIA to improve structural navigation.</p>
+					</div></div>
 				</section>
 
-				<section id="ATK">
-					<h4 id="x2-2-3-atk"><bdi class="secno">2.2.3 </bdi>ATK</h4><a class="self-link" href="#ATK" aria-label="Permalink for Section 2.2.3"></a>
+				<section id="ATK"><h4 id="x2-2-3-atk"><bdi class="secno">2.2.3 </bdi>ATK</h4><a class="self-link" href="#ATK" aria-label="Permalink for Section 2.2.3"></a>
+					
 
 					<p>Indicates the resource is compatible with the Accessibility Toolkit (ATK) API for GNOME.</p>
 				</section>
 
-				<section id="AT-SPI">
-					<h4 id="x2-2-4-at-spi"><bdi class="secno">2.2.4 </bdi>AT-SPI</h4><a class="self-link" href="#AT-SPI" aria-label="Permalink for Section 2.2.4"></a>
+				<section id="AT-SPI"><h4 id="x2-2-4-at-spi"><bdi class="secno">2.2.4 </bdi>AT-SPI</h4><a class="self-link" href="#AT-SPI" aria-label="Permalink for Section 2.2.4"></a>
+					
 
 					<p>Indicates the resource is compatible with the Assistive Technology Service Provider Interface
 						(AT-SPI) API for GNOME.</p>
 				</section>
 
-				<section id="BlackberryAccessibility">
-					<h4 id="x2-2-5-blackberryaccessibility"><bdi class="secno">2.2.5 </bdi>BlackberryAccessibility</h4><a class="self-link" href="#BlackberryAccessibility" aria-label="Permalink for Section 2.2.5"></a>
+				<section id="BlackberryAccessibility"><h4 id="x2-2-5-blackberryaccessibility"><bdi class="secno">2.2.5 </bdi>BlackberryAccessibility</h4><a class="self-link" href="#BlackberryAccessibility" aria-label="Permalink for Section 2.2.5"></a>
+					
 
 					<p>Indicates the resource is compatible with the Blackberry Accessibility API.</p>
 				</section>
 
-				<section id="iAccessible2">
-					<h4 id="x2-2-6-iaccessible2"><bdi class="secno">2.2.6 </bdi>iAccessible2</h4><a class="self-link" href="#iAccessible2" aria-label="Permalink for Section 2.2.6"></a>
+				<section id="iAccessible2"><h4 id="x2-2-6-iaccessible2"><bdi class="secno">2.2.6 </bdi>iAccessible2</h4><a class="self-link" href="#iAccessible2" aria-label="Permalink for Section 2.2.6"></a>
+					
 
 					<p>Indicates the resource is compatible with the iAccessible2 API for Windows.</p>
 				</section>
 
-				<section id="iOSAccessibility">
-					<h4 id="x2-2-7-iosaccessibility"><bdi class="secno">2.2.7 </bdi>iOSAccessibility</h4><a class="self-link" href="#iOSAccessibility" aria-label="Permalink for Section 2.2.7"></a>
+				<section id="iOSAccessibility"><h4 id="x2-2-7-iosaccessibility"><bdi class="secno">2.2.7 </bdi>iOSAccessibility</h4><a class="self-link" href="#iOSAccessibility" aria-label="Permalink for Section 2.2.7"></a>
+					
 
 					<p>Indicates the resource is compatible with the iAccessible2 API for Apple iOS devices.</p>
 				</section>
 
-				<section id="JavaAccessibility">
-					<h4 id="x2-2-8-javaaccessibility"><bdi class="secno">2.2.8 </bdi>JavaAccessibility</h4><a class="self-link" href="#JavaAccessibility" aria-label="Permalink for Section 2.2.8"></a>
+				<section id="JavaAccessibility"><h4 id="x2-2-8-javaaccessibility"><bdi class="secno">2.2.8 </bdi>JavaAccessibility</h4><a class="self-link" href="#JavaAccessibility" aria-label="Permalink for Section 2.2.8"></a>
+					
 
 					<p>Indicates the resource is compatible with the Java Accessibility API (JAAPI).</p>
 				</section>
 
-				<section id="MacOSXAccessibility">
-					<h4 id="x2-2-9-macosxaccessibility"><bdi class="secno">2.2.9 </bdi>MacOSXAccessibility</h4><a class="self-link" href="#MacOSXAccessibility" aria-label="Permalink for Section 2.2.9"></a>
+				<section id="MacOSXAccessibility"><h4 id="x2-2-9-macosxaccessibility"><bdi class="secno">2.2.9 </bdi>MacOSXAccessibility</h4><a class="self-link" href="#MacOSXAccessibility" aria-label="Permalink for Section 2.2.9"></a>
+					
 
 					<p>Indicates the resource is compatible with the iAccessible2 API for Windows.</p>
 				</section>
 
-				<section id="MSAA">
-					<h4 id="x2-2-10-msaa"><bdi class="secno">2.2.10 </bdi>MSAA</h4><a class="self-link" href="#MSAA" aria-label="Permalink for Section 2.2.10"></a>
+				<section id="MSAA"><h4 id="x2-2-10-msaa"><bdi class="secno">2.2.10 </bdi>MSAA</h4><a class="self-link" href="#MSAA" aria-label="Permalink for Section 2.2.10"></a>
+					
 
 					<p>Indicates the resource is compatible with the Microsoft Active Accessibility (MSAA) API for
 						Windows.</p>
 				</section>
 
-				<section id="UIAutomation">
-					<h4 id="x2-2-11-uiautomation"><bdi class="secno">2.2.11 </bdi>UIAutomation</h4><a class="self-link" href="#UIAutomation" aria-label="Permalink for Section 2.2.11"></a>
+				<section id="UIAutomation"><h4 id="x2-2-11-uiautomation"><bdi class="secno">2.2.11 </bdi>UIAutomation</h4><a class="self-link" href="#UIAutomation" aria-label="Permalink for Section 2.2.11"></a>
+					
 
 					<p>Indicates the resource is compatible with the User Interface Automation API for Windows.</p>
 				</section>
 			</section>
 		</section>
-		<section id="accessibilityControl">
-			<h2 id="x3-the-accessibilitycontrol-property"><bdi class="secno">3. </bdi>The <code>accessibilityControl</code> Property</h2><a class="self-link" href="#accessibilityControl" aria-label="Permalink for Section 3."></a>
+		<section id="accessibilityControl"><h2 id="x3-the-accessibilitycontrol-property"><bdi class="secno">3. </bdi>The <code>accessibilityControl</code> Property</h2><a class="self-link" href="#accessibilityControl" aria-label="Permalink for Section 3."></a>
+			
 
-			<section id="accessibilityControl-application">
-				<h3 id="x3-1-application"><bdi class="secno">3.1 </bdi>Application</h3><a class="self-link" href="#accessibilityControl-application" aria-label="Permalink for Section 3.1"></a>
+			<section id="accessibilityControl-application"><h3 id="x3-1-application"><bdi class="secno">3.1 </bdi>Application</h3><a class="self-link" href="#accessibilityControl-application" aria-label="Permalink for Section 3.1"></a>
+				
 
 				<blockquote>
 					<p>Identifies one or more input methods that allow access to all of the application
@@ -506,51 +512,51 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</aside>
 			</section>
 
-			<section id="accessibilityControl-vocabulary">
-				<h3 id="x3-2-vocabulary"><bdi class="secno">3.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessibilityControl-vocabulary" aria-label="Permalink for Section 3.2"></a>
+			<section id="accessibilityControl-vocabulary"><h3 id="x3-2-vocabulary"><bdi class="secno">3.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessibilityControl-vocabulary" aria-label="Permalink for Section 3.2"></a>
+				
 
-				<section id="fullKeyboardControl">
-					<h4 id="x3-2-1-fullkeyboardcontrol"><bdi class="secno">3.2.1 </bdi>fullKeyboardControl</h4><a class="self-link" href="#fullKeyboardControl" aria-label="Permalink for Section 3.2.1"></a>
+				<section id="fullKeyboardControl"><h4 id="x3-2-1-fullkeyboardcontrol"><bdi class="secno">3.2.1 </bdi>fullKeyboardControl</h4><a class="self-link" href="#fullKeyboardControl" aria-label="Permalink for Section 3.2.1"></a>
+					
 
 					<p>Users can fully control the resource through keyboard input.</p>
 				</section>
 
-				<section id="fullMouseControl">
-					<h4 id="x3-2-2-fullmousecontrol"><bdi class="secno">3.2.2 </bdi>fullMouseControl</h4><a class="self-link" href="#fullMouseControl" aria-label="Permalink for Section 3.2.2"></a>
+				<section id="fullMouseControl"><h4 id="x3-2-2-fullmousecontrol"><bdi class="secno">3.2.2 </bdi>fullMouseControl</h4><a class="self-link" href="#fullMouseControl" aria-label="Permalink for Section 3.2.2"></a>
+					
 
 					<p>Users can fully control the resource through mouse input.</p>
 				</section>
 
-				<section id="fullSwitchControl">
-					<h4 id="x3-2-3-fullswitchcontrol"><bdi class="secno">3.2.3 </bdi>fullSwitchControl</h4><a class="self-link" href="#fullSwitchControl" aria-label="Permalink for Section 3.2.3"></a>
+				<section id="fullSwitchControl"><h4 id="x3-2-3-fullswitchcontrol"><bdi class="secno">3.2.3 </bdi>fullSwitchControl</h4><a class="self-link" href="#fullSwitchControl" aria-label="Permalink for Section 3.2.3"></a>
+					
 
 					<p>Users can fully control the resource through switch input.</p>
 				</section>
 
-				<section id="fullTouchControl">
-					<h4 id="x3-2-4-fulltouchcontrol"><bdi class="secno">3.2.4 </bdi>fullTouchControl</h4><a class="self-link" href="#fullTouchControl" aria-label="Permalink for Section 3.2.4"></a>
+				<section id="fullTouchControl"><h4 id="x3-2-4-fulltouchcontrol"><bdi class="secno">3.2.4 </bdi>fullTouchControl</h4><a class="self-link" href="#fullTouchControl" aria-label="Permalink for Section 3.2.4"></a>
+					
 
 					<p>Users can fully control the resource through touch input.</p>
 				</section>
 
-				<section id="fullVideoControl">
-					<h4 id="x3-2-5-fullvideocontrol"><bdi class="secno">3.2.5 </bdi>fullVideoControl</h4><a class="self-link" href="#fullVideoControl" aria-label="Permalink for Section 3.2.5"></a>
+				<section id="fullVideoControl"><h4 id="x3-2-5-fullvideocontrol"><bdi class="secno">3.2.5 </bdi>fullVideoControl</h4><a class="self-link" href="#fullVideoControl" aria-label="Permalink for Section 3.2.5"></a>
+					
 
 					<p>Users can fully control the resource through video input.</p>
 				</section>
 
-				<section id="fullVoiceControl">
-					<h4 id="x3-2-6-fullvoicecontrol"><bdi class="secno">3.2.6 </bdi>fullVoiceControl</h4><a class="self-link" href="#fullVoiceControl" aria-label="Permalink for Section 3.2.6"></a>
+				<section id="fullVoiceControl"><h4 id="x3-2-6-fullvoicecontrol"><bdi class="secno">3.2.6 </bdi>fullVoiceControl</h4><a class="self-link" href="#fullVoiceControl" aria-label="Permalink for Section 3.2.6"></a>
+					
 
 					<p>Users can fully control the resource through voice input.</p>
 				</section>
 			</section>
 		</section>
-		<section id="accessibilityFeature">
-			<h2 id="x4-the-accessibilityfeature-property"><bdi class="secno">4. </bdi>The <code>accessibilityFeature</code> Property</h2><a class="self-link" href="#accessibilityFeature" aria-label="Permalink for Section 4."></a>
+		<section id="accessibilityFeature"><h2 id="x4-the-accessibilityfeature-property"><bdi class="secno">4. </bdi>The <code>accessibilityFeature</code> Property</h2><a class="self-link" href="#accessibilityFeature" aria-label="Permalink for Section 4."></a>
+			
 
-			<section id="accessibilityFeature-application">
-				<h3 id="x4-1-application"><bdi class="secno">4.1 </bdi>Application</h3><a class="self-link" href="#accessibilityFeature-application" aria-label="Permalink for Section 4.1"></a>
+			<section id="accessibilityFeature-application"><h3 id="x4-1-application"><bdi class="secno">4.1 </bdi>Application</h3><a class="self-link" href="#accessibilityFeature-application" aria-label="Permalink for Section 4.1"></a>
+				
 
 				<blockquote>
 					<p>Content features of the resource, such as accessible media, alternatives and supported
@@ -637,108 +643,130 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</aside>
 			</section>
 
-			<section id="accessibilityFeature-vocabulary">
-				<h3 id="x4-2-vocabulary"><bdi class="secno">4.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessibilityFeature-vocabulary" aria-label="Permalink for Section 4.2"></a>
+			<section id="accessibilityFeature-vocabulary"><h3 id="x4-2-vocabulary"><bdi class="secno">4.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessibilityFeature-vocabulary" aria-label="Permalink for Section 4.2"></a>
+				
 
-				<section id="structure-and-navigation-terms">
-					<h4 id="x4-2-1-structure-and-navigation-terms"><bdi class="secno">4.2.1 </bdi>Structure and Navigation Terms</h4><a class="self-link" href="#structure-and-navigation-terms" aria-label="Permalink for Section 4.2.1"></a>
+				<section id="structure-and-navigation-terms"><h4 id="x4-2-1-structure-and-navigation-terms"><bdi class="secno">4.2.1 </bdi>Structure and Navigation Terms</h4><a class="self-link" href="#structure-and-navigation-terms" aria-label="Permalink for Section 4.2.1"></a>
+					
 
 					<p>The structure and navigation term identify structuring and navigation aids that facilitate use of
 						the work.</p>
 
-					<section id="annotations">
-						<h5 id="x4-2-1-1-annotations"><bdi class="secno">4.2.1.1 </bdi>annotations</h5><a class="self-link" href="#annotations" aria-label="Permalink for Section 4.2.1.1"></a>
+					<section id="annotations"><h5 id="x4-2-1-1-annotations"><bdi class="secno">4.2.1.1 </bdi>annotations</h5><a class="self-link" href="#annotations" aria-label="Permalink for Section 4.2.1.1"></a>
+						
 
 						<p>The work includes annotations from the author, instructor and/or others.</p>
 					</section>
 
-					<section id="bookmarks">
-						<h5 id="x4-2-1-2-bookmarks"><bdi class="secno">4.2.1.2 </bdi>bookmarks</h5><a class="self-link" href="#bookmarks" aria-label="Permalink for Section 4.2.1.2"></a>
+					<section id="ARIA"><h5 id="x4-2-1-2-aria"><bdi class="secno">4.2.1.2 </bdi>ARIA</h5><a class="self-link" href="#ARIA" aria-label="Permalink for Section 4.2.1.2"></a>
+						
+
+						<p>Indicates the resource includes ARIA roles to organize and improve the structure and
+							navigation.</p>
+
+						<p>The use of this value corresponds to the inclusion of <a href="https://www.w3.org/TR/wai-aria/#document_structure_roles">Document Structure</a>,
+								<a href="https://www.w3.org/TR/wai-aria/#landmark_roles">Landmark</a>, <a href="https://www.w3.org/TR/wai-aria/#live_region_roles">Live Region</a>, and <a href="https://www.w3.org/TR/wai-aria/#window_roles">Window</a> roles [<cite><a class="bibref" data-link-type="biblio" href="#bib-wai-aria" title="Accessible Rich Internet Applications (WAI-ARIA) 1.0">WAI-ARIA</a></cite>].</p>
+
+						<div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="6"><span>Note</span></div><div class="">
+							<p>The <a href="#accessibilityControl"><code>accessibilityControl</code> property</a> can be
+								used to indicate what input devices custom controls are accessible with.</p>
+						</div></div>
+					</section>
+
+					<section id="bookmarks"><h5 id="x4-2-1-3-bookmarks"><bdi class="secno">4.2.1.3 </bdi>bookmarks</h5><a class="self-link" href="#bookmarks" aria-label="Permalink for Section 4.2.1.3"></a>
+						
 
 						<p>The work includes bookmarks to facilitate navigation to key points.</p>
 					</section>
 
-					<section id="index-term">
-						<h5 id="x4-2-1-3-index"><bdi class="secno">4.2.1.3 </bdi>index</h5><a class="self-link" href="#index-term" aria-label="Permalink for Section 4.2.1.3"></a>
+					<section id="index-term"><h5 id="x4-2-1-4-index"><bdi class="secno">4.2.1.4 </bdi>index</h5><a class="self-link" href="#index-term" aria-label="Permalink for Section 4.2.1.4"></a>
+						
 
 						<p>The work includes an index to the content.</p>
 					</section>
 
-					<section id="printPageNumbers">
-						<h5 id="x4-2-1-4-printpagenumbers"><bdi class="secno">4.2.1.4 </bdi>printPageNumbers</h5><a class="self-link" href="#printPageNumbers" aria-label="Permalink for Section 4.2.1.4"></a>
+					<section id="printPageNumbers"><h5 id="x4-2-1-5-printpagenumbers"><bdi class="secno">4.2.1.5 </bdi>printPageNumbers</h5><a class="self-link" href="#printPageNumbers" aria-label="Permalink for Section 4.2.1.5"></a>
+						
 
 						<p>The work includes equivalent print page numbers. This setting is most commonly used with
 							ebooks for which there is a print equivalent.</p>
 					</section>
 
-					<section id="readingOrder">
-						<h5 id="x4-2-1-5-readingorder"><bdi class="secno">4.2.1.5 </bdi>readingOrder</h5><a class="self-link" href="#readingOrder" aria-label="Permalink for Section 4.2.1.5"></a>
+					<section id="readingOrder"><h5 id="x4-2-1-6-readingorder"><bdi class="secno">4.2.1.6 </bdi>readingOrder</h5><a class="self-link" href="#readingOrder" aria-label="Permalink for Section 4.2.1.6"></a>
+						
 
 						<p>The reading order of the content is clearly defined in the markup (e.g., figures, sidebars
 							and other secondary content has been marked up to allow it to be skipped automatically
 							and/or manually escaped from.</p>
 					</section>
 
-					<section id="structuralNavigation">
-						<h5 id="x4-2-1-6-structuralnavigation"><bdi class="secno">4.2.1.6 </bdi>structuralNavigation</h5><a class="self-link" href="#structuralNavigation" aria-label="Permalink for Section 4.2.1.6"></a>
+					<section id="structuralNavigation"><h5 id="x4-2-1-7-structuralnavigation"><bdi class="secno">4.2.1.7 </bdi>structuralNavigation</h5><a class="self-link" href="#structuralNavigation" aria-label="Permalink for Section 4.2.1.7"></a>
+						
 
 						<p>The use of headings in the work fully and accurately reflects the document hierarchy,
 							allowing navigation by assistive technologies.</p>
 					</section>
 
-					<section id="taggedPDF">
-						<h5 id="x4-2-1-7-taggedpdf"><bdi class="secno">4.2.1.7 </bdi>taggedPDF</h5><a class="self-link" href="#taggedPDF" aria-label="Permalink for Section 4.2.1.7"></a>
+					<section id="tableOfContents"><h5 id="x4-2-1-8-tableofcontents"><bdi class="secno">4.2.1.8 </bdi>tableOfContents</h5><a class="self-link" href="#tableOfContents" aria-label="Permalink for Section 4.2.1.8"></a>
+						
+
+						<p>The work includes a table of contents that provides links to the major sections of the
+							content.</p>
+					</section>
+
+					<section id="taggedPDF"><h5 id="x4-2-1-9-taggedpdf"><bdi class="secno">4.2.1.9 </bdi>taggedPDF</h5><a class="self-link" href="#taggedPDF" aria-label="Permalink for Section 4.2.1.9"></a>
+						
 
 						<p>The structures in a PDF have been tagged to improve the navigation of the content.</p>
 					</section>
 				</section>
 
-				<section id="adaptation-terms">
-					<h4 id="x4-2-2-adaptation-terms"><bdi class="secno">4.2.2 </bdi>Adaptation Terms</h4><a class="self-link" href="#adaptation-terms" aria-label="Permalink for Section 4.2.2"></a>
+				<section id="adaptation-terms"><h4 id="x4-2-2-adaptation-terms"><bdi class="secno">4.2.2 </bdi>Adaptation Terms</h4><a class="self-link" href="#adaptation-terms" aria-label="Permalink for Section 4.2.2"></a>
+					
 
 					<p>The adaptation terms identify provisions in the content that enable reading in alternative access
 						modes.</p>
 
-					<section id="alternativeText">
-						<h5 id="x4-2-2-1-alternativetext"><bdi class="secno">4.2.2.1 </bdi>alternativeText</h5><a class="self-link" href="#alternativeText" aria-label="Permalink for Section 4.2.2.1"></a>
+					<section id="alternativeText"><h5 id="x4-2-2-1-alternativetext"><bdi class="secno">4.2.2.1 </bdi>alternativeText</h5><a class="self-link" href="#alternativeText" aria-label="Permalink for Section 4.2.2.1"></a>
+						
 
 						<p>Alternative text is provided for visual content (e.g., via the [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <a href="https://html.spec.whatwg.org/multipage/embedded-content.html#attr-img-alt"><code>alt</code> attribute</a>).</p>
 					</section>
 
-					<section id="audioDescription">
-						<h5 id="x4-2-2-2-audiodescription"><bdi class="secno">4.2.2.2 </bdi>audioDescription</h5><a class="self-link" href="#audioDescription" aria-label="Permalink for Section 4.2.2.2"></a>
+					<section id="audioDescription"><h5 id="x4-2-2-2-audiodescription"><bdi class="secno">4.2.2.2 </bdi>audioDescription</h5><a class="self-link" href="#audioDescription" aria-label="Permalink for Section 4.2.2.2"></a>
+						
 
 						<p>Audio descriptions are available (e.g., via an [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <a href="https://html.spec.whatwg.org/multipage/media.html#the-track-element"><code>track</code></a> element with its <code>kind</code> attribute set to
 								"<code>descriptions</code>").</p>
 					</section>
 
-					<section id="captions">
-						<h5 id="x4-2-2-3-captions"><bdi class="secno">4.2.2.3 </bdi>captions</h5><a class="self-link" href="#captions" aria-label="Permalink for Section 4.2.2.3"></a>
+					<section id="captions"><h5 id="x4-2-2-3-captions"><bdi class="secno">4.2.2.3 </bdi>captions</h5><a class="self-link" href="#captions" aria-label="Permalink for Section 4.2.2.3"></a>
+						
 
 						<p>Indicates that synchronized captions are available for audio and video content.</p>
 					</section>
 
-					<section id="describedMath">
-						<h5 id="x4-2-2-4-describedmath"><bdi class="secno">4.2.2.4 </bdi>describedMath</h5><a class="self-link" href="#describedMath" aria-label="Permalink for Section 4.2.2.4"></a>
+					<section id="describedMath"><h5 id="x4-2-2-4-describedmath"><bdi class="secno">4.2.2.4 </bdi>describedMath</h5><a class="self-link" href="#describedMath" aria-label="Permalink for Section 4.2.2.4"></a>
+						
 
 						<p>Textual descriptions of math equations are included, whether in the alt attribute for
 							image-based equations, using the <a href="https://www.w3.org/TR/MathML3/chapter2.html#interf.toplevel.atts"><code>alttext</code> attribute</a> for [<cite><a class="bibref" data-link-type="biblio" href="#bib-mathml" title="Mathematical Markup Language (MathML) 1.01 Specification">MathML</a></cite>] equations, or by other means.</p>
 					</section>
 
-					<section id="longDescription">
-						<h5 id="x4-2-2-5-longdescription"><bdi class="secno">4.2.2.5 </bdi>longDescription</h5><a class="self-link" href="#longDescription" aria-label="Permalink for Section 4.2.2.5"></a>
+					<section id="longDescription"><h5 id="x4-2-2-5-longdescription"><bdi class="secno">4.2.2.5 </bdi>longDescription</h5><a class="self-link" href="#longDescription" aria-label="Permalink for Section 4.2.2.5"></a>
+						
 
 						<p>Descriptions are provided for image-based visual content and/or complex structures such as
 							tables, mathematics, diagrams, and charts.</p>
 
-						<div class="note" role="note" id="issue-container-generatedID-1"><div role="heading" class="note-title marker" id="h-note-1" aria-level="6"><span>Note</span></div><div class="">
+						<div class="note" role="note" id="issue-container-generatedID-3"><div role="heading" class="note-title marker" id="h-note-3" aria-level="6"><span>Note</span></div><div class="">
 							<p>Authors may set this property independent of the method they use to provide the extended
 								descriptions (i.e., it is not required to use the obsolete [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] <a href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-longdesc"><code>longdesc</code> attribute</a>).</p>
 						</div></div>
 					</section>
 
-					<section id="rubyAnnotations">
-						<h5 id="x4-2-2-6-rubyannotations"><bdi class="secno">4.2.2.6 </bdi>rubyAnnotations</h5><a class="self-link" href="#rubyAnnotations" aria-label="Permalink for Section 4.2.2.6"></a>
+					<section id="rubyAnnotations"><h5 id="x4-2-2-6-rubyannotations"><bdi class="secno">4.2.2.6 </bdi>rubyAnnotations</h5><a class="self-link" href="#rubyAnnotations" aria-label="Permalink for Section 4.2.2.6"></a>
+						
 
 						<p>Indicates that <a href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"><code>ruby</code> annotations</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-html" title="HTML Standard">HTML</a></cite>] are provided in the content. Ruby
 							annotations are used as pronunciation guides for the logographic characters for languages
@@ -749,29 +777,29 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							ruby.</p>
 					</section>
 
-					<section id="signLanguage">
-						<h5 id="x4-2-2-7-signlanguage"><bdi class="secno">4.2.2.7 </bdi>signLanguage</h5><a class="self-link" href="#signLanguage" aria-label="Permalink for Section 4.2.2.7"></a>
+					<section id="signLanguage"><h5 id="x4-2-2-7-signlanguage"><bdi class="secno">4.2.2.7 </bdi>signLanguage</h5><a class="self-link" href="#signLanguage" aria-label="Permalink for Section 4.2.2.7"></a>
+						
 
 						<p>Sign language interpretation is available for audio and video content. The value may be
 							extended by adding an [<cite><a class="bibref" data-link-type="biblio" href="#bib-iso-639" title="Code for the representation of names of languages">ISO-639</a></cite>] sign language code. For example, <code>/sgn-en-us</code>
 							for American Sign Language.</p>
 					</section>
 
-					<section id="transcript">
-						<h5 id="x4-2-2-8-transcript"><bdi class="secno">4.2.2.8 </bdi>transcript</h5><a class="self-link" href="#transcript" aria-label="Permalink for Section 4.2.2.8"></a>
+					<section id="transcript"><h5 id="x4-2-2-8-transcript"><bdi class="secno">4.2.2.8 </bdi>transcript</h5><a class="self-link" href="#transcript" aria-label="Permalink for Section 4.2.2.8"></a>
+						
 
 						<p>Indicates that a transcript of the audio content is available.</p>
 					</section>
 				</section>
 
-				<section id="rendering-control-terms">
-					<h4 id="x4-2-3-rendering-control-terms"><bdi class="secno">4.2.3 </bdi>Rendering Control Terms</h4><a class="self-link" href="#rendering-control-terms" aria-label="Permalink for Section 4.2.3"></a>
+				<section id="rendering-control-terms"><h4 id="x4-2-3-rendering-control-terms"><bdi class="secno">4.2.3 </bdi>Rendering Control Terms</h4><a class="self-link" href="#rendering-control-terms" aria-label="Permalink for Section 4.2.3"></a>
+					
 
 					<p>The rendering control values identify that access to a resource and rendering and playback of its
 						content can be controlled for easier reading.</p>
 
-					<section id="displayTransformability">
-						<h5 id="x4-2-3-1-displaytransformability"><bdi class="secno">4.2.3.1 </bdi>displayTransformability</h5><a class="self-link" href="#displayTransformability" aria-label="Permalink for Section 4.2.3.1"></a>
+					<section id="displayTransformability"><h5 id="x4-2-3-1-displaytransformability"><bdi class="secno">4.2.3.1 </bdi>displayTransformability</h5><a class="self-link" href="#displayTransformability" aria-label="Permalink for Section 4.2.3.1"></a>
+						
 
 						<p>Display properties are controllable by the user. This property can be set, for example, if
 							custom CSS style sheets can be applied to the content to control the appearance. It can also
@@ -794,69 +822,69 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							accessibility (e.g., image-based content). </p>
 					</section>
 
-					<section id="synchronizedAudioText">
-						<h5 id="x4-2-3-2-synchronizedaudiotext"><bdi class="secno">4.2.3.2 </bdi>synchronizedAudioText</h5><a class="self-link" href="#synchronizedAudioText" aria-label="Permalink for Section 4.2.3.2"></a>
+					<section id="synchronizedAudioText"><h5 id="x4-2-3-2-synchronizedaudiotext"><bdi class="secno">4.2.3.2 </bdi>synchronizedAudioText</h5><a class="self-link" href="#synchronizedAudioText" aria-label="Permalink for Section 4.2.3.2"></a>
+						
 
 						<p>Describes a resource that offers both audio and text, with information that allows them to be
 							rendered simultaneously. The granularity of the synchronization is not specified. This term
 							is not recommended when the only material that is synchronized is the document headings.</p>
 					</section>
 
-					<section id="timingControl">
-						<h5 id="x4-2-3-3-timingcontrol"><bdi class="secno">4.2.3.3 </bdi>timingControl</h5><a class="self-link" href="#timingControl" aria-label="Permalink for Section 4.2.3.3"></a>
+					<section id="timingControl"><h5 id="x4-2-3-3-timingcontrol"><bdi class="secno">4.2.3.3 </bdi>timingControl</h5><a class="self-link" href="#timingControl" aria-label="Permalink for Section 4.2.3.3"></a>
+						
 
 						<p>For content with timed interaction, this value indicates that the user can control the timing
 							to meet their needs (e.g., pause and reset)</p>
 					</section>
 
-					<section id="unlocked">
-						<h5 id="x4-2-3-4-unlocked"><bdi class="secno">4.2.3.4 </bdi>unlocked</h5><a class="self-link" href="#unlocked" aria-label="Permalink for Section 4.2.3.4"></a>
+					<section id="unlocked"><h5 id="x4-2-3-4-unlocked"><bdi class="secno">4.2.3.4 </bdi>unlocked</h5><a class="self-link" href="#unlocked" aria-label="Permalink for Section 4.2.3.4"></a>
+						
 
 						<p>No digital rights management or other content restriction protocols have been applied to the
 							resource.</p>
 					</section>
 				</section>
 
-				<section id="specialized-markup-terms">
-					<h4 id="x4-2-4-specialized-markup-terms"><bdi class="secno">4.2.4 </bdi>Specialized Markup Terms</h4><a class="self-link" href="#specialized-markup-terms" aria-label="Permalink for Section 4.2.4"></a>
+				<section id="specialized-markup-terms"><h4 id="x4-2-4-specialized-markup-terms"><bdi class="secno">4.2.4 </bdi>Specialized Markup Terms</h4><a class="self-link" href="#specialized-markup-terms" aria-label="Permalink for Section 4.2.4"></a>
+					
 
 					<p>The specialized markup terms identify content available in specialized markup grammars. These
 						grammars typically provide users with enhanced structure and navigation capabilities.</p>
 
-					<section id="ChemML">
-						<h5 id="x4-2-4-1-chemml"><bdi class="secno">4.2.4.1 </bdi>ChemML</h5><a class="self-link" href="#ChemML" aria-label="Permalink for Section 4.2.4.1"></a>
+					<section id="ChemML"><h5 id="x4-2-4-1-chemml"><bdi class="secno">4.2.4.1 </bdi>ChemML</h5><a class="self-link" href="#ChemML" aria-label="Permalink for Section 4.2.4.1"></a>
+						
 
 						<p>Identifies that chemical information is encoded using the <a href="https://hachmannlab.github.io/chemml/">ChemML markup language</a>.</p>
 					</section>
 
-					<section id="latex">
-						<h5 id="x4-2-4-2-latex"><bdi class="secno">4.2.4.2 </bdi>latex</h5><a class="self-link" href="#latex" aria-label="Permalink for Section 4.2.4.2"></a>
+					<section id="latex"><h5 id="x4-2-4-2-latex"><bdi class="secno">4.2.4.2 </bdi>latex</h5><a class="self-link" href="#latex" aria-label="Permalink for Section 4.2.4.2"></a>
+						
 
 						<p>Identifies that mathematical equations and formulas are encoded in the <a href="https://www.latex-project.org/">LaTeX typesetting system</a>.</p>
 					</section>
 
-					<section id="mathml">
-						<h5 id="x4-2-4-3-mathml"><bdi class="secno">4.2.4.3 </bdi>MathML</h5><a class="self-link" href="#mathml" aria-label="Permalink for Section 4.2.4.3"></a>
+					<section id="mathml"><h5 id="x4-2-4-3-mathml"><bdi class="secno">4.2.4.3 </bdi>MathML</h5><a class="self-link" href="#mathml" aria-label="Permalink for Section 4.2.4.3"></a>
+						
 
 						<p>Identifies that mathematical equations and formulas are encoded in [<cite><a class="bibref" data-link-type="biblio" href="#bib-mathml" title="Mathematical Markup Language (MathML) 1.01 Specification">MathML</a></cite>].</p>
 					</section>
 
-					<section id="ttsMarkup">
-						<h5 id="x4-2-4-4-ttsmarkup"><bdi class="secno">4.2.4.4 </bdi>ttsMarkup</h5><a class="self-link" href="#ttsMarkup" aria-label="Permalink for Section 4.2.4.4"></a>
+					<section id="ttsMarkup"><h5 id="x4-2-4-4-ttsmarkup"><bdi class="secno">4.2.4.4 </bdi>ttsMarkup</h5><a class="self-link" href="#ttsMarkup" aria-label="Permalink for Section 4.2.4.4"></a>
+						
 
 						<p>One or more of [<cite><a class="bibref" data-link-type="biblio" href="#bib-ssml" title="Speech Synthesis Markup Language (SSML) Version 1.1">SSML</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="#bib-pronunciation-lexicon" title="Pronunciation Lexicon Specification (PLS) Version 1.0">Pronunciation-Lexicon</a></cite>], and [<cite><a class="bibref" data-link-type="biblio" href="#bib-css3-speech" title="CSS Speech Module">CSS3-Speech</a></cite>] properties has been
 							used to enhance text-to-speech playback quality.</p>
 					</section>
 				</section>
 
-				<section id="clarity-terms">
-					<h4 id="x4-2-5-clarity-terms"><bdi class="secno">4.2.5 </bdi>Clarity Terms</h4><a class="self-link" href="#clarity-terms" aria-label="Permalink for Section 4.2.5"></a>
+				<section id="clarity-terms"><h4 id="x4-2-5-clarity-terms"><bdi class="secno">4.2.5 </bdi>Clarity Terms</h4><a class="self-link" href="#clarity-terms" aria-label="Permalink for Section 4.2.5"></a>
+					
 
 					<p>The clarity terms identify ways that the content has been enhanced for improved auditory or
 						visual clarity.</p>
 
-					<section id="highContrastAudio">
-						<h5 id="x4-2-5-1-highcontrastaudio"><bdi class="secno">4.2.5.1 </bdi>highContrastAudio</h5><a class="self-link" href="#highContrastAudio" aria-label="Permalink for Section 4.2.5.1"></a>
+					<section id="highContrastAudio"><h5 id="x4-2-5-1-highcontrastaudio"><bdi class="secno">4.2.5.1 </bdi>highContrastAudio</h5><a class="self-link" href="#highContrastAudio" aria-label="Permalink for Section 4.2.5.1"></a>
+						
 
 						<p>Audio content with speech in the foreground meets the contrast thresholds set out in <a href="https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio">WCAG
 								Success Criteria 1.4.7</a>. The requirement the audio meets can be appended, but is not
@@ -871,15 +899,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						</ul>
 					</section>
 
-					<section id="highContrastDisplay">
-						<h5 id="x4-2-5-2-highcontrastdisplay"><bdi class="secno">4.2.5.2 </bdi>highContrastDisplay</h5><a class="self-link" href="#highContrastDisplay" aria-label="Permalink for Section 4.2.5.2"></a>
+					<section id="highContrastDisplay"><h5 id="x4-2-5-2-highcontrastdisplay"><bdi class="secno">4.2.5.2 </bdi>highContrastDisplay</h5><a class="self-link" href="#highContrastDisplay" aria-label="Permalink for Section 4.2.5.2"></a>
+						
 
 						<p>Content meets the visual contrast threshold set out in <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced">WCAG Success
 								Criteria 1.4.6</a>.</p>
 					</section>
 
-					<section id="largePrint">
-						<h5 id="x4-2-5-3-largeprint"><bdi class="secno">4.2.5.3 </bdi>largePrint</h5><a class="self-link" href="#largePrint" aria-label="Permalink for Section 4.2.5.3"></a>
+					<section id="largePrint"><h5 id="x4-2-5-3-largeprint"><bdi class="secno">4.2.5.3 </bdi>largePrint</h5><a class="self-link" href="#largePrint" aria-label="Permalink for Section 4.2.5.3"></a>
+						
 
 						<p>The content has been formatted to meet large print guidelines. The specific point size may
 							optionally be added as an extension (e.g., <code>largePrint/18</code>).</p>
@@ -888,13 +916,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					</section>
 				</section>
 
-				<section id="tactile-terms">
-					<h4 id="x4-2-6-tactile-terms"><bdi class="secno">4.2.6 </bdi>Tactile Terms</h4><a class="self-link" href="#tactile-terms" aria-label="Permalink for Section 4.2.6"></a>
+				<section id="tactile-terms"><h4 id="x4-2-6-tactile-terms"><bdi class="secno">4.2.6 </bdi>Tactile Terms</h4><a class="self-link" href="#tactile-terms" aria-label="Permalink for Section 4.2.6"></a>
+					
 
 					<p>The tactile terms identify content that is available in tactile form.</p>
 
-					<section id="braille">
-						<h5 id="x4-2-6-1-braille"><bdi class="secno">4.2.6.1 </bdi>braille</h5><a class="self-link" href="#braille" aria-label="Permalink for Section 4.2.6.1"></a>
+					<section id="braille"><h5 id="x4-2-6-1-braille"><bdi class="secno">4.2.6.1 </bdi>braille</h5><a class="self-link" href="#braille" aria-label="Permalink for Section 4.2.6.1"></a>
+						
 
 						<p>The content is in braille format, or alternatives are available in braille. This value can be
 							extended to identify the different types of braille (<code>/ASCII</code>,
@@ -904,8 +932,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							also be specified.</p>
 					</section>
 
-					<section id="tactileGraphic">
-						<h5 id="x4-2-6-2-tactilegraphic"><bdi class="secno">4.2.6.2 </bdi>tactileGraphic</h5><a class="self-link" href="#tactileGraphic" aria-label="Permalink for Section 4.2.6.2"></a>
+					<section id="tactileGraphic"><h5 id="x4-2-6-2-tactilegraphic"><bdi class="secno">4.2.6.2 </bdi>tactileGraphic</h5><a class="self-link" href="#tactileGraphic" aria-label="Permalink for Section 4.2.6.2"></a>
+						
 
 						<p>When used with creative works such as books, indicates that the resource includes tactile
 							graphics.</p>
@@ -913,15 +941,15 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						<p>When used to describe an image resource or physical object, indicates that the resource is a
 							tactile graphic.</p>
 
-						<div class="note" role="note" id="issue-container-generatedID-2"><div role="heading" class="note-title marker" id="h-note-2" aria-level="6"><span>Note</span></div><div class="">
+						<div class="note" role="note" id="issue-container-generatedID-4"><div role="heading" class="note-title marker" id="h-note-4" aria-level="6"><span>Note</span></div><div class="">
 							<p>Refer to the <a href="http://www.brailleauthority.org/tg/">BANA Guidelines and Standards
 									for Tactile Graphics</a> for more information about tactile graphic formats and
 								formatting.</p>
 						</div></div>
 					</section>
 
-					<section id="tactileObject">
-						<h5 id="x4-2-6-3-tactileobject"><bdi class="secno">4.2.6.3 </bdi>tactileObject</h5><a class="self-link" href="#tactileObject" aria-label="Permalink for Section 4.2.6.3"></a>
+					<section id="tactileObject"><h5 id="x4-2-6-3-tactileobject"><bdi class="secno">4.2.6.3 </bdi>tactileObject</h5><a class="self-link" href="#tactileObject" aria-label="Permalink for Section 4.2.6.3"></a>
+						
 
 						<p>When used with creative works such as books, indicates that the resource includes models to
 							generate tactile 3D objects.</p>
@@ -931,18 +959,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					</section>
 				</section>
 
-				<section id="feature-none">
-					<h4 id="x4-2-7-none"><bdi class="secno">4.2.7 </bdi>none</h4><a class="self-link" href="#feature-none" aria-label="Permalink for Section 4.2.7"></a>
+				<section id="feature-none"><h4 id="x4-2-7-none"><bdi class="secno">4.2.7 </bdi>none</h4><a class="self-link" href="#feature-none" aria-label="Permalink for Section 4.2.7"></a>
+					
 
 					<p>Indicates that the resource does not contain any accessibility features.</p>
 				</section>
 			</section>
 		</section>
-		<section id="accessibilityHazard">
-			<h2 id="x5-the-accessibilityhazard-property"><bdi class="secno">5. </bdi>The <code>accessibilityHazard</code> Property</h2><a class="self-link" href="#accessibilityHazard" aria-label="Permalink for Section 5."></a>
+		<section id="accessibilityHazard"><h2 id="x5-the-accessibilityhazard-property"><bdi class="secno">5. </bdi>The <code>accessibilityHazard</code> Property</h2><a class="self-link" href="#accessibilityHazard" aria-label="Permalink for Section 5."></a>
+			
 
-			<section id="accessibilityHazard-application">
-				<h3 id="x5-1-application"><bdi class="secno">5.1 </bdi>Application</h3><a class="self-link" href="#accessibilityHazard-application" aria-label="Permalink for Section 5.1"></a>
+			<section id="accessibilityHazard-application"><h3 id="x5-1-application"><bdi class="secno">5.1 </bdi>Application</h3><a class="self-link" href="#accessibilityHazard-application" aria-label="Permalink for Section 5.1"></a>
+				
 
 				<blockquote>
 					<p>A characteristic of the described resource that is physiologically dangerous to some users.
@@ -995,11 +1023,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</aside>
 			</section>
 
-			<section id="accessibilityHazard-vocabulary">
-				<h3 id="x5-2-vocabulary"><bdi class="secno">5.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessibilityHazard-vocabulary" aria-label="Permalink for Section 5.2"></a>
+			<section id="accessibilityHazard-vocabulary"><h3 id="x5-2-vocabulary"><bdi class="secno">5.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessibilityHazard-vocabulary" aria-label="Permalink for Section 5.2"></a>
+				
 
-				<section id="flashing">
-					<h4 id="x5-2-1-flashing"><bdi class="secno">5.2.1 </bdi>flashing</h4><a class="self-link" href="#flashing" aria-label="Permalink for Section 5.2.1"></a>
+				<section id="flashing"><h4 id="x5-2-1-flashing"><bdi class="secno">5.2.1 </bdi>flashing</h4><a class="self-link" href="#flashing" aria-label="Permalink for Section 5.2.1"></a>
+					
 
 					<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
 
@@ -1007,8 +1035,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							2.3.1 Three Flashes or Below Threshold</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag2" title="Web Content Accessibility Guidelines (WCAG) 2">WCAG2</a></cite>].</p>
 				</section>
 
-				<section id="noFlashingHazard">
-					<h4 id="x5-2-2-noflashinghazard"><bdi class="secno">5.2.2 </bdi>noFlashingHazard</h4><a class="self-link" href="#noFlashingHazard" aria-label="Permalink for Section 5.2.2"></a>
+				<section id="noFlashingHazard"><h4 id="x5-2-2-noflashinghazard"><bdi class="secno">5.2.2 </bdi>noFlashingHazard</h4><a class="self-link" href="#noFlashingHazard" aria-label="Permalink for Section 5.2.2"></a>
+					
 
 					<p>Indicates that the resource does not present a flashing hazard.</p>
 
@@ -1016,8 +1044,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 							2.3.1 Three Flashes or Below Threshold</a> [<cite><a class="bibref" data-link-type="biblio" href="#bib-wcag2" title="Web Content Accessibility Guidelines (WCAG) 2">WCAG2</a></cite>].</p>
 				</section>
 
-				<section id="motionSimulation">
-					<h4 id="x5-2-3-motionsimulation"><bdi class="secno">5.2.3 </bdi>motionSimulation</h4><a class="self-link" href="#motionSimulation" aria-label="Permalink for Section 5.2.3"></a>
+				<section id="motionSimulation"><h4 id="x5-2-3-motionsimulation"><bdi class="secno">5.2.3 </bdi>motionSimulation</h4><a class="self-link" href="#motionSimulation" aria-label="Permalink for Section 5.2.3"></a>
+					
 
 					<p>Indicates that the resource contains instances of motion simulation that may affect some
 						individuals.</p>
@@ -1026,45 +1054,45 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						CSS-controlled backgrounds that move when a user scrolls a page.</p>
 				</section>
 
-				<section id="noMotionSimulationHazard">
-					<h4 id="x5-2-4-nomotionsimulationhazard"><bdi class="secno">5.2.4 </bdi>noMotionSimulationHazard</h4><a class="self-link" href="#noMotionSimulationHazard" aria-label="Permalink for Section 5.2.4"></a>
+				<section id="noMotionSimulationHazard"><h4 id="x5-2-4-nomotionsimulationhazard"><bdi class="secno">5.2.4 </bdi>noMotionSimulationHazard</h4><a class="self-link" href="#noMotionSimulationHazard" aria-label="Permalink for Section 5.2.4"></a>
+					
 
 					<p>Indicates that the resource does not contain instances of motion simulation.</p>
 				</section>
 
-				<section id="sound">
-					<h4 id="x5-2-5-sound"><bdi class="secno">5.2.5 </bdi>sound</h4><a class="self-link" href="#sound" aria-label="Permalink for Section 5.2.5"></a>
+				<section id="sound"><h4 id="x5-2-5-sound"><bdi class="secno">5.2.5 </bdi>sound</h4><a class="self-link" href="#sound" aria-label="Permalink for Section 5.2.5"></a>
+					
 
 					<p>Indicates that the resource contains auditory sounds that may affect some individuals.</p>
 
-					<div class="note" id="issue-container-generatedID-3"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>Editor's note</span></div><p class="">The application of this value is currently under discussion as its application is
+					<div class="note" id="issue-container-generatedID-5"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="5"><span>Editor's note</span></div><p class="">The application of this value is currently under discussion as its application is
 						underspecified.</p></div>
 				</section>
 
-				<section id="noSoundHazard">
-					<h4 id="x5-2-6-nosoundhazard"><bdi class="secno">5.2.6 </bdi>noSoundHazard</h4><a class="self-link" href="#noSoundHazard" aria-label="Permalink for Section 5.2.6"></a>
+				<section id="noSoundHazard"><h4 id="x5-2-6-nosoundhazard"><bdi class="secno">5.2.6 </bdi>noSoundHazard</h4><a class="self-link" href="#noSoundHazard" aria-label="Permalink for Section 5.2.6"></a>
+					
 
 					<p>Indicates that the resource does not contain auditory hazards.</p>
 
-					<div class="note" id="issue-container-generatedID-4"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="5"><span>Editor's note</span></div><p class="">The application of this value is currently under discussion as its application is
+					<div class="note" id="issue-container-generatedID-6"><div role="heading" class="ednote-title marker" id="h-ednote-0" aria-level="5"><span>Editor's note</span></div><p class="">The application of this value is currently under discussion as its application is
 						underspecified.</p></div>
 				</section>
 
-				<section id="unknown">
-					<h4 id="x5-2-7-unknown"><bdi class="secno">5.2.7 </bdi>unknown</h4><a class="self-link" href="#unknown" aria-label="Permalink for Section 5.2.7"></a>
+				<section id="unknown"><h4 id="x5-2-7-unknown"><bdi class="secno">5.2.7 </bdi>unknown</h4><a class="self-link" href="#unknown" aria-label="Permalink for Section 5.2.7"></a>
+					
 
 					<p>Indicates that the author is not able to determine if the resource presents any hazards.</p>
 				</section>
 
-				<section id="hazard-none">
-					<h4 id="x5-2-8-none"><bdi class="secno">5.2.8 </bdi>none</h4><a class="self-link" href="#hazard-none" aria-label="Permalink for Section 5.2.8"></a>
+				<section id="hazard-none"><h4 id="x5-2-8-none"><bdi class="secno">5.2.8 </bdi>none</h4><a class="self-link" href="#hazard-none" aria-label="Permalink for Section 5.2.8"></a>
+					
 
 					<p>Indicates that the resource does not contain any hazards.</p>
 				</section>
 			</section>
 		</section>
-		<section id="accessibilitySummary">
-			<h2 id="x6-the-accessibilitysummary-property"><bdi class="secno">6. </bdi>The <code>accessibilitySummary</code> Property</h2><a class="self-link" href="#accessibilitySummary" aria-label="Permalink for Section 6."></a>
+		<section id="accessibilitySummary"><h2 id="x6-the-accessibilitysummary-property"><bdi class="secno">6. </bdi>The <code>accessibilitySummary</code> Property</h2><a class="self-link" href="#accessibilitySummary" aria-label="Permalink for Section 6."></a>
+			
 
 			<blockquote>
 				<p>A human-readable summary of specific accessibility features or deficiencies, consistent with the
@@ -1106,11 +1134,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 <span class="hljs-tag">&lt;/<span class="hljs-name">package</span>&gt;</span></code></pre>
 			</aside>
 		</section>
-		<section id="accessMode">
-			<h2 id="x7-the-accessmode-property"><bdi class="secno">7. </bdi>The <code>accessMode</code> Property</h2><a class="self-link" href="#accessMode" aria-label="Permalink for Section 7."></a>
+		<section id="accessMode"><h2 id="x7-the-accessmode-property"><bdi class="secno">7. </bdi>The <code>accessMode</code> Property</h2><a class="self-link" href="#accessMode" aria-label="Permalink for Section 7."></a>
+			
 
-			<section id="accessMode-application">
-				<h3 id="x7-1-application"><bdi class="secno">7.1 </bdi>Application</h3><a class="self-link" href="#accessMode-application" aria-label="Permalink for Section 7.1"></a>
+			<section id="accessMode-application"><h3 id="x7-1-application"><bdi class="secno">7.1 </bdi>Application</h3><a class="self-link" href="#accessMode-application" aria-label="Permalink for Section 7.1"></a>
+				
 
 				<blockquote>
 					<p>The human sensory perceptual system or cognitive faculty through which a person may process or
@@ -1160,54 +1188,54 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</aside>
 			</section>
 
-			<section id="accessMode-vocabulary">
-				<h3 id="x7-2-vocabulary"><bdi class="secno">7.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessMode-vocabulary" aria-label="Permalink for Section 7.2"></a>
+			<section id="accessMode-vocabulary"><h3 id="x7-2-vocabulary"><bdi class="secno">7.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessMode-vocabulary" aria-label="Permalink for Section 7.2"></a>
+				
 
-				<section id="auditory">
-					<h4 id="x7-2-1-auditory"><bdi class="secno">7.2.1 </bdi>auditory</h4><a class="self-link" href="#auditory" aria-label="Permalink for Section 7.2.1"></a>
+				<section id="auditory"><h4 id="x7-2-1-auditory"><bdi class="secno">7.2.1 </bdi>auditory</h4><a class="self-link" href="#auditory" aria-label="Permalink for Section 7.2.1"></a>
+					
 
 					<p>Indicates that the resource contains information encoded in auditory form.</p>
 				</section>
 
-				<section id="chartOnVisual">
-					<h4 id="x7-2-2-chartonvisual"><bdi class="secno">7.2.2 </bdi>chartOnVisual</h4><a class="self-link" href="#chartOnVisual" aria-label="Permalink for Section 7.2.2"></a>
+				<section id="chartOnVisual"><h4 id="x7-2-2-chartonvisual"><bdi class="secno">7.2.2 </bdi>chartOnVisual</h4><a class="self-link" href="#chartOnVisual" aria-label="Permalink for Section 7.2.2"></a>
+					
 
 					<p>Indicates that the resource contains charts encoded in visual form.</p>
 				</section>
 
-				<section id="chemOnVisual">
-					<h4 id="x7-2-3-chemonvisual"><bdi class="secno">7.2.3 </bdi>chemOnVisual</h4><a class="self-link" href="#chemOnVisual" aria-label="Permalink for Section 7.2.3"></a>
+				<section id="chemOnVisual"><h4 id="x7-2-3-chemonvisual"><bdi class="secno">7.2.3 </bdi>chemOnVisual</h4><a class="self-link" href="#chemOnVisual" aria-label="Permalink for Section 7.2.3"></a>
+					
 
 					<p>Indicates that the resource contains chemical equations encoded in visual form.</p>
 				</section>
 
-				<section id="colorDependent">
-					<h4 id="x7-2-4-colordependent"><bdi class="secno">7.2.4 </bdi>colorDependent</h4><a class="self-link" href="#colorDependent" aria-label="Permalink for Section 7.2.4"></a>
+				<section id="colorDependent"><h4 id="x7-2-4-colordependent"><bdi class="secno">7.2.4 </bdi>colorDependent</h4><a class="self-link" href="#colorDependent" aria-label="Permalink for Section 7.2.4"></a>
+					
 
 					<p>Indicates that the resource contains information encoded in such that color perception is
 						necessary.</p>
 				</section>
 
-				<section id="diagramOnVisual">
-					<h4 id="x7-2-5-diagramonvisual"><bdi class="secno">7.2.5 </bdi>diagramOnVisual</h4><a class="self-link" href="#diagramOnVisual" aria-label="Permalink for Section 7.2.5"></a>
+				<section id="diagramOnVisual"><h4 id="x7-2-5-diagramonvisual"><bdi class="secno">7.2.5 </bdi>diagramOnVisual</h4><a class="self-link" href="#diagramOnVisual" aria-label="Permalink for Section 7.2.5"></a>
+					
 
 					<p>Indicates that the resource contains diagrams encoded in visual form.</p>
 				</section>
 
-				<section id="mathOnVisual">
-					<h4 id="x7-2-6-mathonvisual"><bdi class="secno">7.2.6 </bdi>mathOnVisual</h4><a class="self-link" href="#mathOnVisual" aria-label="Permalink for Section 7.2.6"></a>
+				<section id="mathOnVisual"><h4 id="x7-2-6-mathonvisual"><bdi class="secno">7.2.6 </bdi>mathOnVisual</h4><a class="self-link" href="#mathOnVisual" aria-label="Permalink for Section 7.2.6"></a>
+					
 
 					<p>Indicates that the resource contains mathematical notations encoded in visual form.</p>
 				</section>
 
-				<section id="musicOnVisual">
-					<h4 id="x7-2-7-musiconvisual"><bdi class="secno">7.2.7 </bdi>musicOnVisual</h4><a class="self-link" href="#musicOnVisual" aria-label="Permalink for Section 7.2.7"></a>
+				<section id="musicOnVisual"><h4 id="x7-2-7-musiconvisual"><bdi class="secno">7.2.7 </bdi>musicOnVisual</h4><a class="self-link" href="#musicOnVisual" aria-label="Permalink for Section 7.2.7"></a>
+					
 
 					<p>Indicates that the resource contains musical notation encoded in visual form.</p>
 				</section>
 
-				<section id="tactile">
-					<h4 id="x7-2-8-tactile"><bdi class="secno">7.2.8 </bdi>tactile</h4><a class="self-link" href="#tactile" aria-label="Permalink for Section 7.2.8"></a>
+				<section id="tactile"><h4 id="x7-2-8-tactile"><bdi class="secno">7.2.8 </bdi>tactile</h4><a class="self-link" href="#tactile" aria-label="Permalink for Section 7.2.8"></a>
+					
 
 					<p>Indicates that the resource contains information encoded in tactile form.</p>
 
@@ -1216,30 +1244,30 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						the use of tactile graphics to convey information.</p>
 				</section>
 
-				<section id="textOnVisual">
-					<h4 id="x7-2-9-textonvisual"><bdi class="secno">7.2.9 </bdi>textOnVisual</h4><a class="self-link" href="#textOnVisual" aria-label="Permalink for Section 7.2.9"></a>
+				<section id="textOnVisual"><h4 id="x7-2-9-textonvisual"><bdi class="secno">7.2.9 </bdi>textOnVisual</h4><a class="self-link" href="#textOnVisual" aria-label="Permalink for Section 7.2.9"></a>
+					
 
 					<p>Indicates that the resource contains text encoded in visual form.</p>
 				</section>
 
-				<section id="textual">
-					<h4 id="x7-2-10-textual"><bdi class="secno">7.2.10 </bdi>textual</h4><a class="self-link" href="#textual" aria-label="Permalink for Section 7.2.10"></a>
+				<section id="textual"><h4 id="x7-2-10-textual"><bdi class="secno">7.2.10 </bdi>textual</h4><a class="self-link" href="#textual" aria-label="Permalink for Section 7.2.10"></a>
+					
 
 					<p>Indicates that the resource contains information encoded in textual form.</p>
 				</section>
 
-				<section id="visual">
-					<h4 id="x7-2-11-visual"><bdi class="secno">7.2.11 </bdi>visual</h4><a class="self-link" href="#visual" aria-label="Permalink for Section 7.2.11"></a>
+				<section id="visual"><h4 id="x7-2-11-visual"><bdi class="secno">7.2.11 </bdi>visual</h4><a class="self-link" href="#visual" aria-label="Permalink for Section 7.2.11"></a>
+					
 
 					<p>Indicates that the resource contains information encoded in visual form.</p>
 				</section>
 			</section>
 		</section>
-		<section id="accessModeSufficient">
-			<h2 id="x8-the-accessmodesufficient-property"><bdi class="secno">8. </bdi>The <code>accessModeSufficient</code> property</h2><a class="self-link" href="#accessModeSufficient" aria-label="Permalink for Section 8."></a>
+		<section id="accessModeSufficient"><h2 id="x8-the-accessmodesufficient-property"><bdi class="secno">8. </bdi>The <code>accessModeSufficient</code> property</h2><a class="self-link" href="#accessModeSufficient" aria-label="Permalink for Section 8."></a>
+			
 
-			<section id="accessModeSufficient-application">
-				<h3 id="x8-1-application"><bdi class="secno">8.1 </bdi>Application</h3><a class="self-link" href="#accessModeSufficient-application" aria-label="Permalink for Section 8.1"></a>
+			<section id="accessModeSufficient-application"><h3 id="x8-1-application"><bdi class="secno">8.1 </bdi>Application</h3><a class="self-link" href="#accessModeSufficient-application" aria-label="Permalink for Section 8.1"></a>
+				
 
 				<blockquote>
 					<p>A list of single or combined <a href="#accessMode">accessModes</a> that are sufficient to
@@ -1311,23 +1339,23 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</aside>
 			</section>
 
-			<section id="accessModeSufficient-vocabulary">
-				<h3 id="x8-2-vocabulary"><bdi class="secno">8.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessModeSufficient-vocabulary" aria-label="Permalink for Section 8.2"></a>
+			<section id="accessModeSufficient-vocabulary"><h3 id="x8-2-vocabulary"><bdi class="secno">8.2 </bdi>Vocabulary</h3><a class="self-link" href="#accessModeSufficient-vocabulary" aria-label="Permalink for Section 8.2"></a>
+				
 
-				<section id="ams-auditory">
-					<h4 id="x8-2-1-auditory"><bdi class="secno">8.2.1 </bdi>auditory</h4><a class="self-link" href="#ams-auditory" aria-label="Permalink for Section 8.2.1"></a>
+				<section id="ams-auditory"><h4 id="x8-2-1-auditory"><bdi class="secno">8.2.1 </bdi>auditory</h4><a class="self-link" href="#ams-auditory" aria-label="Permalink for Section 8.2.1"></a>
+					
 
 					<p>Indicates that auditory perception is necessary to consume the information.</p>
 				</section>
 
-				<section id="ams-tactile">
-					<h4 id="x8-2-2-tactile"><bdi class="secno">8.2.2 </bdi>tactile</h4><a class="self-link" href="#ams-tactile" aria-label="Permalink for Section 8.2.2"></a>
+				<section id="ams-tactile"><h4 id="x8-2-2-tactile"><bdi class="secno">8.2.2 </bdi>tactile</h4><a class="self-link" href="#ams-tactile" aria-label="Permalink for Section 8.2.2"></a>
+					
 
 					<p>Indicates that tactile perception is necessary to consume the information.</p>
 				</section>
 
-				<section id="ams-textual">
-					<h4 id="x8-2-3-textual"><bdi class="secno">8.2.3 </bdi>textual</h4><a class="self-link" href="#ams-textual" aria-label="Permalink for Section 8.2.3"></a>
+				<section id="ams-textual"><h4 id="x8-2-3-textual"><bdi class="secno">8.2.3 </bdi>textual</h4><a class="self-link" href="#ams-textual" aria-label="Permalink for Section 8.2.3"></a>
+					
 
 					<p>Indicates that the ability to read textual content is necessary to consume the information.</p>
 
@@ -1335,18 +1363,18 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 						rendered as audio using a text-to-speech capable device or assistive technology.</p>
 				</section>
 
-				<section id="ams-visual">
-					<h4 id="x8-2-4-visual"><bdi class="secno">8.2.4 </bdi>visual</h4><a class="self-link" href="#ams-visual" aria-label="Permalink for Section 8.2.4"></a>
+				<section id="ams-visual"><h4 id="x8-2-4-visual"><bdi class="secno">8.2.4 </bdi>visual</h4><a class="self-link" href="#ams-visual" aria-label="Permalink for Section 8.2.4"></a>
+					
 
 					<p>Indicates that visual perception is necessary to consume the information.</p>
 				</section>
 			</section>
 		</section>
-		<section id="examples">
-			<h2 id="x9-examples"><bdi class="secno">9. </bdi>Examples</h2><a class="self-link" href="#examples" aria-label="Permalink for Section 9."></a>
+		<section id="examples"><h2 id="x9-examples"><bdi class="secno">9. </bdi>Examples</h2><a class="self-link" href="#examples" aria-label="Permalink for Section 9."></a>
+			
 
-			<section id="ex-book">
-				<h3 id="x9-1-book"><bdi class="secno">9.1 </bdi>Book</h3><a class="self-link" href="#ex-book" aria-label="Permalink for Section 9.1"></a>
+			<section id="ex-book"><h3 id="x9-1-book"><bdi class="secno">9.1 </bdi>Book</h3><a class="self-link" href="#ex-book" aria-label="Permalink for Section 9.1"></a>
+				
 
 				<p>The following example shows how accessibility metadata could be used to enhance a library record
 					available on the Web.</p>
@@ -1354,6 +1382,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				<div class="example">
 					<pre aria-busy="false"><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">itemscope</span>=<span class="hljs-string">""</span> <span class="hljs-attr">itemtype</span>=<span class="hljs-string">"http://schema.org/Book"</span>&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"bookFormat"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"EBook/DAISY3"</span> /&gt;</span>
+   <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"accessibilityFeature"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"ARIA"</span> /&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"accessibilityFeature"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"largePrint"</span> /&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"accessibilityFeature"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"highContrastDisplay"</span> /&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"accessibilityFeature"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"displayTransformability/resizeText"</span> /&gt;</span>
@@ -1365,7 +1394,6 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"accessibilityControl"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"fullKeyboardControl"</span> /&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"accessibilityControl"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"fullMouseControl"</span> /&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"accessibilityHazard"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"none"</span> /&gt;</span>
-   <span class="hljs-tag">&lt;<span class="hljs-name">meta</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"accessibilityAPI"</span> <span class="hljs-attr">content</span>=<span class="hljs-string">"ARIA"</span> /&gt;</span>
    <span class="hljs-tag">&lt;<span class="hljs-name">dl</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">dt</span>&gt;</span>Name:<span class="hljs-tag">&lt;/<span class="hljs-name">dt</span>&gt;</span>
       <span class="hljs-tag">&lt;<span class="hljs-name">dd</span> <span class="hljs-attr">itemprop</span>=<span class="hljs-string">"name"</span>&gt;</span>Holt Physical Science<span class="hljs-tag">&lt;/<span class="hljs-name">dd</span>&gt;</span>
@@ -1418,8 +1446,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</div>
 			</section>
 
-			<section id="ex-video">
-				<h3 id="x9-2-video"><bdi class="secno">9.2 </bdi>Video</h3><a class="self-link" href="#ex-video" aria-label="Permalink for Section 9.2"></a>
+			<section id="ex-video"><h3 id="x9-2-video"><bdi class="secno">9.2 </bdi>Video</h3><a class="self-link" href="#ex-video" aria-label="Permalink for Section 9.2"></a>
+				
 
 				<p>This example shows how the accessibility metadata could be used to augment a record for a video.</p>
 
@@ -1463,8 +1491,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 				</div>
 			</section>
 		</section>
-		<section id="change-log" class="appendix">
-			<h2 id="a-change-log"><bdi class="secno">A. </bdi>Change Log</h2><a class="self-link" href="#change-log" aria-label="Permalink for Appendix A."></a>
+		<section id="change-log" class="appendix"><h2 id="a-change-log"><bdi class="secno">A. </bdi>Change Log</h2><a class="self-link" href="#change-log" aria-label="Permalink for Appendix A."></a>
+			
 
 			<p>Note that this change log only identifies substantive changes to the vocabulary — those that add or
 				deprecate terms, or are similarly noteworthy.</p>
@@ -1473,12 +1501,16 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 					issue tracker</a>.</p>
 
 			<ul>
+				<li>07-Feb-2022: Restore the "tableOfContents" value for <code>accessibilityFeature</code>. See <a href="https://github.com/w3c/a11y-discov-vocab/pull/39">pull request 39</a>.</li>
+				<li>04-Feb-2022: The <code>accessibilityAPI</code> value "ARIA" is deprecated. It is replaced by a new
+					"ARIA" value for <code>accessibilityFeature</code> for indicating the use of roles of enhanced
+					structural and landmark navigation. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/4">issue 4</a>.</li>
 				<li>26-Jan-2022: The accessibility features have been restructured to better organize them by purpose.
 					See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
 			</ul>
 		</section>
-		<section id="acknowledgments" class="appendix">
-			<h2 id="b-acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</h2><a class="self-link" href="#acknowledgments" aria-label="Permalink for Appendix B."></a>
+		<section id="acknowledgments" class="appendix"><h2 id="b-acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</h2><a class="self-link" href="#acknowledgments" aria-label="Permalink for Appendix B."></a>
+			
 
 			<p>The editors would like to thank the <a href="https://www.w3.org/community/a11y-discov-vocab/participants">Accessibility Discoverability Vocabulary for Schema.org Community Group participants</a> for their
 				ongoing input and suggestions to improve this vocabulary.</p>
@@ -1488,9 +1520,27 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
 		</section>
 	
 
-<section id="references" class="appendix"><h2 id="c-references"><bdi class="secno">C. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix C."></a><section id="informative-references">
-    <h3 id="c-1-informative-references"><bdi class="secno">C.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix C.1"></a>
-    <dl class="bibliography"><dt id="bib-css3-speech">[CSS3-Speech]</dt><dd><a href="https://www.w3.org/TR/css-speech-1/"><cite>CSS Speech Module</cite></a>. Daniel Weck.  W3C. 10 March 2020. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/css-speech-1/">https://www.w3.org/TR/css-speech-1/</a></dd><dt id="bib-html">[HTML]</dt><dd><a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a></dd><dt id="bib-iso-639">[ISO-639]</dt><dd><a href="https://www.iso.org/standard/4766.html"><cite>Code for the representation of names of languages</cite></a>. ISO/TC 37/SC 2.  ISO. 1988. International Standard. URL: <a href="https://www.iso.org/standard/4766.html">https://www.iso.org/standard/4766.html</a></dd><dt id="bib-mathml">[MathML]</dt><dd><a href="https://www.w3.org/TR/REC-MathML/"><cite>Mathematical Markup Language (MathML) 1.01 Specification</cite></a>. Patrick D F Ion; Robert R Miner.  W3C. 7 July 1999. W3C Recommendation. URL: <a href="https://www.w3.org/TR/REC-MathML/">https://www.w3.org/TR/REC-MathML/</a></dd><dt id="bib-pronunciation-lexicon">[Pronunciation-Lexicon]</dt><dd><a href="https://www.w3.org/TR/pronunciation-lexicon/"><cite>Pronunciation Lexicon Specification (PLS) Version 1.0</cite></a>. Paolo Baggia.  W3C. 14 October 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/pronunciation-lexicon/">https://www.w3.org/TR/pronunciation-lexicon/</a></dd><dt id="bib-schema-org">[schema-org]</dt><dd><a href="https://schema.org/"><cite>Schema.org</cite></a>. W3C Schema.org Community Group.  W3C. 6.0. URL: <a href="https://schema.org/">https://schema.org/</a></dd><dt id="bib-ssml">[SSML]</dt><dd><a href="https://www.w3.org/TR/speech-synthesis11/"><cite>Speech Synthesis Markup Language (SSML) Version 1.1</cite></a>. Daniel Burnett; Zhi Wei Shuang.  W3C. 7 September 2010. W3C Recommendation. URL: <a href="https://www.w3.org/TR/speech-synthesis11/">https://www.w3.org/TR/speech-synthesis11/</a></dd><dt id="bib-wcag2">[WCAG2]</dt><dd><a href="https://www.w3.org/TR/WCAG2/"><cite>Web Content Accessibility Guidelines (WCAG) 2</cite></a>.  W3C. URL: <a href="https://www.w3.org/TR/WCAG2/">https://www.w3.org/TR/WCAG2/</a></dd></dl>
+<section id="references" class="appendix"><h2 id="c-references"><bdi class="secno">C. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix C."></a><section id="informative-references"><h3 id="c-1-informative-references"><bdi class="secno">C.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix C.1"></a>
+    
+    <dl class="bibliography"><dt id="bib-css3-speech">[CSS3-Speech]</dt><dd>
+      <a href="https://www.w3.org/TR/css-speech-1/"><cite>CSS Speech Module</cite></a>. Daniel Weck.  W3C. 10 March 2020. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/css-speech-1/">https://www.w3.org/TR/css-speech-1/</a>
+    </dd><dt id="bib-html">[HTML]</dt><dd>
+      <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
+    </dd><dt id="bib-iso-639">[ISO-639]</dt><dd>
+      <a href="https://www.iso.org/standard/4766.html"><cite>Code for the representation of names of languages</cite></a>. ISO/TC 37/SC 2.  ISO. 1988. International Standard. URL: <a href="https://www.iso.org/standard/4766.html">https://www.iso.org/standard/4766.html</a>
+    </dd><dt id="bib-mathml">[MathML]</dt><dd>
+      <a href="https://www.w3.org/TR/REC-MathML/"><cite>Mathematical Markup Language (MathML) 1.01 Specification</cite></a>. Patrick D F Ion; Robert R Miner.  W3C. 7 July 1999. W3C Recommendation. URL: <a href="https://www.w3.org/TR/REC-MathML/">https://www.w3.org/TR/REC-MathML/</a>
+    </dd><dt id="bib-pronunciation-lexicon">[Pronunciation-Lexicon]</dt><dd>
+      <a href="https://www.w3.org/TR/pronunciation-lexicon/"><cite>Pronunciation Lexicon Specification (PLS) Version 1.0</cite></a>. Paolo Baggia.  W3C. 14 October 2008. W3C Recommendation. URL: <a href="https://www.w3.org/TR/pronunciation-lexicon/">https://www.w3.org/TR/pronunciation-lexicon/</a>
+    </dd><dt id="bib-schema-org">[schema-org]</dt><dd>
+      <a href="https://schema.org/"><cite>Schema.org</cite></a>. W3C Schema.org Community Group.  W3C. 6.0. URL: <a href="https://schema.org/">https://schema.org/</a>
+    </dd><dt id="bib-ssml">[SSML]</dt><dd>
+      <a href="https://www.w3.org/TR/speech-synthesis11/"><cite>Speech Synthesis Markup Language (SSML) Version 1.1</cite></a>. Daniel Burnett; Zhi Wei Shuang.  W3C. 7 September 2010. W3C Recommendation. URL: <a href="https://www.w3.org/TR/speech-synthesis11/">https://www.w3.org/TR/speech-synthesis11/</a>
+    </dd><dt id="bib-wai-aria">[WAI-ARIA]</dt><dd>
+      <a href="https://www.w3.org/TR/wai-aria/"><cite>Accessible Rich Internet Applications (WAI-ARIA) 1.0</cite></a>. James Craig; Michael Cooper et al.  W3C. 20 March 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/wai-aria/">https://www.w3.org/TR/wai-aria/</a>
+    </dd><dt id="bib-wcag2">[WCAG2]</dt><dd>
+      <a href="https://www.w3.org/TR/WCAG2/"><cite>Web Content Accessibility Guidelines (WCAG) 2</cite></a>.  W3C. URL: <a href="https://www.w3.org/TR/WCAG2/">https://www.w3.org/TR/WCAG2/</a>
+    </dd></dl>
   </section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Back to Top">↑</abbr></a>
   </p><script id="respec-dfn-panel">(() => {

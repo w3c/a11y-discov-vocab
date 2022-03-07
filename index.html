@@ -276,11 +276,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				</section>
 
 				<section id="iOSAccessibility">
-					<h4>iOSAccessibility</h4>
+					<h4>iOSAccessibility (deprecated)</h4>
 
-					<p>Indicates the resource is compatible with the <a
-							href="https://developer.apple.com/documentation/objectivec/nsobject/uiaccessibility"
-							>UIAccessibility API</a> for Apple iOS devices.</p>
+					<p>Authors should use the <a href="#NSAccessibility">NSAccessibility</a> value instead.</p>
 				</section>
 
 				<section id="JavaAccessibility">
@@ -291,18 +289,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 							>Java Accessibility API (JAAPI)</a>.</p>
 				</section>
 
-				<section id="macOSAccessibility">
-					<h4>macOSAccessibility</h4>
-
-					<p>Indicates the resource is compatible with the <a
-							href="https://developer.apple.com/documentation/appkit/nsaccessibility">macOS Accessibility
-							API</a>.</p>
-				</section>
-
 				<section id="MacOSXAccessibility">
 					<h4>MacOSXAccessibility (deprecated)</h4>
 
-					<p>Authors should use the <a href="#macOSAccessibility">macOSAccessibility</a> value instead.</p>
+					<p>Authors should use the <a href="#UIAccessibility">UIAccessibility</a> value instead.</p>
 				</section>
 
 				<section id="MSAA">
@@ -311,6 +301,22 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>Indicates the resource is compatible with the <a
 							href="https://docs.microsoft.com/en-us/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility"
 							>Microsoft Active Accessibility (MSAA) API</a> for Windows.</p>
+				</section>
+
+				<section id="NSAccessibility">
+					<h4>NSAccessibility</h4>
+
+					<p>Indicates the resource is compatible with the <a
+							href="https://developer.apple.com/documentation/appkit/nsaccessibility">NSAccessibility
+							API</a> for Apple iOS and tvOS applications built on UIKit.</p>
+				</section>
+
+				<section id="UIAccessibility">
+					<h4>UIAccessibility</h4>
+
+					<p>Indicates the resource is compatible with the <a
+							href="https://developer.apple.com/documentation/objectivec/nsobject/uiaccessibility"
+							>UIAccessibility API</a> for macOS applications built on AppKit.</p>
 				</section>
 
 				<section id="UIAutomation">

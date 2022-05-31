@@ -162,6 +162,10 @@
 				<p>Setting the property means that the resource is compatible with the given API(s). It does not
 					necessarily mean that the content will be fully accessible to any given user group.</p>
 
+				<p>The expected value of the <code>accessibilityAPI</code> property is a list of the compatible APIs.
+					For metadata formats incapable of expressing lists, the property should be repeated for each
+					API.</p>
+
 				<aside class="example ex-group" title="AccessibilityAPI">
 					<p>The following example shows the metadata used to express that a word processing document is
 						compatible with AndroidAccessibility and iOSAccessibility platform APIs.</p>
@@ -351,6 +355,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 				<p>Setting the property means that the specified control method(s) are compatible with the resource.</p>
 
+				<p>The expected value of the <code>accessibilityControl</code> property is a list of the applicable
+					control methods. For metadata formats incapable of expressing lists, the property should be repeated
+					for each control method.</p>
+
 				<aside class="example ex-group" title="accessibilityControl">
 					<p>The following example shows the metadata for a publication with interactive games that can be
 						controlled by keyboard and mouse input.</p>
@@ -505,6 +513,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<p>The vocabulary also includes <a href="#feature-none">the term "<code>none</code>"</a> that authors
 					can set to indicate that the resource does not contain special enhancements. This value avoids the
 					ambiguity that can arise if a resource has not been checked.</p>
+
+				<p>The expected value of the <code>accessibilityFeature</code> property is a list of the applicable
+					features. For metadata formats incapable of expressing lists, the property should be repeated for
+					each feature.</p>
 
 				<aside class="example ex-group" title="accessibilityFeature">
 					<p>The following example shows the metadata for a book that provides alternative text, extended
@@ -957,6 +969,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<h5>none</h5>
 
 					<p>Indicates that the resource does not contain any accessibility features.</p>
+
+					<p>The <code>none</code> value must not be set with any other feature value.</p>
 				</section>
 			</section>
 		</section>
@@ -983,6 +997,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					or not. Similarly, if an author sets the value <code>unknown</code>, they are stating that they do
 					not know whether hazards are present (e.g., because they do not know how, or are unable, to assess
 					them).</p>
+
+				<p>The expected value of the <code>accessibilityHazard</code> property is a list of the applicable
+					hazards. For metadata formats incapable of expressing lists, the property should be repeated for
+					each hazard.</p>
 
 				<aside class="example ex-group" title="accessibilityHazard">
 					<p>The following example shows the metadata for a video with a flashing hazard.</p>
@@ -1073,6 +1091,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>This value should be set when the content meets the hazard thresholds described in <a
 							href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
 							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+
+					<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
+								><code>noFlashingHazard</code></a>, <a href="#none"><code>none</code></a>, or <a
+							href="#unknown"><code>unknown</code></a> values are set.</p>
 				</section>
 
 				<section id="noFlashingHazard">
@@ -1083,6 +1105,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>This value should be set when the content conforms to <a
 							href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
 							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+
+					<p>The <code>noFlashingHazard</code> value must not be set when either of the <a href="#flashing"
+								><code>flashing</code></a> or <a href="#unknown"><code>unknown</code></a> values is set.
+						It should not be set when the <a href="#none"><code>none</code></a> is set.</p>
 				</section>
 
 				<section id="motionSimulation">
@@ -1093,12 +1119,22 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p>Some examples of motion simulation include video games with a first-person perspective and
 						CSS-controlled backgrounds that move when a user scrolls a page.</p>
+
+					<p>The <code>motionSimulation</code> value must not be set when any of the <a
+							href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, <a href="#none"
+								><code>none</code></a>, or <a href="#unknown"><code>unknown</code></a> values are
+						set.</p>
 				</section>
 
 				<section id="noMotionSimulationHazard">
 					<h4>noMotionSimulationHazard</h4>
 
 					<p>Indicates that the resource does not contain instances of motion simulation.</p>
+
+					<p>The <code>noMotionSimulation</code> value must not be set when either of the <a
+							href="#motionSimulation"><code>motionSimulation</code></a> or <a href="#unknown"
+								><code>unknown</code></a> values is set. It should not be set when the <a href="#none"
+								><code>none</code></a> is set.</p>
 				</section>
 
 				<section id="sound">
@@ -1108,6 +1144,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p class="ednote">The application of this value is currently under discussion as its application is
 						underspecified.</p>
+
+					<p>The <code>sound</code> value must not be set when any of the <a href="#noSoundHazard"
+								><code>noSoundHazard</code></a>, <a href="#none"><code>none</code></a>, or <a
+							href="#unknown"><code>unknown</code></a> values are set.</p>
 				</section>
 
 				<section id="noSoundHazard">
@@ -1117,18 +1157,28 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p class="ednote">The application of this value is currently under discussion as its application is
 						underspecified.</p>
+
+					<p>The <code>noSoundHazard</code> value must not be set when either of the <a href="#sound"
+								><code>sound</code></a> or <a href="#unknown"><code>unknown</code></a> values is set. It
+						should not be set when the <a href="#none"><code>none</code></a> is set.</p>
 				</section>
 
 				<section id="unknown">
 					<h4>unknown</h4>
 
 					<p>Indicates that the author is not able to determine if the resource presents any hazards.</p>
+
+					<p>The <code>unknown</code> value must not be set with any other hazard value.</p>
 				</section>
 
 				<section id="hazard-none">
 					<h4>none</h4>
 
 					<p>Indicates that the resource does not contain any hazards.</p>
+
+					<p>The <code>none</code> value must not be set when specifying either a known hazard or the <a
+							href="#unknown"><code>unknown</code></a> value. It should not be set when negative hazard
+						claims are made.</p>
 				</section>
 			</section>
 		</section>
@@ -1217,14 +1267,23 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						perceive information.</p>
 				</blockquote>
 
-				<p>The <code>accessMode</code> property describes the ways information is encoded in the resource, but
-					it does not tell users if all the specified modes are necessary to consume the information or if
-					only individual modes or combinations are necessary (e.g., in a book with audio content, the ability
-					to read textual content may only be necessary if transcripts are provided).</p>
+				<p>The <code>accessMode</code> property describes the ways information is encoded in the resource, where
+					information is defined as any content that contributes to the understanding of the resource.</p>
 
-				<p>The <a href="#accessModeSufficient"><code>accessModeSufficient</code> property</a> is designed to
-					fill this gap of understanding the combinations of modes necessary to fully consume the
-					information.</p>
+				<p>The expected value of the <code>accessMode</code> property is a list of the applicable access modes.
+					For metadata formats incapable of expressing lists, the property should be repeated for each access
+					mode.</p>
+
+				<div class="note">
+					<p>The access modes do not tell users if all the specified modes are necessary to consume the
+						information or if only individual modes or combinations are necessary (e.g., in a book with
+						audio content, the ability to read textual content may only be necessary if transcripts are
+						provided).</p>
+
+					<p>The <a href="#accessModeSufficient"><code>accessModeSufficient</code> property</a> is designed to
+						fill this gap of understanding the combinations of modes necessary to fully consume the
+						information.</p>
+				</div>
 
 				<aside class="example ex-group" title="accessMode">
 					<p>The following example shows the metadata for a publication that contains both text and
@@ -1295,6 +1354,12 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<h4>auditory</h4>
 
 					<p>Indicates that the resource contains information encoded in auditory form.</p>
+
+					<div class="note">
+						<p>This value is not set when the auditory content conveys no information. For example, an
+							instructional video may include background music while all the necessary information to
+							complete the task is conveyed visually and/or through text captions.</p>
+					</div>
 				</section>
 
 				<section id="chartOnVisual">
@@ -1354,12 +1419,25 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<h4>textual</h4>
 
 					<p>Indicates that the resource contains information encoded in textual form.</p>
+
+					<div class="note">
+						<p>This value is not set if the only textual content is for navigational purposes. For example,
+							an audiobook may include a table of contents but it is not necessary to read the table of
+							contents to read the work. Likewise, books with synchronized text-audio playback may only
+							include headings to allow structured navigation.</p>
+					</div>
 				</section>
 
 				<section id="visual">
 					<h4>visual</h4>
 
 					<p>Indicates that the resource contains information encoded in visual form.</p>
+
+					<div class="note">
+						<p>This value is not set if the only visual imagery is presentational or not directly relevant
+							to understanding the content. Examples of this type of imagery include cover images for
+							publications, corporate logos, and purely decorative images.</p>
+					</div>
 				</section>
 			</section>
 		</section>
@@ -1382,7 +1460,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<p>The author of the content may, however, provide alternatives to a specific access mode that allow the
 					content to be wholly consumed in another manner. The use of alternative text and extended
 					descriptions, for example, can allow a user who cannot perceive visual content to read all the
-					information in textual form.</p>
+					information in textual form (e.g., through text-to-speech playback).</p>
 
 				<p>In such a case, a work with textual and visual access modes could have both a textual and visual
 					sufficient access mode <em>and</em> a purely textual access mode &#8212; because there are text
@@ -1393,6 +1471,19 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<p>It is for this reason that content that has multiple access modes may have one or more sets of
 					sufficient access modes: each listing of sufficient access modes provides users with one possible
 					combination of reading modes that allow the content to be read in full.</p>
+
+				<p>Although listing the combinations of access modes that allow a user to read all the content is
+					helpful, the most important sufficient access modes to list are the single-value ones. Users looking
+					for an alternative to the default encoding of the content typically are looking for a single
+					presentation mode (e.g., a fully textual pathway to use with a text-to-speech renderer or a fully
+					auditory pathway to listen to).</p>
+
+				<p>The expected value of the <code>accessModeSufficient</code> property is an <a
+						href="https://schema.org/ItemList">ItemList</a>. Each entry in the ItemList must be a list of
+					one or more access modes representing one pathway.</p>
+
+				<p>For formats incapable of expressing lists, the property should be repeated for each set of sufficient
+					access modes. In these cases, it is recommended to use a comma-separated list of values.</p>
 
 				<aside class="example ex-group" title="accessModeSufficient">
 					<p>The following metadata shows that a publication has two ways in which the information can be
@@ -1661,6 +1752,16 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 			<details open="">
 				<summary>Changes made in 2022</summary>
 				<ul>
+					<li>31-May-2022: Clarify that access modes do not apply to presentational content. See <a
+							href="https://github.com/w3c/a11y-discov-vocab/issues/38">issue 38</a>.</li>
+					<li>31-May-2022: Clarify that single-value sufficient access modes are the most important to list.
+						See <a href="https://github.com/w3c/a11y-discov-vocab/pull/49">pull request 49</a>.</li>
+					<li>31-May-2022: Identify hazard and feature property values that must not be specified together to
+						avoid ambiguity. See <a href="https://github.com/w3c/a11y-discov-vocab/pull/49">pull request
+							49</a>.</li>
+					<li>31-May-2022: Ensure all properties identify their expected values and describe how to handle
+						less expressive formats like EPUB. See <a
+							href="https://github.com/w3c/a11y-discov-vocab/pull/49">pull request 49</a>.</li>
 					<li>07-Feb-2022: Restore the "tableOfContents" value for <code>accessibilityFeature</code>. See <a
 							href="https://github.com/w3c/a11y-discov-vocab/pull/39">pull request 39</a>.</li>
 					<li>04-Feb-2022: The <code>accessibilityAPI</code> value "ARIA" is deprecated. It is replaced by a

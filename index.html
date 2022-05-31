@@ -17,6 +17,7 @@
 				previousMaturity: 'CG-FINAL',
 				edDraftURI: "https://w3c.github.io/a11y-discov-vocab/",
 				latestVersion: "https://www.w3.org/2021/a11y-discov-vocab/latest/",
+				thisVersion: "https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220209.html",
 				editors: [
 					{
 						name: "Charles LaPierre",
@@ -226,13 +227,16 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<section id="AndroidAccessibility">
 					<h4>AndroidAccessibility</h4>
 
-					<p>Indicates the resource is compatible with the Android Accessibility API.</p>
+					<p>Indicates the resource is compatible with the <a
+							href="http://developer.android.com/reference/android/view/accessibility/package-summary.html"
+							>Android Access API</a>.</p>
 				</section>
 
 				<section id="ARIA-deprecated">
 					<h4>ARIA (deprecated)</h4>
 
-					<p>Indicates the resource uses ARIA markup to improve interoperability with platform APIs.</p>
+					<p>Indicates the resource uses <a href="http://www.w3.org/TR/wai-aria/">ARIA</a> [[WCAG21]] markup
+						to improve interoperability with platform APIs.</p>
 
 					<div class="note">
 						<p>The use of the ARIA value is now deprecated as ARIA is not an accessibility API. The
@@ -244,57 +248,84 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<section id="ATK">
 					<h4>ATK</h4>
 
-					<p>Indicates the resource is compatible with the Accessibility Toolkit (ATK) API for GNOME.</p>
+					<p>Indicates the resource is compatible with the <a href="https://gnome.pages.gitlab.gnome.org/atk/"
+							>Accessibility Toolkit (ATK) API</a> [[ATK]] for GNOME.</p>
 				</section>
 
 				<section id="AT-SPI">
 					<h4>AT-SPI</h4>
 
-					<p>Indicates the resource is compatible with the Assistive Technology Service Provider Interface
-						(AT-SPI) API for GNOME.</p>
+					<p>Indicates the resource is compatible with the <a
+							href="https://developer-old.gnome.org/libatspi/stable/">Assistive Technology Service
+							Provider Interface (AT-SPI) API</a> [[AT-SPI]] for GNOME.</p>
 				</section>
 
 				<section id="BlackberryAccessibility">
 					<h4>BlackberryAccessibility</h4>
 
-					<p>Indicates the resource is compatible with the Blackberry Accessibility API.</p>
+					<p>Indicates the resource is compatible with the <a
+							href="https://blackberry.com/developers/docs/7.1.0api/net/rim/device/api/ui/accessibility/package-summary.html"
+							>Blackberry Accessibility API</a>.</p>
 				</section>
 
 				<section id="iAccessible2">
 					<h4>iAccessible2</h4>
 
-					<p>Indicates the resource is compatible with the iAccessible2 API for Windows.</p>
+					<p>Indicates the resource is compatible with the <a
+							href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/">iAccessible2 API</a>
+						[[IAccessible2]] for Windows.</p>
 				</section>
 
 				<section id="iOSAccessibility">
-					<h4>iOSAccessibility</h4>
+					<h4>iOSAccessibility (deprecated)</h4>
 
-					<p>Indicates the resource is compatible with the iAccessible2 API for Apple iOS devices.</p>
+					<p>Authors should use the <a href="#NSAccessibility">NSAccessibility</a> value instead.</p>
 				</section>
 
 				<section id="JavaAccessibility">
 					<h4>JavaAccessibility</h4>
 
-					<p>Indicates the resource is compatible with the Java Accessibility API (JAAPI).</p>
+					<p>Indicates the resource is compatible with the <a
+							href="https://www.oracle.com/java/technologies/javase/desktop-accessibility.html">Java
+							Accessibility API</a> [[JAPI]].</p>
 				</section>
 
 				<section id="MacOSXAccessibility">
-					<h4>MacOSXAccessibility</h4>
+					<h4>MacOSXAccessibility (deprecated)</h4>
 
-					<p>Indicates the resource is compatible with the iAccessible2 API for Windows.</p>
+					<p>Authors should use the <a href="#UIAccessibility">UIAccessibility</a> value instead.</p>
 				</section>
 
 				<section id="MSAA">
 					<h4>MSAA</h4>
 
-					<p>Indicates the resource is compatible with the Microsoft Active Accessibility (MSAA) API for
-						Windows.</p>
+					<p>Indicates the resource is compatible with the <a
+							href="https://docs.microsoft.com/en-us/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility"
+							>Microsoft Active Accessibility (MSAA) API</a> [[MSAA]] for Windows.</p>
+				</section>
+
+				<section id="NSAccessibility">
+					<h4>NSAccessibility</h4>
+
+					<p>Indicates the resource is compatible with the <a
+							href="https://developer.apple.com/documentation/appkit/nsaccessibility">NSAccessibility
+							API</a> for Apple iOS and tvOS applications built on UIKit.</p>
+				</section>
+
+				<section id="UIAccessibility">
+					<h4>UIAccessibility</h4>
+
+					<p>Indicates the resource is compatible with the <a
+							href="https://developer.apple.com/documentation/objectivec/nsobject/uiaccessibility"
+							>UIAccessibility API</a> for macOS applications built on AppKit.</p>
 				</section>
 
 				<section id="UIAutomation">
 					<h4>UIAutomation</h4>
 
-					<p>Indicates the resource is compatible with the User Interface Automation API for Windows.</p>
+					<p>Indicates the resource is compatible with the <a
+							href="https://docs.microsoft.com/en-us/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility"
+							>User Interface Automation API</a> for Windows.</p>
 				</section>
 			</section>
 		</section>

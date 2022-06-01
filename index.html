@@ -704,7 +704,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<section id="taggedPDF">
 						<h5>taggedPDF</h5>
 
-						<p>The structures in a PDF have been tagged to improve the navigation of the content.</p>
+						<p>The contents of the PDF have been tagged to permit access by assistive technologies.</p>
 					</section>
 				</section>
 
@@ -1672,15 +1672,17 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<li>01-June-2022: Deprecated the <code>bookmarks</code> feature due to its ambiguous definition. The
 							<code>tableOfContents</code> and <code>annotations</code> values are recommended in its
 						place. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/5">issue 5</a>.</li>
-					<li>07-Feb-2022: Restore the <code>tableOfContents</code> value for
-							<code>accessibilityFeature</code>. See <a
-							href="https://github.com/w3c/a11y-discov-vocab/pull/39">pull request 39</a>.</li>
-					<li>04-Feb-2022: The <code>accessibilityAPI</code> value <code>ARIA</code> is deprecated. It is
-						replaced by a new <code>ARIA</code> value for <code>accessibilityFeature</code> for indicating
-						the use of roles of enhanced structural and landmark navigation. See <a
-							href="https://github.com/w3c/a11y-discov-vocab/issues/4">issue 4</a>.</li>
-					<li>26-Jan-2022: The accessibility features have been restructured to better organize them by
-						purpose. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
+					<li>31-May-2022: Clarify the definition of taggedPDF to indicate it is critical for access to the
+						content not just for improved navigation. See <a
+							href="https://github.com/w3c/a11y-discov-vocab/issues/40">issue 40</a>.</li>
+					<li>07-Feb-2022: Restore the "tableOfContents" value for <code>accessibilityFeature</code>. See <a
+						href="https://github.com/w3c/a11y-discov-vocab/pull/39">pull request 39</a>.</li>
+					<li>04-Feb-2022: The <code>accessibilityAPI</code> value "ARIA" is deprecated. It is replaced by a new
+						"ARIA" value for <code>accessibilityFeature</code> for indicating the use of roles of enhanced
+						structural and landmark navigation. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/4"
+							>issue 4</a>.</li>
+					<li>26-Jan-2022: The accessibility features have been restructured to better organize them by purpose.
+						See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
 				</ul>
 			</details>
 		</section>

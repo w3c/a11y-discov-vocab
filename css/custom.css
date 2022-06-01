@@ -31,3 +31,11 @@ div.ex-buttons input {
 input.active {
 	background-color: rgb(250, 250, 250) !important;
 }
+
+p.synonym {
+	margin-top: -0.5rem;
+	margin-bottom: 2rem;
+	padding-top: 0;
+	font-weight: bold;
+	font-size: 90%;
+}

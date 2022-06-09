@@ -662,9 +662,17 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					</section>
 
 					<section id="bookmarks">
-						<h5>bookmarks</h5>
+						<h5>bookmarks (deprecated)</h5>
 
 						<p>The work includes bookmarks to facilitate navigation to key points.</p>
+
+
+						<div class="note">
+							<p>The use of the <code>bookmarks</code> value is now deprecated due to its ambiguity. For
+								PDF bookmarks, the <a href="#tableOfContents"><code>tableOfContents</code></a> value
+								should be used instead. For bookmarks in ebooks, the <a href="#annotations"
+										><code>annotations</code></a> value can be used.</p>
+						</div>
 					</section>
 
 					<section id="index-term">
@@ -1670,6 +1678,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 			<details open="">
 				<summary>Changes made in 2022</summary>
 				<ul>
+					<li>09-June-2022: Deprecated the <code>bookmarks</code> feature due to its ambiguous definition. The
+							<code>tableOfContents</code> and <code>annotations</code> values are recommended in its
+						place. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/5">issue 5</a>.</li>
 					<li>08-June-2022: Marked the BlackberryAccessibility API as obsolete. See <a
 							href="https://github.com/w3c/a11y-discov-vocab/issues/12">issue 12</a>.</li>
 					<li>31-May-2022: Clarify the definition of taggedPDF to indicate it is critical for access to the

@@ -261,11 +261,20 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				</section>
 
 				<section id="BlackberryAccessibility">
-					<h4>BlackberryAccessibility</h4>
+					<h4>BlackberryAccessibility (obsolete)</h4>
 
 					<p>Indicates the resource is compatible with the <a
 							href="https://blackberry.com/developers/docs/7.1.0api/net/rim/device/api/ui/accessibility/package-summary.html"
-							>Blackberry Accessibility API</a>.</p>
+							>BlackBerry Accessibility API</a>.</p>
+
+					<p>This value is now obsolete as BlackBerry devices phones and operating systems are no longer
+						developed, sold, or maintained.</p>
+
+					<div class="note">
+						<p>After 2016, the BlackBerry name was licensed for phones released using the Android platform.
+							Compatibility with these devices must be indicated using the <a href="#AndroidAccessibility"
+									><code>AndroidAccessibility</code> value</a>.</p>
+					</div>
 				</section>
 
 				<section id="iAccessible2">
@@ -1661,17 +1670,19 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 			<details open="">
 				<summary>Changes made in 2022</summary>
 				<ul>
+					<li>08-June-2022: Marked the BlackberryAccessibility API as obsolete. See <a
+							href="https://github.com/w3c/a11y-discov-vocab/issues/12">issue 12</a>.</li>
 					<li>31-May-2022: Clarify the definition of taggedPDF to indicate it is critical for access to the
 						content not just for improved navigation. See <a
 							href="https://github.com/w3c/a11y-discov-vocab/issues/40">issue 40</a>.</li>
 					<li>07-Feb-2022: Restore the "tableOfContents" value for <code>accessibilityFeature</code>. See <a
-						href="https://github.com/w3c/a11y-discov-vocab/pull/39">pull request 39</a>.</li>
-					<li>04-Feb-2022: The <code>accessibilityAPI</code> value "ARIA" is deprecated. It is replaced by a new
-						"ARIA" value for <code>accessibilityFeature</code> for indicating the use of roles of enhanced
-						structural and landmark navigation. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/4"
-							>issue 4</a>.</li>
-					<li>26-Jan-2022: The accessibility features have been restructured to better organize them by purpose.
-						See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
+							href="https://github.com/w3c/a11y-discov-vocab/pull/39">pull request 39</a>.</li>
+					<li>04-Feb-2022: The <code>accessibilityAPI</code> value "ARIA" is deprecated. It is replaced by a
+						new "ARIA" value for <code>accessibilityFeature</code> for indicating the use of roles of
+						enhanced structural and landmark navigation. See <a
+							href="https://github.com/w3c/a11y-discov-vocab/issues/4">issue 4</a>.</li>
+					<li>26-Jan-2022: The accessibility features have been restructured to better organize them by
+						purpose. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
 				</ul>
 			</details>
 		</section>

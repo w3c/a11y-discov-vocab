@@ -1,6 +1,6 @@
 <!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 <meta charset="utf-8">
-<meta name="generator" content="ReSpec 32.1.7">
+<meta name="generator" content="ReSpec 32.1.8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <style>
 span.example-title{text-transform:none}
@@ -176,11 +176,11 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
   "group": "a11y-discov-vocab",
   "specStatus": "CG-FINAL",
   "noRecTrack": true,
-  "previousPublishDate": "2022-02-09",
+  "previousPublishDate": "2022-05-29",
   "previousMaturity": "CG-FINAL",
   "edDraftURI": "https://w3c.github.io/a11y-discov-vocab/",
   "latestVersion": "https://www.w3.org/2021/a11y-discov-vocab/latest/",
-  "thisVersion": "https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220529.html",
+  "thisVersion": "https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220608.html",
   "editors": [
     {
       "name": "Charles LaPierre",
@@ -224,8 +224,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     null,
     null
   ],
-  "publishISODate": "2022-05-29T00:00:00.000Z",
-  "generatedSubtitle": "Final Community Group Report 29 May 2022"
+  "publishISODate": "2022-06-08T00:00:00.000Z",
+  "generatedSubtitle": "Final Community Group Report 08 June 2022"
 }</script>
 <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2021/cg-final"></head>
 	<body class="h-entry informative"><div class="head">
@@ -233,13 +233,13 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
     <h1 id="title" class="title">Schema.org Accessibility Properties for Discoverability Vocabulary</h1> 
     <p id="w3c-state">
       <a href="https://www.w3.org/standards/types#reports">Final Community Group Report</a>
-      <time class="dt-published" datetime="2022-05-29">29 May 2022</time>
+      <time class="dt-published" datetime="2022-06-08">08 June 2022</time>
     </p>
     <dl>
       <dt>This version:</dt><dd>
-              <a class="u-url" href="https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220529.html">https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220529.html</a>
+              <a class="u-url" href="https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220608.html">https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220608.html</a>
             </dd>
-      <dt>Previous version:</dt><dd><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220209.html">https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220209.html</a></dd><dt>Latest published version:</dt><dd>
+      <dt>Previous version:</dt><dd><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220529.html">https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-20220529.html</a></dd><dt>Latest published version:</dt><dd>
               <a href="https://www.w3.org/2021/a11y-discov-vocab/latest/">https://www.w3.org/2021/a11y-discov-vocab/latest/</a>
             </dd>
       <dt>Latest editor's draft:</dt><dd><a href="https://w3c.github.io/a11y-discov-vocab/">https://w3c.github.io/a11y-discov-vocab/</a></dd>
@@ -917,7 +917,7 @@ Interoperability with platform APIs is an issue for Reading Systems</code></pre>
 					<section id="taggedPDF"><div class="header-wrapper"><h5 id="x4-2-1-9-taggedpdf"><bdi class="secno">4.2.1.9 </bdi>taggedPDF</h5><a class="self-link" href="#taggedPDF" aria-label="Permalink for Section 4.2.1.9"></a></div>
 						
 
-						<p>The structures in a PDF have been tagged to improve the navigation of the content.</p>
+						<p>The contents of the PDF have been tagged to permit access by assistive technologies.</p>
 					</section>
 				</section>
 
@@ -1864,14 +1864,21 @@ Interoperability with platform APIs is an issue for Reading Systems</code></pre>
 			<p>For a list of all issues addressed (typos, minor definition modifications, etc.), refer to the <a href="https://github.com/w3c/a11y-discov-vocab/issues?q=is%3Aissue+is%3Aclosed">Community Group's
 					issue tracker</a>.</p>
 
-			<ul>
-				<li>07-Feb-2022: Restore the "tableOfContents" value for <code>accessibilityFeature</code>. See <a href="https://github.com/w3c/a11y-discov-vocab/pull/39">pull request 39</a>.</li>
-				<li>04-Feb-2022: The <code>accessibilityAPI</code> value "ARIA" is deprecated. It is replaced by a new
-					"ARIA" value for <code>accessibilityFeature</code> for indicating the use of roles of enhanced
-					structural and landmark navigation. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/4">issue 4</a>.</li>
-				<li>26-Jan-2022: The accessibility features have been restructured to better organize them by purpose.
-					See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
-			</ul>
+			
+
+			<details open="">
+				<summary>Changes made in 2022</summary>
+				<ul>
+					<li>31-May-2022: Clarify the definition of taggedPDF to indicate it is critical for access to the
+						content not just for improved navigation. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/40">issue 40</a>.</li>
+					<li>07-Feb-2022: Restore the "tableOfContents" value for <code>accessibilityFeature</code>. See <a href="https://github.com/w3c/a11y-discov-vocab/pull/39">pull request 39</a>.</li>
+					<li>04-Feb-2022: The <code>accessibilityAPI</code> value "ARIA" is deprecated. It is replaced by a new
+						"ARIA" value for <code>accessibilityFeature</code> for indicating the use of roles of enhanced
+						structural and landmark navigation. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/4">issue 4</a>.</li>
+					<li>26-Jan-2022: The accessibility features have been restructured to better organize them by purpose.
+						See <a href="https://github.com/w3c/a11y-discov-vocab/issues/10">issue 10</a>.</li>
+				</ul>
+			</details>
 		</section>
 		<section id="acknowledgments" class="appendix"><div class="header-wrapper"><h2 id="b-acknowledgments"><bdi class="secno">B. </bdi>Acknowledgments</h2><a class="self-link" href="#acknowledgments" aria-label="Permalink for Appendix B."></a></div>
 			
@@ -1925,7 +1932,7 @@ Interoperability with platform APIs is an issue for Reading Systems</code></pre>
 <section id="references" class="appendix"><div class="header-wrapper"><h2 id="c-references"><bdi class="secno">C. </bdi>References</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix C."></a></div><section id="informative-references"><div class="header-wrapper"><h3 id="c-1-informative-references"><bdi class="secno">C.1 </bdi>Informative references</h3><a class="self-link" href="#informative-references" aria-label="Permalink for Appendix C.1"></a></div>
     
     <dl class="bibliography"><dt id="bib-at-spi">[AT-SPI]</dt><dd>
-      <a href="https://developer.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/libatspi/stable/">https://developer.gnome.org/libatspi/stable/</a>
+      <a href="https://developer-old.gnome.org/libatspi/stable/"><cite>Assistive Technology Service Provider Interface</cite></a>.  The GNOME Project. URL: <a href="https://developer-old.gnome.org/libatspi/stable/">https://developer-old.gnome.org/libatspi/stable/</a>
     </dd><dt id="bib-atk">[ATK]</dt><dd>
       <a href="https://developer.gnome.org/atk/stable/"><cite>ATK - Accessibility Toolkit</cite></a>.  The GNOME Project. URL: <a href="https://developer.gnome.org/atk/stable/">https://developer.gnome.org/atk/stable/</a>
     </dd><dt id="bib-css3-speech">[CSS3-Speech]</dt><dd>
@@ -1933,7 +1940,7 @@ Interoperability with platform APIs is an issue for Reading Systems</code></pre>
     </dd><dt id="bib-html">[HTML]</dt><dd>
       <a href="https://html.spec.whatwg.org/multipage/"><cite>HTML Standard</cite></a>. Anne van Kesteren; Domenic Denicola; Ian Hickson; Philip Jägenstedt; Simon Pieters.  WHATWG. Living Standard. URL: <a href="https://html.spec.whatwg.org/multipage/">https://html.spec.whatwg.org/multipage/</a>
     </dd><dt id="bib-iaccessible2">[IAccessible2]</dt><dd>
-      <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2">https://www.linuxfoundation.org/collaborate/workgroups/accessibility/iaccessible2</a>
+      <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/"><cite>IAccessible2</cite></a>.  Linux Foundation. URL: <a href="https://wiki.linuxfoundation.org/accessibility/iaccessible2/">https://wiki.linuxfoundation.org/accessibility/iaccessible2/</a>
     </dd><dt id="bib-iso-639">[ISO-639]</dt><dd>
       <a href="https://www.iso.org/standard/4766.html"><cite>Code for the representation of names of languages</cite></a>. ISO/TC 37/SC 2.  ISO. 1988. International Standard. URL: <a href="https://www.iso.org/standard/4766.html">https://www.iso.org/standard/4766.html</a>
     </dd><dt id="bib-japi">[JAPI]</dt><dd>

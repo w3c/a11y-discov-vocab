@@ -531,8 +531,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				</ul>
 
 				<p>The vocabulary also includes <a href="#feature-none">the term "<code>none</code>"</a> that authors
-					can set to indicate that the resource does not contain special enhancements. This value avoids the
-					ambiguity that can arise if a resource has not been checked.</p>
+					can set to indicate that the resource does not contain special enhancements. Similarly, the term
+						"<code>unknown</code>" exists as a placeholder for marking content that authors need to
+					review.</p>
 
 				<p>The expected value of the <code>accessibilityFeature</code> property is a list of the applicable
 					features. For metadata formats incapable of expressing lists, the property should be repeated for
@@ -1016,6 +1017,15 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>Indicates that the resource does not contain any accessibility features.</p>
 
 					<p>The <code>none</code> value must not be set with any other feature value.</p>
+				</section>
+
+				<section id="feature-unknown">
+					<h5>unknown</h5>
+
+					<p>Indicates that the author has not yet checked if the resource contains accessibility features.
+						This value is only intended as a placeholder until an accessibility review can be completed.</p>
+
+					<p>The <code>unknown</code> value must not be set with any other feature value.</p>
 				</section>
 			</section>
 		</section>

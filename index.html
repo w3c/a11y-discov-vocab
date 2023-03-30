@@ -531,8 +531,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				</ul>
 
 				<p>The vocabulary also includes <a href="#feature-none">the term "<code>none</code>"</a> that authors
-					can set to indicate that the resource does not contain special enhancements. This value avoids the
-					ambiguity that can arise if a resource has not been checked.</p>
+					can set to indicate that the resource does not contain special enhancements. Similarly, the term
+						"<code>unknown</code>" exists as a placeholder for marking content that authors need to
+					review.</p>
 
 				<p>The expected value of the <code>accessibilityFeature</code> property is a list of the applicable
 					features. For metadata formats incapable of expressing lists, the property should be repeated for
@@ -1017,6 +1018,15 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p>The <code>none</code> value must not be set with any other feature value.</p>
 				</section>
+
+				<section id="feature-unknown">
+					<h5>unknown</h5>
+
+					<p>Indicates that the author has not yet checked if the resource contains accessibility features.
+						This value is only intended as a placeholder until an accessibility review can be completed.</p>
+
+					<p>The <code>unknown</code> value must not be set with any other feature value.</p>
+				</section>
 			</section>
 		</section>
 		<section id="accessibilityHazard">
@@ -1139,7 +1149,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
 								><code>noFlashingHazard</code></a>, <a href="#hazard-none"><code>none</code></a>, or <a
-							href="#unknown"><code>unknown</code></a> values are set.</p>
+							href="#hazard-unknown"><code>unknown</code></a> values are set.</p>
 				</section>
 
 				<section id="noFlashingHazard">
@@ -1152,8 +1162,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
 
 					<p>The <code>noFlashingHazard</code> value must not be set when either of the <a href="#flashing"
-								><code>flashing</code></a> or <a href="#unknown"><code>unknown</code></a> values is set.
-						It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+								><code>flashing</code></a> or <a href="#hazard-unknown"><code>unknown</code></a> values
+						is set. It should not be set when the <a href="#hazard-none"><code>none</code></a> value is
+						set.</p>
 				</section>
 
 				<section id="motionSimulation">
@@ -1167,8 +1178,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p>The <code>motionSimulation</code> value must not be set when any of the <a
 							href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, <a
-							href="#hazard-none"><code>none</code></a>, or <a href="#unknown"><code>unknown</code></a>
-						values are set.</p>
+							href="#hazard-none"><code>none</code></a>, or <a href="#hazard-unknown"
+							><code>unknown</code></a> values are set.</p>
 				</section>
 
 				<section id="noMotionSimulationHazard">
@@ -1177,7 +1188,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>Indicates that the resource does not contain instances of motion simulation.</p>
 
 					<p>The <code>noMotionSimulation</code> value must not be set when either of the <a
-							href="#motionSimulation"><code>motionSimulation</code></a> or <a href="#unknown"
+							href="#motionSimulation"><code>motionSimulation</code></a> or <a href="#hazard-unknown"
 								><code>unknown</code></a> values is set. It should not be set when the <a
 							href="#hazard-none"><code>none</code></a> value is set.</p>
 				</section>
@@ -1192,7 +1203,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p>The <code>sound</code> value must not be set when any of the <a href="#noSoundHazard"
 								><code>noSoundHazard</code></a>, <a href="#hazard-none"><code>none</code></a>, or <a
-							href="#unknown"><code>unknown</code></a> values are set.</p>
+							href="#hazard-unknown"><code>unknown</code></a> values are set.</p>
 				</section>
 
 				<section id="noSoundHazard">
@@ -1204,11 +1215,12 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						underspecified.</p>
 
 					<p>The <code>noSoundHazard</code> value must not be set when either of the <a href="#sound"
-								><code>sound</code></a> or <a href="#unknown"><code>unknown</code></a> values is set. It
-						should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+								><code>sound</code></a> or <a href="#hazard-unknown"><code>unknown</code></a> values is
+						set. It should not be set when the <a href="#hazard-none"><code>none</code></a> value is
+						set.</p>
 				</section>
 
-				<section id="unknown">
+				<section id="hazard-unknown">
 					<h4>unknown</h4>
 
 					<p>Indicates that the author is not able to determine if the resource presents any hazards.</p>
@@ -1222,8 +1234,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>Indicates that the resource does not contain any hazards.</p>
 
 					<p>The <code>none</code> value must not be set when specifying either a known hazard or the <a
-							href="#unknown"><code>unknown</code></a> value. It should not be set when negative hazard
-						claims are made.</p>
+							href="#hazard-unknown"><code>unknown</code></a> value. It should not be set when negative
+						hazard claims are made.</p>
 				</section>
 			</section>
 		</section>
@@ -1795,14 +1807,22 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 			-->
 
 			<details open="">
-				<summary>Changes made in 2022</summary>
+				<summary>Changes made in 2023</summary>
 				<ul>
+					<li>27-Mar-2023: Add <code>unknown</code> feature for placeholder use. See <a
+							href="https://github.com/w3c/a11y-discov-vocab/issues/17">issue 17</a>.</li>
 					<li>06-Feb-2023: Add <code>pageNavigation</code> feature for indicating that a resource has a page
 						list. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/6">issue 6</a>.</li>
 					<li>06-Feb-2023: Add <code>pageBreakMarkers</code> feature for indicating that a resource includes
 						static page break markers. <code>printPageNumbers</code> is retained as a synonym but no longer
 						recommended for use. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/6">issue
 						6</a>.</li>
+				</ul>
+			</details>
+
+			<details>
+				<summary>Changes made in 2022</summary>
+				<ul>
 					<li>10-June-2022: Removed references to using the slash syntax to extend terms and recommend against
 						using the mechanism any more. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/5"
 							>issue 5</a>.</li>

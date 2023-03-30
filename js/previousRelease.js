@@ -2,7 +2,7 @@
 function addPreviousRelease() {
 	
 	var prevLink = '<dt>Previous version:</dt>\
-<dd><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-%%ppd%%.html">https://www.w3.org/2021/a11y-discov-vocab/latest/CG-FINAL-a11y-discov-vocab-%%ppd%%.html</a></dd>';
+<dd><a href="https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-%%ppd%%/">https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-%%ppd%%/</a></dd>';
 
 	if (!respecConfig.hasOwnProperty('previousPublishDate')) {
 		console.warn('Missing previousPublishDate in respec metadata. Cannot add link to previous release.');

@@ -790,11 +790,26 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					</section>
 
 					<section id="captions">
-						<h5>captions</h5>
+						<h5>captions (deprecated)</h5>
 
 						<p>Indicates that synchronized captions are available for audio and video content.</p>
+						
+						<div class="note">
+							<p>The use of the <code>captions</code> value is now deprecated. Authors should use the
+								more specific <a href="#closedCaptions"><code>closedCaptions</code></a> or 
+								<a href="#openCaptions"><code>openCaptions</code></a> values, as appropriate.</p>
+						</div>
 					</section>
 
+					<section id="closedCaptions">
+						<h5>closedCaptions</h5>
+						
+						<p>Indicates that synchronized closed captions are available for audio and video content.</p>
+						
+						<p>Closed captions are defined separately from the video, allowing users to control whether
+							they are rendered or not, unlike <a href="#openCaptions">open captions</a>.</p>
+					</section>
+					
 					<section id="describedMath">
 						<h5>describedMath</h5>
 
@@ -816,6 +831,15 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 									href="https://html.spec.whatwg.org/multipage/obsolete.html#attr-img-longdesc"
 										><code>longdesc</code> attribute</a>).</p>
 						</div>
+						
+						<section id="openCaptions">
+							<h5>openCaptions</h5>
+							
+							<p>Indicates that synchronized open captions are available for audio and video content.</p>
+							
+							<p>Open captions are part of the video stream and cannot be turned off by the user, unlike
+								<a href="#closedCaptions">closed captions</a>.</p>
+						</section>
 					</section>
 
 					<section id="rubyAnnotations">
@@ -1809,6 +1833,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 			<details open="">
 				<summary>Changes made in 2023</summary>
 				<ul>
+					<li>05-May-2023: Added <code>closedCaptions</code> and <code>openCaptions</code> to replace
+						the more generic <code>captions</code> value. See <a 
+							href="https://github.com/w3c/a11y-discov-vocab/issues/26">issue 26</a>.</li>
 					<li>27-Mar-2023: Add <code>unknown</code> feature for placeholder use. See <a
 							href="https://github.com/w3c/a11y-discov-vocab/issues/17">issue 17</a>.</li>
 					<li>06-Feb-2023: Add <code>pageNavigation</code> feature for indicating that a resource has a page

@@ -292,6 +292,14 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					</div>
 				</section>
 
+				<section id="FuchsiaAccessibility">
+					<h4>FuchsiaAccessibility</h4>
+					
+					<p>Indicates the resource is compatible with the <a
+						href="https://fuchsia.dev/fuchsia-src/concepts/accessibility/accessibility_framework"
+						>Fuchsia Accessibility Framework</a>.</p>
+				</section>
+				
 				<section id="iAccessible2">
 					<h4>iAccessible2</h4>
 
@@ -1833,14 +1841,16 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 			<details open="">
 				<summary>Changes made in 2023</summary>
 				<ul>
+					<li>05-May-2023: Added <code>FuchsiaAccessibility</code> to the <code>accessibilityAPI</code>
+						values. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/24">issue 24</a>.</li>
 					<li>05-May-2023: Added <code>closedCaptions</code> and <code>openCaptions</code> to replace
 						the more generic <code>captions</code> value. See <a 
 							href="https://github.com/w3c/a11y-discov-vocab/issues/26">issue 26</a>.</li>
-					<li>27-Mar-2023: Add <code>unknown</code> feature for placeholder use. See <a
+					<li>27-Mar-2023: Added <code>unknown</code> feature for placeholder use. See <a
 							href="https://github.com/w3c/a11y-discov-vocab/issues/17">issue 17</a>.</li>
-					<li>06-Feb-2023: Add <code>pageNavigation</code> feature for indicating that a resource has a page
+					<li>06-Feb-2023: Added <code>pageNavigation</code> feature for indicating that a resource has a page
 						list. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/6">issue 6</a>.</li>
-					<li>06-Feb-2023: Add <code>pageBreakMarkers</code> feature for indicating that a resource includes
+					<li>06-Feb-2023: Added <code>pageBreakMarkers</code> feature for indicating that a resource includes
 						static page break markers. <code>printPageNumbers</code> is retained as a synonym but no longer
 						recommended for use. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/6">issue
 						6</a>.</li>

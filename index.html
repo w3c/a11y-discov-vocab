@@ -850,18 +850,29 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						</section>
 					</section>
 
+
+					<section id="fullRubyAnnotations">
+						<h5>fullRubyAnnotations</h5>
+
+						<p>Indicates that <a
+								href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
+								    ><code>ruby</code> annotations</a> [[HTML]] are attached to every CJK
+						  ideographic character in the content.  Ruby annotations are used as pronunciation guides
+						  for the logographic characters for languages like Chinese or Japanese. It makes difficult
+						  Kanji or CJK ideographic characters more accessible.</p>
+
+						<p>If some CJK ideographic characters do not have ruby annotations, use "rubyAnnotations"
+						  instead.</p>
+					</section>
+
 					<section id="rubyAnnotations">
 						<h5>rubyAnnotations</h5>
 
 						<p>Indicates that <a
 								href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
-									><code>ruby</code> annotations</a> [[HTML]] are provided in the content. Ruby
-							annotations are used as pronunciation guides for the logographic characters for languages
-							like Chinese or Japanese. It makes difficult Kanji or CJK ideographic characters more
-							accessible.</p>
+								    ><code>ruby</code> annotations</a> [[HTML]] are attached to some but not all
+						  CJK ideographic characters in the content.</p>
 
-						<p>The absence of <code>rubyAnnotations</code> implies that no CJK ideographic characters have
-							ruby.</p>
 					</section>
 
 					<section id="signLanguage">

@@ -1042,20 +1042,21 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>fullRubyAnnotations</h5>
 
 						<p>Indicates that <a
-								href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
-								    ><code>ruby</code> annotations</a> [[HTML]] are attached to every CJK
+								href="https://www.w3.org/TR/jlreq/#usage_of_ruby"
+								    >ruby annotations</a> [[JLreq]] are attached to every CJK
 						  ideographic character in the content.  Ruby annotations are used as pronunciation guides
 						  for the logographic characters for languages like Chinese or Japanese. They make difficult
 						  CJK ideographic characters more accessible.</p>
 
-						<p>If some but not all CJK ideographic characters have ruby annotations, use "rubyAnnotations" instead.</p>
+						<p>If some but not all CJK ideographic characters have ruby annotations, use the
+						  <a href="#rubyAnnotations"><code>rubyAnnotations</code></a> value.</p>
 					</section>
 					
 					<section id="horizontalWriting">
 						<h5>horizontalWriting</h5>
 
 						<p>Indicates that the content can be laid out horizontally (e.g, using the
-						<code>horizontal-tb</code> writing mode of [[[css-writing-modes-3]]).</p>
+						<code>horizontal-tb</code> writing mode of [[css-writing-modes-3]]).</p>
 
 						<div class="note">
 						  <p>In some languages such as Japanese and Chinese, it is possible to both vertically and horizontally
@@ -1067,17 +1068,19 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>rubyAnnotations</h5>
 
 						<p>Indicates that <a
-								href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
-								    ><code>ruby</code> annotations</a> [[HTML]] are attached to some but not all
+								href="https://www.w3.org/TR/jlreq/#usage_of_ruby"
+								    >ruby annotations</a> are attached to some but not all
 						  CJK ideographic characters in the content.</p>
 
+						<p>If all CJK ideographic characters have <code>ruby</code> annotations, use the 
+						  <a href="#fullRubyAnnotations"><code>fullRubyAnnotations</code></a> value.</p>
 					</section>
 
 					<section id="verticalWriting">
 						<h5>verticalWriting</h5>
 
 						<p>Indicates that the content can be laid out vertically (e.g, using the <code>vertical-rl</code>
-						  of [[[css-writing-modes-3]]).</p>
+						  of [[css-writing-modes-3]]).</p>
 
 
 					</section>

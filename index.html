@@ -250,7 +250,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<section id="ARIA-deprecated">
 					<h4>ARIA (deprecated)</h4>
 
-					<p>Indicates the resource uses <a href="http://www.w3.org/TR/wai-aria/">ARIA</a> [[WCAG21]] markup
+					<p>Indicates the resource uses <a href="http://www.w3.org/TR/wai-aria/">ARIA</a> [[WAI-ARIA]] markup
 						to improve interoperability with platform APIs.</p>
 
 					<div class="note">
@@ -907,9 +907,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 							<li>the text alignment</li>
 						</ul>
 
-						<p>In addition, text must not be represented as images unless it is also available in a
-							modifiable form (e.g., in an extended description accessible to all users, or when user
-							agents support the replacement of images with their alternative text).</p>
+						<p>In addition, text must not be represented as images unless it falls under the exceptions of
+								<a href="https://www.w3.org/TR/WCAG2/#images-of-text">Success Criterion 1.4.5</a>
+							[[WCAG2]].</p>
 
 						<p>Note that setting this property does not mean that users will be able to control all the
 							properties of the display in all user agents. It only indicates that the author has not
@@ -989,8 +989,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>highContrastAudio</h5>
 
 						<p>Audio content with speech in the foreground meets the contrast thresholds set out in <a
-								href="https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio">WCAG
-								Success Criteria 1.4.7</a>.</p>
+								href="https://www.w3.org/WAI/WCAG2/Understanding/low-or-no-background-audio">WCAG
+								Success Criteria 1.4.7</a> [[WCAG2]].</p>
 
 						<div class="note">
 							<p>Information about the how the audio meets the requirement should be provided in the <a
@@ -1004,8 +1004,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>highContrastDisplay</h5>
 
 						<p>Content meets the visual contrast threshold set out in <a
-								href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced">WCAG Success
-								Criteria 1.4.6</a>.</p>
+								href="https://www.w3.org/WAI/WCAG2/Understanding/contrast-enhanced">WCAG Success
+								Criteria 1.4.6</a> [[WCAG2]].</p>
 					</section>
 
 					<section id="largePrint">
@@ -1201,8 +1201,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
 
 					<p>This value should be set when the content meets the hazard thresholds described in <a
-							href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
-							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+							href="https://www.w3.org/TR/WCAG2/#three-flashes-or-below-threshold">Success Criterion 2.3.1
+							Three Flashes or Below Threshold</a> [[WCAG2]].</p>
 
 					<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
 								><code>noFlashingHazard</code></a>, <a href="#hazard-none"><code>none</code></a>, or <a
@@ -1215,8 +1215,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>Indicates that the resource does not present a flashing hazard.</p>
 
 					<p>This value should be set when the content conforms to <a
-							href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
-							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+							href="https://www.w3.org/TR/WCAG2/#three-flashes-or-below-threshold">Success Criterion 2.3.1
+							Three Flashes or Below Threshold</a> [[WCAG2]].</p>
 
 					<p>The <code>noFlashingHazard</code> value must not be set when either of the <a href="#flashing"
 								><code>flashing</code></a> or <a href="#hazard-unknown"><code>unknown</code></a> values

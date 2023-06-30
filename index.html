@@ -1056,12 +1056,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>horizontalWriting</h5>
 
 						<p>Indicates that the content can be laid out horizontally (e.g, using the
-						<code>horizontal-tb</code> writing mode of [[css-writing-modes-3]]).</p>
-
-						<div class="note">
-						  <p>In some languages such as Japanese and Chinese, it is possible to both vertically and horizontally
-						    lay out the same text.  However, contents written in these languages may be fixed to either
-						    vertical or horizontal writing.</div>						  
+						<code>horizontal-tb</code> writing mode of [[css-writing-modes-3]]).
+						This value should only be set when the language of the content allows
+						both horizontal and vertical directions.  Notable examples of such
+						languages are Chinese, Japanese, and Korean.</p>
 					</section>
 
 					<section id="rubyAnnotations">
@@ -1080,7 +1078,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>verticalWriting</h5>
 
 						<p>Indicates that the content can be laid out vertically (e.g, using the <code>vertical-rl</code>
-						  of [[css-writing-modes-3]]).</p>
+						  of [[css-writing-modes-3]]).
+						This value should only be set when the language of the content allows
+						both horizontal and vertical directions.</p>
 
 
 					</section>

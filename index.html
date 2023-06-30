@@ -894,8 +894,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 						<p>Indicates that the display properties of the content are controllable by the user.</p>
 
-						<p>When setting this property, the author must ensure that at least the following are
-							modifiable:</p>
+						<p>When setting this property, the author must ensure that the following are modifiable (when
+							applicable to their language and writing mode):</p>
 
 						<ul>
 							<li>the text foreground and background colors</li>
@@ -905,7 +905,18 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 							<li>the line height</li>
 							<li>the letter and word spacing</li>
 							<li>the text alignment</li>
+							<li>the writing direction (horizontal or vertical)</li>
+							<li>the display of ruby (both visibility and text color)</li>
+							<li>the inclusion of space characters as word separators</li>
 						</ul>
+
+						<div class="note">
+							<p>The preceding list may not capture all needed display transformability characteristics
+								for all languages. In such cases, authors must ensure the missing characteristics are
+								also transformable when setting this metadata. To request an addition to the list,
+								please open an issue in <a href="https://github.com/w3c/a11y-discov-vocab/issues">the
+									vocabulary tracker</a>.</p>
+						</div>
 
 						<p>In addition, text must not be represented as images unless it falls under the exceptions of
 								<a href="https://www.w3.org/TR/WCAG2/#images-of-text">Success Criterion 1.4.5</a>

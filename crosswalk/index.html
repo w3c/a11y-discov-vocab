@@ -47,39 +47,44 @@
 			/* Table zebra style... */
 			
 			table.zebra {
-			    font-size:inherit;
-			    font:90%;
-			    margin:1em;
+				font-size: inherit;
+				font: 90%;
+				margin: 1em;
 			}
 			
 			table.zebra td {
-			    padding-left: 0.3em;
+				padding-left: 0.3em;
 			}
 			
 			table.zebra th {
-			    font-weight: bold;
-			    text-align: center;
-			    background-color: rgb(0,0,128) !important;
-			    font-size: 110%;
-			    background: hsl(180, 30%, 50%);
-			    color: #fff;
+				font-weight: bold;
+				text-align: center;
+				background-color: rgb(0, 0, 128) !important;
+				font-size: 110%;
+				background: hsl(180, 30%, 50%);
+				color: #fff;
 			}
 			
 			table.zebra th a:link {
-			  color: #fff;
+				color: #fff;
 			}
 			
 			table.zebra th a:visited {
-			  color: #aaa;
+				color: #aaa;
 			}
 			
 			table.zebra tr:nth-child(even) {
-			    background-color: hsl(180, 30%, 93%) !important;
+				background-color: hsl(180, 30%, 93%) !important;
 			}
 			
-			table.zebra th{border-bottom:1px solid #bbb;padding:.2em 1em;}
-			table.zebra td{border-bottom:1px solid #ddd;padding:.2em 1em;}
-		</style>
+			table.zebra th {
+				border-bottom: 1px solid #bbb;
+				padding: .2em 1em;
+			}
+			table.zebra td {
+				border-bottom: 1px solid #ddd;
+				padding: .2em 1em;
+			}</style>
 	</head>
 	<body>
 		<section id="abstract">
@@ -155,8 +160,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>accessibilityFeature (vocabulary list follows)</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List 196</a> (specific codes follow)</td>
+						<th colspan="2" scope="rowgroup">accessibilityFeature</th>
 					</tr>
 					<tr>
 						<td>alternativeText</td>
@@ -283,8 +287,8 @@
 					</tr>
 					<tr>
 						<td>ttsMarkup</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 21: Text-to-speech
-							hinting provided; 22: Language tagging provided</td>
+						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 21: Text-to-speech hinting
+							provided; 22: Language tagging provided</td>
 					</tr>
 					<tr>
 						<td>unlocked</td>
@@ -309,9 +313,11 @@
 						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code 10: No reading system
 							accessibility options disabled</td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>accessibilityHazard (vocabulary list follows)</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessibilityHazard</th>
 					</tr>
 					<tr>
 						<td>flashing</td>
@@ -341,9 +347,11 @@
 						<td>unknown</td>
 						<td>–</td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>accessibilityAPI (vocabulary list follows)</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessibilityAPI</th>
 					</tr>
 					<tr>
 						<td>AndroidAccessibility</td>
@@ -389,9 +397,11 @@
 						<td>UIAutomation</td>
 						<td>–</td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>accessibilityControl (vocabulary list follows)</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessibilityControl</th>
 					</tr>
 					<tr>
 						<td>fullKeyboardControl</td>
@@ -417,9 +427,11 @@
 						<td>fullVoiceControl</td>
 						<td>–</td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>accessMode (vocabulary list follows)</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessMode</th>
 					</tr>
 					<tr>
 						<td>auditory</td>
@@ -472,10 +484,15 @@
 							or Code: 18: Photographs or Code: 19: Figures, diagrams, charts, graphs or Code: 12: Maps
 							and/or other cartographic content</td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>accessModeSufficient (vocabulary list follows)</td>
-						<td>ONIX crosswalks are for instances where accessModeSufficient includes this vocabulary entry
-							alone; combinations may occur but are more difficult to crosswalk</td>
+						<th colspan="2" scope="rowgroup">accessModeSufficient</th>
+					</tr>
+					<tr>
+						<td colspan="2">ONIX crosswalks are for instances where accessModeSufficient includes this
+							vocabulary entry alone; combinations may occur but are more difficult to crosswalk</td>
 					</tr>
 					<tr>
 						<td>auditory</td>
@@ -496,6 +513,12 @@
 						<td>visual</td>
 						<td>–</td>
 					</tr>
+				</tbody>
+				
+				<tbody>
+					<tr>
+						<th colspan="2" scope="rowgroup">accessibilitySummary</th>
+					</tr>
 					<tr>
 						<td>accessibilitySummary</td>
 						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 00: Accessibility
@@ -504,7 +527,8 @@
 					<tr>
 						<td>Human-readable text</td>
 						<td>If present, include information from <a href="https://ns.editeur.org/onix/en/196">List:
-							196</a>; Codes 95, 96, 98, and 99 (links for further information about accessibility)</td>
+								196</a>; Codes 95, 96, 98, and 99 (links for further information about
+							accessibility)</td>
 					</tr>
 				</tbody>
 			</table>

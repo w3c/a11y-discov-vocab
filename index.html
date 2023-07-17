@@ -1084,6 +1084,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					or not. Similarly, if an author sets the value <code>unknown</code>, they are stating that they do
 					not know whether hazards are present (e.g., because they do not know how, or are unable, to assess
 					them).</p>
+                
+                <p>If there is no video content the author can claim there is <code>noFlashingHazard</code> and <code>noMotionSimulationHazard</code>, however if the content contains and audio recording the author may not know if there exists a sound hazard or not and should specify <code>unknownSoundHazard</code> in this situation.</p>
 
 				<p>The expected value of the <code>accessibilityHazard</code> property is a list of the applicable
 					hazards. For metadata formats incapable of expressing lists, the property should be repeated for
@@ -1189,16 +1191,24 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p>Indicates that the resource does not present a flashing hazard.</p>
 
-					<p>This value should be set when the content conforms to <a
-							href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
-							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
-
 					<p>The <code>noFlashingHazard</code> value must not be set when either of the <a href="#flashing"
 								><code>flashing</code></a> or <a href="#hazard-unknown"><code>unknown</code></a> values
 						is set. It should not be set when the <a href="#hazard-none"><code>none</code></a> value is
 						set.</p>
 				</section>
 
+			    <section id="unknownFlashingHazard">
+					<h4>unknownFlashingHazard</h4>
+
+					<p>Indicates that it is unknown if a flashing hazard exists within the content.</p>
+
+					<p>The <code>unknownFlashingHazard</code> value must not be set when either of the <a href="#flashing"
+								><code>flashing</code></a> or <a href="#hazard-unknown"><code>unknown</code></a> values
+						is set. It should not be set when the <a href="#hazard-none"><code>none</code></a> value is
+						set.</p>
+				</section>
+                
+                
 				<section id="motionSimulation">
 					<h4>motionSimulation</h4>
 
@@ -1220,6 +1230,17 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<p>Indicates that the resource does not contain instances of motion simulation.</p>
 
 					<p>The <code>noMotionSimulation</code> value must not be set when either of the <a
+							href="#motionSimulation"><code>motionSimulation</code></a> or <a href="#hazard-unknown"
+								><code>unknown</code></a> values is set. It should not be set when the <a
+							href="#hazard-none"><code>none</code></a> value is set.</p>
+				</section>
+
+				<section id="unknownMotionSimulationHazard">
+					<h4>unknownMotionSimulationHazard</h4>
+
+					<p>Indicates that it is unknown if a motion simulation hazard exists within the content.</p>
+
+					<p>The <code>unknownMotionSimulation</code> value must not be set when either of the <a
 							href="#motionSimulation"><code>motionSimulation</code></a> or <a href="#hazard-unknown"
 								><code>unknown</code></a> values is set. It should not be set when the <a
 							href="#hazard-none"><code>none</code></a> value is set.</p>
@@ -1252,10 +1273,23 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						set.</p>
 				</section>
 
+				<section id="unknownSoundHazard">
+					<h4>unknownSoundHazard</h4>
+
+					<p>Indicates that it is unknown if an auditory hazard exists within the content.</p>
+
+					<p>The <code>unknownSoundHazard</code> value must not be set when either of the <a href="#sound"
+								><code>sound</code></a> or <a href="#hazard-unknown"><code>unknown</code></a> values is
+						set. It should not be set when the <a href="#hazard-none"><code>none</code></a> value is
+						set.</p>
+				</section>
+                
 				<section id="hazard-unknown">
 					<h4>unknown</h4>
 
 					<p>Indicates that the author is not able to determine if the resource presents any hazards.</p>
+   
+                    <p>It is recommended to use the overarching <code>unknown</code> value when all hazards are unknown instead of individual statements for <code>unknownSoundHazard</code>, <code>unknownMotionSimulationHazard</code>, and <code>unknownFlashingHazard</code>.</p>
 
 					<p>The <code>unknown</code> value must not be set with any other hazard value.</p>
 				</section>
@@ -1265,6 +1299,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<p>Indicates that the resource does not contain any hazards.</p>
 
+                    <p>It is recommended to use the overarching <code>none</code> value when there are no hazards instead of individual statements for <code>noSoundHazard</code>, <code>noMotionSimulationHazard</code>, and <code>noFlashingHazard</code>.</p>                    
+                    
 					<p>The <code>none</code> value must not be set when specifying either a known hazard or the <a
 							href="#hazard-unknown"><code>unknown</code></a> value. It should not be set when negative
 						hazard claims are made.</p>

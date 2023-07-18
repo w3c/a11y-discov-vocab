@@ -1294,162 +1294,176 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 			<section id="accessibilityHazard-vocabulary">
 				<h3>Vocabulary</h3>
 
-				<section id="flashing">
-					<h4>flashing</h4>
+				<section id="hazards">
+					<h4>Hazard terms</h4>
 
-					<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
+					<section id="flashing">
+						<h5>flashing</h5>
 
-					<p>This value should be set when the content meets the hazard thresholds described in <a
-							href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
-							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+						<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
 
-					<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
-								><code>noFlashingHazard</code></a>, <a href="#unknownFlashingHazard"
-								><code>unknownFlashingHazard</code></a>, <a href="#hazard-none"><code>none</code></a>,
-						or <a href="#hazard-unknown"><code>unknown</code></a> values is set.</p>
+						<p>This value should be set when the content meets the hazard thresholds described in <a
+								href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
+								2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+
+						<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
+									><code>noFlashingHazard</code></a>, <a href="#unknownFlashingHazard"
+									><code>unknownFlashingHazard</code></a>, <a href="#hazard-none"
+								><code>none</code></a>, or <a href="#hazard-unknown"><code>unknown</code></a> values is
+							set.</p>
+					</section>
+
+					<section id="motionSimulation">
+						<h5>motionSimulation</h5>
+
+						<p>Indicates that the resource contains instances of motion simulation that may affect some
+							individuals.</p>
+
+						<p>Some examples of motion simulation include video games with a first-person perspective and
+							CSS-controlled backgrounds that move when a user scrolls a page.</p>
+
+						<p>The <code>motionSimulation</code> value must not be set when any of the <a
+								href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, <a
+								href="#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a>, <a
+								href="#hazard-none"><code>none</code></a>, or <a href="#hazard-unknown"
+									><code>unknown</code></a> values is set.</p>
+					</section>
+
+					<section id="sound">
+						<h5>sound</h5>
+
+						<p>Indicates that the resource contains auditory sounds that may affect some individuals.</p>
+
+						<p class="ednote">The application of this value is currently under discussion as its application
+							is underspecified.</p>
+
+						<p>The <code>sound</code> value must not be set when any of the <a href="#noSoundHazard"
+									><code>noSoundHazard</code></a>, <a href="#unknownSoundHazard"
+									><code>unknownSoundHazard</code></a>, <a href="#hazard-none"><code>none</code></a>,
+							or <a href="#hazard-unknown"><code>unknown</code></a> values are set.</p>
+					</section>
 				</section>
 
-				<section id="noFlashingHazard">
-					<h4>noFlashingHazard</h4>
+				<section id="no-hazards">
+					<h4>No hazard terms</h4>
+					
+					<section id="hazard-none">
+						<h5>none</h5>
 
-					<p>Indicates that the resource does not present a flashing hazard.</p>
+						<p>Indicates that the resource does not contain any hazards.</p>
 
-					<p>The <code>noFlashingHazard</code> value must not be set when any of the <a href="#flashing"
-								><code>flashing</code></a>, <a href="#unknownFlashingHazard"
-								><code>unknownFlashing</code></a>, or <a href="#hazard-unknown"><code>unknown</code></a>
-						values is set.</p>
+						<p>It is recommended to use the <code>none</code> value when there are no hazards instead of
+							individual statements for <a href="#noSoundHazard"><code>noSoundHazard</code></a>, <a
+								href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, and <a
+								href="#noFlashingHazard"><code>noFlashingHazard</code></a>.</p>
 
-					<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+						<p>The <code>none</code> value must not be set when specifying either a known hazard or the <a
+								href="#hazard-unknown"><code>unknown</code></a> value. It should not be set when
+							negative hazard claims are made.</p>
+					</section>
+
+					<section id="noFlashingHazard">
+						<h5>noFlashingHazard</h5>
+
+						<p>Indicates that the resource does not present a flashing hazard.</p>
+
+						<p>The <code>noFlashingHazard</code> value must not be set when any of the <a href="#flashing"
+									><code>flashing</code></a>, <a href="#unknownFlashingHazard"
+									><code>unknownFlashing</code></a>, or <a href="#hazard-unknown"
+								><code>unknown</code></a> values is set.</p>
+
+						<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+					</section>
+
+					<section id="noMotionSimulationHazard">
+						<h5>noMotionSimulationHazard</h5>
+
+						<p>Indicates that the resource does not contain instances of motion simulation.</p>
+
+						<p>The <code>noMotionSimulation</code> value must not be set when any of the <a
+								href="#motionSimulation"><code>motionSimulation</code></a>, <a
+								href="#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a>, or
+								<a href="#hazard-unknown"><code>unknown</code></a> values is set.</p>
+
+						<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+					</section>
+
+					<section id="noSoundHazard">
+						<h5>noSoundHazard</h5>
+
+						<p>Indicates that the resource does not contain auditory hazards.</p>
+
+						<p class="ednote">The application of this value is currently under discussion as its application
+							is underspecified.</p>
+
+						<p>The <code>noSoundHazard</code> value must not be set when either of the <a href="#sound"
+									><code>sound</code></a>, <a href="#unknownSoundHazard"
+									><code>unknownSoundHazard</code></a>, or <a href="#hazard-unknown"
+									><code>unknown</code></a> values is set.</p>
+
+						<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+					</section>
 				</section>
 
-				<section id="unknownFlashingHazard">
-					<h4>unknownFlashingHazard</h4>
+				<section id="unknown-hazards">
+					<h4>Unknown hazard terms</h4>
+					
+					<section id="hazard-unknown">
+						<h5>unknown</h5>
 
-					<p>Indicates that the author cannot determine if a flashing hazard exists.</p>
+						<p>Indicates that the author is not able to determine if the resource presents any hazards.</p>
 
-					<p>The <code>unknownFlashingHazard</code> value must not be set when any of the <a href="#flashing"
-								><code>flashing</code></a>, <a href="#noFlashingHazard"
-							><code>noFlashingHazard</code></a>, <a href="#hazard-none"><code>none</code></a> values is
-						set.</p>
+						<p>It is recommended to use the <code>unknown</code> value when all hazards are unknown instead
+							of individual statements for <a href="#unknownSoundHazard"
+								><code>unknownSoundHazard</code></a>, <a href="#unknownMotionSimulationHazard"
+									><code>unknownMotionSimulationHazard</code></a>, and <a
+								href="#unknownFlashingHazard"><code>unknownFlashingHazard</code></a>.</p>
 
-					<p>It should not be set when the <a href="#hazard-unknown"><code>unknown</code></a> value is
-						set.</p>
-				</section>
+						<p>The <code>unknown</code> value must not be set when specifying either a known hazard or the
+								<a href="#hazard-none"><code>none</code></a> value. It should not be set with the
+							individual unknown hazard value.</p>
+					</section>
 
-				<section id="motionSimulation">
-					<h4>motionSimulation</h4>
+					<section id="unknownFlashingHazard">
+						<h5>unknownFlashingHazard</h5>
 
-					<p>Indicates that the resource contains instances of motion simulation that may affect some
-						individuals.</p>
+						<p>Indicates that the author cannot determine if a flashing hazard exists.</p>
 
-					<p>Some examples of motion simulation include video games with a first-person perspective and
-						CSS-controlled backgrounds that move when a user scrolls a page.</p>
+						<p>The <code>unknownFlashingHazard</code> value must not be set when any of the <a
+								href="#flashing"><code>flashing</code></a>, <a href="#noFlashingHazard"
+									><code>noFlashingHazard</code></a>, <a href="#hazard-none"><code>none</code></a>
+							values is set.</p>
 
-					<p>The <code>motionSimulation</code> value must not be set when any of the <a
-							href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, <a
-							href="#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a>, <a
-							href="#hazard-none"><code>none</code></a>, or <a href="#hazard-unknown"
-							><code>unknown</code></a> values is set.</p>
-				</section>
+						<p>It should not be set when the <a href="#hazard-unknown"><code>unknown</code></a> value is
+							set.</p>
+					</section>
 
-				<section id="noMotionSimulationHazard">
-					<h4>noMotionSimulationHazard</h4>
+					<section id="unknownMotionSimulationHazard">
+						<h5>unknownMotionSimulationHazard</h5>
 
-					<p>Indicates that the resource does not contain instances of motion simulation.</p>
+						<p>Indicates that it is unknown if a motion simulation hazard exists within the content.</p>
 
-					<p>The <code>noMotionSimulation</code> value must not be set when any of the <a
-							href="#motionSimulation"><code>motionSimulation</code></a>, <a
-							href="#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a>, or <a
-							href="#hazard-unknown"><code>unknown</code></a> values is set.</p>
+						<p>The <code>unknownMotionSimulation</code> value must not be set when any of the <a
+								href="#motionSimulation"><code>motionSimulation</code></a>, <a
+								href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a> or <a
+								href="#hazard-none"><code>none</code></a> values is set.</p>
 
-					<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
-				</section>
+						<p>It should not be set when the <a href="#hazard-unknown"><code>unknown</code></a> value is
+							set.</p>
+					</section>
 
-				<section id="unknownMotionSimulationHazard">
-					<h4>unknownMotionSimulationHazard</h4>
+					<section id="unknownSoundHazard">
+						<h5>unknownSoundHazard</h5>
 
-					<p>Indicates that it is unknown if a motion simulation hazard exists within the content.</p>
+						<p>Indicates that it is unknown if an auditory hazard exists within the content.</p>
 
-					<p>The <code>unknownMotionSimulation</code> value must not be set when any of the <a
-							href="#motionSimulation"><code>motionSimulation</code></a>, <a
-							href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a> or <a
-							href="#hazard-none"><code>none</code></a> values is set.</p>
+						<p>The <code>unknownSoundHazard</code> value must not be set when either of the <a href="#sound"
+									><code>sound</code></a>, <a href="#unknownSoundHazard"
+									><code>unknownSoundHazard</code></a>, or <a href="#hazard-unknown"
+									><code>unknown</code></a> values is set.</p>
 
-					<p>It should not be set when the <a href="#hazard-unknown"><code>unknown</code></a> value is
-						set.</p>
-				</section>
-
-				<section id="sound">
-					<h4>sound</h4>
-
-					<p>Indicates that the resource contains auditory sounds that may affect some individuals.</p>
-
-					<p class="ednote">The application of this value is currently under discussion as its application is
-						underspecified.</p>
-
-					<p>The <code>sound</code> value must not be set when any of the <a href="#noSoundHazard"
-								><code>noSoundHazard</code></a>, <a href="#unknownSoundHazard"
-								><code>unknownSoundHazard</code></a>, <a href="#hazard-none"><code>none</code></a>, or
-							<a href="#hazard-unknown"><code>unknown</code></a> values are set.</p>
-				</section>
-
-				<section id="noSoundHazard">
-					<h4>noSoundHazard</h4>
-
-					<p>Indicates that the resource does not contain auditory hazards.</p>
-
-					<p class="ednote">The application of this value is currently under discussion as its application is
-						underspecified.</p>
-
-					<p>The <code>noSoundHazard</code> value must not be set when either of the <a href="#sound"
-								><code>sound</code></a>, <a href="#unknownSoundHazard"
-							><code>unknownSoundHazard</code></a>, or <a href="#hazard-unknown"><code>unknown</code></a>
-						values is set.</p>
-
-					<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
-				</section>
-
-				<section id="unknownSoundHazard">
-					<h4>unknownSoundHazard</h4>
-
-					<p>Indicates that it is unknown if an auditory hazard exists within the content.</p>
-
-					<p>The <code>unknownSoundHazard</code> value must not be set when either of the <a href="#sound"
-								><code>sound</code></a>, <a href="#unknownSoundHazard"
-							><code>unknownSoundHazard</code></a>, or <a href="#hazard-unknown"><code>unknown</code></a>
-						values is set.</p>
-
-					<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
-				</section>
-
-				<section id="hazard-unknown">
-					<h4>unknown</h4>
-
-					<p>Indicates that the author is not able to determine if the resource presents any hazards.</p>
-
-					<p>It is recommended to use the <code>unknown</code> value when all hazards are unknown instead of
-						individual statements for <a href="#unknownSoundHazard"><code>unknownSoundHazard</code></a>, <a
-							href="#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a>, and <a
-							href="#unknownFlashingHazard"><code>unknownFlashingHazard</code></a>.</p>
-
-					<p>The <code>unknown</code> value must not be set when specifying either a known hazard or the <a
-							href="#hazard-none"><code>none</code></a> value. It should not be set with the individual
-						unknown hazard value.</p>
-				</section>
-
-				<section id="hazard-none">
-					<h4>none</h4>
-
-					<p>Indicates that the resource does not contain any hazards.</p>
-
-					<p>It is recommended to use the <code>none</code> value when there are no hazards instead of
-						individual statements for <a href="#noSoundHazard"><code>noSoundHazard</code></a>, <a
-							href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, and <a
-							href="#noFlashingHazard"><code>noFlashingHazard</code></a>.</p>
-
-					<p>The <code>none</code> value must not be set when specifying either a known hazard or the <a
-							href="#hazard-unknown"><code>unknown</code></a> value. It should not be set when negative
-						hazard claims are made.</p>
+						<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+					</section>
 				</section>
 			</section>
 		</section>

@@ -294,12 +294,12 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 				<section id="FuchsiaAccessibility">
 					<h4>FuchsiaAccessibility</h4>
-					
+
 					<p>Indicates the resource is compatible with the <a
-						href="https://fuchsia.dev/fuchsia-src/concepts/accessibility/accessibility_framework"
-						>Fuchsia Accessibility Framework</a>.</p>
+							href="https://fuchsia.dev/fuchsia-src/concepts/accessibility/accessibility_framework"
+							>Fuchsia Accessibility Framework</a>.</p>
 				</section>
-				
+
 				<section id="iAccessible2">
 					<h4>iAccessible2</h4>
 
@@ -804,23 +804,23 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>captions (deprecated)</h5>
 
 						<p>Indicates that synchronized captions are available for audio and video content.</p>
-						
+
 						<div class="note">
-							<p>The use of the <code>captions</code> value is now deprecated. Authors should use the
-								more specific <a href="#closedCaptions"><code>closedCaptions</code></a> or 
-								<a href="#openCaptions"><code>openCaptions</code></a> values, as appropriate.</p>
+							<p>The use of the <code>captions</code> value is now deprecated. Authors should use the more
+								specific <a href="#closedCaptions"><code>closedCaptions</code></a> or <a
+									href="#openCaptions"><code>openCaptions</code></a> values, as appropriate.</p>
 						</div>
 					</section>
 
 					<section id="closedCaptions">
 						<h5>closedCaptions</h5>
-						
+
 						<p>Indicates that synchronized closed captions are available for audio and video content.</p>
-						
-						<p>Closed captions are defined separately from the video, allowing users to control whether
-							they are rendered or not, unlike <a href="#openCaptions">open captions</a>.</p>
+
+						<p>Closed captions are defined separately from the video, allowing users to control whether they
+							are rendered or not, unlike <a href="#openCaptions">open captions</a>.</p>
 					</section>
-					
+
 					<section id="describedMath">
 						<h5>describedMath</h5>
 
@@ -843,14 +843,14 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 										><code>longdesc</code> attribute</a>).</p>
 						</div>
 					</section>
-					
+
 					<section id="openCaptions">
 						<h5>openCaptions</h5>
-						
+
 						<p>Indicates that synchronized open captions are available for audio and video content.</p>
-						
-						<p>Open captions are part of the video stream and cannot be turned off by the user, unlike
-							<a href="#closedCaptions">closed captions</a>.</p>
+
+						<p>Open captions are part of the video stream and cannot be turned off by the user, unlike <a
+								href="#closedCaptions">closed captions</a>.</p>
 					</section>
 
 					<section id="signLanguage">
@@ -1140,24 +1140,36 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<p>Identifying potential hazards that a resource poses allows users to determine if a resource poses a
 					risk to them and to potentially filter out content that could be harmful.</p>
 
-				<p>If no hazards are known to exist, it is recommended to use the value "<code>none</code>". If the
-					content has hazard(s), include positive assertions for the hazards it has and negative assertions
-					(the values that begin with "no") for the others.</p>
-
-				<p>If this property is not set for a resource, it is not possible to state whether it presents hazards
-					or not. Similarly, if an author sets the value <code>unknown</code>, they are stating that they do
-					not know whether hazards are present (e.g., because they do not know how, or are unable, to assess
-					them).</p>
-
 				<p>The expected value of the <code>accessibilityHazard</code> property is a list of the applicable
 					hazards. For metadata formats incapable of expressing lists, the property should be repeated for
 					each hazard.</p>
 
-				<aside class="example ex-group" title="accessibilityHazard">
-					<p>The following example shows the metadata for a video with a flashing hazard.</p>
+				<p>The <code>accessibilityHazard</code> property currently allows three types of hazards to be
+					identified: flashing, motion simulation, and sound. These correspond to the values
+						<code>flashing</code>, <code>motionSimulation</code>, and <code>sound</code>.</p>
+
+				<p>It also allows authors to indicate that each of the hazards is not present. In this case, the values
+					follow the pattern "<code>no&#8230;Hazard</code>", using the hazard names in place of the ellipsis
+					(e.g., <code>noFlashingHazard</code>).</p>
+
+				<p>If the author is sure there are no hazards, they are recommended to use the value "<code>none</code>"
+					in place of specifying that each individual hazard is not present. When setting this value, no other
+					hazard statuses are allowed.</p>
+
+				<p>Authors can additionally indicate that they are unable to determine if a hazard is present. In this
+					case, the values follow the pattern "<code>unknown&#8230;Hazard</code>", using the hazard names in
+					place of the ellipsis (e.g., <code>unknownSoundHazard</code>).</p>
+
+				<p>Authors can set the value <code>unknown</code> if they are unsure whether any hazards are present
+					(e.g., because they do not know how, or are unable, to assess them). When setting this value, no
+					other hazard statuses are allowed.</p>
+
+				<aside class="example ex-group" title="Mix of accessibility hazard">
+					<p>This example shows the metadata for a web page that embeds a video game with flashing hazard, but
+						without any sound or motion simulation.</p>
 					<pre class="json-ld"><code>{
    "@context": "schema.org",
-   "@type": "MediaObject",
+   "@type": "WebPage",
    &#8230;
    "accessibilityHazard": ["flashingHazard",
                            "noMotionSimulationHazard",
@@ -1165,32 +1177,14 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
    &#8230;
 }</code></pre>
 
-					<pre class="epub"><code>&lt;package &#8230;>
-   &lt;metadata>
-      &#8230;
-      &lt;meta
-          property="schema:accessibilityHazard">
-         flashing
-      &lt;/meta>
-      &lt;meta
-          property="schema:accessibilityHazard">
-         noMotionSimulationHazard
-      &lt;/meta>
-      &lt;meta
-          property="schema:accessibilityHazard">
-         noSoundHazard
-      &lt;/meta>
-  	&#8230;
-   &lt;/metadata>
-   &#8230;
-&lt;/package></code></pre>
+					<pre class="epub"><code>Not applicable</code></pre>
 
 					<pre class="rdfa"><code>&lt;div
     vocab="https://schema.org"
-    typeof="MediaObject">
+    typeof="WebPage">
    &#8230;
    &lt;p>
-      This video contains
+      This page contains video with
       &lt;span
           property="accessibilityHazard">
          flashing
@@ -1208,11 +1202,11 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 &lt;/div></code></pre>
 
 					<pre class="microdata"><code>&lt;div
-    itemtype="https://schema.org/MediaObject"
+    itemtype="https://schema.org/WebPage"
     itemscope="">
    &#8230;
    &lt;p>
-      This video contains
+      This page contains video with
       &lt;span
           itemprop="accessibilityHazard">
          flashing
@@ -1229,109 +1223,311 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
    &#8230;
 &lt;/div></code></pre>
 				</aside>
+
+				<aside class="example ex-group" title="Unknown accessibility hazard">
+					<p>This example shows the metadata for a textbook that has no content that moves or flashes, but the
+						author is uncertain if the embedded audio clips could present a hazard.</p>
+					<pre class="json-ld"><code>{
+   "@context": "schema.org",
+   "@type": "Book",
+   &#8230;
+   "accessibilityHazard": ["noFlashingHazard",
+                           "noMotionSimulationHazard",
+                           "unknownSoundHazard"],
+   &#8230;
+}</code></pre>
+
+					<pre class="epub"><code>&lt;package &#8230;>
+   &lt;metadata>
+      &#8230;
+      &lt;meta
+          property="schema:accessibilityHazard">
+         noFlashingHazard
+      &lt;/meta>
+      &lt;meta
+          property="schema:accessibilityHazard">
+         noMotionSimulationHazard
+      &lt;/meta>
+      &lt;meta
+          property="schema:accessibilityHazard">
+         unknownSoundHazard
+      &lt;/meta>
+  	&#8230;
+   &lt;/metadata>
+   &#8230;
+&lt;/package></code></pre>
+
+					<pre class="rdfa"><code>&lt;div
+    vocab="https://schema.org"
+    typeof="Book">
+   &#8230;
+   &lt;p>
+      This textbook does not have
+      &lt;span property="accessibilityHazard"
+            content="noMotionSimulationHazard">
+      motion simulation&lt;/span> or
+      &lt;span property="accessibilityHazard"
+         content="noFlashingHazard">flashing&lt;span>
+      hazards, but it is unknown if there is
+      a &lt;span property="accessibilityHazard"
+         content="unknownSoundHazard">sound&lt;/span>
+       hazard.
+   &lt;/p>
+   &#8230;
+&lt;/div></code></pre>
+
+					<pre class="microdata"><code>&lt;div
+    itemtype="https://schema.org/Book"
+    itemscope="">
+   &#8230;
+   &lt;p>
+      This textbook does not have
+      &lt;span
+          itemprop="accessibilityHazard"
+          content="noMotionSimulationHazard">
+         motion simulation
+      &lt;/span> or
+      &lt;span
+          itemprop="accessibilityHazard"
+          content="noFlashingHazard">
+         flashing
+      &lt;/span>
+      hazards, but it is unknown if there is a
+      &lt;span itemprop="accessibilityHazard"
+         content="unknownSoundHazard">
+      sound&lt;/span> hazard.
+   &lt;/p>
+   &#8230;
+&lt;/div></code></pre>
+				</aside>
+
+				<aside class="example ex-group" title="No accessibility hazards">
+					<p>The following example shows the metadata for a novel written entirely in text so it has no
+						hazards.</p>
+					<pre class="json-ld"><code>{
+   "@context": "schema.org",
+   "@type": "Book",
+   &#8230;
+   "accessibilityHazard": ["none"],
+   &#8230;
+}</code></pre>
+
+					<pre class="epub"><code>&lt;package &#8230;>
+   &lt;metadata>
+      &#8230;
+      &lt;meta
+          property="schema:accessibilityHazard">
+         none
+      &lt;/meta>
+  	&#8230;
+   &lt;/metadata>
+   &#8230;
+&lt;/package></code></pre>
+
+					<pre class="rdfa"><code>&lt;div
+    vocab="https://schema.org"
+    typeof="Book">
+   &#8230;
+   &lt;p>
+      This book has &lt;span
+          property="accessibilityHazard"
+          content="none">
+         no hazards
+      &lt;/span>.
+   &lt;/p>
+   &#8230;
+&lt;/div></code></pre>
+
+					<pre class="microdata"><code>&lt;div
+    itemtype="https://schema.org/Book"
+    itemscope="">
+   &#8230;
+   &lt;p>
+      This book has
+      &lt;span
+          itemprop="accessibilityHazard"
+          content="none">
+         no hazards
+      &lt;/span>.
+   &lt;/p>
+   &#8230;
+&lt;/div></code></pre>
+				</aside>
 			</section>
 
 			<section id="accessibilityHazard-vocabulary">
 				<h3>Vocabulary</h3>
 
-				<section id="flashing">
-					<h4>flashing</h4>
+				<section id="hazards">
+					<h4>Hazard terms</h4>
 
-					<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
+					<section id="flashing">
+						<h5>flashing</h5>
 
-					<p>This value should be set when the content meets the hazard thresholds described in <a
-							href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
-							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+						<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
 
-					<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
-								><code>noFlashingHazard</code></a>, <a href="#hazard-none"><code>none</code></a>, or <a
-							href="#hazard-unknown"><code>unknown</code></a> values are set.</p>
+						<p>This value should be set when the content meets the hazard thresholds described in <a
+								href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
+								2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+
+						<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
+									><code>noFlashingHazard</code></a>, <a href="#unknownFlashingHazard"
+									><code>unknownFlashingHazard</code></a>, <a href="#hazard-none"
+								><code>none</code></a>, or <a href="#hazard-unknown"><code>unknown</code></a> values is
+							set.</p>
+					</section>
+
+					<section id="motionSimulation">
+						<h5>motionSimulation</h5>
+
+						<p>Indicates that the resource contains instances of motion simulation that may affect some
+							individuals.</p>
+
+						<p>Some examples of motion simulation include video games with a first-person perspective and
+							CSS-controlled backgrounds that move when a user scrolls a page.</p>
+
+						<p>The <code>motionSimulation</code> value must not be set when any of the <a
+								href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, <a
+								href="#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a>, <a
+								href="#hazard-none"><code>none</code></a>, or <a href="#hazard-unknown"
+									><code>unknown</code></a> values is set.</p>
+					</section>
+
+					<section id="sound">
+						<h5>sound</h5>
+
+						<p>Indicates that the resource contains auditory sounds that may affect some individuals.</p>
+
+						<p class="ednote">The application of this value is currently under discussion as its application
+							is underspecified.</p>
+
+						<p>The <code>sound</code> value must not be set when any of the <a href="#noSoundHazard"
+									><code>noSoundHazard</code></a>, <a href="#unknownSoundHazard"
+									><code>unknownSoundHazard</code></a>, <a href="#hazard-none"><code>none</code></a>,
+							or <a href="#hazard-unknown"><code>unknown</code></a> values are set.</p>
+					</section>
 				</section>
 
-				<section id="noFlashingHazard">
-					<h4>noFlashingHazard</h4>
+				<section id="no-hazards">
+					<h4>No hazard terms</h4>
 
-					<p>Indicates that the resource does not present a flashing hazard.</p>
+					<section id="hazard-none">
+						<h5>none</h5>
 
-					<p>This value should be set when the content conforms to <a
-							href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
-							2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+						<p>Indicates that the resource does not contain any hazards.</p>
 
-					<p>The <code>noFlashingHazard</code> value must not be set when either of the <a href="#flashing"
-								><code>flashing</code></a> or <a href="#hazard-unknown"><code>unknown</code></a> values
-						is set. It should not be set when the <a href="#hazard-none"><code>none</code></a> value is
-						set.</p>
+						<p>It is recommended to use the <code>none</code> value when there are no hazards instead of
+							individual statements for <a href="#noSoundHazard"><code>noSoundHazard</code></a>, <a
+								href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, and <a
+								href="#noFlashingHazard"><code>noFlashingHazard</code></a>.</p>
+
+						<p>The <code>none</code> value must not be set when specifying either a known hazard or the <a
+								href="#hazard-unknown"><code>unknown</code></a> value. It should not be set when
+							negative hazard claims are made.</p>
+					</section>
+
+					<section id="noFlashingHazard">
+						<h5>noFlashingHazard</h5>
+
+						<p>Indicates that the resource does not present a flashing hazard.</p>
+
+						<p>The <code>noFlashingHazard</code> value must not be set when any of the <a href="#flashing"
+									><code>flashing</code></a>, <a href="#unknownFlashingHazard"
+									><code>unknownFlashing</code></a>, or <a href="#hazard-unknown"
+								><code>unknown</code></a> values is set.</p>
+
+						<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+					</section>
+
+					<section id="noMotionSimulationHazard">
+						<h5>noMotionSimulationHazard</h5>
+
+						<p>Indicates that the resource does not contain instances of motion simulation.</p>
+
+						<p>The <code>noMotionSimulation</code> value must not be set when any of the <a
+								href="#motionSimulation"><code>motionSimulation</code></a>, <a
+								href="#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a>, or
+								<a href="#hazard-unknown"><code>unknown</code></a> values is set.</p>
+
+						<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+					</section>
+
+					<section id="noSoundHazard">
+						<h5>noSoundHazard</h5>
+
+						<p>Indicates that the resource does not contain auditory hazards.</p>
+
+						<p class="ednote">The application of this value is currently under discussion as its application
+							is underspecified.</p>
+
+						<p>The <code>noSoundHazard</code> value must not be set when either of the <a href="#sound"
+									><code>sound</code></a>, <a href="#unknownSoundHazard"
+									><code>unknownSoundHazard</code></a>, or <a href="#hazard-unknown"
+									><code>unknown</code></a> values is set.</p>
+
+						<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+					</section>
 				</section>
 
-				<section id="motionSimulation">
-					<h4>motionSimulation</h4>
+				<section id="unknown-hazards">
+					<h4>Unknown hazard terms</h4>
 
-					<p>Indicates that the resource contains instances of motion simulation that may affect some
-						individuals.</p>
+					<section id="hazard-unknown">
+						<h5>unknown</h5>
 
-					<p>Some examples of motion simulation include video games with a first-person perspective and
-						CSS-controlled backgrounds that move when a user scrolls a page.</p>
+						<p>Indicates that the author is not able to determine if the resource presents any hazards.</p>
 
-					<p>The <code>motionSimulation</code> value must not be set when any of the <a
-							href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a>, <a
-							href="#hazard-none"><code>none</code></a>, or <a href="#hazard-unknown"
-							><code>unknown</code></a> values are set.</p>
-				</section>
+						<p>It is recommended to use the <code>unknown</code> value when all hazards are unknown instead
+							of individual statements for <a href="#unknownSoundHazard"
+								><code>unknownSoundHazard</code></a>, <a href="#unknownMotionSimulationHazard"
+									><code>unknownMotionSimulationHazard</code></a>, and <a
+								href="#unknownFlashingHazard"><code>unknownFlashingHazard</code></a>.</p>
 
-				<section id="noMotionSimulationHazard">
-					<h4>noMotionSimulationHazard</h4>
+						<p>The <code>unknown</code> value must not be set when specifying either a known hazard or the
+								<a href="#hazard-none"><code>none</code></a> value. It should not be set with the
+							individual unknown hazard value.</p>
+					</section>
 
-					<p>Indicates that the resource does not contain instances of motion simulation.</p>
+					<section id="unknownFlashingHazard">
+						<h5>unknownFlashingHazard</h5>
 
-					<p>The <code>noMotionSimulation</code> value must not be set when either of the <a
-							href="#motionSimulation"><code>motionSimulation</code></a> or <a href="#hazard-unknown"
-								><code>unknown</code></a> values is set. It should not be set when the <a
-							href="#hazard-none"><code>none</code></a> value is set.</p>
-				</section>
+						<p>Indicates that the author cannot determine if a flashing hazard exists.</p>
 
-				<section id="sound">
-					<h4>sound</h4>
+						<p>The <code>unknownFlashingHazard</code> value must not be set when any of the <a
+								href="#flashing"><code>flashing</code></a>, <a href="#noFlashingHazard"
+									><code>noFlashingHazard</code></a>, <a href="#hazard-none"><code>none</code></a>
+							values is set.</p>
 
-					<p>Indicates that the resource contains auditory sounds that may affect some individuals.</p>
+						<p>It should not be set when the <a href="#hazard-unknown"><code>unknown</code></a> value is
+							set.</p>
+					</section>
 
-					<p class="ednote">The application of this value is currently under discussion as its application is
-						underspecified.</p>
+					<section id="unknownMotionSimulationHazard">
+						<h5>unknownMotionSimulationHazard</h5>
 
-					<p>The <code>sound</code> value must not be set when any of the <a href="#noSoundHazard"
-								><code>noSoundHazard</code></a>, <a href="#hazard-none"><code>none</code></a>, or <a
-							href="#hazard-unknown"><code>unknown</code></a> values are set.</p>
-				</section>
+						<p>Indicates that it is unknown if a motion simulation hazard exists within the content.</p>
 
-				<section id="noSoundHazard">
-					<h4>noSoundHazard</h4>
+						<p>The <code>unknownMotionSimulation</code> value must not be set when any of the <a
+								href="#motionSimulation"><code>motionSimulation</code></a>, <a
+								href="#noMotionSimulationHazard"><code>noMotionSimulationHazard</code></a> or <a
+								href="#hazard-none"><code>none</code></a> values is set.</p>
 
-					<p>Indicates that the resource does not contain auditory hazards.</p>
+						<p>It should not be set when the <a href="#hazard-unknown"><code>unknown</code></a> value is
+							set.</p>
+					</section>
 
-					<p class="ednote">The application of this value is currently under discussion as its application is
-						underspecified.</p>
+					<section id="unknownSoundHazard">
+						<h5>unknownSoundHazard</h5>
 
-					<p>The <code>noSoundHazard</code> value must not be set when either of the <a href="#sound"
-								><code>sound</code></a> or <a href="#hazard-unknown"><code>unknown</code></a> values is
-						set. It should not be set when the <a href="#hazard-none"><code>none</code></a> value is
-						set.</p>
-				</section>
+						<p>Indicates that it is unknown if an auditory hazard exists within the content.</p>
 
-				<section id="hazard-unknown">
-					<h4>unknown</h4>
+						<p>The <code>unknownSoundHazard</code> value must not be set when either of the <a href="#sound"
+									><code>sound</code></a>, <a href="#unknownSoundHazard"
+									><code>unknownSoundHazard</code></a>, or <a href="#hazard-unknown"
+									><code>unknown</code></a> values is set.</p>
 
-					<p>Indicates that the author is not able to determine if the resource presents any hazards.</p>
-
-					<p>The <code>unknown</code> value must not be set with any other hazard value.</p>
-				</section>
-
-				<section id="hazard-none">
-					<h4>none</h4>
-
-					<p>Indicates that the resource does not contain any hazards.</p>
-
-					<p>The <code>none</code> value must not be set when specifying either a known hazard or the <a
-							href="#hazard-unknown"><code>unknown</code></a> value. It should not be set when negative
-						hazard claims are made.</p>
+						<p>It should not be set when the <a href="#hazard-none"><code>none</code></a> value is set.</p>
+					</section>
 				</section>
 			</section>
 		</section>
@@ -1781,7 +1977,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
    &lt;meta itemprop="accessibilityFeature" content="ARIA" />
    &lt;meta itemprop="accessibilityFeature" content="largePrint" />
    &lt;meta itemprop="accessibilityFeature" content="highContrastDisplay" />
-   &lt;meta itemprop="accessibilityFeature" content="displayTransformability/resizeText" />
+   &lt;meta itemprop="accessibilityFeature" content="displayTransformability" />
    &lt;meta itemprop="accessibilityFeature" content="longDescription" />
    &lt;meta itemprop="accessibilityFeature" content="alternativeText" />
    &lt;meta itemprop="accessibilityFeature" content="readingOrder" />
@@ -1907,8 +2103,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<ul>
 					<li>05-May-2023: Added <code>FuchsiaAccessibility</code> to the <code>accessibilityAPI</code>
 						values. See <a href="https://github.com/w3c/a11y-discov-vocab/issues/24">issue 24</a>.</li>
-					<li>05-May-2023: Added <code>closedCaptions</code> and <code>openCaptions</code> to replace
-						the more generic <code>captions</code> value. See <a 
+					<li>05-May-2023: Added <code>closedCaptions</code> and <code>openCaptions</code> to replace the more
+						generic <code>captions</code> value. See <a
 							href="https://github.com/w3c/a11y-discov-vocab/issues/26">issue 26</a>.</li>
 					<li>27-Mar-2023: Added <code>unknown</code> feature for placeholder use. See <a
 							href="https://github.com/w3c/a11y-discov-vocab/issues/17">issue 17</a>.</li>

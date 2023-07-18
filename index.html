@@ -536,6 +536,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 					<li><a href="#tactile-terms">Tactile terms</a> identify content that is formatted for tactile use,
 						such as graphics and objects.</li>
+
+					<li><a href="#internationalization-terms">Internationalization terms</a> identify those accessibility characteristics of the content which are required for internationalization.</li>
+
 				</ul>
 
 				<p>The vocabulary also includes <a href="#feature-none">the term "<code>none</code>"</a> that authors
@@ -850,20 +853,6 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 								href="#closedCaptions">closed captions</a>.</p>
 					</section>
 
-					<section id="rubyAnnotations">
-						<h5>rubyAnnotations</h5>
-
-						<p>Indicates that <a
-								href="https://html.spec.whatwg.org/multipage/text-level-semantics.html#the-ruby-element"
-									><code>ruby</code> annotations</a> [[HTML]] are provided in the content. Ruby
-							annotations are used as pronunciation guides for the logographic characters for languages
-							like Chinese or Japanese. It makes difficult Kanji or CJK ideographic characters more
-							accessible.</p>
-
-						<p>The absence of <code>rubyAnnotations</code> implies that no CJK ideographic characters have
-							ruby.</p>
-					</section>
-
 					<section id="signLanguage">
 						<h5>signLanguage</h5>
 
@@ -1043,6 +1032,81 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					</section>
 				</section>
 
+				<section id="internationalization-terms">
+					<h4>Internationalization Terms</h4>
+
+					<p>The internationalization terms identify those accessibility characteristics of the content which are required for internationalization.</p>
+
+
+					<section id="fullRubyAnnotations">
+						<h5>fullRubyAnnotations</h5>
+
+						<p>Indicates that <a
+								href="https://www.w3.org/TR/jlreq/#usage_of_ruby"
+								    >ruby annotations</a> [[JLreq]] are attached to every CJK
+						  ideographic character in the content.  Ruby annotations are used as pronunciation guides
+						  for the logographic characters for languages like Chinese or Japanese. They make difficult
+						  CJK ideographic characters more accessible.</p>
+
+						<p>If some but not all CJK ideographic characters have ruby annotations, use the
+						  <a href="#rubyAnnotations"><code>rubyAnnotations</code></a> value.</p>
+					</section>
+					
+					<section id="horizontalWriting">
+						<h5>horizontalWriting</h5>
+
+						<p>Indicates that the content can be laid out horizontally (e.g, using the
+						<code>horizontal-tb</code> writing mode of [[css-writing-modes-3]]).
+						This value should only be set when the language of the content allows
+						both horizontal and vertical directions.  Notable examples of such
+						languages are Chinese, Japanese, and Korean.</p>
+						<div class="note">
+						  <p>Some dyslexic Japanese can read horizontal writing but cannot read vertical writing.<p>
+						</div>						
+					</section>
+
+					<section id="rubyAnnotations">
+						<h5>rubyAnnotations</h5>
+
+						<p>Indicates that <a
+								href="https://www.w3.org/TR/jlreq/#usage_of_ruby"
+								    >ruby annotations</a> are attached to some but not all
+						  CJK ideographic characters in the content.</p>
+
+						<p>If all CJK ideographic characters have <code>ruby</code> annotations, use the 
+						  <a href="#fullRubyAnnotations"><code>fullRubyAnnotations</code></a> value.</p>
+					</section>
+
+					<section id="verticalWriting">
+						<h5>verticalWriting</h5>
+
+						<p>Indicates that the content can be laid out vertically (e.g, using the <code>vertical-rl</code>
+						  of [[css-writing-modes-3]]).
+						This value should only be set when the language of the content allows
+						both horizontal and vertical directions.</p>
+
+
+					</section>
+
+
+					<section id="withAdditionalWordSegmentation">
+						<h5>withAdditionalWordSegmentation</h5>
+
+						<p>Indicates that the content can be rendered with additional word segmentation.</p>
+
+
+						<div class="note">
+						  <p>Although the space character is not typically used for word segmentation in languages such as Chinese, 
+						  Japanese, Thai and Lao, it may be used for accessibility reasons.<p>
+						</div>
+					</section>
+
+					<section id="withoutAdditionalWordSegmentation">
+						<h5>withoutAdditionalWordSegmentation</h5>
+
+						<p>Indicates that the content can be rendered without additional word segmentation.</p>
+					</section>
+				</section>	
 				<section id="feature-none">
 					<h5>none</h5>
 

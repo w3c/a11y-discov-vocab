@@ -9,11 +9,12 @@
 			//<![CDATA[
 			var respecConfig = {
 				group: "a11y-discov-vocab",
-				specStatus: "CG-FINAL",
+				specStatus: "CG-DRAFT",
 				noRecTrack: true,
-				edDraftURI: null,
-				thisVersion: "https://w3c.github.io/a11y-disco-vocab/crosswalk",
-				latestVersion: "https://w3c.github.io/a11y-disco-vocab/crosswalk",
+				shortName: 'crosswalk',
+				edDraftURI: "https://w3c.github.io/a11y-discov-vocab/crosswalk/",
+				latestVersion: "https://w3c.github.io/a11y-discov-vocab/latest/crosswalk/",
+				thisVersion: "https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-crosswalk-20240208/",
 				editors: [
 					{
 						name: "Madeleine Rothberg",
@@ -46,58 +47,69 @@
 			/* Table zebra style... */
 			
 			table.zebra {
-			    font-size:inherit;
-			    font:90%;
-			    margin:1em;
+				font-size: inherit;
+				font: 90%;
+				margin: 1em;
 			}
 			
 			table.zebra td {
-			    padding-left: 0.3em;
+				padding-left: 0.3em;
 			}
 			
 			table.zebra th {
-			    font-weight: bold;
-			    text-align: center;
-			    background-color: rgb(0,0,128) !important;
-			    font-size: 110%;
-			    background: hsl(180, 30%, 50%);
-			    color: #fff;
+				font-weight: bold;
+				text-align: center;
+				background-color: rgb(0, 0, 128) !important;
+				font-size: 110%;
+				background: hsl(180, 30%, 50%);
+				color: #fff;
 			}
 			
 			table.zebra th a:link {
-			  color: #fff;
+				color: #fff;
 			}
 			
 			table.zebra th a:visited {
-			  color: #aaa;
+				color: #aaa;
 			}
 			
 			table.zebra tr:nth-child(even) {
-			    background-color: hsl(180, 30%, 93%) !important;
+				background-color: hsl(180, 30%, 93%) !important;
 			}
 			
-			table.zebra th{border-bottom:1px solid #bbb;padding:.2em 1em;}
-			table.zebra td{border-bottom:1px solid #ddd;padding:.2em 1em;}
-		</style>
+			table.zebra th {
+				border-bottom: 1px solid #bbb;
+				padding: .2em 1em;
+				text-align: left;
+			}
+			table.zebra td {
+				border-bottom: 1px solid #ddd;
+				padding: .2em 1em;
+			}</style>
 	</head>
 	<body>
 		<section id="abstract">
 			<p>This document crosswalks the accessibility metadata for Schema.org, EPUB, and ONIX.</p>
 		</section>
-		
 		<section id="sotd"></section>
-		
 		<section id="epub-onix">
 			<h2>EPUB and ONIX</h2>
-			
+
 			<p>The following table provides a crosswalk between the properties defined in the <a
-				href="https://www.w3.org/TR/epub-a11y-11">EPUB Accessibility specification</a> [[EPUB-A11Y-11]] and the
-				equivalents defined in the ONIX metadata standard [[ONIX]].</p>
-			
-			<p class="note">The <code>conformsTo</code> term used in EPUB is drawn from <a
-					href="http://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">Dublin
-					Core</a>.</p>
-			
+					href="https://www.w3.org/TR/epub-a11y-11">EPUB Accessibility specification</a> [[EPUB-A11Y-11]] and
+				the equivalents defined in the ONIX metadata standard [[ONIX]].</p>
+
+			<div class="note">
+				<p>The <code>conformsTo</code> term used in EPUB is drawn from <a
+						href="http://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">Dublin
+						Core</a>.</p>
+			</div>
+
+			<div class="note">
+				<p>Unless stated otherwise, all code values are from ONIX <a href="https://ns.editeur.org/onix/en/196"
+						>code list 196</a>: E-publication Accessibility Details.</p>
+			</div>
+
 			<table class="zebra">
 				<thead>
 					<tr>
@@ -107,44 +119,201 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>certifiedBy</td>
-						<td>–</td>
-					</tr>
-					<tr>
-						<td>certifierReport</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 94: Compliance web page
-							for detailed accessibility information or, if a publisher is self-certifying, Code: 96:
-							Publisher's web page for detailed accessibility information</td>
-					</tr>
-					<tr>
-						<td>certifierCredential</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/TR/epub-a11y/#certifiedBy"
+							><code>certifiedBy</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
 						<td>
-							dcterms:conformsTo with the URL
-							<code>http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-a</code>
+							<p><a href="https://www.w3.org/TR/epub-a11y/#certifierReport"
+									><code>certifierReport</code></a></p>
 						</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 02: EPUB Accessibility
-							Specification 1.0 A</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/94">Code 94</a>: Compliance web page for
+								detailed accessibility information</p>
+							<p>or, if a publisher is self-certifying,</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/96">Code 96</a>: Publisher's web page for
+								detailed accessibility information</p>
+						</td>
 					</tr>
 					<tr>
 						<td>
-							dcterms:conformsTo with the URL
-							<code>http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa</code>
+							<p><a href="https://www.w3.org/TR/epub-a11y/#certifierCredential"
+										><code>certifierCredential</code></a></p>
 						</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 03: EPUB Accessibility
-							Specification 1.0 AA</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/93">Code 93</a>: Compliance certification
+								by</p>
+						</td>
 					</tr>
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.0 Level A</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/80">Code 80</a>: WCAG v2.0</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/84">Code 84</a>: WCAG level A</p>                            
+						</td>
+					</tr>  
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.0 Level AA</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/80">Code 80</a>: WCAG v2.0</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/85">Code 85</a>: WCAG level AA</p>                            
+						</td>
+					</tr>                    
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.0 Level AAA</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/80">Code 80</a>: WCAG v2.0</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/86">Code 86</a>: WCAG level AAA</p>                            
+						</td>
+					</tr>                    
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.1 Level A</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/81">Code 81</a>: WCAG v2.1</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/84">Code 84</a>: WCAG level A</p>                            
+						</td>
+					</tr>  
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.1 Level AA</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/81">Code 81</a>: WCAG v2.1</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/85">Code 85</a>: WCAG level AA</p>                            
+						</td>
+					</tr>                    
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.1 Level AAA</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/81">Code 81</a>: WCAG v2.1</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/86">Code 86</a>: WCAG level AAA</p>                            
+						</td>
+					</tr> 
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.2 Level A</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/82">Code 82</a>: WCAG v2.2</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/84">Code 84</a>: WCAG level A</p>                            
+						</td>
+					</tr>  
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.2 Level AA</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/82">Code 82</a>: WCAG v2.2</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/85">Code 85</a>: WCAG level AA</p>                            
+						</td>
+					</tr>                    
+	                <tr>
+						<td>
+                            <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                <code>EPUB Accessibility 1.1 - WCAG 2.1 Level AAA</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/04">Code 04</a>: EPUB Accessibility Specification 1.1</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/82">Code 82</a>: WCAG v2.2</p>
+                            <p><a href="https://ns.editeur.org/onix/en/196/86">Code 86</a>: WCAG level AAA</p>                            
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the URL
+                                <code>http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-a</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/02">Code 02</a>: EPUB Accessibility
+								Specification 1.0 A</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
+										><code>dcterms:conformsTo</code></a> with the URL
+                                <code>http://www.idpf.org/epub/a11y/accessibility-20170105.html#wcag-aa</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/03">Code 03</a>: EPUB Accessibility
+								Specification 1.0 AA</p>
+						</td>
+					</tr>
+                    
+					<tr>
+						<td>
+							<p><code>a11y:exemption</code> with the text string<br/><code>eaa-microenterprise</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/75">Code 75</a>: EAA exception 1 - Micro-enterprises</p>
+						</td>
+					</tr> 
+					<tr>
+						<td>
+							<p><code>a11y:exemption</code> with the text string<br/><code>eaa-disproportionate-burden</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/76">Code 76</a>: EAA exception 2 - Disproportionate burden</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<p><code>a11y:exemption</code> with the text string<br/><code>eaa-fundamental-alteration</code></p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/77">Code 77</a>: EAA exception 3 - Fundamental modification</p>
+						</td>
+					</tr>                    
 				</tbody>
 			</table>
 		</section>
-		
 		<section id="schema-onix">
 			<h2>Schema.org and ONIX</h2>
-			
+
 			<p>The following table provides a crosswalk between the Schema.org metadata and ONIX standard [[ONIX]].</p>
-			
+
+			<div class="note">
+				<p>Unless stated otherwise, all code values are from ONIX <a href="https://ns.editeur.org/onix/en/196"
+						>code list 196</a>: E-publication Accessibility Details.</p>
+			</div>
+
 			<table class="zebra">
 				<thead>
 					<tr>
@@ -154,356 +323,533 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td>accessibilityFeature (vocabulary list follows)</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List 196</a> (specific codes follow)</td>
+						<th colspan="2" scope="rowgroup">accessibilityFeature</th>
 					</tr>
 					<tr>
-						<td>alternativeText</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 14: Short alternative
-							descriptions</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#alternativeText"
+										><code>alternativeText</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/14">Code 14</a>: Short alternative
+								descriptions</p></td>
 					</tr>
 					<tr>
-						<td>annotations</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#annotations"
+										><code>annotations</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>audioDescription</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#alternativeText"
+										><code>ARIA</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/30">Code 30</a>: ARIA roles provided</p></td>
 					</tr>
+                    
 					<tr>
-						<td>bookmarks</td>
-						<td>N/A (Reading system feature)</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#audioDescription"
+										><code>audioDescription</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/28">Code 28</a>: Full alternative audio descriptions</p></td>
 					</tr>
 					<tr>
-						<td>braille</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bookmarks"
+										><code>bookmarks</code></a> (<em>deprecated</em>)</p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>captions</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#braille"
+									><code>braille</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/21">List 21</a>: Edition type, <a
+									href="https://ns.editeur.org/onix/en/21/BRL">Code BRL</a>: Braille edition</p>
+                            <p>or</p>
+                            <p><a href="https://ns.editeur.org/onix/en/175">List 175</a>: Product form detail, <a
+									href="https://ns.editeur.org/onix/en/175/E146">Code E146</a>: BRF(Braille-ready file) Electronic Braille file</p>
+                        </td>
 					</tr>
 					<tr>
-						<td>ChemML</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 18: Accessible chem
-							content</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#captions"
+										><code>captions</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>describedMath</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ChemML"
+									><code>ChemML</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/18">Code 18</a>: Accessible chem content</p>
+						</td>
 					</tr>
 					<tr>
-						<td>displayTransformability</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#describedMath"
+										><code>describedMath</code></a></p></td>
+						<td>
+                            <p><a href="https://ns.editeur.org/onix/en/196/14">Code 14</a>: Short alternative textual descriptions</p>
+                            <p>along with</p>
+                            <p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/48">Code 48</a>: Mathematical content</p></td>
 					</tr>
 					<tr>
-						<td>highContrastAudio</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#displayTransformability"
+										><code>displayTransformability</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/36">Code 36</a>: All textual content can be modified</p></td>
 					</tr>
 					<tr>
-						<td>highContrastDisplay</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#fullRubyAnnotations"
+							><code>fullRubyAnnotations</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>index</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 12: Index navigation</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#highContrastAudio"
+										><code>highContrastAudio</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/27">Code 27</a>: Use of high contrast between foreground and background audio</p></td>
 					</tr>
 					<tr>
-						<td>largePrint</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#highContrastDisplay"
+										><code>highContrastDisplay</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/26">Code 26</a>: Use of high contrast between text and background color</p>
+                        <p>and</p>
+                        <p><a href="https://ns.editeur.org/onix/en/196/37">Code 37</a>: Use of ultra-high contrast between text foreground and background</p></td>
 					</tr>
 					<tr>
-						<td>latex</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#horizontalWriting"
+							><code>horizontalWriting</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>longDescription</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 15: Full alternative
-							descriptions; 16: Visualised data also available as non-graphical data</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#index"
+								><code>index</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/12">Code 12</a>: Index navigation</p>
+						</td>
 					</tr>
 					<tr>
-						<td>MathML</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 17: Accessible math
-							content</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#largePrint"
+										><code>largePrint</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/21">List 21</a>: Edition type, <a
+									href="https://ns.editeur.org/onix/en/21/LTE">Code LTE</a>: Large type / large print edition</p>
+                            <p>and</p>
+                            <p><a href="https://ns.editeur.org/onix/en/21">List 21</a>: Edition type, <a
+									href="https://ns.editeur.org/onix/en/21/ULP">Code ULP</a>: Ultra large print edition</p></td>
 					</tr>
 					<tr>
-						<td>none</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#latex"
+								><code>latex</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/35">Code 35</a>: Accessible math content (as LaTeX)</p>
+                        <p>should be used with</p>
+                        <p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/48">Code 48</a>: Mathematical content</p>
+                        </td>
 					</tr>
 					<tr>
-						<td>printPageNumbers</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 19: Print-equivalent page
-							numbering</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#longDescription"
+										><code>longDescription</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/15">Code 15</a>: Full alternative
+								descriptions</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/16">Code 16</a>: Visualised data also
+								available as non-graphical data</p>
+						</td>
 					</tr>
 					<tr>
-						<td>readingOrder</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 13: Reading order</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#MathML"
+									><code>MathML</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/17">Code 17:</a> Accessible math content</p>
+						</td>
 					</tr>
 					<tr>
-						<td>rubyAnnotations</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#feature-none"
+										><code>none</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/09">Code 09</a>: Inaccessible, or known limited accessibility</p></td>
 					</tr>
 					<tr>
-						<td>signLanguage</td>
-						<td>–</td>
+						<td>
+							<p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#pageBreakMarkers"
+										><code>pageBreakMarkers</code></a><br /> (formerly
+								<code>printPageNumbers</code>)</p>
+						</td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/19">Code 19</a>: Print-equivalent page
+								numbering</p>
+						</td>
 					</tr>
 					<tr>
-						<td>structuralNavigation</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#pageNavigation"
+										><code>pageNavigation</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>sychronizedAudioText</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 20: Synchronised
-							pre-recorded audio</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#readingOrder"
+										><code>readingOrder</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/13">Code 13</a>: Reading order</p>
+						</td>
 					</tr>
 					<tr>
-						<td>tableOfContents</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 11: Table of contents
-							navigation</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#rubyAnnotations"
+										><code>rubyAnnotations</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>taggedPDF</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#signLanguage"
+										><code>signLanguage</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>tactileGraphic</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#structuralNavigation"
+										><code>structuralNavigation</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/29">Code 29</a>: Next / Previous structural navigation</p></td>
 					</tr>
 					<tr>
-						<td>tactileObject</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#sychronizedAudioText"
+										><code>sychronizedAudioText</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/20">Code 20</a>: Synchronised pre-recorded
+								audio</p>
+						</td>
 					</tr>
 					<tr>
-						<td>timingControl</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#tableOfContents"
+										><code>tableOfContents</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/11">Code 11</a>: Table of contents
+								navigation</p>
+						</td>
 					</tr>
 					<tr>
-						<td>transcript</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#taggedPDF"
+										><code>taggedPDF</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/05">Code 05</a>: PDF/UA</p></td>
 					</tr>
 					<tr>
-						<td>ttsMarkup</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 21: Text-to-speech
-							hinting provided; 22: Language tagging provided</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#tactileGraphic"
+										><code>tactileGraphic</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>unlocked</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#tactileObject"
+										><code>tactileObject</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>–</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code 22: Language tagging
-							provided – helps with TTS in multi-lingual content</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#timingControl"
+										><code>timingControl</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>–</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code 24: Dyslexia
-							readability</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#transcript"
+										><code>transcript</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>–</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code 09: Inaccessible</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ttsMarkup"
+										><code>ttsMarkup</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/21">Code 21</a>: Text-to-speech hinting
+								provided</p>
+							<p><a href="https://ns.editeur.org/onix/en/196/22">Code 22</a>: Language tagging
+								provided</p>
+						</td>
 					</tr>
 					<tr>
-						<td>–</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code 10: No reading system
-							accessibility options disabled</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#feature-unknown"
+										><code>unknown</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/196/08">Code 08</a>: Unknown accessibility</p></td>
 					</tr>
 					<tr>
-						<td>accessibilityHazard (vocabulary list follows)</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unlocked"
+										><code>unlocked</code></a></p></td>
+                        <td><p><a href="https://ns.editeur.org/onix/en/144">List 144:</a> E-publication technical protection, <a
+									href="https://ns.editeur.org/onix/en/144/00">Code 00</a>: 	None</p></td>
 					</tr>
 					<tr>
-						<td>flashing</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#verticalWriting"
+							><code>verticalWriting</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>noFlashingHazard</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#withAdditionalWordSegmentation"
+							><code>withAdditionalWordSegmentation</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>motionSimulation</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#withoutAdditionalWordSegmentation"
+							><code>withoutAdditionalWordSegmentation</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>noMotionSimulationHazard</td>
-						<td>–</td>
+						<td><p>–</p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/22">Code 22</a>: Language tagging
+								provided</p>
+						</td>
 					</tr>
 					<tr>
-						<td>sound</td>
-						<td>–</td>
+						<td><p>–</p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/24">Code 24</a>: Dyslexia readability</p>
+						</td>
 					</tr>
 					<tr>
-						<td>noSoundHazard</td>
-						<td>–</td>
+						<td><p>–</p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/09">Code 09</a>: Inaccessible</p>
+						</td>
 					</tr>
 					<tr>
-						<td>unknown</td>
-						<td>–</td>
+						<td><p>–</p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/10">Code 10</a>: No reading system
+								accessibility options disabled</p>
+						</td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>accessibilityAPI (vocabulary list follows)</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessibilityHazard</th>
 					</tr>
 					<tr>
-						<td>AndroidAccessibility</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#flashing"
+										><code>flashing</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/143">List 143</a>: US CPSIA or other international hazard warning type, <a
+									href="https://ns.editeur.org/onix/en/143/13">Code 13</a>: WARNING – Flashing hazard</p></td>
 					</tr>
 					<tr>
-						<td>ARIA</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#motionSimulation"
+										><code>motionSimulation</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/143">List 143</a>: US CPSIA or other international hazard warning type, <a
+									href="https://ns.editeur.org/onix/en/143/17">Code 17</a>: WARNING – Motion simulation hazard</p></td>
 					</tr>
 					<tr>
-						<td>ATK</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#sound"
+								><code>sound</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/143">List 143</a>: US CPSIA or other international hazard warning type, <a
+									href="https://ns.editeur.org/onix/en/143/15">Code 15</a>: WARNING – Sound hazard</p></td>
 					</tr>
 					<tr>
-						<td>AT-SPI</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#hazard-none"
+									><code>none</code></a></p></td>
+				<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>BlackberryAccessibility</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#noFlashingHazard"
+										><code>noFlashingHazard</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/143">List 143</a>: US CPSIA or other international hazard warning type, <a
+									href="https://ns.editeur.org/onix/en/143/14">Code 14</a>: No flashing hazard warning necessary</p></td>
 					</tr>
 					<tr>
-						<td>iAccessible2</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#noMotionSimulationHazard"
+										><code>noMotionSimulationHazard</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/143">List 143</a>: US CPSIA or other international hazard warning type, <a
+									href="https://ns.editeur.org/onix/en/143/18">Code 18</a>: No motion simulation hazard warning necessary</p></td>
 					</tr>
 					<tr>
-						<td>iOSAccessibility</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#noSoundHazard"
+										><code>noSoundHazard</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/143">List 143</a>: US CPSIA or other international hazard warning type, <a
+									href="https://ns.editeur.org/onix/en/143/16">Code 16</a>: No sound hazard warning necessary/p></td>
 					</tr>
 					<tr>
-						<td>JavaAccessibility</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#hazard-unknown"
+										><code>unknown</code></a></p></td>
+                        <td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>MacOSXAccessibility</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownFlashingHazard"
+										><code>unknownFlashingHazard</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>MSAA</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownMotionSimulationHazard"
+										><code>unknownMotionSimulationHazard</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>UIAutomation</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownSoundHazard"
+										><code>unknownSoundHazard</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>accessibilityControl (vocabulary list follows)</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessibilityAPI</th>
 					</tr>
 					<tr>
-						<td>fullKeyboardControl</td>
-						<td>–</td>
+						<td colspan="2" scope="rowgroup">The metadata accessibilityAPI does not really apply to EPUBs directly but rather to the Reading System itself. Therefore we have not included it here in this crosswalk to ONIX.</td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>fullMouseControl</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessibilityControl</th>
 					</tr>
-					<tr>
-						<td>fullSwitchControl</td>
-						<td>–</td>
-					</tr>
-					<tr>
-						<td>fullTouchControl</td>
-						<td>–</td>
+				    <tr>
+						<td colspan="2" scope="rowgroup">The metadata accessibilityControl does not really apply to EPUBs directly but rather to the Reading System itself. Therefore we have not included it here in this crosswalk to ONIX.</td>
 					</tr>
+
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>fullVideoControl</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessMode</th>
 					</tr>
 					<tr>
-						<td>fullVoiceControl</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#auditory"
+										><code>auditory</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, 
+                            <ul>
+                            <li><a
+									href="https://ns.editeur.org/onix/en/81/01">Code 01</a>: Audiobook</li>
+                            <p>plus types of audio content</p>
+                            <li><a href="https://ns.editeur.org/onix/en/81/22">Code 22</a>: Additional audio content not part of main content</li>
+                            <li><a href="https://ns.editeur.org/onix/en/81/13">Code 13</a>: Other speech content</li>
+                            <li><a href="https://ns.editeur.org/onix/en/81/03">Code 03</a>: Music recording</li>
+                            <li><a href="https://ns.editeur.org/onix/en/81/04">Code 04</a>: Other audio</li>
+                            <li><a href="https://ns.editeur.org/onix/en/81/21">Code 21</a>: Partial performance – spoken word</li>
+                            <li><a href="https://ns.editeur.org/onix/en/81/23">Code 23</a>: Promotional audio for other book product</li>
+                            
+                            </ul>
+                        </td>
 					</tr>
 					<tr>
-						<td>accessMode (vocabulary list follows)</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#chartOnVisual"
+										><code>chartOnVisual</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/19">Code 19</a>: Figures, Diagrams,
+								Charts</p>
+						</td>
 					</tr>
 					<tr>
-						<td>auditory</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#chemOnVisual"
+										><code>chemOnVisual</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/47">Code 47</a>: Chemical content</p></td>
 					</tr>
 					<tr>
-						<td>chartOnVisual</td>
-						<td><a href="https://ns.editeur.org/onix/en/81">List: 81</a>; Code 19: Figures, Diagrams,
-							Charts</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#colorDependent"
+										><code>colorDependent</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>chemOnVisual</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#diagramOnVisual"
+										><code>diagramOnVisual</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/19">Code 19</a>: Figures, Diagrams,
+								Charts</p>
+						</td>
 					</tr>
 					<tr>
-						<td>colorDependent</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#mathOnVisual"
+										><code>mathOnVisual</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/48">Code 48</a>: Mathematical content</p></td>
 					</tr>
 					<tr>
-						<td>diagramOnVisual</td>
-						<td><a href="https://ns.editeur.org/onix/en/81">List: 81</a>; Code 19: Figures, Diagrams,
-							Charts</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#musicOnVisual"
+										><code>musicOnVisual</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/11">Code 11</a>: Musical notation</p></td>
 					</tr>
 					<tr>
-						<td>mathOnVisual</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#tactile"
+									><code>tactile</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>musicOnVisual</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#textOnVisual"
+										><code>textOnVisual</code></a></p></td>
+						<td><p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/49">Code 49</a>: Images of text</p></td>
 					</tr>
 					<tr>
-						<td>tactile</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#textual"
+									><code>textual</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196">List 196</a>: E-publication Accessibility Details, <a
+									href="https://ns.editeur.org/onix/en/196/52">Code 52</a>: All non-decorative content supports reading without sight</p>
+						</td>
 					</tr>
 					<tr>
-						<td>textOnVisual</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#visual"
+									><code>visual</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type,</p>
+							<ul>
+								<li><a href="https://ns.editeur.org/onix/en/81/07">Code 07</a>: Still images / graphics,
+									or</li>
+								<li><a href="https://ns.editeur.org/onix/en/81/18">Code 18</a>: Photographs, or </li>
+								<li><a href="https://ns.editeur.org/onix/en/81/19">Code 19</a>: Figures, diagrams,
+									charts, graphs, or </li>
+                                <li><a href="https://ns.editeur.org/onix/en/81/20">Code 20</a>: Additional images / graphics not part of main work, or </li>
+								<li><a href="https://ns.editeur.org/onix/en/81/12">Code 12</a>: Maps and/or other
+									cartographic content, or</li>
+                                <li><a href="https://ns.editeur.org/onix/en/81/46">Code 46</a>: Decorative images or graphics, or</li>
+                                <li><a href="https://ns.editeur.org/onix/en/81/42">Code 42</a>: Assessment material, or</li>
+                                <li><a href="https://ns.editeur.org/onix/en/81/50">Code 50</a>: Video content without audio, or</li>
+                                <li><a href="https://ns.editeur.org/onix/en/81/24">Code 24</a>: Animated / interactive illustrations</li>
+							</ul>
+						</td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>textual</td>
-						<td><a href="https://ns.editeur.org/onix/en/81">List: 81</a>; Code: 10 combined with <a
-								href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 10 means all text is
-							actual text. Note that List: 81; Code: 10 on its own (without List: 196; Code: 10) admits
-							the possibility that the "text" is inaccessible because it is an image of text.</td>
+						<th colspan="2" scope="rowgroup">accessModeSufficient</th>
 					</tr>
 					<tr>
-						<td>visual</td>
-						<td><a href="https://ns.editeur.org/onix/en/81">List: 81</a>; Code: 07: Still images / graphics
-							or Code: 18: Photographs or Code: 19: Figures, diagrams, charts, graphs or Code: 12: Maps
-							and/or other cartographic content</td>
+						<td colspan="2">ONIX crosswalks are for instances where accessModeSufficient includes this
+							vocabulary entry alone; combinations may occur but are more difficult to crosswalk</td>
 					</tr>
 					<tr>
-						<td>accessModeSufficient (vocabulary list follows)</td>
-						<td>ONIX crosswalks are for instances where accessModeSufficient includes this vocabulary entry
-							alone; combinations may occur but are more difficult to crosswalk</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ams-auditory"
+										><code>auditory</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
+									href="https://ns.editeur.org/onix/en/81/01">Code 01</a>: Audiobook</p>
+						</td>
 					</tr>
 					<tr>
-						<td>auditory</td>
-						<td><a href="https://ns.editeur.org/onix/en/81">List: 81</a>; Code:01</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ams-tactile"
+										><code>tactile</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>tactile</td>
-						<td>–</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ams-textual"
+										><code>textual</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
 					<tr>
-						<td>textual</td>
-						<td><a href="https://ns.editeur.org/onix/en/81">List: 81</a>; Code: 10 combined with <a
-								href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 10 means all text is
-							actual text. Note that List: 81; Code: 10 on its own (without List: 196; Code: 10) admits
-							the possibility that the "text" is inaccessible because it is an image of text.</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ams-visual"
+										><code>visual</code></a></p></td>
+						<td><p>–</p></td>
 					</tr>
+				</tbody>
+
+				<tbody>
 					<tr>
-						<td>visual</td>
-						<td>–</td>
+						<th colspan="2" scope="rowgroup">accessibilitySummary</th>
 					</tr>
 					<tr>
-						<td>accessibilitySummary</td>
-						<td><a href="https://ns.editeur.org/onix/en/196">List: 196</a>; Code: 00: Accessibility
-							Summary</td>
+						<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilitySummary"
+										><code>accessibilitySummary</code></a></p></td>
+						<td>
+							<p><a href="https://ns.editeur.org/onix/en/196/00">Code 00</a>: Accessibility summary</p>
+						</td>
 					</tr>
 					<tr>
 						<td>Human-readable text</td>
-						<td>If present, include information from <a href="https://ns.editeur.org/onix/en/196">List:
-							196</a>; Codes 95, 96, 98, and 99 (links for further information about accessibility)</td>
+						<td>
+							<p>If present, include information from Codes:</p>
+							<ul>
+								<li><a href="https://ns.editeur.org/onix/en/196/95">95</a>: Trusted intermediary's web
+									page for detailed accessibility information</li>
+								<li><a href="https://ns.editeur.org/onix/en/196/96">96</a>: Publisher's web page for
+									detailed accessibility information</li>
+								<li><a href="https://ns.editeur.org/onix/en/196/98">98</a>: Trusted Intermediary
+									contact</li>
+								<li><a href="https://ns.editeur.org/onix/en/196/99">99</a>: Publisher contact for
+									further accessibility information</li>
+							</ul>
+						</td>
 					</tr>
 				</tbody>
 			</table>

@@ -13,7 +13,7 @@
 				group: "a11y-discov-vocab",
 				specStatus: "CG-DRAFT",
 				noRecTrack: true,
-				previousPublishDate: '2023-05-23',
+				previousPublishDate: '2023-07-18',
 				previousMaturity: 'CG-FINAL',
 				shortName: 'vocabulary',
 				edDraftURI: "https://w3c.github.io/a11y-discov-vocab/",
@@ -121,9 +121,20 @@
 					accessibility APIs, and other values that already have recognized naming conventions (e.g., "MathML"
 					and "iOSAccessibility").</p>
 
+				<p id="descriptors">Hyphens are used to add additional descriptors to the end of terms. These
+					descriptors are only added to clarify certain ambiguities with terms and only one descriptor is
+					allowed at the end of any given term. For example, languages like MathML and latex are typically
+					associated with encoding math content but are sometimes used to encode chemical equations and
+					formulas. To ensure users can differentiate when these languages are being used for chemistry, the
+						"<code>-chemistry</code>" descriptor is defined in this vocabulary for use on the respective
+					math terms.</p>
+
 				<p>To ensure maximum interoperability with user agents that process these properties, use the values
 					exactly as they are defined in this vocabulary. Alternative case spellings may not be recognized
 					(e.g., "mathml" or "aria").</p>
+
+				<p>If a user agent does not recognize a term with a descriptor, it should remove the hyphenated
+					descriptor and attempt to process the base term.</p>
 
 				<p>User agent developers should be aware that these values may not be strictly validated depending on
 					the context in which they are created and used. Two values that differ only in case should be
@@ -150,6 +161,12 @@
 				<p>If a term in this vocabulary is not be expressive enough, it is now recommended to open an <a
 						href="https://github.com/w3c/a11y-discov-vocab/issues">issue in the tracker</a> to consider how
 					to improve the existing term (e.g., by renaming terms or defining more specialized cases).</p>
+
+				<div class="note">
+					<p><a href="#descriptors">Descriptors</a> are not a general extensibility mechanism. If a term can
+						benefit from a new descriptor, the resulting combined value must be registered in the
+						vocabulary.</p>
+				</div>
 			</section>
 		</section>
 		<section id="accessibilityAPI">
@@ -930,10 +947,23 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 								href="https://www.latex-project.org/">LaTeX typesetting system</a>.</p>
 					</section>
 
+					<section id="latext-chemistry">
+						<h5>latex-chemistry</h5>
+
+						<p>Identifies that the <a href="https://www.latex-project.org/">LaTeX typesetting system</a> is
+							used to encode chemical equations and formulas.</p>
+					</section>
+
 					<section id="mathml">
 						<h5>MathML</h5>
 
 						<p>Identifies that mathematical equations and formulas are encoded in [[MathML]].</p>
+					</section>
+
+					<section id="mathml-chemistry">
+						<h5>MathML-chemistry</h5>
+
+						<p>Identifies that [[MathML]] is used to encode chemical equations and formulas.</p>
 					</section>
 
 					<section id="ttsMarkup">

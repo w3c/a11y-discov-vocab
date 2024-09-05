@@ -267,7 +267,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				<section id="ARIA-deprecated">
 					<h4>ARIA (deprecated)</h4>
 
-					<p>Indicates the resource uses <a href="http://www.w3.org/TR/wai-aria/">ARIA</a> [[WCAG21]] markup
+					<p>Indicates the resource uses <a href="http://www.w3.org/TR/wai-aria/">ARIA</a> [[WAI-ARIA]] markup
 						to improve interoperability with platform APIs.</p>
 
 					<div class="note">
@@ -899,9 +899,45 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<section id="displayTransformability">
 						<h5>displayTransformability</h5>
 
-						<p>Display properties are controllable by the user. This property can be set, for example, if
-							custom CSS style sheets can be applied to the content to control the appearance. It can also
-							be used to indicate that styling in document formats like Word and PDF can be modified.</p>
+						<p>Indicates that the display properties of the content are controllable by the user.</p>
+
+						<p>When setting this property, the author must ensure that the following are modifiable (when
+							applicable to their language and writing mode):</p>
+
+						<ul>
+							<li>the text foreground and background colors</li>
+							<li>the font family and size</li>
+							<li>the paragraph spacing</li>
+							<li>the text margin</li>
+							<li>the line height</li>
+							<li>the letter and word spacing</li>
+							<li>the text alignment</li>
+							<li>the writing direction (horizontal or vertical)</li>
+							<li>the display of ruby (both visibility and text color)</li>
+							<li>the inclusion of space characters as word separators</li>
+						</ul>
+
+						<div class="note">
+							<p>The preceding list may not capture all needed display transformability characteristics
+								for all languages. In such cases, authors must ensure the missing characteristics are
+								also transformable when setting this metadata. To request an addition to the list,
+								please open an issue in <a href="https://github.com/w3c/a11y-discov-vocab/issues">the
+									vocabulary tracker</a>.</p>
+						</div>
+
+						<p>In addition, text must not be represented as images unless it falls under the exceptions of
+								<a href="https://www.w3.org/TR/WCAG2/#images-of-text">Success Criterion 1.4.5</a>
+							[[WCAG2]].</p>
+
+						<p>Note that setting this property does not mean that users will be able to control all the
+							properties of the display in all user agents. It only indicates that the author has not
+							limited the ability of users to change the settings (e.g., by using <code>style</code>
+							attributes [[HTML]] or <code>!important</code> declarations [[css-cascade-4]] that prevent
+							user agents from altering the properties, or by restricting users from modifying Word or PDF
+							files).</p>
+
+						<p>The property must not be set for content for which no user agents are available that can
+							transform the appearance and presentation of the text.</p>
 					</section>
 
 					<section id="synchronizedAudioText">
@@ -984,8 +1020,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>highContrastAudio</h5>
 
 						<p>Audio content with speech in the foreground meets the contrast thresholds set out in <a
-								href="https://www.w3.org/WAI/WCAG21/Understanding/low-or-no-background-audio">WCAG
-								Success Criteria 1.4.7</a>.</p>
+								href="https://www.w3.org/WAI/WCAG2/Understanding/low-or-no-background-audio">WCAG
+								Success Criteria 1.4.7</a> [[WCAG2]].</p>
 
 						<div class="note">
 							<p>Information about the how the audio meets the requirement should be provided in the <a
@@ -999,8 +1035,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>highContrastDisplay</h5>
 
 						<p>Content meets the visual contrast threshold set out in <a
-								href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced">WCAG Success
-								Criteria 1.4.6</a>.</p>
+								href="https://www.w3.org/WAI/WCAG2/Understanding/contrast-enhanced">WCAG Success
+								Criteria 1.4.6</a> [[WCAG2]].</p>
 					</section>
 
 					<section id="largePrint">
@@ -1388,11 +1424,11 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<section id="flashing">
 						<h5>flashing</h5>
 
-						<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
+					<p>This value should be set when the content meets the hazard thresholds described in <a
+							href="https://www.w3.org/TR/WCAG2/#three-flashes-or-below-threshold">Success Criterion 2.3.1
+							Three Flashes or Below Threshold</a> [[WCAG2]].</p>
 
-						<p>This value should be set when the content meets the hazard thresholds described in <a
-								href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
-								2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
+						<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
 
 						<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
 									><code>noFlashingHazard</code></a>, <a href="#unknownFlashingHazard"

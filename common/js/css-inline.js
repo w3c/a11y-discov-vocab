@@ -17,14 +17,14 @@ function getCSS() {
     try {
         var xmlhttp = new XMLHttpRequest();
         
-        xmlhttp.open('GET', 'custom/css/custom.css', false);
+        xmlhttp.open('GET', 'common/css/custom.css', false);
         xmlhttp.send();
         
         if (xmlhttp.status == 200) {
            return xmlhttp.responseText;
         }
         else {
-           console.error('Failed to read CSS file custom/css/custom.css. Returned status: ' + xmlhttp.status);
+           console.error('Failed to read CSS file common/css/custom.css. Returned status: ' + xmlhttp.status);
            return '';
         }
     }

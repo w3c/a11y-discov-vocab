@@ -5,6 +5,7 @@
 		<title>Schema.org Accessibility Properties Crosswalk</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<script src="../common/js/permalink-a11y.js" class="remove"></script>
+		<script src="../common/js/previousRelease.js" class="remove"></script>
 		<script class="remove">
 			//<![CDATA[
 			var respecConfig = {
@@ -43,7 +44,8 @@
 				github: {
 					repoURL: "https://github.com/w3c/a11y-discov-vocab",
 					branch: "main"
-				}
+				},
+				postProcess: [addPreviousRelease]
 			};//]]></script>
 		<style>
 			/* Table zebra style... */

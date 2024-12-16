@@ -46,6 +46,16 @@
 						"title": "Web Content Accessibility Guidelines (WCAG) 2",
 						"href": "https://www.w3.org/TR/WCAG2/",
 						"publisher": "W3C"
+					},
+					"iso-14289-1": {
+						"title": "ISO 14289-1:2024 — Document management applications — Electronic document file format enhancement for accessibility Part 1: Use of ISO 32000-1 (PDF/UA-1)",
+						"href": "https://www.iso.org/standard/64599.html",
+						"publisher": "ISO"
+					},
+					"iso-14289-2": {
+						"title": "ISO 14289-2:2024 — Document management applications — Electronic document file format enhancement for accessibility Part 2: Use of ISO 32000-2 (PDF/UA-2)",
+						"href": "https://www.iso.org/standard/82278.html",
+						"publisher": "ISO"
 					}
 				},
 				diffTool: "http://www.aptest.com/standards/htmldiff/htmldiff.pl",
@@ -792,6 +802,14 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>taggedPDF</h5>
 
 						<p>The contents of the PDF have been tagged to permit access by assistive technologies.</p>
+
+						<p>Only set this value for PDFs whose tagging conform to the PDF/UA standard [[iso-14289-1]]
+							[[iso-14289-2]].</p>
+
+						<div class="note">
+							<p>For more information about PDF tagging best practices, refer to <a
+									href="https://pdfa.org/wtpdf/">Well-Tagged PDF (WTPDF)</a>.</p>
+						</div>
 					</section>
 				</section>
 
@@ -2179,6 +2197,9 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 			<details id="changes-2024" open="">
 				<summary>Changes made in 2024</summary>
 				<ul>
+					<li>16-Dec-2024: Clarified that the <code>taggedPDF</code> is only to be set when a PDF meets
+						accepted standards for accessibility. Refer to <a
+							href="https://github.com/w3c/a11y-discov-vocab/issues/40">issue 40</a>.</li>
 					<li>25-Nov-2024: Moved the visual access modes that combine descriptions about the nature of the
 						visual content into a new section and caution that they should always be paired with the value
 							<code>visual</code>. Refer to <a href="https://github.com/w3c/epub-specs/issues/2653">issue

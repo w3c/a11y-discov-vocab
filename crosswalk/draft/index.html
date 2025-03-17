@@ -148,18 +148,32 @@
 					<td>Identifies a party responsible for the testing and certification of the accessibility of an EPUB
 						publication.</td>
 					<td><a href="https://www.w3.org/TR/epub-a11y-11/#certifiedBy">certifiedBy</a></td>
-					<td><a href="https://ns.editeur.org/onix/en/196/93">List 196: Code 93</a>: Compliance certification
+					<td><a href="https://ns.editeur.org/onix/en/196/93">List 196: Code 90</a>: Compliance certification
 						by
-						<code>ProductFormFeatureDescription</code> carries the URL of a web page belonging to the
-						organisation responsible for compliance testing and certification of the product – typically a
-						‘home page’ or a page describing the certification scheme itself. For use in ONIX 3.0 only
+						<code>ProductFormFeatureDescription</code> carries the name of the organization responsible for compliance testing and certification of the product. See <a href="#code93">code 93</a> for the URL of the organization, which should also be provided. Only for use in ONIX 3.0 or later
 					</td>
 					<td>532 8# Accessibility Note (Non-specific)</td>
 					<td>532 8# Accessibility Note$a</td>
 					<td>231 ##$i93$2onix196</td>
 				</tr>
+                <tr>
+					<td id="code93">Identifies a credential or badge that establishes the authority of the party identified in the
+						associated certifiedBy property to certify content accessible.</td>
+					<td><a href="https://www.w3.org/TR/epub-a11y-11/#certifierCredential">certifierCredential</a></td>
+					<td><a href="https://ns.editeur.org/onix/en/196/93">List 196: Code 93</a>: Compliance certification
+						by
+						<code>ProductFormFeatureDescription</code> carries the URL of a web page belonging to the
+						organisation responsible for compliance testing and certification of the product – typically a
+						‘home page’ or a page describing the certification scheme itself. For use in ONIX 3.0  or later
+					</td>
+
+					<td>532 8# Accessibility Note (Non-specific)</td>
+					<td></td>
+					<td></td>
+				</tr>
+
 				<tr>
-					<td>f the evaluator provides a publicly-readable report of its assessment, provide a link to the
+					<td>If the evaluator provides a publicly-readable report of its assessment, provide a link to the
 						assessment in an a11y:certifierReport property associated with [epub-3] the evaluator's
 						name.</td>
 					<td><a href="https://www.w3.org/TR/epub-a11y-11/#certifierReport">certifierReport</a></td>
@@ -176,15 +190,6 @@
 					</td>
 					<td>532 8# Accessibility Note$a</td>
 					<td>231 ##$i94$2onix196 and/or 231 ##$i96$2onix196</td>
-				</tr>
-				<tr>
-					<td>Identifies a credential or badge that establishes the authority of the party identified in the
-						associated certifiedBy property to certify content accessible.</td>
-					<td><a href="https://www.w3.org/TR/epub-a11y-11/#certifierCredential">certifierCredential</a></td>
-					<td>–</td>
-					<td>532 8# Accessibility Note (Non-specific)</td>
-					<td></td>
-					<td></td>
 				</tr>
                 
                 <!-- ConformsTo -->
@@ -496,8 +501,7 @@
 					<td>Identifies that chemical information is encoded using the <a
 							href="https://hachmannlab.github.io/chemml/">ChemML markup language</a>.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ChemML">ChemML</a></td>
-					<td><a href="https://ns.editeur.org/onix/en/196/18">List: 196; Code: 18</a>: Accessible chem
-						content</td>
+					<td><a href="https://ns.editeur.org/onix/en/196/18">List: 196; Code: 18</a>: Accessible chemistry content</td>
 					<td>341 0# $avisual$bChemML$2sapdv</td>
 					<td>231 ##$i18$2onix196</td>
 				</tr>
@@ -989,9 +993,11 @@
 				</tr>
                 <tr>
                     <td>
-                        <p>Indicates that the author cannot determine if a flashing hazard exists.</p>
-                        <p>The unknownFlashingHazard value must not be set when any of the flashing, noFlashingHazard, none values is set.</p>
-                        <p>It should not be set when the unknown value is set.</p>
+                        <p>Indicates that it is unknown if any flashing hazards exist within the content.</p>
+                        <p>The <i>unknownFlashingHazard</i> value must not be set when either of the <i>flashing</i> or <i>noFlashingHazard</i> values is set.</p>
+                        <p>It should not be set when the <i>none</i> value is set.</p>
+                        <p>It should not be set when the <i>unknown</i> value is set.</p>
+                        
                     </td>
 					<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownFlashingHazard"><code>unknownFlashingHazard</code></a></p></td>
 					<td><p><a href="https://ns.editeur.org/onix/en/143/24">List: 143; Code: 24</a> Flashing risk unknown</p></td>
@@ -1021,9 +1027,10 @@
 				</tr>
                 <tr>
                     <td>
-                        <p>Indicates that it is unknown if a motion simulation hazard exists within the content.</p>
-                        <p>The unknownMotionSimulation value must not be set when any of the motionSimulation, noMotionSimulationHazard or none values is set.</p>
-                        <p>It should not be set when the unknown value is set.</p>
+                        <p>Indicates that it is unknown if any motion simulation hazards exist within the content.</p>
+                        <p>The <i>unknownMotionSimulation</i> value must not be set when either of the <i>motionSimulation</i> or <i>noMotionSimulationHazard</i> values is set.</p>
+                        <p>It should not be set when the <i>none</i> value is set.</p>
+                        <p>It should not be set when the <i>unknown</i> value is set.</p>
                     </td>
 					<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a></p></td>
 					<td><p><a href="https://ns.editeur.org/onix/en/143/26">List: 143; Code: 26</a> Motion simulation unknown</p></td>
@@ -1051,9 +1058,10 @@
 				</tr>
                 <tr>
                     <td>
-                        <p>Indicates that it is unknown if an auditory hazard exists within the content.</p>
-                        <p>The unknownSoundHazard value must not be set when either of the sound, unknownSoundHazard, or unknown values is set.</p>
-                        <p>It should not be set when the none value is set.</p>
+                        <p>Indicates that it is unknown if any auditory hazards exist within the content.</p>
+                        <p>The <i>unknownSoundHazard</i> value must not be set when either of the <i>sound</i> or <i>noSoundHazard</i> values is set.</p>
+                        <p>It should not be set when the <i>none</i> value is set.</p>
+                        <p>It should not be set when the <i>unknown</i> value is set.</p>
                     </td>
                     <td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownSoundHazard"><code>unknownSoundHazard</code></a></p></td>
                     <td><p><a href="https://ns.editeur.org/onix/en/143/25">List: 143; Code: 25</a> Sound risk unknown</p></td>
@@ -1070,7 +1078,7 @@
 					<td></td>
 				</tr>
 				<tr>
-					<td>Indicates that the author is not able to determine if the resource presents any hazards.</td>
+					<td>Indicates that it is unknown if any hazards exist within the content.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknown">unknown</a></td>
 					<td>–</td>
 					<td>532 8# $aThis resource has not been evaluated for hazard risks.</td>
@@ -1083,7 +1091,7 @@
 						<th colspan="5" scope="rowgroup">accessibilityAPI</th>
 					</tr>
 					<tr>
-						<td colspan="5" scope="rowgroup">The metadata accessibilityAPI does not really apply to EPUBs directly but rather to the Reading System itself. Therefore we have not included it here in this crosswalk to ONIX.</td>
+						<td colspan="5" scope="rowgroup">The metadata field accessibilityAPI does not apply to digital publications directly but rather to reading system software. We do not include it in this crosswalk.</td>
 					</tr>
             </tbody>
             <!-- accessibilityControl -->
@@ -1092,7 +1100,7 @@
                     <th colspan="5" scope="rowgroup">accessibilityControl</th>
                 </tr>
                 <tr>
-                    <td colspan="5" scope="rowgroup">The metadata accessibilityControl does not really apply to EPUBs directly but rather to the Reading System itself. Therefore we have not included it here in this crosswalk to ONIX.</td>
+                    <td colspan="5" scope="rowgroup">The metadata field accessibilityControl does not apply to digital publications directly but rather to reading system software. We do not include it in this crosswalk.</td>
                 </tr>
             </tbody>
         </table>

@@ -61,9 +61,6 @@
 			margin: 1em;
 		}
 
-		table.zebra td {
-			padding-left: 0.3em;
-		}
 
 		table.zebra th {
 			font-weight: bold;
@@ -94,6 +91,8 @@
 		table.zebra td {
 			border-bottom: 1px solid #ddd;
 			padding: .2em 1em;
+            vertical-align: top;
+			padding-left: 0.3em;
 		}
 	</style>
 </head>
@@ -422,11 +421,13 @@
 		<table class="zebra">
 			<thead>
 				<tr>
-					<th>Definition</th>
-					<th>Schema.org</th>
-					<th>ONIX</th>
-					<th>Schema.org in MARC21</th>
-					<th>UNIMARC</th>
+					<th scope="col">Definition</th>
+					<th scope="col">Schema.org</th>
+					<th scope="col">ONIX</th>
+					<th scope="col">Schema.org in MARC21</th>
+                    <th scope="col">ONIX to Schema in MARC21</th>
+                    <th scope="col">ONIX in MARC21*</th>
+					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
 
@@ -439,6 +440,8 @@
 					<td><a href="https://ns.editeur.org/onix/en/196/14">List: 196; Code: 14</a>: Short alternative
 						descriptions</td>
 					<td>341 0# $avisual$balternativeText$2sapdv or 341 0# $aaudio$bcaptions$2sapdv</td>
+                    <td>-</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
 					<td>231 ##$i14$2onix196</td>
 				</tr>
 				<tr>
@@ -447,7 +450,9 @@
 					<td>–</td>
 					<td>341 0# $atextual$bannotations $2 sapdv or 532 8# $a This resource includes annotations from the
 						author, instructor and/or others.</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
                 <tr>
                     <td>
@@ -460,6 +465,7 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
+					<td>-</td>
                 </tr>
 
 				<tr>
@@ -470,7 +476,9 @@
 					</td>
 				    <td><p><a href="https://ns.editeur.org/onix/en/196/28">Code 28</a>: Full alternative audio descriptions</p></td>
 					<td>341 0# $avisual$daudioDescription$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>(deprecated). The work includes bookmarks to facilitate navigation to key points.
@@ -482,7 +490,9 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bookmarks">bookmarks</a></td>
 					<td>N/A (Reading system feature)</td>
 					<td>341 0# $atextual$bbookmarks$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>[1] The content is in braille format, or [2] alternatives are available in braille.
@@ -505,7 +515,9 @@
 							<li>Use Case [2] (alternatives are available in Braille): 341 0# $atext$ebraille </li>
 						</ul>
 					</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>(deprecated, replaced by closedCaptions, openCaptions)</td>
@@ -520,6 +532,8 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ChemML">ChemML</a></td>
 					<td><a href="https://ns.editeur.org/onix/en/196/18">List: 196; Code: 18</a>: Accessible chemistry content</td>
 					<td>341 0# $avisual$bChemML$2sapdv</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 ##$i18$2onix196</td>
 				</tr>
                 <tr>
@@ -527,7 +541,9 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#closedCaptions">closedCaptions</a></td>
 					<td>–</td>
 					<td>341 0# $aauditory$bcaptions$2sapdv or 341 0# $avisual$bcaptions$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 
 				<tr>
@@ -545,7 +561,9 @@
                             <p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
 									href="https://ns.editeur.org/onix/en/81/48">Code 48</a>: Mathematical content</p></td>
 					<td>341 0# $avisual$bdescribedMath$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>Display properties are controllable by the user. This property can be set, for example, if
@@ -556,15 +574,18 @@
 					</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/36">List: 196 ; Code: 36</a>: All textual content can be modified.</td>
 					<td>341 0# $atextual$b displayTransformability$2sapdv</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 ## $iE200$2onix175</td>
 				</tr>
                 <tr>
                     <td>Indicates that ruby annotations [[JLreq]] are attached to every CJK ideographic character in the content. Ruby annotations are used as pronunciation guides for the logographic characters for languages like Chinese or Japanese. They make difficult CJK ideographic characters more accessible.</td>
 					<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#fullRubyAnnotations"
 						><code>fullRubyAnnotations</code></a></p></td>
-					<td><p>–</p></td>
                     <td>-</td>
                     <td>-</td>
+                    <td>-</td>
+					<td>-</td>					
                     <td>-</td>
 				</tr>
 				<tr>
@@ -576,7 +597,9 @@
 					</td>
                     <td><p><a href="https://ns.editeur.org/onix/en/196/27">Code 27</a>: Use of high contrast between foreground and background audio</p></td>
 					<td>3410$aauditory$dhighContrastAudio$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>Content meets the visual contrast threshold set out in <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-enhanced">WCAG Success
@@ -586,22 +609,27 @@
                     <p>and</p>
                     <p><a href="https://ns.editeur.org/onix/en/196/37">Code 37</a>: Use of ultra-high contrast between text foreground and background</p></td>
 					<td>3410#$atextual$b highContrastDisplay$2sapdv or 3410#$avisual$c highContrastDisplay$2sapd</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
                 <tr>
                     <td>Indicates that the content can be laid out horizontally (e.g, using the horizontal-tb writing mode of [[css-writing-modes-3]]). This value should only be set when the language of the content allows both horizontal and vertical directions. Notable examples of such languages are Chinese, Japanese, and Korean.</td>
                     <td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#horizontalWriting"
                         ><code>horizontalWriting</code></a></p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                 </tr>             
 				<tr>
 					<td>The work includes an index to the content.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#index-term">index</a></td>
 					<td><a href="https://ns.editeur.org/onix/en/196/12">List: 196; Code: 12</a>: Index navigation</td>
 					<td>3410#$atextual$bindex$2sapdv</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i12$2onix196</td>
 				</tr>
 				<tr>
@@ -624,7 +652,9 @@
 							<li>340 ## $nLarge print (18 point)$2rdafs</li>
 						</ul>
 					</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>Identifies that mathematical equations and formulas are encoded in the <a href="https://www.latex-project.org/">LaTeX typesetting system</a>.</td>
@@ -636,16 +666,19 @@
                     </td>
 
 					<td>3410#$avisual$blatex$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
                 <tr>
                     <td>Identifies that the LaTeX typesetting system is used to encode chemical equations and formulas.</td>
                     <td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#latext-chemistry"
                             ><code>latex-chemistry</code></a></p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                 </tr>
 
 				<tr>
@@ -671,6 +704,8 @@
 							<li>3410#$aauditory$btranscript$2sapdv</li>
 						</ul>
 					</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i15$2onix196</td>
 				</tr>
 				<tr>
@@ -679,6 +714,8 @@
 					<td><a href="https://ns.editeur.org/onix/en/196/17">List: 196; Code: 17</a>: Accessible math
 						content</td>
 					<td>3410#$avisual$bMathML$2sapdv</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i17$2onix196</td>
 				</tr>
                 <tr>
@@ -689,6 +726,7 @@
                     </td>
                     <td>-</td>
                     <td>-</td>
+					<td>-</td>
                     <td>-</td>
                 </tr>
 				<tr>
@@ -699,14 +737,18 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#feature-none">none</a></td>
 					<td><p><a href="https://ns.editeur.org/onix/en/196/09">Code 09</a>: Inaccessible, or known limited accessibility</p></td>
 					<td>532 2# $aLacks significant accessibility features.</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i09$2onix196</td>
 				</tr>
                 <tr>
 					<td>Indicates that synchronized captions are available for audio and video content.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#openCaptions">openCaptions</a></td>
-					<td>–</td>
+					<td>-</td>
 					<td>341 0# $aauditory$bcaptions$2sapdv or 341 0# $avisual$bcaptions$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
                 <tr>
                     <td>
@@ -722,7 +764,8 @@
                             numbering</p>
                     </td>
                     <td>-</td>
-                    <td>-</td>
+					<td>-</td>
+					<td>-</td>
                     <td>-</td>
 				</tr>
                 <tr>
@@ -732,10 +775,11 @@
                     </td>
                     <td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#pageNavigation"
                                     ><code>pageNavigation</code></a></p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                 </tr>
 
 				<tr>
@@ -743,6 +787,8 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#readingOrder">readingOrder</a></td>
 					<td><a href="https://ns.editeur.org/onix/en/196/13">List: 196; Code: 13</a>: Reading order</td>
 					<td>3410#$atextual$breadingOrder$2sapdv</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i13$2onix196</td>
 				</tr>
 				<tr>
@@ -752,9 +798,11 @@
 						accessible. The absence of <code>rubyAnnotations</code> implies that no CJK ideographic characters have
 						ruby.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#rubyAnnotations">rubyAnnotations</a></td>
-					<td>–</td>
+                    <td>-</td>
 					<td>3410#$atextual$brubyAnnotations$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>Sign language interpretation is available for audio and video content. 
@@ -764,14 +812,18 @@
                     <td><p><a href="https://ns.editeur.org/onix/en/175">List 175</a>: Product form detail, <a
                                 href="https://ns.editeur.org/onix/en/175/V213">Code V213</a>: Sign language interpretation</p></td>
 					<td>3410#$aauditory$csignLanguage$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>The use of headings in the work fully and accurately reflects the document hierarchy, allowing navigation by assistive technologies.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#structuralNavigation">structuralNavigation</a></td>
                     <td><p><a href="https://ns.editeur.org/onix/en/196/29">Code 29</a>: Next / Previous structural navigation</p></td>
 					<td>3410#$atextual$bstructuralNavigation$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>Describes a resource that offers both audio and text, with information that allows them to be rendered simultaneously. The granularity of the synchronization is not specified. This term is not recommended when the only material that is synchronized is the document headings.</td>
@@ -779,6 +831,8 @@
 					<td><a href="https://ns.editeur.org/onix/en/196/20">List: 196; Code: 20</a>: Synchronised
 						pre-recorded audio</td>
 					<td>3410#$atextual$d synchronizedAudioText$2sapdv</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i20$2onix196</td>
 				</tr>
 				<tr>
@@ -787,6 +841,8 @@
 					<td><a href="https://ns.editeur.org/onix/en/196/11">List: 196; Code: 11</a>: Table of contents
 						navigation</td>
 					<td>3410#$atextual$btableofContents$2sapdv</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i11$2onix196</td>
 				</tr>
 				<tr>
@@ -795,7 +851,9 @@
                     <td><p><a href="https://ns.editeur.org/onix/en/196/05">Code 05</a>: PDF/UA</p>
                         <p><a href="https://ns.editeur.org/onix/en/196/06">Code 06</a>: PDF/UA-2</p></td>
 					<td>3410#$atextual$btaggedPDF$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>
@@ -815,7 +873,9 @@
 						</ul>
 						<p>And 336 Content type ; 336 ##$atactile image$2rdacontent</p>
 					</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>
@@ -836,16 +896,18 @@
 								object and 500 $aTactile 3D object.</li>
 						</ul>
 						<p>336 ##$atactile three-dimensional form$2rdacontent</p></td>
-					<td>
-					
-					</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>For content with timed interaction, this value indicates that the user can control the timing to meet their needs (e.g., pause and reset)</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#timingControl">timingControl</a></td>
-					<td>–</td>
+					<td>-</td>
 					<td>341$aauditory$dtimingControl$2sapdv or 341$avisual$dtimingControl$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that a transcript of the audio content is available.</td>
@@ -853,7 +915,9 @@
                     <td><p><a href="https://ns.editeur.org/onix/en/175">List 175</a>: Product form detail, <a
                         href="https://ns.editeur.org/onix/en/175/V212">Code V212</a>: Transcript</p></td>
 					<td>341$aauditory$btranscript$2sapdv</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>One or more of [<cite><a class="bibref" data-link-type="biblio" href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bib-ssml" title="Speech Synthesis Markup Language (SSML) Version 1.1">SSML</a></cite>], [<cite><a class="bibref" data-link-type="biblio" href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bib-pronunciation-lexicon" title="Pronunciation Lexicon Specification (PLS) Version 1.0">Pronunciation-Lexicon</a></cite>], and [<cite><a class="bibref" data-link-type="biblio" href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bib-css3-speech" title="CSS Speech Module">CSS3-Speech</a></cite>] properties has been
@@ -864,6 +928,8 @@
 						provided</td>
 					<td>341$atext$bttsMarkup$2sapdv and 532 1# $a Text-to-speech has been optimised through provision of
 						PLS lexicons, SSML or CSS Speech synthesis hints.</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i21$2onix196 and/or 231 $i22$2onix196</td>
 				</tr>
                 <tr>
@@ -876,6 +942,7 @@
 					<td><p><a href="https://ns.editeur.org/onix/en/196/08">Code 08</a>: Unknown accessibility</p></td>
                     <td>-</td>
                     <td>-</td>
+					<td>-</td>
                     <td>-</td>
                 </tr>
 				<tr>
@@ -886,64 +953,75 @@
 
 					<td>532 1# $aNo DRM (digital rights management) or other content restriction protocols have been
 						applied to the resource.</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
                 <tr>
                     <td>Indicates that the content can be laid out vertically (e.g, using the vertical-rl of [[css-writing-modes-3]]). This value should only be set when the language of the content allows both horizontal and vertical directions.
                     </td>
                     <td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#verticalWriting"
                         ><code>verticalWriting</code></a></p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
+ 					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                 </tr>
                 <tr>
                     <td>Indicates that the content can be rendered with additional word segmentation.</td>
                     <td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#withAdditionalWordSegmentation"
                         ><code>withAdditionalWordSegmentation</code></a></p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
+ 					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                </tr>
                 <tr>
                     <td>Indicates that the content can be rendered without additional word segmentation.</td>
                     <td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#withoutAdditionalWordSegmentation"
                         ><code>withoutAdditionalWordSegmentation</code></a></p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
+ 					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                 </tr>
                 <tr>
                     <td>
                         <p>Where interactive content is included in the product, controls are provided (eg for speed, pause and resume, reset) and labelled to make their use clear.</p>
                     </td>
-                    <td><p>–</p></td>
-                    <td>
+ 					<td>-</td>
+                   <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/31">Code 31</a>: Accessible controls provided</p>
                     </td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
+ 					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                 </tr>
                 <tr>
                     <td>Includes basic landmark navigation (usually less detailed than TOC-based navigation).</td>
-                    <td><p>–</p></td>
+   					<td>-</td>
                     <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/32">Code 32</a>: Landmark navigation</p>
                     </td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                 </tr>
                 <tr>
                     <td>For readers with color vision deficiency, use of color (eg in diagrams, graphs and charts, in prompts or on buttons inviting a response) is not the sole means of graphical distinction or of conveying information.</td>
-                    <td><p>–</p></td>
+					<td>-</td>
                     <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/25">Code 25</a>: Use of color is not sole means of conveying information</p>
                     </td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
-                    <td><p>–</p></td>
+ 					<td>-</td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
                 </tr>
 				<tr>
 					<td>ONIX: The language of the text has been specified (eg via the HTML or XML lang attribute) to optimise text-to-speech (and other alternative renderings), both at whole document level and, where appropriate, for individual words, phrases or passages in a different language.</td>
@@ -953,25 +1031,31 @@
 					<td>532 1# $aThe language of the text has been specified (eg via the HTML or XML lang attribute) to
 						optimise text-to-speech (and other alternative renderings), both at whole document level and,
 						where appropriate,for individual words, phrases or passages in a different language.</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i22$2onix196</td>
 				</tr>
 				<tr>
 					<td>ONIX: Specialised font, character and/or line spacing, justification and paragraph spacing, coloring and other options provided specifically to improve readability for dyslexic readers. Details, including the name of the font if relevant, should be listed in <code>ProductFormFeatureDescription</code></td>
-					<td>–</td>
+					<td>-</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/24">List: 196; Code 24</a>: Dyslexia readability
 					</td>
 					<td>532 1# $aSpecialised font, character and line spacing, justification and paragraph spacing, and
 						coloring for dyslexic readers.</td>
-					<td></td>
+					<td>-</td>
+					<td>-</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>ONIX: No accessibility features offered by the reading system, device or reading software (including but not limited to choice of text size or typeface, choice of text or background color, text-to-speech) are disabled, overridden or otherwise unusable with the product EXCEPT – in ONIX 3 messages only – those specifically noted as subject to restriction or prohibition in <code>EpubUsageConstraint</code>. Note that provision of any significant part of the textual content as images (ie as pictures of text, rather than as text, and without any textual equivalent) inevitably prevents use of these accessibility options.</td>
-					<td>–</td>
+					<td>-</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/10">List: 196; Code 10</a>: No reading system
 						accessibility options disabled (except)</td>
 					<td>532 8# $aNo accessibility features offered by the reading system, device or reading software
 						(including but not limited to choice of text size or typeface, choice of text or background
 						color, text-to-speech) are disabled, overridden or otherwise unusable with the product.</td>
+					<td>-</td>
+					<td>-</td>
 					<td>231 $i10$2onix196</td>
 				</tr>
 			</tbody>
@@ -985,6 +1069,8 @@
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
 					<th scope="col">Schema.org in MARC21</th>
+                    <th scope="col">ONIX to Schema in MARC21</th>
+                    <th scope="col">ONIX in MARC21*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -996,17 +1082,21 @@
 					<td>Indicates that the resource presents a flashing hazard for photosensitive persons. This value should be set when the content meets the hazard thresholds described in <a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
 						2.3.1 Three Flashes or Below Threshold</a> [<cite><a class="bibref" data-link-type="biblio" href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bib-wcag2" title="Web Content Accessibility Guidelines (WCAG) 2">WCAG2</a></cite>]. 
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#flashing">flashing</a></td>
-					<td>–</td>
+                    <td>-</td>
 					<td>532 8# $aThe resource presents a flashing hazard for photosensitive persons.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource does not present a flashing hazard. This value should be set when the content conforms to <a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
 						2.3.1 Three Flashes or Below Threshold</a> [<cite><a class="bibref" data-link-type="biblio" href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bib-wcag2" title="Web Content Accessibility Guidelines (WCAG) 2">WCAG2</a></cite>]. 
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#noFlashingHazard">noFlashingHazard</a></td>
-					<td>–</td>
+                    <td>-</td>
 					<td>532 8# $aThis resource does not present a flashing hazard.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
                 <tr>
                     <td>
@@ -1018,6 +1108,7 @@
                     </td>
 					<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownFlashingHazard"><code>unknownFlashingHazard</code></a></p></td>
 					<td><p><a href="https://ns.editeur.org/onix/en/143/24">List: 143; Code: 24</a> Flashing risk unknown</p></td>
+                    <td>-</td>
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
@@ -1033,14 +1124,18 @@
 						Products simulates (via visual effects) the experience of motion, which may cause nausea in
 						sensitive people</td>
 					<td>532 8# $aContains instances of motion simulation that may affect some individuals.</td>
+                    <td>-</td>
+                    <td>-</td>
 					<td>231 $i17$2onix143</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource does not contain instances of motion simulation.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#noMotionSimulationHazard">noMotionSimulationHazard</a></td>
-					<td>–</td>
+                    <td>-</td>
 					<td>532 8# $aThis resource does not contain instances of motion simulation.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
                 <tr>
                     <td>
@@ -1054,6 +1149,7 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
+                    <td>-</td>
 				</tr>
                 <!-- Sound -->    
 				<tr>
@@ -1063,6 +1159,8 @@
 						Incidental sounds added to the audiobook narration (eg background environmental sounds). (may
 						not correspond to a hazard)</td>
 					<td>532 8# $aContains auditory sounds that may affect some individuals.</td>
+                    <td>-</td>
+                    <td>-</td>
 					<td>231 $iA310$2onix175</td>
 				</tr>
 				<tr>
@@ -1071,7 +1169,9 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#noSoundHazard">noSoundHazard</a></td>
 					<td>–</td>
 					<td>532 8# $aThis resource does not contain auditory hazards.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
                 <tr>
                     <td>
@@ -1085,39 +1185,44 @@
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
+                    <td>-</td>
                 </tr>
 
 				<tr>
 					<td>Indicates that the resource does not contain any hazards.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#hazard-none">none</a></td>
-					<td>–</td>
-					<td></td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that it is unknown if any hazards exist within the content.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknown">unknown</a></td>
-					<td>–</td>
+                    <td>-</td>
 					<td>532 8# $aThis resource has not been evaluated for hazard risks.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 			</tbody>
             <!-- accessibilityAPI -->
             <tbody>
             	<tr>
-						<th colspan="5" scope="rowgroup">accessibilityAPI</th>
+				    <th colspan="7" scope="rowgroup">accessibilityAPI</th>
 					</tr>
 					<tr>
-						<td colspan="5" scope="rowgroup">The metadata field accessibilityAPI does not apply to digital publications directly but rather to reading system software. We do not include it in this crosswalk.</td>
+						<td colspan="7" scope="rowgroup">The metadata field accessibilityAPI does not apply to digital publications directly but rather to reading system software. We do not include it in this crosswalk.</td>
 					</tr>
             </tbody>
             <!-- accessibilityControl -->
             <tbody>
                 <tr>
-                    <th colspan="5" scope="rowgroup">accessibilityControl</th>
+                    <th colspan="7" scope="rowgroup">accessibilityControl</th>
                 </tr>
                 <tr>
-                    <td colspan="5" scope="rowgroup">The metadata field accessibilityControl does not apply to digital publications directly but rather to reading system software. We do not include it in this crosswalk.</td>
+                    <td colspan="7" scope="rowgroup">The metadata field accessibilityControl does not apply to digital publications directly but rather to reading system software. We do not include it in this crosswalk.</td>
                 </tr>
             </tbody>
         </table>
@@ -1132,6 +1237,8 @@
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
 					<th scope="col">Schema.org in MARC21</th>
+                    <th scope="col">ONIX to Schema in MARC21</th>
+                    <th scope="col">ONIX in MARC21*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -1161,7 +1268,9 @@
 						336 ##$asounds$2rdacontent;
 						336 ##$aspoken word$2rdacontent;
 						344 ## $i sound</td>
-					<td></td>
+                    <td>-</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
+					<td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains charts encoded in visual form.</td>
@@ -1169,6 +1278,8 @@
 					<td><a href="https://ns.editeur.org/onix/en/81/19">List: 81; Code 19</a>: Figures, Diagrams,
 						Charts</td>
 					<td>341 0 $avisual; 532 8# $aResource contains charts encoded in visual form.</td>
+                    <td>-</td>
+                    <td>-</td>
 					<td>231 $i19$2onix81</td>
 				</tr>
 				<tr>
@@ -1177,7 +1288,9 @@
 				    <td><p><a href="https://ns.editeur.org/onix/en/81">List 81</a>: Product content type, <a
 						href="https://ns.editeur.org/onix/en/81/47">Code 47</a>: Chemical content</p></td>
 					<td>341 0# $avisual; 532 8# $aResource contains chemical equations encoded in visual form.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains information encoded such that color perception is necessary.</td>
@@ -1185,7 +1298,9 @@
 					<td>–</td>
 					<td>532 2# $aThe resource contains information encoded in such that color perception is necessary.
 					</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains diagrams encoded in visual form.</td>
@@ -1193,6 +1308,8 @@
 					<td><a href="https://ns.editeur.org/onix/en/81/19">List: 81; Code 19</a>: Figures, Diagrams,
 						Charts</td>
 					<td>341 0# $avisual; 532 8# $a Resource contains diagrams encoded in visual form.</td>
+                    <td>-</td>
+                    <td>-</td>
 					<td>231 $i19$2onix81</td>
 				</tr>
 				<tr>
@@ -1202,7 +1319,9 @@
                         href="https://ns.editeur.org/onix/en/81/48">Code 48</a>: Mathematical content</p></td>
 					<td>341 0# $avisual;
 						532 8# $aResource contains mathematical notations encoded in visual form.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains musical notation encoded in visual form.</td>
@@ -1211,14 +1330,18 @@
                         href="https://ns.editeur.org/onix/en/81/11">Code 11</a>: Musical notation</p></td>
 					<td>341 0# $avisual;
 						532 8# $a Resource contains music encoded in visual form.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains information encoded in tactile form. Note that although an indication of a tactile mode often indicates the content is encoded using a braille system, this is not always the case. Tactile perception may also indicate, for example, the use of tactile graphics to convey information.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#tactile">tactile</a></td>
-					<td>–</td>
+                    <td>-</td>
 					<td>341 0#$atactile </td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains text encoded in visual form.</td>
@@ -1227,7 +1350,9 @@
 						href="https://ns.editeur.org/onix/en/81/49">Code 49</a>: Images of text</p></td>
 					<td>341 0# $avisual;
 						532 8# $a Resource contains text encoded in visual form.</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains information encoded in textual form. 
@@ -1252,7 +1377,9 @@
 						accessible thru true text", he must adopt a reasoning by absence.
 					</td>
 					<td>341 0# $atextual</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains information encoded in visual form. <em>Note: This value is not set if the only visual imagery is presentational or not directly relevant to understanding the content. Examples of this type of imagery include cover images for publications, corporate logos, and purely decorative images.</em>
@@ -1289,6 +1416,8 @@
 							<li>336$aperformed movement$2rdacontent</li>
 						</ul>
 					</td>
+                    <td>-</td>
+                    <td>-</td>
 					<td>231 $i07$2onix81</td>
 				</tr>
 		</table>
@@ -1304,6 +1433,8 @@
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
 					<th scope="col">Schema.org in MARC21</th>
+                    <th scope="col">ONIX to Schema in MARC21</th>
+                    <th scope="col">ONIX in MARC21*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -1314,14 +1445,18 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ams-auditory">auditory</a></td>
 					<td><a href="https://ns.editeur.org/onix/en/81/01">List: 81; Code:01</a></td>
 					<td>341 0#$aauditory$2sapdv</td>
+                    <td>-</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
 					<td> 181 #0 $cspw$2rdacontent (may correspond only to human narration)</td>
 				</tr>
 				<tr>
 					<td>Indicates that tactile perception is necessary to consume the information.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ams-tactile">tactile</a></td>
-					<td>–</td>
+                    <td>-</td>
 					<td>341 0#$atactile$2sapdv</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that the resource contains information encoded in textual form. <em>Note: This value is not set if the only textual content is for navigational purposes.</em></td>
@@ -1338,14 +1473,18 @@
 						thru true text", he must adopt a reasoning by absence.
 					</td>
 					<td>341 0#$atextual$2sapdv</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 				<tr>
 					<td>Indicates that visual perception is necessary to consume the information.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ams-visual">visual</a></td>
 					<td>–</td>
 					<td>341 0#$avisual$2sapdv</td>
-					<td></td>
+                    <td>-</td>
+                    <td>-</td>
+                    <td>-</td>
 				</tr>
 			</tbody>
 		</table>
@@ -1360,6 +1499,8 @@
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
 					<th scope="col">Schema.org in MARC21</th>
+                    <th scope="col">ONIX to Schema in MARC21</th>
+                    <th scope="col">ONIX in MARC21*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -1372,6 +1513,8 @@
 						Accessibility
 						Summary</td>
 					<td>532 8# $a [Text] </td>
+                    <td>-</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
 					<td> 231 $i00$2onix196</td>
 				</tr>
 			</tbody>

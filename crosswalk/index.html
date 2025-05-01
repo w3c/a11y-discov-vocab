@@ -179,10 +179,19 @@
 						assessment in an a11y:certifierReport property associated with [epub-3] the evaluator's
 						name.</td>
 					<td><a href="https://www.w3.org/TR/epub-a11y-11/#certifierReport">certifierReport</a></td>
-					<td><a href="https://ns.editeur.org/onix/en/196/94">List: 196; Code: 94</a>: Compliance web page
-						for detailed accessibility information or, if a publisher is self-certifying, <a
-							href="https://ns.editeur.org/onix/en/196/96">List: 196; Code: 96</a>:
-						Publisher's web page for detailed accessibility information</td>
+					<td>
+                <p>
+                    <a href="https://ns.editeur.org/onix/en/196/94">List: 196; Code: 94</a>: When certification done by an official and independent organization.
+                </p>
+                <p>Or</p>
+                <p>
+                    <a href="https://ns.editeur.org/onix/en/196/95">List: 196; Code: 95</a>: When certification is done by a trusted third party, such as the EPUB creator or distributor.
+                </p>
+                <p>Or</p>
+                <p>
+                    <a href="https://ns.editeur.org/onix/en/196/96">List: 196; Code: 96</a>: When the publisher has self-certified the product.
+                </p>
+          </td>
 					<td>
 						<ul>
 							<li>532 8# Accessibility Note (Non-specific)</li>
@@ -1646,9 +1655,14 @@
 				<tr>
 					<td>The accessibilitySummary property is a free-form field that allows authors to describe the accessible properties of the resource. As a result, it does not have an associated vocabulary.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilitySummary">accessibilitySummary</a></td>
-					<td><a href="https://ns.editeur.org/onix/en/196/00">List: 196; Code: 00</a>:
-						Accessibility
-						Summary</td>
+					<td>
+                        <p><a href="https://ns.editeur.org/onix/en/196/00">List: 196; Code: 00</a>: Accessibility Summary - contains a short explanatory summary of the accessibility of the product. Used when the summary includes information also conveyed using other ONIX codes.
+                        </p>
+                        <p>Additionally</p>
+                        <p>
+                            <a href="https://ns.editeur.org/onix/en/196/92">List: 196; Code: 92</a>: Accessibility Addendum - contains a short addendum to the accessibility detail of the product. Used when the summary is for information not conveyed with other ONIX codes.
+                        </p>
+                    </td>
 					<td>532 8# $a [Text] </td>
                     <td>-</td>
                     <td>*Awaiting clarification on recording ONIX codes in MARC21</td>

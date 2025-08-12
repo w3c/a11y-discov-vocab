@@ -13,7 +13,7 @@
 				group: "a11y-discov-vocab",
 				specStatus: "CG-DRAFT",
 				noRecTrack: true,
-				previousPublishDate: '2024-09-06',
+				previousPublishDate: '2024-12-09',
 				previousMaturity: 'CG-FINAL',
 				shortName: 'vocabulary',
 				edDraftURI: "https://w3c.github.io/a11y-discov-vocab/",
@@ -691,9 +691,16 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						a resource.</p>
 
 					<section id="annotations">
-						<h5>annotations</h5>
+						<h5>annotations (deprecated)</h5>
 
 						<p>The resource includes annotations from the author, instructor and/or others.</p>
+
+						<div class="note">
+							<p>The use of the <code>annotations</code> value is now deprecated due to the general nature
+								of annotations in published works. When authors or publishers add annotations to a work,
+								they provide information for all readers; they are not used as a means of enhancing
+								otherwise inaccessible content.</p>
+						</div>
 					</section>
 
 					<section id="ARIA">
@@ -722,8 +729,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<div class="note">
 							<p>The use of the <code>bookmarks</code> value is now deprecated due to its ambiguity. For
 								PDF bookmarks, the <a href="#tableOfContents"><code>tableOfContents</code></a> value
-								should be used instead. For bookmarks in ebooks, the <a href="#annotations"
-										><code>annotations</code></a> value can be used.</p>
+								should be used instead.</p>
 						</div>
 					</section>
 
@@ -2176,7 +2182,16 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 				  - only add open attribute to current year
 			-->
 
-			<details id="changes-2024" open="">
+			<details id="changes-2025" open="">
+				<summary>Changes made in 2025</summary>
+				<ul>
+					<li>20-June-2025: Deprecated the use of the <code>annotations</code> value for
+							<code>accessibilityFeature</code>. Refer to <a
+							href="https://github.com/w3c/a11y-discov-vocab/issues/166">issue 166</a>.</li>
+				</ul>
+			</details>
+
+			<details id="changes-2024">
 				<summary>Changes made in 2024</summary>
 				<ul>
 					<li>25-Nov-2024: Moved the visual access modes that combine descriptions about the nature of the

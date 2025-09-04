@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
-
+<html lang="en-US">
 <head>
-	<meta charset="utf-8" />
-	<title>Accessibility Properties Crosswalk (schema.org, ONIX, MARC21 &amp; UNIMARC)</title>
+	<meta charset="utf-8">
+	<title>Accessibility Properties Crosswalk (schema.org, ONIX, &amp; MARC 21)</title>
 	<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 	<script src="../common/js/permalink-a11y.js" class="remove"></script>
 	<script src="../common/js/previousRelease.js" class="remove"></script>
@@ -34,7 +33,8 @@
 				{
 					name: "Gautier Chomel",
 					company: "EDRLab",
-					companyURL: "https://www.edrlab.org"
+					companyURL: "https://www.edrlab.org",
+					w3cid: 136660
 				}
 			],
 			includePermalinks: true,
@@ -110,7 +110,7 @@
 <body>
 	<section id="abstract">
 		<p>This document is a work in progress to extend the existing crosswalk for accessibility metadata for
-			Schema.org, EPUB, and ONIX to MARC21 and UNIMARC, including a new initial definition column.</p>
+			Schema.org, EPUB, ONIX and MARC 21, including a new initial definition column.</p>
 		  <p>Note: Definitions are taken from the <a href="https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20241209/">Schema.org Accessibility Properties for Discoverability Vocabulary</a> unless otherwise noted (i.e. some are marked as being ONIX definitions).</p>
  	</section>
 	
@@ -118,6 +118,7 @@
 	
 	<section id="information">
 		<h2>Information and references:</h2>
+
 			<section id="information-schema">
 				<h3>EPUB resources</h3>
 				<p>Schema definitions are found here: <a href="https://www.w3.org/2021/a11y-discov-vocab/latest/">https://www.w3.org/2021/a11y-discov-vocab/latest/</a></p>
@@ -128,12 +129,17 @@
 			</section>
 			<section id="information-MARC21">
 				<h3>MARC21 resources</h3>
-				<p><a href="https://www.loc.gov/marc/bibliographic/">MARC 21 information</a></p>
-				<p><a href="https://www.loc.gov/marc/specifications/specrecstruc.html">Fixed length fields (fixed fields) and variable length fields (very brief summary – fuller details)</a></p>
-				<p>MARC 21 fixed field = 3 digit numeric code (except the Leader); no indicators, value in each position has a specific meaning.</p>
-				<p>MARC 21 variable length field = 3 digit numeric code; each field can have 2 indicators that signify different values; each field can have one or more subfields; convention to designate subfield = $ ; if no subfield, assume $a.</p>
-				<p>More detailed information about <a href="https://www.loc.gov/marc/bibliographic/bd341.html">MARC 21 field 341</a> and <a href="https://www.loc.gov/marc/bibliographic/bd532.html"> MARC21 field 532</a></p>
-			</section>
+					<p><a href="https://www.loc.gov/marc/bibliographic/">MARC 21 information</a></p>
+		      <p><a href="https://www.loc.gov/marc/specifications/specrecstruc.html">Fixed length fields (fixed fields) and variable length fields (very brief summary – fuller details)</a></p>
+		      <p>MARC 21 fixed field = 3 digit numeric code (except the Leader); no indicators, value in each position has a specific meaning.</p>
+		      <p>MARC 21 variable length field = 3 digit numeric code; each field can have 2 indicators that signify different values; each field can have one or more subfields; convention to designate subfield = $ ; if no subfield, assume $a.</p>
+		      <p>More detailed information about <a href="https://www.loc.gov/marc/bibliographic/bd341.html">MARC 21 field 341</a>, and <a href="https://www.loc.gov/marc/bibliographic/bd532.html"> MARC 21 field 532</a>.</p>
+			<aside class="note">
+			<p>Best practices and procedures for recording accessibility metadata in MARC 21 using the Schema.org Accessibility Properties for Discoverability Vocabulary (sapdv) and ONIX are still under development.  Please be aware that future work may result in changes to the crosswalk, though it is expected such changes will be minimal and backwards compatible.</p>
+			<p>This crosswalk provides recommendations for MARC 21 fields appropriate for each accessibility metadata term. Cataloguing agencies can determine the correct syntax for expressing the metadata in that field.</p>
+			<p>Currently <code>certifierReport</code> uses <a href="https://www.loc.gov/marc/bibliographic/bd856.html">MARC 21 field 856</a> since <a href="https://www.loc.gov/marc/bibliographic/bd532.html"> MARC 21 field 532</a> does not currently include a subfield to hold a URL. There is a proposal submitted to include this in the future.</p>
+		</aside>
+    </section>
 			<section id="information-UNIMARC">
 				<h3>UNIMARC resources</h3>
 		  		<p><a href="https://cdn.ifla.org/wp-content/uploads/U_B_231_update2021_ONLINE_FINAL-1.pdf
@@ -146,14 +152,12 @@
 			</p>
 			</section>
 	</section>
-
-
 	<section id="epub-onix">
 		<h2>From EPUB</h2>
         <h3>Conformance and Exemption Declarations</h3>
 		<p>The following table provides a crosswalk between the properties defined in the <a
 				href="https://www.w3.org/TR/epub-a11y-11">EPUB Accessibility specification</a> [[EPUB-A11Y-11]] and the
-			equivalents defined metadata standards [[ONIX]], MARC21, UNIMARC.</p>
+			equivalents defined metadata standards [[ONIX]], MARC 21.</p>
 
 		<p class="note">The <code>conformsTo</code> term used in EPUB is drawn from <a
 				href="http://www.dublincore.org/specifications/dublin-core/dcmi-terms/#terms-conformsTo">Dublin
@@ -165,10 +169,10 @@
 					<th scope="col">Definition</th>
 					<th scope="col">EPUB</th>
 					<th scope="col">ONIX</th>
-                    <th scope="col">MARC21 Fields</th>
-					<th scope="col">EPUB to MARC21</th>
-					<th scope="col">ONIX to MARC21 using EPUB Vocabulary</th>
-					<th scope="col">ONIX to MARC21 using ONIX Codes*</th>
+                    <th scope="col">MARC 21 Fields</th>
+					<th scope="col">EPUB to MARC 21</th>
+					<th scope="col">ONIX to MARC 21 using EPUB Vocabulary</th>
+					<th scope="col">ONIX to MARC 21 using ONIX Codes*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -186,7 +190,7 @@
                     <td><b>532</b></td>
 					<td><b>532</b> 8# <b>$a</b>[Name of Certifier]</td>
 					<td>532 8# Accessibility Note$a</td>
-                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC 21</td>
 					<td>231 ##$i93$2onix196</td>
 				</tr>
                 <tr>
@@ -196,7 +200,7 @@
 					<td><a href="https://ns.editeur.org/onix/en/196/93">List 196; Code 93</a>: Compliance certification
 						by
 						<code>ProductFormFeatureDescription</code> carries the URL of a web page belonging to the
-						organisation responsible for compliance testing and certification of the product – typically a
+						organisation responsible for compliance testing and certification of the product - typically a
 						‘home page’ or a page describing the certification scheme itself. For use in ONIX 3.0  or later
 					</td>
 					<td>Do Not Record</td>
@@ -237,7 +241,7 @@
                     <td>An established standard to which the described resource conforms.</td>
                     <td>
                         <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
-                                    ><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                    ><code>dcterms:conformsTo</code></a> with the text string<br>
                             <code>EPUB Accessibility 1.1 - WCAG 2.0 Level AA</code></p>
                     </td>
                     <td>
@@ -258,7 +262,7 @@
                     <td>An established standard to which the described resource conforms.</td>
                     <td>
                         <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
-                                    ><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                    ><code>dcterms:conformsTo</code></a> with the text string<br>
                             <code>EPUB Accessibility 1.1 - WCAG 2.0 Level AAA</code></p>
                     </td>
                     <td>
@@ -280,7 +284,7 @@
                     <td>An established standard to which the described resource conforms.</td>
                     <td>
                         <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
-                                    ><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                    ><code>dcterms:conformsTo</code></a> with the text string<br>
                             <code>EPUB Accessibility 1.1 - WCAG 2.1 Level A</code></p>
                     </td>
                     <td>
@@ -302,7 +306,7 @@
                     <td>An established standard to which the described resource conforms.</td>
                     <td>
                         <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
-                                    ><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                    ><code>dcterms:conformsTo</code></a> with the text string<br>
                             <code>EPUB Accessibility 1.1 - WCAG 2.1 Level AA</code></p>
                     </td>
                     <td>
@@ -323,7 +327,7 @@
                     <td>An established standard to which the described resource conforms.</td>
                     <td>
                         <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
-                                    ><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                    ><code>dcterms:conformsTo</code></a> with the text string<br>
                             <code>EPUB Accessibility 1.1 - WCAG 2.1 Level AAA</code></p>
                     </td>
                     <td>
@@ -345,7 +349,7 @@
                     <td>An established standard to which the described resource conforms.</td>
                     <td>
                         <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
-                                    ><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                    ><code>dcterms:conformsTo</code></a> with the text string<br>
                             <code>EPUB Accessibility 1.1 - WCAG 2.2 Level A</code></p>
                     </td>
                     <td>
@@ -366,7 +370,7 @@
                     <td>An established standard to which the described resource conforms.</td>
                     <td>
                         <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
-                                    ><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                    ><code>dcterms:conformsTo</code></a> with the text string<br>
                             <code>EPUB Accessibility 1.1 - WCAG 2.2 Level AA</code></p>
                     </td>
                     <td>
@@ -388,7 +392,7 @@
                     <td>An established standard to which the described resource conforms.</td>
                     <td>
                         <p><a href="https://www.w3.org/TR/epub-a11y/#sec-conf-reporting-pub"
-                                    ><code>dcterms:conformsTo</code></a> with the text string<br/>
+                                    ><code>dcterms:conformsTo</code></a> with the text string<br>
                             <code>EPUB Accessibility 1.1 - WCAG 2.2 Level AAA</code></p>
                     </td>
                     <td>
@@ -462,7 +466,7 @@
                 <tr>
                     <td>Identifies the accessibility exemption the EPUB publication falls under.</td>
                     <td>
-                        <p><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#exemption-property">a11y:exemption</a></code> with the text string<br/><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#eaa-microenterprise">eaa-microenterprise</a></code></p>
+                        <p><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#exemption-property">a11y:exemption</a></code> with the text string<br><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#eaa-microenterprise">eaa-microenterprise</a></code></p>
                     </td>
                     <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/75">List 196; Code 75</a>: EAA exception 1 - Micro-enterprises</p>
@@ -476,7 +480,7 @@
                 <tr>
                      <td>Identifies the accessibility exemption the EPUB publication falls under.</td>
                    <td>
-                        <p><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#exemption-property">a11y:exemption</a></code> with the text string<br/><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#eaa-disproportionate-burden">eaa-disproportionate-burden</a></code></p>
+                        <p><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#exemption-property">a11y:exemption</a></code> with the text string<br><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#eaa-disproportionate-burden">eaa-disproportionate-burden</a></code></p>
                     </td>
                     <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/76">List 196; Code 76</a>: EAA exception 2 - Disproportionate burden</p>
@@ -490,7 +494,7 @@
                 <tr>
                     <td>Identifies the accessibility exemption the EPUB publication falls under.</td>
                     <td> 
-                        <p><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#exemption-property">a11y:exemption</a></code> with the text string<br/><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#eaa-fundamental-alteration">eaa-fundamental-alteration</a></code></p>
+                        <p><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#exemption-property">a11y:exemption</a></code> with the text string<br><code><a href="https://www.w3.org/TR/epub-a11y-exemption/#eaa-fundamental-alteration">eaa-fundamental-alteration</a></code></p>
                     </td>
                     <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/77">List 196; Code 77</a>: EAA exception 3 - Fundamental alteration</p>
@@ -500,7 +504,32 @@
                     <td>-</td>
 					<td>-</td>
                     <td>-</td>
-                </tr>                    
+                </tr>
+                
+                <tr>
+                    <td>
+                        <p>Provides a unique identifier for the source of the page break markers in an EPUB publication.</p>
+                     </td>
+                    <td>
+                        <p><a href="https://www.w3.org/publishing/a11y/page-source-id/#pageBreakSource"><code>pageBreakSource</code></a></p>
+                        <p>value of <code>none</code> indicates digital-only edition</p>
+                    </td>
+                    <td>
+                        <p><a href="https://ns.editeur.org/onix/en/51/13">List 51; Code 13</a>: Print-equivalent page numbering points from the digital publication to the physical version.</p>
+                        <p>or</p>
+                        <p><a href="https://ns.editeur.org/onix/en/51/27">List 51; Code 27</a>: Electronic version available points from the physical version to the digital publication.</p>                       
+                    </td>
+                    <td><p><b>341</b></p><p>and</p><p><b>532</b></p></td>
+                    <td>
+                        <p><b>341</b> 0# <b>$a</b>textual<b>$b</b>pageBreakSource<b>$2</b>sapdv</p>
+                        <p>and</p>
+                        <p><b>532</b> 8# <b>$a</b>Page break source: [insert unique identifier]</p>
+		    	    </td>
+					<td>-</td>
+					<td>-</td>
+                    <td>-</td>
+				</tr>
+                
 			</tbody>
 		</table>
 	</section>
@@ -508,12 +537,12 @@
 	<section id="schema-onix">
 		<h2>From Schema.org</h2>
 
-		<p>The following table provides a crosswalk between the Schema.org metadata and [[ONIX]], MARC21, UNIMARC.</p>
+		<p>The following table provides a crosswalk between the Schema.org metadata and [[ONIX]], MARC 21.</p>
 
         <h3><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#accessibilityFeature">accessibilityFeature</a></h3>
 		<p>ONIX: <a href="https://ns.editeur.org/onix/en/196">List 196</a> (specific codes follow)</p>
-		<p>MARC21: would not map. Mapping of individual properties is possible as reflected in the following table</p>
-		<p>UNIMARC: Easy mapping thru list 231 allowing reference to any ONIX list and code.</p>
+		<p>MARC 21: would not map. Mapping of individual properties is possible as reflected in the following table</p>
+		<!-- <p>UNIMARC: Easy mapping thru list 231 allowing reference to any ONIX list and code.</p> -->
 
 		<table class="zebra">
 			<thead>
@@ -521,10 +550,10 @@
 					<th scope="col">Definition</th>
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
-                    <th scope="col">MARC21 Fields</th>					
-                    <th scope="col">Schema.org in MARC21</th>
-                    <th scope="col">ONIX to Schema in MARC21</th>
-                    <th scope="col">ONIX in MARC21 using ONIX Codes*</th>
+                    <th scope="col">MARC 21 Fields</th>					
+                    <th scope="col">Schema.org in MARC 21</th>
+                    <th scope="col">ONIX to Schema in MARC 21</th>
+                    <th scope="col">ONIX in MARC 21 using ONIX Codes*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -544,13 +573,13 @@
 					</td>
                     
                     <td>-</td>
-                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC 21</td>
 					<td>231 ##$i14$2onix196</td>
 				</tr>
 				<tr>
 					<td>The work includes annotations from the author, instructor and/or others.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#annotations">annotations</a></td>
-					<td>–</td>
+					<td>-</td>
                     <td><b>341</b></td>
 					<td><b>341</b> 0# <b>$a</b>textual<b>$b</b>annotations<b>$2</b>sapdv</td>
 					<td>-</td>
@@ -616,7 +645,7 @@
                         </td>
                     <td><b>341</b></td>
 					<td>
-						<p>In MARC21 print braille resources are described as tactile materials and resources in electronic braille format are described as computer files, but for resources providing alternative braille access:</p>
+						<p>In MARC 21 print braille resources are described as tactile materials and resources in electronic braille format are described as computer files, but for resources providing alternative braille access:</p>
 						<p>For electronic resources enhanced with braille alternatives:</p>
 						<p><b>341</b> 0# <b>$a</b>text<b>$e</b>braille<b>$2</b>sapdv</p>
 						<p>and</p>
@@ -696,7 +725,7 @@
 					<td><a
 							href="https://www.w3.org/2021/a11y-discov-vocab/latest/#displayTransformability">displayTransformability</a>
 					</td>
-					<td><a href="https://ns.editeur.org/onix/en/196/36">List 196; Code 36</a>: All textual content can be modified.</td>
+					<td><a href="https://ns.editeur.org/onix/en/196/36">List 196; Code 36</a>: All textual content can be modified</td>
                     <td><b>341</b></td>
 					<td><b>341</b> 0# <b>$a</b>textual<b>$b</b>displayTransformability<b>$2</b>sapdv</td>
 					<td>-</td>
@@ -860,8 +889,12 @@
 				<tr>
 					<td>Identifies that mathematical equations and formulas are encoded in [<cite><a class="bibref" data-link-type="biblio" href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bib-mathml" title="Mathematical Markup Language (MathML) 1.01 Specification">MathML</a></cite>].</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#mathml">MathML</a></td>
-					<td><a href="https://ns.editeur.org/onix/en/196/17">List 196; Code 17</a>: Accessible math
-						content</td>
+					<td>
+                        <p><a href="https://ns.editeur.org/onix/en/196/17">List 196; Code 17</a>: Accessible math
+						content</p>
+                        <p>along with</p>
+                            <p><a href="https://ns.editeur.org/onix/en/81/48">List 81; Code 48</a>: Mathematical content</p>
+                    </td>
                     <td><p><b>341</b></p><p>and</p><p><b>532</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>textual<b>$b</b>MathML<b>$2</b>sapdv</p>
@@ -923,7 +956,7 @@
                         <p>The resource includes static page markers, such as those identified by the doc-pagebreak role [[DPUB-ARIA-1.1]].</p>
                         <p>This value is most commonly used with ebooks for which there is a statically paginated equivalent, such as a print edition, but it is not required that the page markers correspond to another work. The markers may exist solely to facilitate navigation in purely digital works.</p></td>
                     <td>
-                        <p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#pageBreakMarkers"><code>pageBreakMarkers</code></a><br /> (formerly
+                        <p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#pageBreakMarkers"><code>pageBreakMarkers</code></a><br> (formerly
                             <code>printPageNumbers</code>)</p>
                     </td>
                     <td>
@@ -935,30 +968,6 @@
 					<td>-</td>
                     <td>-</td>
 				</tr>
-                 <tr>
-                    <td>
-                        <p>Provides a unique identifier for the source of the page break markers in an EPUB publication.</p>
-                     </td>
-                    <td>
-                        <p><a href="https://www.w3.org/publishing/a11y/page-source-id/#pageBreakSource"><code>pageBreakSource</code></a></p>
-                        <p>value of <code>none</code> indicates digital-only edition</p>
-                    </td>
-                    <td>
-                        <p><a href="https://ns.editeur.org/onix/en/51/13">List 51; Code 13</a>: Print-equivalent page numbering points from the digital publication to the physical version.</p>
-                        <p>or</p>
-                        <p><a href="https://ns.editeur.org/onix/en/51/27">List 51; Code 27</a>: Electronic version available points from the physical version to the digital publication.</p>                       
-                    </td>
-                    <td><p><b>341</b></p><p>and</p><p><b>532</b></p></td>
-                    <td>
-			<p><b>341</b> 0# <b>$a</b>textual<b>$b</b>pageBreakSource<b>$2</b>sapdv</p>
-			<p>and</p>
-			<p><b>532</b> 8# <b>$a</b>Page break source: [insert unique identifier]</p>
-		    	</td>
-					<td>-</td>
-					<td>-</td>
-                    <td>-</td>
-				</tr>
-               
                 
                 <tr>
                     <td>
@@ -1067,7 +1076,7 @@
 						</ul>
 					</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#tactileGraphic">tactileGraphic</a></td>
-					<td>–</td>
+					<td>-</td>
                     <td><p><b>341</b></p> <p>and</p> <p><b>532</b></p></td>
 					<td>
 						<ul>
@@ -1096,7 +1105,7 @@
 						</ul>
 					</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#tactileObject">tactileObject</a></td>
-					<td>–</td>
+					<td>-</td>
                     <td><b>532</b></td>
 					<td>
 						<ul>
@@ -1144,7 +1153,7 @@
 						used to enhance text-to-speech playback quality.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#ttsMarkup">ttsMarkup</a></td>
 					<td><a href="https://ns.editeur.org/onix/en/196/21">List 196; Code 21</a>: Text-to-speech
-						hinting provided;</td>
+						hinting provided</td>
                     <td><b>341</b></td>
 					<td><b>341</b> 0# <b>$a</b>text<b>$b</b>ttsMarkup<b>$2</b>sapdv</td>
 					<td>-</td>
@@ -1263,9 +1272,9 @@
                 </tr>
 				<tr>
 					<td>ONIX: The language of the text has been specified (eg via the HTML or XML lang attribute) to optimise text-to-speech (and other alternative renderings), both at whole document level and, where appropriate, for individual words, phrases or passages in a different language.</td>
-					<td>–</td>
+					<td>-</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/22">List 196; Code 22</a>: Language tagging
-						provided – helps with TTS in multi-lingual content</td>
+						provided - helps with TTS in multi-lingual content</td>
 					<td>-</td>
 					<td><b>532</b> 1# <b>$a</b>The language of the text has been specified (eg via the HTML or XML lang attribute) to optimise text-to-speech (and other alternative renderings), both at whole document level and, where appropriate, for individual words, phrases or passages in a different language.</td>
 					<td>-</td>
@@ -1284,7 +1293,7 @@
 					<td>-</td>
 				</tr>
 				<tr>
-					<td>ONIX: No accessibility features offered by the reading system, device or reading software (including but not limited to choice of text size or typeface, choice of text or background color, text-to-speech) are disabled, overridden or otherwise unusable with the product EXCEPT – in ONIX 3 messages only – those specifically noted as subject to restriction or prohibition in <code>EpubUsageConstraint</code>. Note that provision of any significant part of the textual content as images (ie as pictures of text, rather than as text, and without any textual equivalent) inevitably prevents use of these accessibility options.</td>
+					<td>ONIX: No accessibility features offered by the reading system, device or reading software (including but not limited to choice of text size or typeface, choice of text or background color, text-to-speech) are disabled, overridden or otherwise unusable with the product EXCEPT - in ONIX 3 messages only - those specifically noted as subject to restriction or prohibition in <code>EpubUsageConstraint</code>. Note that provision of any significant part of the textual content as images (ie as pictures of text, rather than as text, and without any textual equivalent) inevitably prevents use of these accessibility options.</td>
 					<td>-</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/10">List 196; Code 10</a>: No reading system
 						accessibility options disabled (except)</td>
@@ -1330,7 +1339,7 @@
 					<td>-</td>
 				</tr>
 				<tr>
-					<td>ONIX: Where links, controls or buttons are included in the product, the purpose or functionality of each link, control or button is apparent from the associated text alone – or where it is unclear, separate link, control or button descriptions are provided.</td>
+					<td>ONIX: Where links, controls or buttons are included in the product, the purpose or functionality of each link, control or button is apparent from the associated text alone - or where it is unclear, separate link, control or button descriptions are provided.</td>
 					<td>-</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/40">List 196; Code 40</a>: Link purposes clear 
 					</td>
@@ -1395,10 +1404,10 @@
 					<th scope="col">Definition</th>
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
-                    <th scope="col">MARC21 Fields</th>
-					<th scope="col">Schema.org in MARC21</th>
-                    <th scope="col">ONIX to Schema in MARC21</th>
-                    <th scope="col">ONIX in MARC21 using ONIX Codes*</th>
+                    <th scope="col">MARC 21 Fields</th>
+					<th scope="col">Schema.org in MARC 21</th>
+                    <th scope="col">ONIX to Schema in MARC 21</th>
+                    <th scope="col">ONIX in MARC 21 using ONIX Codes*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -1410,11 +1419,11 @@
 					<td>Indicates that the resource presents a flashing hazard for photosensitive persons. This value should be set when the content meets the hazard thresholds described in <a href="https://www.w3.org/TR/WCAG21/#three-flashes-or-below-threshold">Success Criterion
 						2.3.1 Three Flashes or Below Threshold</a> [<cite><a class="bibref" data-link-type="biblio" href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bib-wcag2" title="Web Content Accessibility Guidelines (WCAG) 2">WCAG2</a></cite>]. 
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#flashing">flashing</a></td>
-                   <td><p><a href="https://ns.editeur.org/onix/en/143/13">List 143; Code 13</a>: WARNING – Flashing hazard</p></td>
+                   <td><p><a href="https://ns.editeur.org/onix/en/143/13">List 143; Code 13</a>: WARNING - Flashing hazard</p></td>
                     <td><b>532</b></td>
 					<td><b>532</b> 8# <b>$a</b>The resource presents a flashing hazard for photosensitive persons.</td>
                     <td>-</td>
-                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC 21</td>
                     <td>-</td>
 				</tr>
 				<tr>
@@ -1451,7 +1460,7 @@
 					Some examples of motion simulation include video games with a first-person perspective and CSS-controlled backgrounds that move when a user scrolls a page.
 					</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#motionSimulation">motionSimulation</a></td>
-                    <td><p><a href="https://ns.editeur.org/onix/en/143/17">List 143; Code 17</a>: WARNING – Motion
+                    <td><p><a href="https://ns.editeur.org/onix/en/143/17">List 143; Code 17</a>: WARNING - Motion
 						simulation hazard</p></td>
                     <td><b>532</b></td>
 					<td><b>532</b> 8# <b>$a</b>Contains instances of motion simulation that may affect some individuals.</td>
@@ -1488,7 +1497,7 @@
 				<tr>
 					<td>Indicates that the resource contains auditory sounds that may affect some individuals. <em>Editor's note: The application of this value is currently under discussion as its application is underspecified.</em></td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#sound">sound</a></td>
-                    <td><p><a href="https://ns.editeur.org/onix/en/143/15">List 143; Code 15</a>: WARNING – Sound hazard
+                    <td><p><a href="https://ns.editeur.org/onix/en/143/15">List 143; Code 15</a>: WARNING - Sound hazard
                         <a href="https://ns.editeur.org/onix/en/175/A310">List 175; Code A310</a>: Sound effects Incidental sounds added to the audiobook narration (eg background environmental sounds). (may not correspond to a hazard)</p>
                     </td>
                     <td><b>532</b></td>
@@ -1556,10 +1565,10 @@
 					<th scope="col">Definition</th>
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
-                    <th scope="col">MARC21 Fields</th>
-					<th scope="col">Schema.org in MARC21</th>
-                    <th scope="col">ONIX to Schema in MARC21</th>
-                    <th scope="col">ONIX in MARC21 using ONIX Codes*</th>
+                    <th scope="col">MARC 21 Fields</th>
+					<th scope="col">Schema.org in MARC 21</th>
+                    <th scope="col">ONIX to Schema in MARC 21</th>
+                    <th scope="col">ONIX in MARC 21 using ONIX Codes*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -1574,19 +1583,19 @@
                         <p>Use the most relevant ones and use 01 if unsure</p>
                         <ul>
                             <li><a href="https://ns.editeur.org/onix/en/81/01">List 81; Code 01</a>: Audiobook (for any audio recording of a reading of a book or other text)</li>
-                            <li><a href="https://ns.editeur.org/onix/en/81/02">List 81; Code 02</a>: Performance – spoken word</li>
+                            <li><a href="https://ns.editeur.org/onix/en/81/02">List 81; Code 02</a>: Performance - spoken word</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/22">List 81; Code 22</a>: Additional audio content not part of main content</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/13">List 81; Code 13</a>: Other speech content</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/03">List 81; Code 03</a>: Music recording</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/04">List 81; Code 04</a>: Other audio</li>
-                            <li><a href="https://ns.editeur.org/onix/en/81/21">List 81; Code 21</a>: Partial performance – spoken word</li>
+                            <li><a href="https://ns.editeur.org/onix/en/81/21">List 81; Code 21</a>: Partial performance - spoken word</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/23">List 81; Code 23</a>: Promotional audio for other book product</li>
                         </ul>
                     </td>
                     <td><b>341</b></td>
 					<td><b>341</b> 0# <b>$a</b>auditory<b>$2</b>sapdv</td>
                     <td>-</td>
-                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC 21</td>
 					<td>-</td>
 				</tr>
 				<tr>
@@ -1623,7 +1632,7 @@
                         <p>See related value <a href="#use-of-color">Use of Color.</a></p>
                     </td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#colorDependent">colorDependent</a></td>
-					<td>–</td>
+					<td>-</td>
                     <td><b>532</b></td>
 					<td><b>532</b> 2# <b>$a</b>The resource contains information encoded in such that color perception is necessary.
 					</td>
@@ -1735,7 +1744,7 @@
                             <li><a href="https://ns.editeur.org/onix/en/81/24">List 81; Code 24</a>: Animated / interactive illustrations</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/25">List 81; Code 25</a>: Narrative animation</li>                            
                             <li><a href="https://ns.editeur.org/onix/en/81/26">List 81; Code 26</a>: Video recording of a reading</li>
-                            <li><a href="https://ns.editeur.org/onix/en/81/27">List 81; Code 27</a>: Performance – visual</li>
+                            <li><a href="https://ns.editeur.org/onix/en/81/27">List 81; Code 27</a>: Performance - visual</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/28">List 81; Code 28</a>: Other video</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/44">List 81; Code 44</a>: Sequential art</li>
                             <li><a href="https://ns.editeur.org/onix/en/81/46">List 81; Code 46</a>: Decorative images or graphics</li>
@@ -1760,10 +1769,10 @@
 					<th scope="col">Definition</th>
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
-                    <th scope="col">MARC21 Fields</th>
-					<th scope="col">Schema.org in MARC21</th>
-                    <th scope="col">ONIX to Schema in MARC21</th>
-                    <th scope="col">ONIX in MARC21 using ONIX Codes*</th>
+                    <th scope="col">MARC 21 Fields</th>
+					<th scope="col">Schema.org in MARC 21</th>
+                    <th scope="col">ONIX to Schema in MARC 21</th>
+                    <th scope="col">ONIX in MARC 21 using ONIX Codes*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -1785,7 +1794,7 @@
                     <td>-</td>
 					<td>-</td>
                     <td>-</td>
-                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC 21</td>
 					<td> 181 #0 $cspw$2rdacontent (may correspond only to human narration)</td>
 				</tr>
 				<tr>
@@ -1848,10 +1857,10 @@
 					<th scope="col">Definition</th>
 					<th scope="col">Schema.org</th>
 					<th scope="col">ONIX</th>
-                    <th scope="col">MARC21 Fiels</th>
-					<th scope="col">Schema.org in MARC21</th>
-                    <th scope="col">ONIX to Schema in MARC21</th>
-                    <th scope="col">ONIX in MARC21 using ONIX Codes*</th>
+                    <th scope="col">MARC 21 Fiels</th>
+					<th scope="col">Schema.org in MARC 21</th>
+                    <th scope="col">ONIX to Schema in MARC 21</th>
+                    <th scope="col">ONIX in MARC 21 using ONIX Codes*</th>
 					<th scope="col">UNIMARC</th>
 				</tr>
 			</thead>
@@ -1871,7 +1880,7 @@
                     <td><b>532</b></td>
 					<td><b>532</b> 8# <b>$a</b>[Text]</td>
                     <td>-</td>
-                    <td>*Awaiting clarification on recording ONIX codes in MARC21</td>
+                    <td>*Awaiting clarification on recording ONIX codes in MARC 21</td>
 					<td> 231 $i00$2onix196</td>
 				</tr>
 			</tbody>

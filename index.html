@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<html lang="en-US">
 	<head>
-		<meta charset="utf-8" />
+		<meta charset="utf-8">
 		<title>Schema.org Accessibility Properties for Discoverability Vocabulary</title>
 		<script src="https://www.w3.org/Tools/respec/respec-w3c" class="remove"></script>
 		<script src="common/js/examples.js" class="remove"></script>
 		<script src="common/js/previousRelease.js" class="remove"></script>
 		<script src="common/js/css-inline.js" class="remove"></script>
 		<script class="remove">
-			//<![CDATA[
 			var respecConfig = {
 				group: "a11y-discov-vocab",
 				specStatus: "CG-DRAFT",
@@ -66,7 +65,6 @@
 				preProcess: [formatExamples,inlineCustomCSS],
 				postProcess: [addPreviousRelease,formatExampleTitles]
 			};
-			//]]>
 		</script>
 	</head>
 	<body>
@@ -1448,11 +1446,11 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<section id="flashing">
 						<h5>flashing</h5>
 
+						<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
+						
 						<p>This value should be set when the content meets the hazard thresholds described in <a
 								href="https://www.w3.org/TR/WCAG2/#three-flashes-or-below-threshold">Success Criterion
 								2.3.1 Three Flashes or Below Threshold</a> [[WCAG2]].</p>
-
-						<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
 
 						<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
 									><code>noFlashingHazard</code></a>, <a href="#unknownFlashingHazard"

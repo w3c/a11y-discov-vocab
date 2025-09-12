@@ -109,19 +109,34 @@
 
 <body>
 	<section id="abstract">
-		<p>This document is a work in progress to extend the existing crosswalk for accessibility metadata for
-			Schema.org, EPUB, ONIX and MARC 21, including a new initial definition column.</p>
-		  <p>Note: Definitions are taken from the <a href="https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20241209/">Schema.org Accessibility Properties for Discoverability Vocabulary</a> unless otherwise noted (i.e. some are marked as being ONIX definitions).</p>
+		<p>This document is designed to promote interoperability between different accessibility metadata standards and schemas by providing guidance on ways to map between terms used in various accessibility vocabularies.</p>
  	</section>
 	
 	<section id="sotd"></section>
-	
+
+	<section id="introduction">
+		<h2>Foreword</h2>
+		<p>Accessibility metadata can be provided in different ways:</p>
+			<ul>
+				<li>via the metadata inside the file of the digital product,</li>
+				<li>via a system that maintains and produces bibliographic and supply chain metadata,</li>
+				<li>via a system of mapping or ‘translation’ between 1 & 2, that is from the metadata inside the product file to the corresponding metadata in the bibliographic record (which may be supplemented by additional metadata),</li>
+				<li>via a system of Master Data Management (MDM) containing shared production and distribution metadata.</li>
+			</ul>
+			<p>Standards and schemas used in these different contexts may vary. This document provides information about ways to express accessibility information within the main standards used by the industry.</p>
+			<p>The crosswalk tables extends between the three standards that have different approaches and need to be mapped to each other: Schema.org, ONIX and MARC21.</p>
+			<p>The informative section provides links to standards resources. It includes additional standards beyond the ones presented in the crosswalk tables because some standards provide easy one-to-one mappings and displaying additional columns would make the tables more difficult to use.</p>
+			<p>This crosswalk is not intended to impose any kind of computer architecture on organizations but instead can serve as a guideline to compare various ways of communicating accessibility metadata.</p>
+			<p>The crosswalk is an important resource as not all parts of the accessibility metadata supply chain have access to information in all formats. Many organizations will not have access to the metadata inside digital files, which is primarily used by reading systems. Book distributors, resellers, online platforms, booksellers, librarians, educational institutions, and others will generally have access to the distributed bibliographic metadata in one or more forms, and not the metadata inside the files.</p>
+		<p>By offering a structured comparison of terms the crosswalk helps ensure that accessibility information is consistently described and discovered across platforms, making it easier for developers, content creators, and organizations to align their accessibility metadata.</p>
+		<p>Definitions are taken from the <a href="https://www.w3.org/community/reports/a11y-discov-vocab/CG-FINAL-vocabulary-20241209/">Schema.org Accessibility Properties for Discoverability Vocabulary</a> unless otherwise noted (i.e. some are marked as being ONIX definitions).</p>
+	</section>
 	<section id="information">
 		<h2>Information and references:</h2>
 			<section id="information-schema">
 				<h3>EPUB resources</h3>
 				<p>Schema definitions are found here: <a href="https://www.w3.org/2021/a11y-discov-vocab/latest/">https://www.w3.org/2021/a11y-discov-vocab/latest/</a></p>
-				<p>“ConformsTo” term used in EPUB -drawn from Dublin Core.</p>
+				<p>“ConformsTo” term used in EPUB –drawn from Dublin Core.</p>
 			</section>
 			<section id="information-ONIX">
 				<h3>ONIX resources</h3>	
@@ -135,25 +150,30 @@
 				</p>
 			</section>
 			<section id="information-MARC21">
-			<h3>MARC 21 resources</h3>
-		<p><a href="https://www.loc.gov/marc/bibliographic/">MARC 21 information</a></p>
-		<p><a href="https://www.loc.gov/marc/specifications/specrecstruc.html">Fixed length fields (fixed fields) and variable length fields (very brief summary – fuller details)</a></p>
-		<p>MARC 21 fixed field = 3 digit numeric code (except the Leader); no indicators, value in each position has a specific meaning.</p>
-		<p>MARC 21 variable length field = 3 digit numeric code; each field can have 2 indicators that signify different values; each field can have one or more subfields; convention to designate subfield = $ ; if no subfield, assume $a.</p>
-		<p>More detailed information about <a href="https://www.loc.gov/marc/bibliographic/bd341.html">MARC 21 field 341</a>, and <a href="https://www.loc.gov/marc/bibliographic/bd532.html"> MARC 21 field 532</a>.</p>
-		<aside class="note">
-		  <p>Best practices and procedures for recording accessibility metadata in MARC 21 using the Schema.org Accessibility Properties for Discoverability Vocabulary (sapdv) and ONIX are still under development.  Please be aware that future work may result in changes to the crosswalk, though it is expected such changes will be minimal and backwards compatible.</p>
-      <p>This crosswalk provides recommendations for MARC 21 fields appropriate for each accessibility metadata term. Cataloguing agencies can determine the correct syntax for expressing the metadata in that field.</p>
+				<h3>MARC21 resources</h3>
+					<p><a href="https://www.loc.gov/marc/bibliographic/">MARC 21 information</a></p>
+		      <p><a href="https://www.loc.gov/marc/specifications/specrecstruc.html">Fixed length fields (fixed fields) and variable length fields (very brief summary – fuller details)</a></p>
+		      <p>MARC 21 fixed field = 3 digit numeric code (except the Leader); no indicators, value in each position has a specific meaning.</p>
+		      <p>MARC 21 variable length field = 3 digit numeric code; each field can have 2 indicators that signify different values; each field can have one or more subfields; convention to designate subfield = $ ; if no subfield, assume $a.</p>
+		      <p>More detailed information about <a href="https://www.loc.gov/marc/bibliographic/bd341.html">MARC 21 field 341</a>, and <a href="https://www.loc.gov/marc/bibliographic/bd532.html"> MARC 21 field 532</a>.</p>
+			<aside class="note">
+			<p>Best practices and procedures for recording accessibility metadata in MARC 21 using the Schema.org Accessibility Properties for Discoverability Vocabulary (sapdv) and ONIX are still under development.  Please be aware that future work may result in changes to the crosswalk, though it is expected such changes will be minimal and backwards compatible.</p>
+			<p>This crosswalk provides recommendations for MARC 21 fields appropriate for each accessibility metadata term. Cataloguing agencies can determine the correct syntax for expressing the metadata in that field.</p>
 			<p>Currently <code>certifierReport</code> uses <a href="https://www.loc.gov/marc/bibliographic/bd856.html">MARC 21 field 856</a> since <a href="https://www.loc.gov/marc/bibliographic/bd532.html"> MARC 21 field 532</a> does not currently include a subfield to hold a URL. There is a proposal submitted to include this in the future.</p>
 		</aside>
-  </section>
+    </section>
 			<section id="information-UNIMARC">
 				<h3>UNIMARC resources</h3>
-				<p>UNIversal MAchine Readable Cataloguing (UNIMARC) is a format The Universal MARC format (UNIMARC) is a widely used international standard for the representation and exchange of data in machine-readable form, maintained by the International Federation of Library Associations and Institutions (IFLA).</p>
-				<p><a href="https://repository.ifla.org/handle/20.500.14598/2880.2">UNIMARC 231i (pdf file)</a> offers an easy mapping to ONIX 196. Other UNIMARC codes may best describe some references.</p>
+		  		<p><a href="https://cdn.ifla.org/wp-content/uploads/U_B_231_update2021_ONLINE_FINAL-1.pdf
+				">UNIMARC 231i (pdf file)</a> offers a easy mapping to ONIX 196. Some references may be best described by other UNIMARC codes.</p>
+			</section>
+			<section id="information-RWPM">
+				<h3>RWPM resources</h3>
+		  		<p>Readium Web Publication Manifest (RWPM) is a JSON-based document meant to represent and distribute publications over HTTPS. It is the primary exchange format used in the Readium Architecture and serves as the main building block for OPDS 2.0.</p>
+				<p><a href="https://github.com/readium/webpub-manifest/blob/master/schema/a11y.schema.json">RWPM accessibility information schema</a> is mainly derived from the Schema.org Accessibility Properties for Discoverability Vocabulary, facilitating one to one mapping.
+			</p>
 			</section>
 	</section>
-
 	<section id="epub-onix">
 		<h2>From EPUB</h2>
         <h3>Conformance and Exemption Declarations</h3>

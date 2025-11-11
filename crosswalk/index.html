@@ -120,7 +120,7 @@
 			<ul>
 				<li>via the metadata inside the file of the digital product,</li>
 				<li>via a system that maintains and produces bibliographic and supply chain metadata,</li>
-				<li>via a system of mapping or ‘translation’ between 1 & 2, that is from the metadata inside the product file to the corresponding metadata in the bibliographic record (which may be supplemented by additional metadata),</li>
+				<li>via a system of mapping or ‘translation’ between 1 &amp; 2, that is from the metadata inside the product file to the corresponding metadata in the bibliographic record (which may be supplemented by additional metadata),</li>
 				<li>via a system of Master Data Management (MDM) containing shared production and distribution metadata.</li>
 			</ul>
 			<p>Standards and schemas used in these different contexts may vary. This document provides information about ways to express accessibility information within the main standards used by the industry.</p>
@@ -142,12 +142,11 @@
 				<h3>ONIX resources</h3>	
 				<p><a href="https://www.editeur.org/83/Overview/">ONIX</a> is an XML-based standard for rich book metadata, providing a consistent way for publishers, retailers and their supply chain partners to communicate a wide range of information about their products.</p>
 				<p>Within ONIX, most metadata relating to the accessibility of the product is carried in the <code>ProductFormFeature</code> data element. This uses <a href="https://ns.editeur.org/onix/en/196/">ONIX codelist 196</a>. Plus the metadata to express the access modes in the data element <code>ProductFormFeature</code> which uses <a href="https://ns.editeur.org/onix/en/81/">ONIX code list 81</a>.</p>
-				<p>To help metadata providers, EDItEUR provides two guidance documents:
+                <p>To help metadata providers, EDItEUR provides two guidance documents:</p>
 					<ul>
 						<li><a href="https://doi.org/10.4400/heiy">Providing Accessibility metadata in ONIX</a></li>
 						<li><a href="https://doi.org/10.4400/frib">Providing accessibility metadata in ONIX (advanced)</a></li>
 					</ul>
-				</p>
 			</section>
 			<section id="information-MARC21">
 				<h3>MARC21 resources</h3>
@@ -209,7 +208,7 @@
 						by
 						<code>ProductFormFeatureDescription</code> carries the name of the organization responsible for compliance testing and certification of the product. See <a href="#code93">code 93</a> for the URL of the organization, which should also be provided. Only for use in ONIX 3.0 or later
 					</td>
-                    <td><b>532</b></td>
+                    <td><p><b>532</b></p></td>
 					<td><b>532</b> 8# <b>$a</b>[Name of Certifier]</td>
 					<td>532 8# Accessibility Note$a</td>
                     <td>*Awaiting clarification on recording ONIX codes in MARC 21</td>
@@ -225,7 +224,7 @@
 						organisation responsible for compliance testing and certification of the product - typically a
 						‘home page’ or a page describing the certification scheme itself. For use in ONIX 3.0  or later
 					</td>
-					<td>Do Not Record</td>
+					<td><p><b>532</b></p></td>
 					<td>Do Not Record</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -646,12 +645,12 @@
 							bookmarks in ebooks, the annotations value can be used.</em>
 					</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bookmarks">bookmarks</a></td>
-					<td>(no equivalent)</td>
-					<td>(no equivalent)</td>
-                    <td>(no equivalent)</td>
-					<td>(no equivalent)</td>
-					<td>(no equivalent)</td>
-					<td>(no equivalent)</td>
+					<td>(deprecated)</td>
+					<td>(deprecated)</td>
+                    <td>(deprecated)</td>
+					<td>(deprecated)</td>
+					<td>(deprecated)</td>
+					<td>(deprecated)</td>
 				</tr>
 				<tr>
 					<td>[1] The content is in braille format, or [2] alternatives are available in braille.
@@ -684,12 +683,12 @@
 				<tr>
 					<td>(deprecated, replaced by closedCaptions, openCaptions)</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#captions">captions</a></td>
-					<td>(no equivalent)</td>
-                    <td>(no equivalent)</td>
-                    <td>(no equivalent)</td>
-					<td>(no equivalent)</td>
-					<td>(no equivalent)</td>
-                    <td>(no equivalent)</td>
+					<td>(deprecated)</td>
+                    <td>(deprecated)</td>
+                    <td>(deprecated)</td>
+					<td>(deprecated)</td>
+					<td>(deprecated)</td>
+                    <td>(deprecated)</td>
 				</tr>
 				<tr>
 					<td>Identifies that chemical information is encoded using the <a
@@ -700,7 +699,7 @@
                         <p>along with</p>
                         <p><a href="https://ns.editeur.org/onix/en/81/47">List 81; Code 47</a>: Chemical content</p>
                     </td>
-                    <td><p><b>341</b></p> <p>and</p> <p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>textual<b>$b</b>ChemML<b>$2</b>sapdv</p>
 						<p>and</p>
@@ -785,7 +784,7 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#highContrastDisplay">highContrastDisplay</a></td>
                     <td>
                     <p><a href="https://ns.editeur.org/onix/en/196/37">List 196; Code 37</a>: Use of ultra-high contrast between text foreground and background</p></td>
-                    <td><b>341</b></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>textual<b>$b</b>highContrastDisplay<b>$2</b>sapdv</p>
 						<p>or</p>
@@ -801,7 +800,7 @@
 					<td>(no equivalent)</td>
                     <td><p><a href="https://ns.editeur.org/onix/en/196/26">List 196; Code 26</a>: Use of high contrast between text and background color</p>
                     </td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>341</b></p></td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -836,7 +835,7 @@
                     <td><p><a href="https://ns.editeur.org/onix/en/21/LTE">List 21; Code LTE</a>: Large type / large print edition</p>
                         <p>and</p>
                         <p><a href="https://ns.editeur.org/onix/en/21/ULP">List 21; Code ULP</a>: Ultra large print edition</p></td>
-                    <td>Do Not Record</td>
+                    <td><p><b>341</b></p></td>
 					<td>Do not record for electronic resources where font size can be increased. Use displayTransformability.</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -868,7 +867,7 @@
                             <p>along with</p>
                             <p><a href="https://ns.editeur.org/onix/en/81/47">List 81; Code 47</a>: Chemical content</p>
                     </td>
-                    <td><p><b>341</b></p><p>and</p><p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>textual<b>$b</b>latex<b>$2</b>sapdv</p>
 						<p>and</p>
@@ -917,7 +916,7 @@
                         <p>along with</p>
                             <p><a href="https://ns.editeur.org/onix/en/81/48">List 81; Code 48</a>: Mathematical content</p>
                     </td>
-                    <td><p><b>341</b></p><p>and</p><p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>textual<b>$b</b>MathML<b>$2</b>sapdv</p>
 						<p>and</p>
@@ -936,7 +935,7 @@
                         <p>along with</p>
                         <p><a href="https://ns.editeur.org/onix/en/81/47">List 81; Code 47</a>: Chemical content</p>
                     </td>
-                    <td><p><b>341</b></p><p>and</p><p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
                     <td>
 						<p><b>341</b> 0# <b>$a</b>textual<b>$b</b>MathML-chemistry<b>$2</b>sapdv</p>
 						<p>and</p>
@@ -1099,7 +1098,7 @@
 					</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#tactileGraphic">tactileGraphic</a></td>
 					<td>(no equivalent)</td>
-                    <td><p><b>341</b></p> <p>and</p> <p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<ul>
 							<li>Use case [1] If tactile alternatives to printed graphics in a print resource are provided: 
@@ -1182,17 +1181,6 @@
 					<td>(no equivalent)</td>
 					<td>231 $i21$2onix196 and/or 231 $i22$2onix196</td>
 				</tr>
-				<tr>
-					<td>ONIX: The language of the text has been specified (eg via the HTML or XML lang attribute) to optimise text-to-speech (and other alternative renderings), both at whole document level and, where appropriate, for individual words, phrases or passages in a different language</td>
-					<td>(no equivalent)</td>
-					<td><a href="https://ns.editeur.org/onix/en/196/22">List 196; Code 22</a>: Language tagging
-						provided</td>
-                    <td>(no equivalent)</td>
-					<td>(no equivalent)</td>
-					<td>(no equivalent)</td>
-					<td>(no equivalent)</td>
-					<td>231 $i21$2onix196 and/or 231 $i22$2onix196</td>
-				</tr>                
                 <tr>
                     <td>
                         <p>Indicates that the author has not yet checked if the resource contains accessibility features. This value is only intended as a placeholder until an accessibility review can be completed.</p>
@@ -1260,7 +1248,7 @@
                    <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/31">List 196; Code 31</a>: Accessible controls provided</p>
                     </td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>341</b></p></td>
  					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -1272,7 +1260,7 @@
                     <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/32">List 196; Code 32</a>: Landmark navigation</p>
                     </td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>341</b></p></td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -1286,7 +1274,7 @@
                     <td>
                         <p><a href="https://ns.editeur.org/onix/en/196/25">List 196; Code 25</a>: Use of color is not sole means of conveying information</p>
                     </td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>341</b></p></td>
  					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -1297,7 +1285,7 @@
 					<td>(no equivalent)</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/22">List 196; Code 22</a>: Language tagging
 						provided - helps with TTS in multi-lingual content</td>
-					<td>(no equivalent)</td>
+					<td><p><b>341</b></p></td>
 					<td><b>532</b> 1# <b>$a</b>The language of the text has been specified (eg via the HTML or XML lang attribute) to optimise text-to-speech (and other alternative renderings), both at whole document level and, where appropriate, for individual words, phrases or passages in a different language.</td>
 					<td>(no equivalent)</td>
 					<td>231 $i22$2onix196</td>
@@ -1307,7 +1295,7 @@
 					<td>(no equivalent)</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/24">List 196; Code 24</a>: Dyslexia readability
 					</td>
-                    <td><b>532</b></td>
+                    <td><p><b>341</b></p></td>
 					<td>(no equivalent)</td>
 					<td><b>532</b> 1# <b>$a</b>Specialised font, character and line spacing, justification and paragraph spacing, and
 						coloring for dyslexic readers.</td>
@@ -1319,7 +1307,7 @@
 					<td>(no equivalent)</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/10">List 196; Code 10</a>: No reading system
 						accessibility options disabled (except)</td>
-                    <td><b>532</b></td>
+                    <td><p><b>341</b></p></td>
 					<td>(no equivalent)</td>
 					<td><b>532</b> 8# <b>$a</b>No accessibility features offered by the reading system, device or reading software
 						(including but not limited to choice of text size or typeface, choice of text or background
@@ -1332,7 +1320,7 @@
 					<td>(no equivalent)</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/13">List 196; Code 13</a>: Single logical reading order
 					</td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>341</b></p></td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -1343,7 +1331,7 @@
 					<td>(no equivalent)</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/38">List 196; Code 38</a>: Unusual words or abbreviations explained
 					</td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>341</b></p></td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -1354,7 +1342,7 @@
 					<td>(no equivalent)</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/39">List 196; Code 39</a>: Supplementary material to an audiobook is accessible
 					</td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>341</b></p></td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -1365,7 +1353,7 @@
 					<td>(no equivalent)</td>
 					<td><a href="https://ns.editeur.org/onix/en/196/40">List 196; Code 40</a>: Link purposes clear 
 					</td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>341</b></p></td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
 					<td>(no equivalent)</td>
@@ -1453,7 +1441,7 @@
 						2.3.1 Three Flashes or Below Threshold</a> [<cite><a class="bibref" data-link-type="biblio" href="https://www.w3.org/2021/a11y-discov-vocab/latest/#bib-wcag2" title="Web Content Accessibility Guidelines (WCAG) 2">WCAG2</a></cite>]. 
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#noFlashingHazard">noFlashingHazard</a></td>
                    <td><p><a href="https://ns.editeur.org/onix/en/143/14">List 143; Code 14</a>: No flashing hazard warning necessary</p></td>
-                    <td><b>532</b></td>
+                    <td><p><b>532</b></p></td>
 					<td><b>532</b> 8# <b>$a</b>This resource does not present a flashing hazard.</td>
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
@@ -1470,7 +1458,7 @@
 					<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownFlashingHazard"><code>unknownFlashingHazard</code></a></p></td>
                     <td><p><a href="https://ns.editeur.org/onix/en/143/24">List 143; Code 24</a>: Flashing risk unknown</p>
                     </td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>532</b></p></td>
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
@@ -1509,7 +1497,7 @@
                     </td>
 					<td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownMotionSimulationHazard"><code>unknownMotionSimulationHazard</code></a></p></td>
                     <td><p><a href="https://ns.editeur.org/onix/en/143/26">List 143; Code 26</a>: Motion simulation unknown</p></td>
-                    <td>(no equivalent)</td>   
+                    <td><p><b>532</b></p></td>   
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
@@ -1548,7 +1536,7 @@
                     </td>
                     <td><p><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#unknownSoundHazard"><code>unknownSoundHazard</code></a></p></td>
                     <td><p><a href="https://ns.editeur.org/onix/en/143/25">List 143; Code 25</a>: Sound risk unknown</p></td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>532</b></p></td>
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
@@ -1559,7 +1547,7 @@
 					<td>Indicates that the resource does not contain any hazards.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#hazard-none">none</a></td>
                     <td><p><a href="https://ns.editeur.org/onix/en/143/00">List 143; Code 00</a>: No known hazards or warnings</p></td>
-                    <td>(no equivalent)</td>
+                    <td><p><b>532</b></p></td>
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
                     <td>(no equivalent)</td>
@@ -1624,7 +1612,7 @@
 					<td>Indicates that the resource contains charts encoded in visual form.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#chartOnVisual">chartOnVisual</a></td>
 					<td><a href="https://ns.editeur.org/onix/en/81/19">List 81; Code 19</a>: Figures, Diagrams, Charts</td>
-                    <td><p><b>341</b></p><p>/</p><p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>chartOnVisual<b>$2</b>sapdv</p>
 						<p>or</p> 
@@ -1638,7 +1626,7 @@
 					<td>Indicates that the resource contains chemical equations encoded in visual form.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#chemOnVisual">chemOnVisual</a></td>
 				    <td><p><a href="https://ns.editeur.org/onix/en/81/47">List 81; Code 47</a>: Chemical content</p></td>
-                    <td><p><b>341</b></p><p>/</p><p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>	
 						<p><b>341</b> 0# <b>$a</b>chemOnVisual<b>$2</b>sapdv</p>
 						<p>or</p> 
@@ -1667,7 +1655,7 @@
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#diagramOnVisual">diagramOnVisual</a></td>
 					<td><a href="https://ns.editeur.org/onix/en/81/19">List 81; Code 19</a>: Figures, Diagrams,
 						Charts</td>
-                    <td><p><b>341</b></p><p>/</p><p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>diagramOnVisual<b>$2</b>sapdv</p>
 						<p>or</p> 
@@ -1681,7 +1669,7 @@
 					<td>Indicates that the resource contains mathematical notations encoded in visual form.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#mathOnVisual">mathOnVisual</a></td>
                     <td><p><a href="https://ns.editeur.org/onix/en/81/48">List 81; Code 48</a>: Mathematical content</p></td>
-                    <td><p><b>341</b></p><p>/</p><p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>mathOnVisual<b>$2</b>sapdv</p>
 						<p>or</p> 
@@ -1719,7 +1707,7 @@
 					<td>Indicates that the resource contains text encoded in visual form.</td>
 					<td><a href="https://www.w3.org/2021/a11y-discov-vocab/latest/#textOnVisual">textOnVisual</a></td>
 				    <td><p><a href="https://ns.editeur.org/onix/en/81/49">List 81; Code 49</a>: Images of text</p></td>
-                    <td><p><b>341</b></p><p>/</p><p><b>532</b></p></td>
+                    <td><p><b>341</b></p></td>
 					<td>
 						<p><b>341</b> 0# <b>$a</b>textOnVisual<b>$2</b>sapdv</p>
 						<p>or</p> 

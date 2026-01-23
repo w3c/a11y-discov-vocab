@@ -151,6 +151,14 @@
 						<li><a href="https://doi.org/10.4400/heiy">Providing Accessibility metadata in ONIX</a></li>
 						<li><a href="https://doi.org/10.4400/frib">Providing accessibility metadata in ONIX (advanced)</a></li>
 					</ul>
+                <aside class="note">
+                    <h2>Bidirectional mapping and round-tripping</h2>
+                    <p>The mappings provided in this crosswalk identify conceptual equivalence between vocabularies but are not always mathematically symmetrical or "round-trippable."</p>
+                    <p>Structural differences between formats—such as strict exclusivity in one vocabulary versus permissive coexistence in another—mean that a valid mapping in one direction may be invalid in the reverse.</p>
+                    <p><b>Example:</b> ONIX List 196 code 09 (Inaccessible/Limited) maps conceptually to Schema.org <code>accessibilityFeature="none"</code>. However, while ONIX code 09 allows for other accessibility features to be present simultaneously, Schema.org <code>accessibilityFeature="none"</code> is exclusive and prohibits other feature declarations.</p>
+                    <p>In practice, ONIX records that include List 196 code 09 have few accessibility affordances, despite the option to include other features in the metadata, and can be mapped to Schema.org <code>accessibilityFeature="none"</code> with little loss of fidelity. Any minor accessibility features listed in the ONIX record would be left out of the Schema.org record due to the constraints Schema.org places on the term "none", which is why this transformation is not "round-trippable."</p>
+                </aside>
+               
 			</section>
         
 			<section id="information-MARC21">

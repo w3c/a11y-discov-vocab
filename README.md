@@ -24,10 +24,7 @@ The Schema.org Accessibility Properties for Content Discoverability vocabulary i
 
 ### Crosswalk
 
-The Community Group also maintains a crosswalk document that describes how to map the Schema.org properties and terms to equivalent expressions in EPUB and ONIX:
-
-- [Editor's Draft](https://w3c.github.io/a11y-discov-vocab/crosswalk)
-- [Latest Version](https://w3c.github.io/a11y-discov-vocab/latest/crosswalk/)
+The accessibility metadata crosswalk for publishers is no longer maintained in this repository. For more information, or to report issues, please refer to the [repository](https://github.com/w3c/publ-a11y) for the Publishing Community Group's accessibility task force.
 
 ## Governance
 

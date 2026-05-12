@@ -19,7 +19,7 @@ For more information about the original development of these properties, please 
 
 The Schema.org Accessibility Properties for Content Discoverability vocabulary is available in the following forms:
 
-- [Editor's Draft](https://w3c.github.io/a11y-discov-vocab/) - The editor's draft is the working version of the vocabulary. It may include changes that have not yet been published and that may be subject to further revision before publishing. This document has no standing and should not be referenced.
+- [Editor's Draft](https://w3c-cg.github.io/a11y-discov-vocab/) - The editor's draft is the working version of the vocabulary. It may include changes that have not yet been published and that may be subject to further revision before publishing. This document has no standing and should not be referenced.
 - [Latest Version](https://www.w3.org/2021/a11y-discov-vocab/latest/) - The latest version of the vocabulary is the stable version of the vocabulary endorsed by the Community Group. The latest version should be referenced by implementers.
 
 ### Crosswalk
@@ -30,7 +30,7 @@ The accessibility metadata crosswalk for publishers is no longer maintained in t
 
 This repository is maintained by the [Accessibility Discoverability Vocabulary for Schema.org Community Group](https://www.w3.org/community/a11y-discov-vocab/).
 
-Please refer to the [Community Group's charter](https://github.com/w3c/a11y-discov-vocab/wiki/Community-Group-Charter) for a detailed description of the governance of this group.
+Please refer to the [Community Group's charter](https://github.com/w3c-cg/a11y-discov-vocab/wiki/Community-Group-Charter) for a detailed description of the governance of this group.
 
 The chairs of the Community Group are responsible for ensuring the smooth functioning of the group and resolving any issues that might arise.
 

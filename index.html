@@ -838,9 +838,10 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<section id="readingOrder">
 						<h5>readingOrder</h5>
 
-						<p>The reading order of the content is clearly defined in the markup (e.g., figures, sidebars
-							and other secondary content has been marked up to allow it to be skipped automatically
-							and/or manually escaped from.</p>
+						<p>The ordering of the content in the markup matches its visual presentation, as described in <a
+								data-cite="wcag2#meaningful-sequence">success criterion 1.3.2 (Meaningful Sequence)</a>
+							[[wcag2]]. For example, CSS styling is not used to position content visually in a different
+							order from the markup.</p>
 					</section>
 
 					<section id="structuralNavigation">
@@ -1003,7 +1004,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						</div>
 
 						<p>In addition, text must not be represented as images unless it falls under the exceptions of
-								<a href="https://www.w3.org/TR/WCAG2/#images-of-text">Success Criterion 1.4.5</a>
+								<a data-cite="wcag2#images-of-text">success criterion 1.4.5 (Images of Text)</a>
 							[[wcag2]].</p>
 
 						<p>Note that setting this property does not mean that users will be able to control all the
@@ -1097,8 +1098,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<h5>highContrastAudio</h5>
 
 						<p>Audio content with speech in the foreground meets the contrast thresholds set out in <a
-								href="https://www.w3.org/WAI/WCAG2/Understanding/low-or-no-background-audio">WCAG
-								Success Criteria 1.4.7</a> [[wcag2]].</p>
+								data-cite="wcag2#low-or-no-background-audio">success criterion 1.4.7 (Low or No
+								Background Audio)</a> [[wcag2]].</p>
 
 						<div class="note">
 							<p>Information about the how the audio meets the requirement should be provided in the <a
@@ -1111,9 +1112,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 					<section id="highContrastDisplay">
 						<h5>highContrastDisplay</h5>
 
-						<p>Content meets the visual contrast threshold set out in <a
-								href="https://www.w3.org/WAI/WCAG2/Understanding/contrast-enhanced">WCAG Success
-								Criteria 1.4.6</a> [[wcag2]].</p>
+						<p>Content meets the visual contrast threshold set out in <a data-cite="wcag2#contrast-enhanced"
+								>success criterion 1.4.6 (Contrast (Enhanced))</a> [[wcag2]].</p>
 					</section>
 
 					<section id="largePrint">
@@ -1270,8 +1270,7 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 
 				<blockquote>
 					<p>A characteristic of the described resource that is physiologically dangerous to some users.
-						Related to <a href="http://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure.html">WCAG 2.0 guideline
-							2.3</a>.</p>
+						Related to <a data-cite="wcag2#seizures-and-physical-reactions">WCAG 2.0 guideline 2.3</a>.</p>
 				</blockquote>
 
 				<p>Identifying potential hazards that a resource poses allows users to determine if a resource poses a
@@ -1504,8 +1503,8 @@ Interoperability with platform APIs is an issue for Reading Systems</pre>
 						<p>Indicates that the resource presents a flashing hazard for photosensitive persons.</p>
 
 						<p>This value should be set when the content meets the hazard thresholds described in <a
-								href="https://www.w3.org/TR/WCAG2/#three-flashes-or-below-threshold">Success Criterion
-								2.3.1 Three Flashes or Below Threshold</a> [[wcag2]].</p>
+								data-cite="wcag2#three-flashes-or-below-threshold">success criterion 2.3.1 (Three
+								Flashes or Below Threshold)</a> [[wcag2]].</p>
 
 						<p>The <code>flashing</code> value must not be set when any of the <a href="#noFlashingHazard"
 									><code>noFlashingHazard</code></a>, <a href="#unknownFlashingHazard"
